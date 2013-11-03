@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://vanja.gavric.org/</title>
+  <link>http://vanja.gavric.org/</link>
+
+<item>
+     <link>http://vanja.gavric.org/vg-en.html#index</link>
+     <title>Vanja Gavrić - personal web</title>
+     <description>Vanja Gavrić - personal web</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://vanja.gavric.org/vg-hr.html#index</link>
+     <title>Vanja Gavrić - osobni web</title>
+     <description>Vanja Gavrić - osobni web</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://vanja.gavric.org/vg-en.html#writer</link>
+     <title>Vanja Gavrić is a writer.</title>
+     <description>Vanja Gavrić is a writer.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://vanja.gavric.org/vg-en.html#developer</link>
+     <title>Vanja Gavrić is a developer.</title>
+     <description>Vanja Gavrić is a developer.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://vanja.gavric.org/vg-en.html#photographer</link>
+     <title>Vanja Gavrić is a photographer.</title>
+     <description>Vanja Gavrić is a photographer.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://vanja.gavric.org/vg-hr.html#writer</link>
+     <title>Vanja Gavrić je novinar.</title>
+     <description>Vanja Gavrić je novinar.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://vanja.gavric.org/vg-hr.html#developer</link>
+     <title>Vanja Gavrić je programer.</title>
+     <description>Vanja Gavrić je programer.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://vanja.gavric.org/vg-hr.html#photographer</link>
+     <title>Vanja Gavrić je fotograf.</title>
+     <description>Vanja Gavrić je fotograf.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

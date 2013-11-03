@@ -1,0 +1,9 @@
+DirectoryIndex country-redirect.php index.php index.html
+
+Options +FollowSymlinks -Indexes
+RewriteEngine on
+RewriteRule ^vg-en.html(/?)+$ index.php?lang=en [L]
+RewriteRule ^vg-hr.html(/?)+$ index.php?lang=hr [L]
+
+RewriteRule ^form-hr.html(/?)+$ form.php?lang=hr [L]
+RewriteRule ^form-en.html(/?)+$ form.php?lang=hr [L]

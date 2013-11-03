@@ -1,0 +1,91 @@
+<?PHP
+$head['title']="Vanja Gavrić - osobni web";
+$head['keywords']="Vanja Gavrić, novinar, programer, fotograf";
+
+$body['noscript']="Čini se da imate isključen JavaScript. Kako bi u potpunosti bili u mogućnosti koristiti ovu stranicu, molim da omogućite Javascript i ponovno učitate stranicu.";
+$body['ie6-error']="Ovaj internet browser nije podržan. Molim da instalirate moderan internet browser kako biste mogli u potpunosti koristiti ovu stranicu.";
+$body['ie8-error']="Kako biste u potpunosti uživali u ovoj stranici, preporuka je koristiti moderni (ne-IE) internet browser. Probajte <a rel=\"external\" href=\"http://www.getfirefox.com/\">Firefox</a> ili <a rel=\"external\" href=\"http://www.google.com/chrome\">Chrome</a>. <a class=\"close\">Zatvori</a>";
+$fancybox['error']="Traženo ne može biti učitano.<br />Molim pokušajte kasnije.";
+$fancybox['image']="Fotografija";
+
+$left['lang1']="<li class=\"open\"><img src=\"images/lang/hr.png\" alt=\"hrvatski\"/>HRVATSKI</li> \n";
+$left['lang2']="<li><a href=\"vg-en.html#index\"><img src=\"images/lang/us.png\" alt=\"English\" />ENGLISH</a></li>";
+$left['h1']="Vanja Gavrić";
+$left['keywords']="Ključne riječi";
+$left['links']="Linkovi";
+$left['more']="<i>geek</i> &bull; IT &bull; roler &bull; Apple &bull; ljubitelja <i>gadgeta</i> &bull; mobilna industrija &bull; fotografija &bull; želi-biti poduzetnik";
+$left['blog']="Posjetite blog";
+$left['blog_soon']="";
+$left['contact_href']="form-hr.html";
+$left['contact']="Kontakt";
+$left['twitter']="Molim pričekajte da se moji tweetovi učitaju...";
+$left['social']="Društvene mreže";
+
+$center['writer']="piše.";
+$center['developer']="kodira.";
+$center['photographer']="fotografira.";
+$center['je_novinar']="je novinar.";
+$center['je_programer']="je programer.";
+$center['je_fotograf']="je fotograf.";
+
+$right['close']="zatvori";
+
+$writer['h1']="novinar";
+$writer['p']="<p>Vanja Gavrić počeo je pisati članke s 15 godina. Većina njegovih članaka vezane su za <abbr title=\"Information and communications technology\">ICT</abbr> industriju i na hrvatskom su jeziku. </p>
+			<p>Posebnu pozornost uvijek mu je plijenila mobilna industrija i telekomunikacije. Njegovi članci objavljivani su u časopisima  <a rel=\"external\" href=\"http://www.mobil.hr/\">Mobil</a> i <a rel=\"external\" href=\"http://www.bug.hr/mreza/\">Mreža</a> (preko 50 članaka). Također piše i za Internet magazin za Mac korisnike <a rel=\"external\" href=\"http://www.mackorisnik.com\">Mackorisnik.com</a>, koji je orijentiran na Mac platformu općenito.</p>
+			<p>Neki članci:</p>
+			<ul class=\"lista\">
+				<li style=\"width: 109px;\"><a href=\"files/pdf/mobil-92-iphone.pdf\">iPhone na testu</a><div class=\"popup\"><img src=\"images/writer/thumbs/iphone.jpg\" alt=\"iPhone na testu\" /></div></li>
+				<li style=\"width: 116px;\"><a href=\"files/pdf/mreza-nokia.pdf\">Divovski nesklad</a><div class=\"popup\"><img src=\"images/writer/thumbs/nokia.jpg\" alt=\"Divovski nesklad\" /></div></li>
+				<li style=\"width: 104px;\"><a href=\"files/pdf/mobil-75-usa.pdf\">Made in U.S.A.</a><div class=\"popup\"><img src=\"images/writer/thumbs/usa.jpg\" alt=\"Made in U.S.A.\" /></div></li>
+				<li style=\"width: 204px;\"><a href=\"files/pdf/mobil-37-stungun.pdf\">Ovaj telefon NE služi za pričanje</a><div class=\"popup\"><img src=\"images/writer/thumbs/stungun.jpg\" alt=\"Ovaj telefon NE služi za pričanje\" /></div></li>
+				<li style=\"width: 134px;\"><a href=\"files/pdf/mobil-40-41-alcatel.pdf\">Daltonizam izliječen</a><div class=\"popup\"><img src=\"images/writer/thumbs/alcatel.jpg\" alt=\"Daltonizam izliječen\" /></div></li>
+				<li style=\"width: 198px;\"><a href=\"files/pdf/mobil-37-microsoft.pdf\">Microsoft kreće u nove pohode</a><div class=\"popup\"><img src=\"images/writer/thumbs/ms.jpg\" alt=\"Microsoft kreće u nove pohode\" /></div></li>
+				<li style=\"width: 119px;\"><a href=\"files/pdf/mobil-40-41-treo.pdf\">Mobitel, napokon</a><div class=\"popup\"><img src=\"images/writer/thumbs/treo.jpg\" alt=\"Mobitel, napokon\" /></div> </li>
+				<li style=\"width: 212px;\"><a href=\"files/pdf/mobil-35-motorola.pdf\">Ambiciozna 20-godišnja Motorola</a><div class=\"popup\"><img src=\"images/writer/thumbs/motorola.jpg\" alt=\"Ambiciozna 20-godišnja Motorola\" /></div></li>
+	</ul>";
+			
+$developer['h1']="programer";
+$developer['p']="<p>Programerski početci Vanje Gavrića sežu još u osnovnoškolske dane kada se upoznao s Logom i QBasicom. Tijekom godina radio je s raznim tehnologijama &mdash; C(++), <abbr title=\"(Extensible) Hyper Text Markup Language\">(X)HTML</abbr>, JavaScript (jQuery), <abbr title=\"Hypertext Preprocessor\">PHP</abbr>	&amp; MySQL i <abbr title=\"Extensible Markup Language\">XML</abbr>.</p>
+			<p>Radio je na raznim projektima poput vlastitog <abbr title=\"Content Management System\">CMS</abbr>-a, web trgovine, osobnih <i>task managera</i>, web aplikacija za iPhone, aplikacije za normiranje sati i slično.</p>
+
+			<p>U posljednje vrijeme pozornost mu zaokuplja razvoj nativnih aplikacija za <a href=\"http://www.apple.com/ios/\" rel=\"external\">iOS</a>, te HTML5. Posebno područje interesa mu predstavlja semantički web, prirodna obrada teksta i baze znanja.</p>
+			<p>Nekoliko isječaka nalazi se ispod.</p>
+
+			<ul class=\"portfolio\">
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/igornjigrad.hr.jpg\"><img src=\"images/developer/thumbs/igornjigrad.hr.jpg\" alt=\"gornjigrad.hr/mobile\" /></a><span><a rel=\"external\" href=\"http://gornjigrad.hr/mobile\">gornjigrad.hr/mobile</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/vanja.gavric.org.jpg\"><img src=\"images/developer/thumbs/vanja.gavric.org.jpg\" alt=\"vanja.gavric.org\" /></a><span><a rel=\"external\" href=\"http://vanja.gavric.org/\">vanja.gavric.org/</a>Photoshop, HTML, CSS, JavaScript, PHP, Apache</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/kozul.hr.jpg\"><img src=\"images/developer/thumbs/kozul.hr.jpg\" alt=\"kozul.hr\" /></a><span><a href=\"#\">kozul.hr (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP, MySQL, Apache</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/euronek.hr.jpg\"><img src=\"images/developer/thumbs/euronek.hr.jpg\" alt=\"euronek.hr\" /></a><span><a rel=\"external\" href=\"http://www.euronek.hr\">euronek.hr</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/iSMS.jpg\"><img  src=\"images/developer/thumbs/iPhone.jpg\" alt=\"vanja.gavric.org/sms\" /></a> <span><a rel=\"external\" href=\"http://vanja.gavric.org/sms/\">vanja.gavric.org/sms</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/men-ars.hr.jpg\"><img src=\"images/developer/thumbs/men-ars.hr.jpg\" alt=\"men-ars.hr\" /></a><span><a rel=\"external\" href=\"http://www.men-ars.hr\">men-ars.hr</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/realiscentar.hr.jpg\"><img src=\"images/developer/thumbs/realiscentar.hr.jpg\" alt=\"realiscentar.hr\" /></a><span><a rel=\"external\" href=\"http://www.realiscentar.hr\">realiscentar.hr</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/opt.jpg\"><img  src=\"images/developer/thumbs/opt.jpg\" alt=\"vanja.gavric.org/opt\" /></a> <span><a rel=\"external\" href=\"http://vanja.gavric.org/opt/\">vanja.gavric.org/opt/</a>HTML, JavaScript, PHP</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/igorvlajnic.com.jpg\"><img  src=\"images/developer/thumbs/igorvlajnic.com.jpg\" alt=\"igorvlajnic.com (offline)\" /></a> <span><a href=\"#\">igorvlajnic.com (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/rijeka.kbf.hr.jpg\"><img  src=\"images/developer/thumbs/rijeka.kbf.hr.jpg\" alt=\"rijeka.kbf.hr\" /></a><span><a rel=\"external\" href=\"http://www.rijeka.kbf.hr\">www.rijeka.kbf.hr</a>Photoshop, HTML, CSS, JavaScript, PHP, MySQL</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/merz-mladi.org.jpg\"><img  src=\"images/developer/thumbs/merz-mladi.org.jpg\" alt=\"merz-mladi.org (offline)\" /></a><span><a href=\"#\">merz-mladi.org (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/the-abbey.org.jpg\"><img  src=\"images/developer/thumbs/the-abbey.org.jpg\" alt=\"the-abbey.org (offline)\" /></a><span><a href=\"#\">the-abbey.org (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP, MySQL, Apache</span></li>
+			</ul>\n";
+			
+$photographer['h1']="fotograf";
+$photographer['p']="<p>Vanja Gavrić oduvijek je gajio veliku ljubav prema fotografiji, ali ozbiljnije se počinje baviti tek 2007. kada nabavlja prvi digitalni <abbr title=\"single-lens reflex camera\">SLR</abbr>. Uglavnom fotografira gradski život, pejzaže, arhitekuru, prirodu i sve između toga. Radove objavljuje na <a rel=\"external\" href=\"http://www.flickr.com/vanja-gavric/\">Flickr</a>u. Fotografije obrađuje primarno u <a rel=\"external\" href=\"http://www.apple.com/aperture/\">Apple Aperture</a>u.</p>
+			<p>Trenutno koristi Canon sistem (30D i 7D) i omiljeni objektiv mu je Samyang 8 mm f/3.5 Aspherical IF MC Fish-eye.<br /></p>
+			
+			<ul class=\"polaroids\"></ul>
+			<div class=\"cb\"></div>
+			<p>Molim da ga kontaktirate ukoliko želite licencirati ili koristiti njegove fotografije.</p>";
+			
+			
+$form['title']="Želite me kontaktirati u vezi poslovne suradnje? Zatražiti životopis? Poslati pismo mržnje? Ljubavno pismo? Na pravom ste mjestu.";			
+$form['name']="Ime*";			
+$form['email']="Email*";			
+$form['url']="URL";			
+$form['message']="Poruka*";			
+$form['required']="Ovo polje je obvezno.";			
+$form['tooshortname']="Ime je prekratko.";			
+$form['notvalidemail']="Nije valjana e-mail adresa.";			
+$form['notvalidurl']="Nije valjani URL.";			
+$form['tooshortmessage']="Poruka je prekratka.";			
+$form['js_h1']="Poruka poslana!";			
+$form['js_p']="Brzo ću Vam se javiti.";				
+?>

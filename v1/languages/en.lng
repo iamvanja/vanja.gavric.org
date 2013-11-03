@@ -1,0 +1,96 @@
+<?PHP
+$head['title']="Vanja Gavrić - personal web";
+$head['keywords']="Vanja Gavrić, writer, developer, photographer";
+
+$body['noscript']="It looks like you have disabled Javascript. To fully use this website, please enable Javascript and refresh this page.";
+$body['ie6-error']="This browser is not supported. Please update to a modern browser.";
+$body['ie8-error']="To fully enjoy this site, it is recommended to use a modern (non-IE) browser. Try <a rel=\"external\" href=\"http://www.getfirefox.com/\">Firefox</a> or <a rel=\"external\" href=\"http://www.google.com/chrome\">Chrome</a>. <a class=\"close\">Close</a>";
+$fancybox['error']="The requested content cannot be loaded.&lt;br /&gt;Please try again later.";
+$fancybox['image']="Photograph";
+
+$left['lang1']="<li><a href=\"vg-hr.html#index\"><img src=\"images/lang/hr.png\" alt=\"hrvatski\" />HRVATSKI</a></li>";
+$left['lang2']="<li class=\"open\"><img src=\"images/lang/us.png\" alt=\"English\"/>ENGLISH</li> \n";
+$left['h1']="Vanja Gavrić";
+$left['keywords']="Keywords.";
+$left['links']="Links.";
+$left['more']="geek &bull; Apple &amp; mobile industry aficionado &bull; photographer &bull; gadget lover &bull; inline skater &bull; wannabe entrepreneur";
+$left['blog']="Visit blog";
+$left['blog_soon']="(soon)";
+$left['contact_href']="form.php?lang=en";
+$left['contact']="Contact";
+$left['twitter']="Please wait while my tweets load...";
+$left['social']="Let's be friends.";
+
+$center['writer']="writes.";
+$center['developer']="codes.";
+$center['photographer']="photographs.";
+$center['je_novinar']="is a writer.";
+$center['je_programer']="is a developer.";
+$center['je_fotograf']="is a photographer.";
+
+$right['close']="close";
+
+$writer['h1']="writer";
+$writer['p']="<p>Vanja Gavrić started writing for various magazines at the age of 15. Most of his articles focus on the <abbr title=\"Information and communications technology\">ICT</abbr> industry and are written in Croatian.</p>
+			<p>He is especially passionate about mobile technology and telecommunications. Work of his is published in magazines  <a rel=\"external\" href=\"http://www.mobil.hr/\">Mobil</a> and <a rel=\"external\" href=\"http://www.bug.hr/mreza/\">Mreža</a> (over 50 articles). He also holds an editor position at the Internet magazine for Mac users <a rel=\"external\" href=\"http://www.mackorisnik.com\">Mackorisnik.com</a>, writing about Macintosh and iPhone.</p>
+			<p>Some of his articles (in Croatian):</p>
+			<ul class=\"lista\">
+				<li style=\"width: 105px;\"><a href=\"files/pdf/mobil-92-iphone.pdf\">iPhone on test</a><div class=\"popup\"><img src=\"images/writer/thumbs/iphone.jpg\" alt=\"iPhone on test\" /></div></li>
+				<li style=\"width: 140px;\"><a href=\"files/pdf/mreza-nokia.pdf\">Giants' disproportion</a><div class=\"popup\"><img src=\"images/writer/thumbs/nokia.jpg\" alt=\"Giants' disproportion\" /></div></li>
+				<li style=\"width: 104px;\"><a href=\"files/pdf/mobil-75-usa.pdf\">Made in U.S.A.</a><div class=\"popup\"><img src=\"images/writer/thumbs/usa.jpg\" alt=\"Made in U.S.A.\" /></div></li>
+				<li style=\"width: 257px;\"><a href=\"files/pdf/mobil-37-stungun.pdf\">Stungun - this telephone is not for talking</a><div class=\"popup\"><img src=\"images/writer/thumbs/stungun.jpg\" alt=\"Stungun - this telephone is not for talking\" /></div></li>
+				<li style=\"width: 190px;\"><a href=\"files/pdf/mobil-40-41-alcatel.pdf\">Alcatel 535 - daltonism cured</a><div class=\"popup\"><img src=\"images/writer/thumbs/alcatel.jpg\" alt=\"Alcatel 535 - daltonism cured\" /></div></li>
+				<li style=\"width: 208px;\"><a href=\"files/pdf/mobil-37-microsoft.pdf\">Microsoft conquers new markets</a><div class=\"popup\"><img src=\"images/writer/thumbs/ms.jpg\" alt=\"Microsoft conquers new markets\" /></div></li>
+				<li style=\"width: 140px;\"><a href=\"files/pdf/mobil-40-41-treo.pdf\">A cell phone, finally!</a><div class=\"popup\"><img src=\"images/writer/thumbs/treo.jpg\" alt=\"A cell phone, finally!\" /></div> </li>
+				<li style=\"width: 201px;\"><a href=\"files/pdf/mobil-35-motorola.pdf\">Ambitious 20-year-old Motorola</a><div class=\"popup\"><img src=\"images/writer/thumbs/motorola.jpg\" alt=\"Ambitious 20-year-old Motorola\" /></div></li>
+	</ul>";
+			
+$developer['h1']="developer";
+$developer['p']="<p>Even in elementary school, Vanja Gavrić was fascinated by the world of programming and set out to learn Logo and QBasic. Over the years, he worked with C(++), <abbr title=\"(Extensible) Hyper Text Markup Language\">(X)HTML</abbr>, JavaScript (jQuery), <abbr title=\"Hypertext Preprocessor\">PHP</abbr>	&amp; MySQL and <abbr title=\"Extensible Markup Language\">XML</abbr> technologies. </p>
+			<p>He worked on several projects such as his own CMS, web shop, personal web-based task managers, web applications for iPhone, labor management application, etc.</p>
+			<p>Currently, he is mostly involved in native <a href=\"http://www.apple.com/ios/\" rel=\"external\">iOS</a> application development and exploring HTML5. Special field of interest represent semantic web, natural language processing and AI.</p>
+			<p>Here are some screenshots of his work.</p>
+
+			<ul class=\"portfolio\">
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/presto-eng.com.jpg\"><img src=\"images/developer/thumbs/presto-eng.com.jpg\" alt=\"presto-eng.com\" /></a><span><a rel=\"external\" href=\"http://www.presto-eng.com\">presto-eng.com/</a>HTML5, CSS3, JavaScript, PHP, RWD, Retina ready</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/fanattac.com.jpg\"><img src=\"images/developer/thumbs/fanattac.com.jpg\" alt=\"fanattac.com\" /></a><span><a rel=\"external\" href=\"http://www.fanattac.com\">fanattac.com/</a>HTML5, CSS3, JavaScript, PHP, Design (member of a team)</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/taxi-hodak.com.jpg\"><img src=\"images/developer/thumbs/taxi-hodak.com.jpg\" alt=\"taxi-hodak.com\" /></a><span><a rel=\"external\" href=\"http://www.taxi-hodak.com\">taxi-hodak.com/</a>HTML5, CSS3, JavaScript, PHP, Apache, Photography</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/igornjigrad.hr.jpg\"><img src=\"images/developer/thumbs/igornjigrad.hr.jpg\" alt=\"gornjigrad.hr/mobile\" /></a><span><a rel=\"external\" href=\"http://gornjigrad.hr/mobile\">gornjigrad.hr/mobile</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/maris.hr.jpg\"><img src=\"images/developer/thumbs/maris.hr.jpg\" alt=\"maris.hr\" /></a><span><a rel=\"external\" href=\"http://maris.hr/\">maris.hr/</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/realestate-cres.com.hr.jpg\"><img src=\"images/developer/thumbs/realestate-cres.com.hr.jpg\" alt=\"realestate-cres.com.hr\" /></a><span><a rel=\"external\" href=\"http://realestate-cres.com.hr/\">realestate-cres.com.hr/</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/villas-luigiluisa.com.jpg\"><img src=\"images/developer/thumbs/villas-luigiluisa.com.jpg\" alt=\"villas-luigiluisa.com\" /></a><span><a rel=\"external\" href=\"http://villas-luigiluisa.com/\">villas-luigiluisa.com/</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/primat-nekretnine.com.jpg\"><img src=\"images/developer/thumbs/primat-nekretnine.com.jpg\" alt=\"maris.hr\" /></a><span><a rel=\"external\" href=\"http://primat-nekretnine.com/\">primat-nekretnine.com/</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/vanja.gavric.org.jpg\"><img src=\"images/developer/thumbs/vanja.gavric.org.jpg\" alt=\"vanja.gavric.org\" /></a><span><a rel=\"external\" href=\"http://vanja.gavric.org/\">vanja.gavric.org/</a>Photoshop, HTML, CSS, JavaScript, PHP, Apache</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/kozul.hr.jpg\"><img src=\"images/developer/thumbs/kozul.hr.jpg\" alt=\"kozul.hr\" /></a><span><a href=\"#\">kozul.hr (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP, MySQL, Apache</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/euronek.hr.jpg\"><img src=\"images/developer/thumbs/euronek.hr.jpg\" alt=\"euronek.hr\" /></a><span><a rel=\"external\" href=\"http://www.euronek.hr\">euronek.hr</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/men-ars.hr.jpg\"><img src=\"images/developer/thumbs/men-ars.hr.jpg\" alt=\"men-ars.hr\" /></a><span><a rel=\"external\" href=\"http://www.men-ars.hr\">men-ars.hr</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/realiscentar.hr.jpg\"><img src=\"images/developer/thumbs/realiscentar.hr.jpg\" alt=\"realiscentar.hr\" /></a><span><a rel=\"external\" href=\"http://www.realiscentar.hr\">realiscentar.hr</a>HTML, CSS, JavaScript</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/opt.jpg\"><img  src=\"images/developer/thumbs/opt.jpg\" alt=\"vanja.gavric.org/opt\" /></a> <span><a rel=\"external\" href=\"http://vanja.gavric.org/opt/\">vanja.gavric.org/opt/</a>HTML, JavaScript, PHP</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/igorvlajnic.com.jpg\"><img  src=\"images/developer/thumbs/igorvlajnic.com.jpg\" alt=\"igorvlajnic.com (offline)\" /></a> <span><a href=\"#\">igorvlajnic.com (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/rijeka.kbf.hr.jpg\"><img  src=\"images/developer/thumbs/rijeka.kbf.hr.jpg\" alt=\"rijeka.kbf.hr\" /></a><span><a rel=\"external\" href=\"http://www.rijeka.kbf.hr\">www.rijeka.kbf.hr</a>Photoshop, HTML, CSS, JavaScript, PHP, MySQL</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/merz-mladi.org.jpg\"><img  src=\"images/developer/thumbs/merz-mladi.org.jpg\" alt=\"merz-mladi.org (offline)\" /></a><span><a href=\"#\">merz-mladi.org (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP</span></li>
+						<li><a rel=\"work\" class=\"group\" href=\"images/developer/the-abbey.org.jpg\"><img  src=\"images/developer/thumbs/the-abbey.org.jpg\" alt=\"the-abbey.org (offline)\" /></a><span><a href=\"#\">the-abbey.org (<i>offline</i>)</a>Photoshop, HTML, CSS, JavaScript, PHP, MySQL, Apache</span></li>
+			</ul>\n";
+
+			
+$photographer['h1']="photographer";
+$photographer['p']="<p>Vanja has been in love with photography for years, but really got serious about it in 2007 when he bought a digital <abbr title=\"single-lens reflex camera\">SLR</abbr>. Vanja usually shoots Cityscape, Landscape, Architecture and Nature shots, but has shot almost everything in between at one time or another.</p>
+			<p>He currently shoots with Canon system (30D and 7D) and his favorite lens is Samyang 8 mm f/3.5 Aspherical IF MC Fish-eye. Photo editing tool of his choice is <a rel=\"external\" href=\"http://www.apple.com/aperture/\">Apple Aperture</a>.</p>
+			<ul class=\"polaroids\"><li class=\"dummy\">dummy</li></ul>
+			<div class=\"cb\"></div>
+			<p>Please contact Vanja Gavrić if you are interested in licensing or using his images.</p>";
+			
+$form['title']="Do you want to hire me? Request a resume/CV? Perhaps send me a hate mail? Maybe even a love note? Feel free to do so.";			
+$form['name']="Name*";
+$form['submit']="Submit";
+$form['email']="Email*";			
+$form['url']="URL";			
+$form['message']="Message*";			
+$form['required']="This field is required.";			
+$form['tooshortname']="Name is too short.";			
+$form['notvalidemail']="Not a valid email.";			
+$form['notvalidurl']="Not a valid URL.";			
+$form['tooshortmessage']="Your message is too short.";			
+$form['js_h1']="Contact Form Submitted!";			
+$form['js_p']="I will be in touch soon.";					
+?>

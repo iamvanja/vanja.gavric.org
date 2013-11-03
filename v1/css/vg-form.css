@@ -1,0 +1,191 @@
+
+#contact_form
+{
+	width: 600px;
+	//height: 370px;
+	color: #888;
+	text-shadow: #fff 0 1px 0;
+	font: 14px/16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/* font: 14px/17px "Lucida Grande", Verdana, sans-serif; */
+
+	/* font: 12px/16px "Helvetica Neue", Helvetica, Arial, sans-serif; */
+/* 	display:none; */
+border:1px solid #afafaf;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+-khtml-border-radius:6px;
+border-radius: 6px;
+background:#fff;
+padding-bottom:5px;
+padding-top: 10px;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.faded { color:#999; }
+
+#contact 
+{
+	width: 600px;
+	//height: 370px;
+}
+
+#contact p
+{
+	margin:	5px 10px 15px 10px;
+	text-shadow: #fff 0 1px 0;
+	font: 14px/16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #555;
+}
+
+#contact p.form-title { font-size:16px; } 
+
+#contact p.text-field 
+{
+	overflow: hidden;
+	width: 500px;
+	height: 33px;
+	background: url(../images/kontakt/input-back.png) 4.5em 0 no-repeat;
+}
+
+#contact label 
+{
+	width: 4em;
+	font-size: 16px;
+	display: block;
+	float: left;
+	padding-top: 4px;
+	color: #666;
+	text-shadow: #fff 0 1px 0;
+}
+
+#contact p.text-field .error, #contact p.textarea .error 
+{
+	width: 160px;
+	font-size: 12px;
+	text-indent: 5px;
+	margin: auto 0;
+	color:red;
+}
+
+#contact p.text-field input 
+{
+	float: left;
+	height: 26px;
+	width: 217px;
+	background: none;
+	padding: 4px 6px 0 6px;
+	border: 0;
+}
+
+
+
+#contact .textarea label 
+{
+	float: left;
+	padding-right: 5px;
+
+}
+
+#contact .textarea 
+{
+	background: url(../images/kontakt/textarea.png) left bottom no-repeat;
+}
+
+#contact textarea 
+{
+	margin-top: 10px;
+	height: 90px;
+	width: 560px;
+	background: none;
+	border: 0;
+	font-family: arial;
+	font-size: 14px;
+	padding: 10px;
+	resize:none;
+}
+
+#message
+{
+	width: 600px;
+	height: 270px;
+	padding-top: 100px;
+	text-align: center;
+}
+#message h2	
+{ 
+	font-size:150%; 
+	text-align: center; 	
+	color: #888; 
+	text-shadow: #fff 0 1px 0; 
+}
+#message p						
+{ 	
+	color: #888; 
+	text-shadow: #fff 0 1px 0; 
+	font-weight:bold;
+	margin:6px 0px; 
+	text-align: center; 
+}
+	
+#checkmark { margin: 0 auto; }
+
+	
+.button 
+{
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	float: right; 
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: normal normal bold 15px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover 
+{
+	text-decoration: none;
+}
+.button:active 
+{
+	position: relative;
+	top: 1px;
+}
+
+
+/* green */
+.button.green 
+{
+	color: #e8f0de;
+	border: solid 1px #538312;
+	background: #64991e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+	background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+.button.green:hover 
+{
+	background: #538018;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+	background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+.button.green:active 
+{
+	color: #a9c08c;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+	background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+}	
+	
