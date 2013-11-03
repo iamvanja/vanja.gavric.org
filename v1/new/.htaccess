@@ -1,6 +1,6 @@
 AuthType Basic
 AuthName "Early beta stuff :)"
-AuthUserFile /home/vanja/public_html/vanja.gavric.org/new/.htpasswd
+AuthUserFile /home/vanja/public_html/vanja.gavric.org/v1/new/.htpasswd
 Require valid-user
 
 DirectoryIndex index.php index.html
