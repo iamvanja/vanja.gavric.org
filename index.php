@@ -677,10 +677,10 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
         <script src="assets/js/vendor/skrollr.js"></script>
         <script src="assets/js/main.js"></script>
         <script>
-        //     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        //     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        //     g.src='//www.google-analytics.com/ga.js';
-        //     s.parentNode.insertBefore(g,s)}(document,'script'));
+            var _gaq=[['_setAccount','UA-24663272-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
     </body>
 </html>
