@@ -1,4 +1,17 @@
-/*
+/*!
+  |--------------------------------------------------------------------------
+  | Vanja Gavric personal site JS
+  |--------------------------------------------------------------------------
+  | #########################################################################
+  | Author    : Vanja Gavric <vanja@gavric.org>
+  | Project   : Vanja Gavric personal site
+  | Version   : 1.0
+  | #########################################################################
+ */
+
+
+
+/*!
  * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
  *
  * Uses the built in easing capabilities added In jQuery 1.1
