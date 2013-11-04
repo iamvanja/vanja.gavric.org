@@ -176,13 +176,14 @@ h1, h2, h3, h4, h5, h6 {
 
     @include background(radial-gradient(ellipse farthest-side at -10% 90%, rgba($asphalt, 0.9) 20%, rgba($asphalt,0)),
                         radial-gradient(ellipse farthest-side at 100% 75%, #fff, rgba(#fff,0) 80%));
-    background-color:lighten($asphalt,34%);
+    // background-color:lighten($asphalt,34%);
+    background-color:lighten($green, 5%);
 
 
 // @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), 
 //                     linear-gradient(108deg, #E5E9BF 10%, #00396F 90%));
 // @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), 
-                    // linear-gradient(108deg, #26D0CE, #1A2980 90%));
+//                     linear-gradient(108deg, #26D0CE, #1A2980 90%));
 
 // @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), linear-gradient(108deg, #E0DA81, #E0A681 10%, #0F1B58 90%));
     // linear-gradient(left bottom, #fff 0%, $asphalt 100%)
@@ -190,6 +191,15 @@ h1, h2, h3, h4, h5, h6 {
   //             radial-gradient(ellipse farthest-side at 100% 75%, #fff, rgba(#fff,0) 80%),
   //             radial-gradient(ellipse farthest-side at 85% 60%, lighten($asphalt,30%) 10%, rgba(lighten($asphalt,30%),0)), /* 787F8A */
   //             radial-gradient(circle closest-corner at 50% 0, #fff, #afb4bc));
+
+
+
+// iPad Air
+// needs latest Compass, add '@import "compass"' to your scss
+// background-color: #1e488f; // Old browsers
+// @include filter-gradient(#1e488f, #91d8b8, horizontal); // IE6-9 fallback on horizontal gradient
+// @include background-image(linear-gradient(left top,  #1e488f 0%,#8bb6ee 68%,#91d8b8 100%));
+
 
     .abs-centered {
         position:absolute;
