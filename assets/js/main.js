@@ -134,11 +134,19 @@
                 left:'-200%'
             }, function(){
                 $loader.remove();
-                $('body').addClass('delayedAnimateStuff');
+                var androidVersion = App.helpers.getAndroidVersion();
+                if (androidVersion === false || androidVersion >= 4) {
+                    $('body').addClass('delayedAnimateStuff');
+                }
             });
         });
     };
-
+    App.helpers.getAndroidVersion = function() {
+        if( navigator.userAgent.indexOf("Android") >= 0 ) {
+          return parseFloat(ua.slice(ua.indexOf("Android")+8));
+        }
+        return false;
+    };
 
 
     // essentially a document ready init

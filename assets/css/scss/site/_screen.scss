@@ -118,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
         position:relative;
         z-index:1;
         @include transition(all 0.3s linear);
+        -webkit-backface-visibility: hidden;
         margin-left:-100%;
         // border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
         // border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
@@ -506,6 +507,7 @@ html.skrollr, .skrollr body {
             margin-bottom:emCalc(2);
             margin-right:emCalc(2);
             @include transition(all 0.3s ease-in);
+            -webkit-backface-visibility: hidden;
             &.front-end {
                 background-color:$skin;
             }
@@ -703,6 +705,7 @@ html.skrollr, .skrollr body {
                 a {
                     display: inline-block;
                     @include transition(all 0.3s ease-in);
+                    -webkit-backface-visibility: hidden;
                     &:hover {
                         @include transform(scale(1.2));
                     }
@@ -747,6 +750,7 @@ html.skrollr, .skrollr body {
             line-height: 1.2;
             letter-spacing: -1px;
             @include transition(all 0.15s ease);
+            -webkit-backface-visibility: hidden;
             &:hover {
                 .circle {
                     &:after,
@@ -941,6 +945,7 @@ html.skrollr, .skrollr body {
     &.border-fill {
         border-width: emCalc(50);
         @include transition(border 0.3s 0.3s);
+        -webkit-backface-visibility: hidden;
         > div {
             &:first-child {
                 width: 100%;
