@@ -589,6 +589,7 @@ html.skrollr, .skrollr body {
         background-repeat:no-repeat;
         background-position: 50% 0;
         @include background-size(cover);
+        background-attachment: fixed;
     }
     .photography .icon {
         display:none;
