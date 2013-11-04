@@ -134,10 +134,10 @@
                 left:'-200%'
             }, function(){
                 $loader.remove();
-                var androidVersion = App.helpers.getAndroidVersion();
-                if (androidVersion === false || androidVersion >= 4) {
-                    $('body').addClass('delayedAnimateStuff');
-                }
+                // var androidVersion = App.helpers.getAndroidVersion();
+                // if (androidVersion === false || androidVersion >= 4) {
+                    App.elements.$body.addClass('delayedAnimateStuff');
+                // }
             });
         });
     };
@@ -155,7 +155,7 @@
     // photos
     App.elements.$backstretchWrap.backstretch([
         '/assets/images/photos/autumn-in-zrinjevac.jpg', /* Zrinjevac autumn */
-        '/assets/images/photos/stuck-in-traffic.jpg', /* Stuck in traffic */
+        // '/assets/images/photos/stuck-in-traffic.jpg', /* Stuck in traffic */
         '/assets/images/photos/double-rainbow-in-paris.jpg', /* Paris double rainbow */
         '/assets/images/photos/hana.jpg', /* Hana trava */
         // '/assets/images/photos/adriatic-sea.jpg', /* Adriatic sea */
