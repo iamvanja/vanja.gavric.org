@@ -237,6 +237,11 @@
         }
     });
 
+    // on load navigate to the page fragment
+    if (window.location.hash) {
+        // alert(window.location.hash);
+        $('a[href="'+ window.location.hash +'"]').trigger('click');
+    }
 
     // init all on window ready
     App.elements.$window.on('load resize', function(){
