@@ -175,11 +175,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-    @include background(radial-gradient(ellipse farthest-side at -10% 90%, rgba($asphalt, 0.9) 20%, rgba($asphalt,0)),
-                        radial-gradient(ellipse farthest-side at 100% 75%, #fff, rgba(#fff,0) 80%));
-    // background-color:lighten($asphalt,34%);
-    background-color:lighten($green, 5%);
-
+    @include background(radial-gradient(ellipse farthest-side at -10% 90%, rgba($green, 0.9) 20%, rgba($green,0.1)),
+                        radial-gradient(ellipse farthest-side at 100% 75%, $purple, rgba($purple,0) 80%));
+    background-color:darken($blue,4%);
+    // background-color:lighten($green,34%);
+    // background-color:darken(#00C86A, 5%);
+// @include background(linear-gradient(147deg, #009DEB 1%, #00C86A 75%) repeat scroll 0 0 rgba(0, 0, 0, 0));
 
 // @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), 
 //                     linear-gradient(108deg, #E5E9BF 10%, #00396F 90%));
@@ -196,7 +197,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 // iPad Air
-// needs latest Compass, add '@import "compass"' to your scss
 // background-color: #1e488f; // Old browsers
 // @include filter-gradient(#1e488f, #91d8b8, horizontal); // IE6-9 fallback on horizontal gradient
 // @include background-image(linear-gradient(left top,  #1e488f 0%,#8bb6ee 68%,#91d8b8 100%));

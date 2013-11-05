@@ -162,8 +162,8 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
 
 
         <div id="skrollr-body">
-            <div id="content" class="content">
-                <section class="developer" id="developer" role="region" aria-labelledby="main-title-dev">
+            <section id="content" class="content">
+                <article class="developer" id="developer" role="article" aria-labelledby="main-title-dev">
                     <div class="row">
                         <div class="large-12 columns">
                             <h2 class="main-title-dev no-margin-bottom" id="main-title-dev"
@@ -331,9 +331,9 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                             <?= $lang[$l]['developerText'] ?>
                         </div>
                     </div>
-                </section> <!-- end #developer -->
+                </article> <!-- end #developer -->
 
-                <section class="photography" id="photography" role="section" aria-labelledby="main-title-photo">
+                <article class="photography" id="photography" role="article" aria-labelledby="main-title-photo">
                     <div class="row">
                         <div class="large-12 columns">
                             <h2 id="main-title-photo"
@@ -361,9 +361,9 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                     data-top-bottom="transform:translate3d(0px,0%),0px">
                         <!-- empty -->
                     </div>
-                </section> <!-- end #photography -->
+                </article> <!-- end #photography -->
 
-                <section class="writing" id="writing" role="section" aria-labelledby="main-title-writing">
+                <article class="writing" id="writing" role="article" aria-labelledby="main-title-writing">
                     <div class="row">
                         <div class="large-12 columns">
                             <div data-anchor-target="#writing" 
@@ -442,9 +442,9 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                             </div>
                         </div>
                     </div>
-                </section> <!-- end #writing -->
+                </article> <!-- end #writing -->
 
-                <section class="contact" id="contact" role="section" aria-labelledby="main-title-contact">
+                <article class="contact" id="contact" role="article" aria-labelledby="main-title-contact">
                     <div class="row">
                         <div class="large-12 columns">
                             <h1 data-anchor-target="#contact" id="main-title-contact"
@@ -591,8 +591,8 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                             </ul>
                         </div>
                     </div>
-                </section> <!-- end #contact -->
-            </div> <!-- end #content -->
+                </article> <!-- end #contact -->
+            </section> <!-- end #content -->
 
             <footer class="footer" id="footer" role="contentinfo">
                 <div class="footer-wrap">
