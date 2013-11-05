@@ -239,11 +239,6 @@
         }
     });
 
-    // on load navigate to the page fragment
-    if (window.location.hash) {
-        // alert(window.location.hash);
-        $('a[href="'+ window.location.hash +'"]').trigger('click');
-    }
 
     // init all on window ready
     App.elements.$window.on('load resize', function(){
@@ -253,6 +248,11 @@
     // remove loader once everything is set up
     App.elements.$window.on('load', function(){
         App.helpers.removeLoader();
+        // on load navigate to the page fragment
+        if (window.location.hash) {
+            // alert(window.location.hash);
+            $('a[href="'+ window.location.hash +'"]').trigger('click');
+        }
 
         // once the loader is removed, add more photos to backstretch
         var backstretchInstance = App.elements.$backstretchWrap.data('backstretch');
