@@ -155,7 +155,7 @@
     // photos
     App.elements.$backstretchWrap.backstretch([
         '/assets/images/photos/autumn-in-zrinjevac.jpg', /* Zrinjevac autumn */
-        '/assets/images/photos/stuck-in-traffic.jpg', /* Stuck in traffic */
+        '/assets/images/photos/adriatic-sea.jpg'
         // '/assets/images/photos/coming-down-on-me.jpg', /* Coming down on me */
     // 'http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg', /* Paris opera */
     // 'http://farm9.staticflickr.com/8097/8442056306_0c4c82c808_o.jpg', /* London Big Ben */
@@ -259,7 +259,7 @@
         backstretchInstance.images.push(
             '/assets/images/photos/double-rainbow-in-paris.jpg',
             '/assets/images/photos/hana.jpg',
-            '/assets/images/photos/adriatic-sea.jpg'
+            '/assets/images/photos/stuck-in-traffic.jpg'
         );
     });
 

@@ -602,14 +602,14 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
             <footer class="footer" id="footer" role="contentinfo">
                 <div class="footer-wrap">
                     <div class="row">
-                        <div class="large-10 small-7 columns left">
+                        <div class="large-9 small-7 columns left">
                             <p>
                                 <?= $lang[$l]['handmade'] ?> :)
                             </p>
                         </div>
-                        <div class="large-2 small-5 columns right">
+                        <div class="large-3 small-5 columns right">
                             <p>
-                                <span class="hide-for-small"><?= $lang[$l]['siteBy'] ?></span> <a href="http://vanja.gavric.org" title="Vanja Gavrić web"><span>vanja</span>.gavric</a> &copy; 
+                                &copy; <a href="http://vanja.gavric.org" title="Vanja Gavrić web"><span>vanja</span>.gavric</a>
                             </p>
                             <p class="smaller">
                                 <a href="/v1">v1 site</a>
