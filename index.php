@@ -672,7 +672,7 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                 $loader.find('h1').fadeOut(function(){
                     $(this).html(alternativeText).fadeIn();
                 });
-            }, 8000);
+            }, 10000);
 
         });
         </script>
