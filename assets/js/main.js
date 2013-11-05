@@ -205,8 +205,10 @@
             parent = $this.parent('li'),
             isMobile = $('html').hasClass('skrollr-mobile');
 
-        if (App.variables.skrollrInstance !== false && isMobile && hash === '#top'){
-            App.variables.skrollrInstance.setScrollTop(offset);
+        if (isMobile) {
+            if (App.variables.skrollrInstance !== false && hash === '#top'){
+                App.variables.skrollrInstance.setScrollTop(offset);
+            }
             return;
         }
 
