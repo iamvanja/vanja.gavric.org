@@ -37,9 +37,9 @@
     App.elements.$backstretchWrap = $('#photography .backstretch-wrap');
     App.elements.$backToTop = $('#back-to-top');
     
-    App.variables.transformClass = Modernizr.cssfilters ? 'blurred' : 'grayscale';
-    App.variables.isSkrollrAllowed = (Modernizr.csstransforms3d &&
-                                    !App.elements.$body.hasClass('lt-ie9')) ? true : false;
+    // App.variables.transformClass = Modernizr.cssfilters ? 'blurred' : 'grayscale';
+    App.variables.transformClass = 'grayscale';
+    App.variables.isSkrollrAllowed = Modernizr.csstransforms3d;
     App.variables.skrollrInstance = false;
     App.variables.skrollInitObj = {
         forceHeight : false,
