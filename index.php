@@ -152,10 +152,12 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                 </div>
             </div>
             <div class="scroll-down fadeIn animation-1s animationDelay-4s">
-                <span>
-                    <?= $lang[$l]['scrollDown'] ?> 
-                </span>
-                <i class="icon-down-circled"></i>
+                <a href="#developer">
+                    <span>
+                        <?= $lang[$l]['scrollDown'] ?> 
+                    </span>
+                    <i class="icon-down-circled"></i>
+                </a>
             </div>
         </header>
         <main role="main">
@@ -164,6 +166,11 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
         <div id="skrollr-body">
             <section id="content" class="content">
                 <article class="developer" id="developer" role="article" aria-labelledby="main-title-dev">
+                    <div data-anchor-target="#developer"
+                        data-bottom-top="transform:translate3d(0px,40%,0px);opacity:0;" 
+                        data-top="transform:translate3d(0px,0%,0px);opacity:1;">
+                        
+                    
                     <div class="row">
                         <div class="large-12 columns">
                             <h2 class="main-title-dev no-margin-bottom" id="main-title-dev"
@@ -182,9 +189,7 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                     </div>
 
                     <div class="row">
-                        <div class="small-12 large-8 large-centered columns" data-anchor-target="#developer"
-                        data-bottom-top="transform:translate3d(0px,-20%,0px);opacity:0;" 
-                        data-top="transform:translate3d(0px,0%,0px);opacity:1;">
+                        <div class="small-12 large-8 large-centered columns">
                             <h3>
                                 <?= $lang[$l]['skills'] ?>
                             </h3>
@@ -260,9 +265,9 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                         style="width:60%"
                                         data-anchor-target="#developer"
                                         data-bottom-top="width:0%;" 
-                                        data-20-top="width:60%;">
+                                        data-20-top="width:50%;">
                                             <span class="category">
-                                                <?= $lang[$l]['design'] ?> 60%
+                                                <?= $lang[$l]['design'] ?> 50%
                                             </span>
                                         </span>
                                     </div>
@@ -271,10 +276,10 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                         </div>
                         <hr>
                     </div>
-
+</div>
 
                     <div class="technologies-wrap" data-anchor-target="#skills"
-                    data-bottom-top="transform:translate3d(0px,-50%,0px);opacity:0;" 
+                    data-bottom-top="transform:translate3d(0px,-10%,0px);opacity:0;" 
                     data-center-bottom="transform:translate3d(0px,0%,0px);opacity:1;">
                         <div class="row experience">
                             <div class="large-12 columns">
@@ -458,18 +463,18 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                 <ul class="contact-circles large-block-grid-6 small-block-grid-3"
                                 data-anchor-target="#contact" 
                                 data-bottom-top="transform:translate3d(130%,0px,0px)"
-                                data-bottom="transform:translate3d(0%,0px,0px)">
+                                data-100-bottom="transform:translate3d(0%,0px,0px)">
                                     <li class="contact-circle">
                                         <a href="https://twitter.com/iamvanja">
                                             <span class="circle twitter"
                                             data-anchor-target="#contact" 
                                             data-bottom-top="transform:rotate(1080deg)"
-                                            data-bottom="transform:rotate(0deg)">
+                                            data-100-bottom="transform:rotate(0deg)">
                                                 <i class="icon-twitter-1"></i>
                                             </span>
                                             <span class="text" data-anchor-target="#contact" 
-                                            data-40-bottom="opacity:0"
-                                            data-bottom="opacity:1">
+                                            data-140-bottom="opacity:0"
+                                            data-100-bottom="opacity:1">
                                                 Twitter
                                             </span>
                                         </a>
@@ -479,12 +484,12 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                             <span class="circle facebook"
                                             data-anchor-target="#contact" 
                                             data-bottom-top="transform:rotate(1020deg)"
-                                            data-bottom="transform:rotate(0deg)">
+                                            data-100-bottom="transform:rotate(0deg)">
                                                 <i class="icon-facebook-1"></i>
                                             </span>
                                             <span class="text" data-anchor-target="#contact" 
-                                            data-40-bottom="opacity:0"
-                                            data-bottom="opacity:1">
+                                            data-140-bottom="opacity:0"
+                                            data-100-bottom="opacity:1">
                                                 Facebook
                                             </span>
                                         </a>
@@ -494,12 +499,12 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                             <span class="circle linkedin"
                                             data-anchor-target="#contact" 
                                             data-bottom-top="transform:rotate(960deg)"
-                                            data-bottom="transform:rotate(0deg)">
+                                            data-100-bottom="transform:rotate(0deg)">
                                                 <i class="icon-linkedin"></i>
                                             </span>
                                             <span class="text" data-anchor-target="#contact" 
-                                            data-40-bottom="opacity:0"
-                                            data-bottom="opacity:1">
+                                            data-140-bottom="opacity:0"
+                                            data-100-bottom="opacity:1">
                                                 LinkedIn
                                             </span>
                                         </a>
@@ -509,12 +514,12 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                             <span class="circle github"
                                             data-anchor-target="#contact" 
                                             data-bottom-top="transform:rotate(900deg)"
-                                            data-bottom="transform:rotate(0deg)">
+                                            data-100-bottom="transform:rotate(0deg)">
                                                 <i class="icon-github-circled"></i>
                                             </span>
                                             <span class="text" data-anchor-target="#contact" 
-                                            data-40-bottom="opacity:0"
-                                            data-bottom="opacity:1">
+                                            data-140-bottom="opacity:0"
+                                            data-100-bottom="opacity:1">
                                                 GitHub
                                             </span>
                                         </a>
@@ -524,12 +529,12 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                             <span class="circle flickr"
                                             data-anchor-target="#contact" 
                                             data-bottom-top="transform:rotate(840deg)"
-                                            data-bottom="transform:rotate(0deg)">
+                                            data-100-bottom="transform:rotate(0deg)">
                                                 <i class="icon-flickr-1"></i>
                                             </span>
                                             <span class="text" data-anchor-target="#contact" 
-                                            data-40-bottom="opacity:0"
-                                            data-bottom="opacity:1">
+                                            data-140-bottom="opacity:0"
+                                            data-100-bottom="opacity:1">
                                                 Flickr
                                             </span>
                                         </a>
@@ -539,12 +544,12 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                             <span class="circle fivehundredpx"
                                             data-anchor-target="#contact" 
                                             data-bottom-top="transform:rotate(780deg)"
-                                            data-bottom="transform:rotate(0deg)">
+                                            data-100-bottom="transform:rotate(0deg)">
                                                 <i class="icon-fivehundredpx"></i>
                                             </span>
                                             <span class="text" data-anchor-target="#contact" 
-                                            data-40-bottom="opacity:0"
-                                            data-bottom="opacity:1">
+                                            data-140-bottom="opacity:0"
+                                            data-100-bottom="opacity:1">
                                                 500px
                                             </span>
                                         </a>
@@ -556,18 +561,18 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                             <ul class="contact-circles small-block-grid-2"
                             data-anchor-target="#contact" 
                             data-bottom-top="transform:translate3d(-130%,0px,0px)"
-                            data-bottom="transform:translate3d(0%,0px,0px)">
+                            data-50-bottom="transform:translate3d(0%,0px,0px)">
                                 <li class="contact-circle" id="contact-circle">
                                     <a href="#">
                                         <span class="circle mail"
                                         data-anchor-target="#contact" 
                                         data-bottom-top="transform:rotate(-930deg)"
-                                        data-bottom="transform:rotate(0deg)">
+                                        data-50-bottom="transform:rotate(0deg)">
                                             <i class="icon-mail"></i>
                                         </span>
                                         <span class="text" data-anchor-target="#contact" 
-                                        data-10-bottom="opacity:0"
-                                        data-bottom="opacity:1">
+                                        data-50-bottom="opacity:0"
+                                        data-20-bottom="opacity:1">
                                             <?= $lang[$l]['dropEmail'] ?>
                                             <noscript>&#118;&#97;&#110;&#106;&#97;&#91;&#97;&#116;&#93;&#103;&#97;&#118;&#114;&#105;&#99;&#91;&#100;&#111;&#116;&#93;&#111;&#114;&#103;</noscript>
                                         </span>
@@ -578,12 +583,12 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                         <span class="circle skype"
                                         data-anchor-target="#contact" 
                                         data-bottom-top="transform:rotate(-720deg)"
-                                        data-bottom="transform:rotate(0deg)">
+                                        data-50-bottom="transform:rotate(0deg)">
                                             <i class="icon-skype"></i>
                                         </span>
                                         <span class="text" data-anchor-target="#contact" 
-                                        data-10-bottom="opacity:0"
-                                        data-bottom="opacity:1">
+                                        data-50-bottom="opacity:0"
+                                        data-20-bottom="opacity:1">
                                             <?= $lang[$l]['callSkype'] ?>
                                         </span>
                                     </a>
@@ -604,10 +609,10 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                         </div>
                         <div class="large-2 small-5 columns right">
                             <p>
-                                <?= $lang[$l]['siteBy'] ?> <a href="http://vanja.gavric.org" title="Vanja Gavrić web"><span>vanja</span>.gavric</a> &copy; 
+                                <span class="hide-for-small"><?= $lang[$l]['siteBy'] ?></span> <a href="http://vanja.gavric.org" title="Vanja Gavrić web"><span>vanja</span>.gavric</a> &copy; 
                             </p>
-                            <p>
-                                <a href="/v1"><?= $lang[$l]['old'] ?> v1 site</a>
+                            <p class="smaller">
+                                <a href="/v1">v1 site</a>
                             </p>
                         </div>
                     </div>
