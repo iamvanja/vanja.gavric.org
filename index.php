@@ -341,10 +341,7 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                 <article class="photography" id="photography" role="article" aria-labelledby="main-title-photo">
                     <div class="row">
                         <div class="large-12 columns">
-                            <h2 id="main-title-photo"
-                            data-anchor-target="#photography" 
-                            data-bottom="opacity:0.6" 
-                            data-50-top="opacity:1">
+                            <h2 id="main-title-photo">
                                 <?= $lang[$l]['likePhotos'] ?>
                             </h2>
 
