@@ -266,6 +266,9 @@
             $(this).attr('src', $(this).attr('data-lazysrc'));
         });
 
+        if (App.variables.skrollrInstance !== false) {
+            App.variables.skrollrInstance.refresh();
+        }
     });
 
 }());
