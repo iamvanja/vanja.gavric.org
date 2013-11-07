@@ -388,56 +388,80 @@ setcookie('language', $l, time() + (86400 * 21)); // 86400 = 1 day
                                     data-bottom-top="transform:translate3d(0px,-60px,0px);"
                                     data-top="transform:translate3d(0px,3px,0px);">
                                         <a href="assets/downloads/pdf/mobil-92-iphone.pdf">
-                                            <img src="assets/images/articles/iphone.jpg" alt="<?= $lang[$l]['articleiPhone'] ?>" height="160" width="117">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/iphone.jpg" alt="<?= $lang[$l]['articleiPhone'] ?>" height="160" width="117">
+                                            <noscript>
+                                                <img src="assets/images/articles/iphone.jpg" alt="<?= $lang[$l]['articleiPhone'] ?>" height="160" width="117">
+                                            </noscript>
                                         </a>
                                     </li>
                                     <li data-anchor-target="#writing" 
                                     data-bottom-top="transform:translate3d(0px,-30px,0px);"
                                     data-top="transform:translate3d(0px,10p,0px)x;">
                                         <a href="assets/downloads/pdf/mobil-35-motorola.pdf">
-                                            <img src="assets/images/articles/motorola.jpg" alt="<?= $lang[$l]['articleMotorola'] ?>" height="160" width="119">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/motorola.jpg" alt="<?= $lang[$l]['articleMotorola'] ?>" height="160" width="119">
+                                            <noscript>
+                                                <img src="assets/images/articles/motorola.jpg" alt="<?= $lang[$l]['articleMotorola'] ?>" width="119" height="160">
+                                            </noscript>
                                         </a>
                                     </li>
                                     <li data-anchor-target="#writing" 
                                     data-bottom-top="transform:translate3d(0px,-80px,0px);"
                                     data-top="transform:translate3d(0px,0px,0px);">
                                         <a href="assets/downloads/pdf/mobil-37-microsoft.pdf">
-                                            <img src="assets/images/articles/ms.jpg" alt="<?= $lang[$l]['articleMs'] ?>" height="160" width="120">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/ms.jpg" alt="<?= $lang[$l]['articleMs'] ?>" height="160" width="120">
+                                            <noscript>
+                                                <img src="assets/images/articles/ms.jpg" alt="<?= $lang[$l]['articleMs'] ?>" width="120" height="160">
+                                            </noscript>
                                         </a>
                                     </li>
                                     <li data-anchor-target="#writing" 
                                     data-bottom-top="transform:translate3d(0px,-30px,0px);"
                                     data-top="transform:translate3d(0px,4px,0px);">
                                         <a href="assets/downloads/pdf/mreza-nokia.pdf">
-                                            <img src="assets/images/articles/nokia.jpg" alt="<?= $lang[$l]['articleNokia'] ?>" height="160" width="114">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/nokia.jpg" alt="<?= $lang[$l]['articleNokia'] ?>" height="160" width="114">
+                                            <noscript>
+                                                <img src="assets/images/articles/nokia.jpg" alt="<?= $lang[$l]['articleNokia'] ?>" width="114" height="160">
+                                            </noscript>
                                         </a>
                                     </li>
                                     <li data-anchor-target="#writing" 
                                     data-bottom-top="transform:translate3d(0px,60px,0px);"
                                     data-top="transform:translate3d(0px,3px,0px);">
                                         <a href="assets/downloads/pdf/mobil-37-stungun.pdf">
-                                            <img src="assets/images/articles/stungun.jpg" alt="<?= $lang[$l]['articleStungun'] ?>" height="160" width="118">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/stungun.jpg" alt="<?= $lang[$l]['articleStungun'] ?>" height="160" width="118">
+                                            <noscript>
+                                                <img src="assets/images/articles/stungun.jpg" alt="<?= $lang[$l]['articleStungun'] ?>" width="118" height="160">
+                                            </noscript>
                                         </a>
                                     </li>
                                     <li data-anchor-target="#writing" 
                                     data-bottom-top="transform:translate3d(0px,60px,0px);"
                                     data-top="transform:translate3d(0px,5px,0px);">
                                         <a href="assets/downloads/pdf/mobil-40-41-treo.pdf">
-                                            <img src="assets/images/articles/treo.jpg" alt="<?= $lang[$l]['articleTreo'] ?>" height="160" width="120">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/treo.jpg" alt="<?= $lang[$l]['articleTreo'] ?>" height="160" width="120">
+                                            <noscript>
+                                                <img src="assets/images/articles/treo.jpg" alt="<?= $lang[$l]['articleTreo'] ?>" width="120" height="160">
+                                            </noscript>
                                         </a>
                                     </li>
                                     <li data-anchor-target="#writing" 
                                     data-bottom-top="transform:translate3d(0px,80px,0px);"
                                     data-top="transform:translate3d(0px,0px,0px);">
                                         <a href="assets/downloads/pdf/mobil-75-usa.pdf">
-                                            <img src="assets/images/articles/usa.jpg" alt="<?= $lang[$l]['articleUSA'] ?>" height="160" width="118">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/usa.jpg" alt="<?= $lang[$l]['articleUSA'] ?>" height="160" width="118">
+                                            <noscript>
+                                                <img src="assets/images/articles/usa.jpg" alt="<?= $lang[$l]['articleUSA'] ?>" width="118" height="160">
+                                            </noscript>
                                         </a>
                                     </li>
                                     <li data-anchor-target="#writing" 
                                     data-bottom-top="transform:translate3d(0px,30px,0px);"
                                     data-top="transform:translate3d(0px,3px,0px);">
                                         <a href="assets/downloads/pdf/mobil-40-41-alcatel.pdf">
-                                            <img src="assets/images/articles/alcatel.jpg" alt="<?= $lang[$l]['articleAlcatel'] ?>" height="160" width="119">
+                                            <img class="lazy" src="assets/images/pixel.gif" data-lazysrc="assets/images/articles/alcatel.jpg" alt="<?= $lang[$l]['articleAlcatel'] ?>" height="160" width="119">
+                                            <noscript>
+                                                <img src="assets/images/articles/alcatel.jpg" alt="<?= $lang[$l]['articleAlcatel'] ?>" width="119" height="160">
+                                            </noscript>
                                         </a>
                                     </li>
                                 </ul>

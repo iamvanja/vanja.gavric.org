@@ -601,7 +601,8 @@ html.skrollr, .skrollr body {
         background-repeat:no-repeat;
         background-position: 50% 0;
         @include background-size(cover);
-        background-attachment: fixed;
+        // background-attachment: fixed;
+        height:100%;
     }
     .photography .icon {
         display:none;
@@ -706,6 +707,7 @@ html.skrollr, .skrollr body {
                     display: inline-block;
                     @include transition(all 0.3s ease-in);
                     -webkit-backface-visibility: hidden;
+                    background:darken(#0e83cd, 10%);
                     &:hover {
                         @include transform(scale(1.2));
                     }
@@ -718,7 +720,11 @@ html.skrollr, .skrollr body {
     }
 }
 
-
+.no-js {
+    .lazy {
+        display:none;
+    }
+}
 
 
 

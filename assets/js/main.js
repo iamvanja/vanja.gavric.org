@@ -261,6 +261,11 @@
             '/assets/images/photos/autumn-in-zrinjevac.jpg',
             '/assets/images/photos/double-rainbow-in-paris.jpg'
         );
+
+        $('#articles > .article-items > li > a > img.lazy').each(function(){
+            $(this).attr('src', $(this).attr('data-lazysrc'));
+        });
+
     });
 
 }());
