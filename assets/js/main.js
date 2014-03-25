@@ -270,7 +270,7 @@
             // alert(window.location.hash);
             $('a[href="'+ window.location.hash +'"]').trigger('click');
         }
-        if (window.backstretch){
+         if ($.fn.backstretch){
             // once the loader is removed, add more photos to backstretch
             var backstretchInstance = App.elements.$backstretchWrap.data('backstretch');
             backstretchInstance.images.push(
