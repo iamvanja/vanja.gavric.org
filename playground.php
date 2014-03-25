@@ -11,7 +11,7 @@ include_once('_languageCheck.php');
     <head>
         <meta charset="utf-8">
         <title>Vanja Gavrić | front-end developer | web developer</title>
-        <meta name="description" content="<?= $lang[$l]["description"] ?>">
+        <meta name="description" content="<?= $lang[$l]["descriptionPlayground"] ?>">
         <meta name="viewport" content="width=device-width">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png">
@@ -66,7 +66,7 @@ include_once('_languageCheck.php');
         <!-- <div id="console"></div>         -->
         <main role="main">
             <h1><?= $lang[$l]['playground'] ?></h1>
-            <section id="content" class="content playground-items">
+            <section id="content" class="content1 playground-items">
                 <article class="playground-item poof" id="poof" role="article">
                     <div class="row">
                         <a class="item-link" href="/playground/poof"></a>
