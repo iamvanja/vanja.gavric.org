@@ -140,7 +140,6 @@
              else {
                 $(".playground-item .columns").css({"height":"auto"});
              }
-             console.log();
         }
 
     };
