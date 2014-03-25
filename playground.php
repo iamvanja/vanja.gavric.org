@@ -80,7 +80,7 @@ include_once('_languageCheck.php');
                         <div class="columns large-8 description">
                             <div class="wrap">
                                 <div class="inner">
-                                    <span>Cross-browser compatible (including legacy browsers) solution for displaying a 'poof' animation on each click or tap (similar to removing icons from a Mac OS X dock)</span>
+                                    <span>Cross-browser compatible (including legacy browsers) solution for displaying a 'poof' animation on each click or tap (similar to removing icons from a Mac OS X dock).</span>
                                 </div>
                             </div>
                             
@@ -121,7 +121,7 @@ include_once('_languageCheck.php');
                         <div class="columns large-8 description">
                             <div class="wrap">
                                 <div class="inner">
-                                    <span>Small Backbone app that displays the social connections by a given data. Data is represented as a group of people and each person has one or more connections to the group.</span>
+                                    <span>Small Backbone app that displays social connections by given data. Data is represented as a group of people and each person has one or more connections to the group.</span>
                                 </div>
                             </div>
                         </div>

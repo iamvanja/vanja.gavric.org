@@ -918,12 +918,23 @@ html.skrollr, .skrollr body {
             top:0;left:0;
             z-index:1;
         }
+        .columns {
+            padding: 10px 0;
+        }
         .title {
+            @media only screen and (max-width : 768px) {
+                padding-top:10px;
+            }
             h2 {
                 line-height: 1.2;
+                margin-top:0;
+                margin-bottom:0;
             }
         }
         .description {
+            @media only screen and (max-width : 768px) {
+                padding-bottom:16px;
+            }
             span {
                 padding-bottom:10px;
             }
