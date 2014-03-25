@@ -30,6 +30,7 @@ $lang = array(
         'handmade' => 'Handmade using ecologically sustainable code',
         'old' => 'old',
         'description' => 'Vanja Gavrić is a web developer specializing in front-end. He also enjoys shooting photos and occasionally writes about gadgets. Loves writing about himself in third person.',
+        'descriptionPlayground' => 'Vanja Gavrić is a web developer specializing in front-end. This is his playground.',
         'articleiPhone' => 'iPhone on test',
         'articleMotorola' => 'Ambitious 20-year-old Motorola',
         'articleMs' => 'Microsoft conquers new markets',
@@ -72,6 +73,7 @@ $lang = array(
         'handmade' => 'Ručno izrađeno korišteći ekološki prihvatljiv kod',
         'old' => 'stari',
         'description' => 'Vanja Gavrić je web developer orijentiran na front-end. Voli fotografiju i povremeno piše o gadgetima.',
+        'descriptionPlayground' => 'Vanja Gavrić je web developer orijentiran na front-end. Ovo je njegovo igralište.',
         'articleiPhone' => 'iPhone na testu',
         'articleMotorola' => 'Ambiciozna 20-godišnja Motorola',
         'articleMs' => 'Microsoft kreće u nove pohode',
@@ -83,6 +85,7 @@ $lang = array(
         'photography' => 'Fotografija',
         'writing' => 'Pisanje',
         'playground' => 'igralište'
+
     )
 );
 ?>
