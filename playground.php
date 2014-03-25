@@ -131,12 +131,6 @@ include_once('_languageCheck.php');
             </section> <!-- end #content -->
         </main>
 
-        <nav>
-            <a id="back-to-top" class="back-to-top" href="#top">
-                <i class="icon-up-circled"></i>
-            </a>
-        </nav>
-
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
