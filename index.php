@@ -650,11 +650,11 @@ include_once('_languageCheck.php');
         });
         </script>
 
-        <script src="assets/js/vendor/jquery.easing.1.3.js"></script>
-        <script src="assets/js/vendor/jquery.backstretch.js"></script>
-        <script src="assets/js/vendor/skrollr.js"></script>
-        <script src="assets/js/main.js"></script>
-        <!-- // <script src="min/?g=main.min.js"></script> -->
+        <!-- // <script src="assets/js/vendor/jquery.easing.1.3.js"></script> -->
+        <!-- // <script src="assets/js/vendor/jquery.backstretch.js"></script> -->
+        <!-- // <script src="assets/js/vendor/skrollr.js"></script> -->
+        <!-- // <script src="assets/js/main.js"></script> -->
+        <script src="min/?g=main.min.js"></script>
         <script>
             var _gaq=[['_setAccount','UA-24663272-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
