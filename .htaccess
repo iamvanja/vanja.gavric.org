@@ -223,6 +223,7 @@ AddDefaultCharset utf-8
 
     RewriteRule ^en(/?)+$ index.php?l=en [L]
     RewriteRule ^hr(/?)+$ index.php?l=hr [L]
+    RewriteRule ^playground(/?)+$ playground.php [L]
 
     # redirect the old url structure to the new one
     Redirect 301 /vg-hr.html /hr
