@@ -90,7 +90,7 @@ include_once('_languageCheck.php');
 
                 <article class="playground-item old-tv" id="old-tv" role="article">
                     <div class="row">
-                        <a class="item-link" href="/playground/old-tv"></a>
+                        <a class="item-link" href="/playground/turn-off-tv"></a>
                         <div class="columns large-4 title">
                             <div class="wrap">
                                 <div class="inner">
