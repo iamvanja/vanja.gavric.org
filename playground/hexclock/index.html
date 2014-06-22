@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hex clock</title>
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+
+    <div class="hex-clock-wrap">
+        <span id="hex-clock"></span>
+    </div>
+
+    <script>
+        (function(window, document, undefined){
+            var clockEl = document.getElementById("hex-clock"),
+                bodyEl = document.body,
+                formatTime = function(dateObj){
+                    var d = {
+                        h: dateObj.getHours(),
+                        m: dateObj.getMinutes(),
+                        s: dateObj.getSeconds()
+                    };
+                    for (var key in d){
+                        if (d[key] < 10){
+                            d[key] = "0"+d[key];
+                        }
+                    };
+                    return ""+d.h + d.m + d.s;
+                },
+                updateTime = function(){
+                    var hex = "#"+formatTime(new Date());
+                    clockEl.innerHTML = hex;
+                    bodyEl.style.backgroundColor = hex;
+                    setTimeout(updateTime, 1000);
+                };
+
+                updateTime();
+
+        })(window, document);
+    </script>
+
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24663272-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</body>
+</html>
