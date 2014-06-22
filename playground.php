@@ -128,6 +128,26 @@ include_once('_languageCheck.php');
                     </div>
                 </article> <!-- end #bb-connections -->
 
+                <article class="playground-item hex-clock" id="hex-clock" role="article">
+                    <div class="row">
+                        <a class="item-link" href="/playground/hexclock"></a>
+                        <div class="columns large-4 title">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <h2>#clock</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns large-8 description">
+                            <div class="wrap">
+                                <div class="inner">
+                                    <span>A hexadecimal clock that changes background color depending on the current time - from #000000 to #235959</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article> <!-- end #bb-connections -->
+
             </section> <!-- end #content -->
         </main>
 

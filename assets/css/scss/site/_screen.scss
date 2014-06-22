@@ -899,6 +899,9 @@ html.skrollr, .skrollr body {
         &.bb-connections {
             background-color:$blue;
         }
+        &.hex-clock {
+            background-color:$green-sea;
+        }
         &:hover {
             &.poof {
                 background-color: darken($purple, 3%);
@@ -908,6 +911,9 @@ html.skrollr, .skrollr body {
             }
             &.bb-connections {
                 background-color: darken($blue, 3%);
+            }
+            &.hex-clock {
+                background-color: darken($green-sea, 3%);
             }
         }
         a.item-link {
