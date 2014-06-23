@@ -13,25 +13,16 @@
 
     <script>
         (function(window, document, undefined){
+            "use strict";
             var clockEl = document.getElementById("hex-clock"),
                 bodyEl = document.body,
-                formatTime = function(dateObj){
-                    var d = {
-                        h: dateObj.getHours(),
-                        m: dateObj.getMinutes(),
-                        s: dateObj.getSeconds()
-                    };
-                    for (var key in d){
-                        if (d[key] < 10){
-                            d[key] = "0"+d[key];
-                        }
-                    };
-                    return ""+d.h + d.m + d.s;
+                formatTime = function(d){
+                    return ""+("0"+d.getHours()).slice(-2) +
+                    ("0" + d.getMinutes()).slice(-2) +
+                    ("0" + d.getSeconds()).slice(-2);
                 },
                 updateTime = function(){
-                    var hex = "#"+formatTime(new Date());
-                    clockEl.innerHTML = hex;
-                    bodyEl.style.backgroundColor = hex;
+                    clockEl.innerHTML = bodyEl.style.backgroundColor = "#"+formatTime(new Date());
                     setTimeout(updateTime, 1000);
                 };
 

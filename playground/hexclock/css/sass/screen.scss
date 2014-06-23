@@ -31,10 +31,7 @@ body {
         position:absolute;
         top:0;
         left:0;
-       // @include background();
-
         @include background-image(
-            radial-gradient(center, ellipse cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%),
             linear-gradient(180deg, rgba(#b8b8b8, 0.05) 1%, rgba(#fff, 0.05) 75%)
         );
     }
