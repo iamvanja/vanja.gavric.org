@@ -5,28 +5,100 @@
     <title>#clock</title>
     <link rel="stylesheet" href="css/screen.css">
 </head>
-<body>
-
+<body class="gradient">
     <div class="hex-clock-wrap">
         <span id="hex-clock"></span>
+    </div>
+
+    <div class="buttons" id="buttons">
+        <div class="button solid" id="solid">
+            SOLID
+        </div>
+        <div class="button gradient active" id="gradient">
+            GRADIENT
+        </div>
     </div>
 
     <script>
         (function(window, document, undefined){
             "use strict";
-            var clockEl = document.getElementById("hex-clock"),
+            var that = this,
+                clockEl = document.getElementById("hex-clock"),
                 bodyEl = document.body,
-                formatTime = function(d){
-                    return ""+("0"+d.getHours()).slice(-2) +
-                    ("0" + d.getMinutes()).slice(-2) +
-                    ("0" + d.getSeconds()).slice(-2);
+                buttons = document.querySelectorAll("#buttons .button"),
+                timer,
+                helpers = {
+                    getGradient: function(color1, color2){
+                        var gradientString = "\
+                            background-image: -moz-linear-gradient(top, {color1} 0%, {color2} 100%);\
+                            background-image: -o-linear-gradient(top, {color1} 0%, {color2} 100%);\
+                            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, {color1}), color-stop(1, {color2}));\
+                            background-image: -webkit-linear-gradient(top, {color1} 0%, {color2} 100%);\
+                            background: -ms-linear-gradient(top,  {color1} 0%,{color2} 100%);\
+                            background: linear-gradient(top,  {color1} 0%,{color2} 100%);";
+                        
+                        return function(color1, color2){
+                            return gradientString.replace(/\{color1\}/g, color1).replace(/\{color2\}/g, color2);
+                        }
+                    }(),
+                    getComplement: function(color){
+                        return "#" + ("000000" + (("0xffffff" ^ color.replace("#", "0x")).toString(16))).slice(-6);
+                    },
+                    formatTime: function(d){
+                        return ""+("0"+d.getHours()).slice(-2) +
+                        ("0" + d.getMinutes()).slice(-2) +
+                        ("0" + d.getSeconds()).slice(-2);
+                    }
                 },
-                updateTime = function(){
-                    clockEl.innerHTML = bodyEl.style.backgroundColor = "#"+formatTime(new Date());
-                    setTimeout(updateTime, 1000);
+                updateTime = {
+                    solidTime: function(){
+                        var hex = "#"+helpers.formatTime(new Date());
+                        clockEl.innerHTML = hex;
+                        bodyEl.setAttribute("style", "background-color: "+hex);
+                        timer = setTimeout(updateTime.solidTime, 1000);
+                    },
+                    gradientTime: function(){
+                        var hex = "#"+helpers.formatTime(new Date());
+                        clockEl.innerHTML = hex;
+                        bodyEl.setAttribute("style", helpers.getGradient( hex, helpers.getComplement(hex) ));
+                        timer = setTimeout(updateTime.gradientTime, 1000);
+                    }
+                },
+                attachEvents = function(){
+                    var method = "attachEvent",
+                        eventName = "onclick",
+                        handleClick = function(){
+                            var bodyClass = "linear",
+                                buttonIndex = 1,
+                                timeMethod = "solidTime";
+
+                            if (this.id === "gradient"){
+                                // gradient
+                                bodyClass = "gradient";
+                                buttonIndex = 0;
+                                timeMethod = "gradientTime";
+                            }
+
+                            bodyEl.className = bodyClass;
+                            this.classList.add("active");
+                            buttons[ buttonIndex ].classList.remove("active");
+                            bodyEl.style = "";
+                            clearTimeout(timer);
+                            updateTime[ timeMethod ]();
+                        };
+
+                    if (document.body.addEventListener) {
+                        method = "addEventListener";
+                        eventName = "click";
+                    }
+
+                    [].forEach.call(buttons, function(el) {
+                        el[method](eventName, handleClick);
+                    });
                 };
 
-                updateTime();
+            updateTime.gradientTime();
+            attachEvents();
 
         })(window, document);
     </script>
