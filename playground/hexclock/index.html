@@ -82,7 +82,7 @@
                             bodyEl.className = bodyClass;
                             this.classList.add("active");
                             buttons[ buttonIndex ].classList.remove("active");
-                            bodyEl.style = "";
+                            bodyEl.setAttribute("style", "");
                             clearTimeout(timer);
                             updateTime[ timeMethod ]();
                         };
