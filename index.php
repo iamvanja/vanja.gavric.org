@@ -662,6 +662,7 @@ include_once('_languageCheck.php');
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-24663272-1', 'auto');
+            ga('require', 'displayfeatures');
             ga('send', 'pageview');
         </script>
     </body>
