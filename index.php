@@ -140,7 +140,7 @@ include_once('_languageCheck.php');
                         </div>
                     </div>
 
-                    <div class="row">
+<!--                     <div class="row">
                         <div class="small-12 large-8 large-centered columns">
                             <h3>
                                 <?= $lang[$l]['skills'] ?>
@@ -227,10 +227,10 @@ include_once('_languageCheck.php');
                             </ul>
                         </div>
                         <hr>
-                    </div>
+                    </div> -->
 </div>
 
-                    <div class="technologies-wrap" data-anchor-target="#skills"
+                    <div class="technologies-wrap" data-anchor-target="#developer"
                     data-bottom-top="transform:translate3d(0px,-10%,0px);opacity:0;" 
                     data-center-bottom="transform:translate3d(0px,0%,0px);opacity:1;">
                         <div class="row experience">
@@ -243,6 +243,8 @@ include_once('_languageCheck.php');
                                     <span class="test">Test frameworks</span>
                                     <span class="version-control">Version control</span>
                                     <span class="lib-fram">Libraries / frameworks</span>
+                                    <span class="back-end">Back-end</span>
+                                    <span class="databases"><?= $lang[$l]['databases'] ?></span>
                                     <span class="various"><?= $lang[$l]['various'] ?></span>
                                 </div>
                                 <hr>
@@ -254,12 +256,16 @@ include_once('_languageCheck.php');
                                     <li class="label round front-end">Foundation</li>
                                     <li class="label round front-end">Bootstrap</li>
                                     <li class="label round mvc">BackboneJS</li>
+                                    <li class="label round mvc">AngularJS</li>
                                     <li class="label round api">Facebook API</li>
                                     <li class="label round api">Twitter API</li>
                                     <li class="label round api">Google APIs</li>
                                     <li class="label round api">Flickr API</li>
                                     <li class="label round api">Rdio API</li>
                                     <li class="label round api">SoundCloud API</li>
+                                    <li class="label round api">hasOffers API</li>
+                                    <li class="label round api">Cake API</li>
+                                    <li class="label round api">SalesForce</li>
                                     <li class="label round test">Jasmine</li>
                                     <li class="label round version-control">SVN</li>
                                     <li class="label round version-control">Git</li>
@@ -268,14 +274,25 @@ include_once('_languageCheck.php');
                                     <li class="label round lib-fram">Slim</li>
                                     <li class="label round lib-fram">Handlebars</li>
                                     <li class="label round lib-fram">CodeIgniter</li>
+                                    <li class="label round lib-fram">Express (Node)</li>
                                     <li class="label round various">SASS + Compass</li>
+                                    <li class="label round various">LESS</li>
+                                    <li class="label round various">Jade</li>
                                     <li class="label round various">RequireJS</li>
                                     <li class="label round various">Sphinx</li>
                                     <li class="label round various">Redmine</li>
                                     <li class="label round various">Jira</li>
-                                    <li class="label round various">Apache</li>
                                     <li class="label round various"><?= $lang[$l]['commandLine'] ?></li>
                                     <li class="label round various">Agile</li>
+                                    <li class="label round various">Amazon Web Services</li>
+                                    <li class="label round various">A/B testing (VWO)</li>
+                                    <li class="label round various">Grunt</li>
+                                    <li class="label round back-end">Apache</li>
+                                    <li class="label round back-end">PHP</li>
+                                    <li class="label round back-end">NodeJS</li>
+                                    <li class="label round databases">MySQL</li>
+                                    <li class="label round databases">MS SQL</li>
+                                    <li class="label round databases">Mongo</li>
                                 </ul>
                             </div>
                         </div>

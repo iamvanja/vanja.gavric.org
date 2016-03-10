@@ -504,7 +504,13 @@ html.skrollr, .skrollr body {
                     background-color:$yellow;
                 }
                 &.various:before {
-                    background-color:$asphalt;
+                    background-color: darken($asphalt, 5%);
+                }
+                &.back-end:before {
+                    background-color:darken($green-sea, 16%);
+                }
+                &.databases:before {
+                    background-color:darken($brown, 10%);
                 }
                 position: relative;
                 // padding-left:1.2em;
@@ -536,7 +542,13 @@ html.skrollr, .skrollr body {
                 background-color:$yellow;
             }
             &.various {
-                background-color:$asphalt;
+                background-color: darken($asphalt, 5%);
+            }
+            &.back-end {
+                background-color:darken($green-sea, 16%);
+            }
+            &.databases {
+                background-color:darken($brown, 10%);
             }
         }
     }
