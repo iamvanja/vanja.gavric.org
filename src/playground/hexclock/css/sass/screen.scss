@@ -1,0 +1,92 @@
+@import "compass/reset";
+@import "compass/css3";
+
+// fonts
+@include font-face(
+    "Lato Light", 
+    font-files(
+        "lato-lig-webfont.eot", 
+        "lato-lig-webfont.svg", 
+        "lato-lig-webfont.woff", 
+        "lato-lig-webfont.ttf"
+    )
+);
+
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+body {
+    font-family: 'Lato Light',Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding:0;
+    background-color:#fff;
+    @include transition(all 0.5s);
+    &:after {
+        content:"";
+        height:100%;
+        width:100%;
+        z-index:-1;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    &.linear {
+        &:after {
+            @include background-image(
+                linear-gradient(180deg, rgba(#b8b8b8, 0.05) 1%, rgba(#fff, 0.05) 75%)
+            );
+        }
+    }
+    &.gradient {
+        &:after {
+            @include background-image(
+                linear-gradient(180deg, rgba(#000, 0.05) 1%, rgba(#333, 0.05) 75%)
+            );
+        }
+    }
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.hex-clock-wrap {
+    color:#fff;
+    text-align: center;
+    height:100%;
+    width:100%;
+    display: table;
+    span {
+        vertical-align: middle;
+        display: table-cell;
+        font-size: 4em;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+}
+
+.buttons {
+    position:absolute;
+    top:3%;
+    right:3%;
+    .button {
+        border: 1px solid #fff;
+        padding: 6px;
+        text-align: center;
+        float:left;
+        margin-left:6px;
+        cursor: pointer;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 12px;
+        &:hover,
+        &.active {
+            background-color: #5EB95E;
+            border-color: darken(#5EB95E, 10%);
+            text-shadow: 0 0 0 #fff;
+        }
+    }
+}
