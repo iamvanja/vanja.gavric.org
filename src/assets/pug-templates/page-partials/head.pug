@@ -1,7 +1,7 @@
 head
     meta(charset="utf-8")
-    title #{title}
-    meta(name="description", content=$i18n.head.description[currentPage.name])
+    title= $i18n.head.title[currentPage.name] || title
+    meta(name="description", content=$i18n.head.description[currentPage.name] || "")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(name="local-url", content=assetsUrl.local)
     meta(name="environment", content=environment)
@@ -9,3 +9,4 @@ head
     link(rel="apple-touch-icon", href="/apple-touch-icon.png")
     include js/rollbar.pug
     include js/modernizr.pug
+    block head
