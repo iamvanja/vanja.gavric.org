@@ -444,7 +444,7 @@ module.exports = function(grunt){
     });
 
     grunt.registerTask("postPushInfo", "Displays info", function(){
-        grunt.log.oklns("Your files are in -> ",  settings.domainName + "/" + grunt.config.get("remoteAssetLocation") + "/");
+        grunt.log.oklns("Your files are in -> ",  settings.deploy.domainName + "/" + grunt.config.get("remoteAssetLocation") + "/");
     });
 
     grunt.registerTask("default", []);
