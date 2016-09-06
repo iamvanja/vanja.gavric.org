@@ -8,6 +8,7 @@
     "htmlPages": [
         "index.pug",
         "playground.pug",
+        "404.pug"
     ],
     "jsFiles": [
         "src/assets/js/vendor/jquery.easing.1.3.js",

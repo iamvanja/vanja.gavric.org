@@ -1,0 +1,42 @@
+extends ../page-partials/layout.pug
+
+block vars
+    -
+        var currentPage = {
+            name: "404",
+            customClass: "error-page 404"
+        }
+
+block head
+    style.
+        html, body {
+            min-height: 100%;
+            background:#16A085;
+        }
+        h2 {
+            color:rgba(0,0,0,0.3);
+        }
+        hr {
+            border-color: rgba(0,0,0,0.2);
+        }
+        ul {
+            padding-left:40px;
+            line-height: 1.4;
+        }
+
+block body
+    .container
+        .row
+            .large-8.columns.large-centered
+                h1.no-margin-bottom Not found / Nije pronađeno
+                h2.no-margin-top
+                    span 404
+                p.tc
+                    | Sorry, but the page you were trying to view does not exist.
+                p.no-margin-bottom
+                    | It looks like this was the result of either:
+                ul
+                    li a mistyped address
+                    li an out-of-date link
+
+
