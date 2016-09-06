@@ -5,6 +5,7 @@ module.exports = function(grunt){
     });
 
     var settings = grunt.file.readJSON("settings.json"),
+        credentials = grunt.file.readJSON(".credentials.json"),
         shell = require("shelljs"),
         helpers = {
             pugData: function(options) {
@@ -59,7 +60,6 @@ module.exports = function(grunt){
         pug: {
             watch: {
                 getLocale: function(){
-                    console.log("getLocale");
                    return "src/assets/pug-data/locales/"+ (grunt.option("locale") || "*") +".json";
                 },
                 options: {
@@ -266,6 +266,18 @@ module.exports = function(grunt){
                 ]
             }
         },
+        choose: {
+            target: {
+                options: {
+                    message: "Please choose where to push:"
+                },
+                choices: {
+                    "test-currentBranch": ["deploy:currentBranch", "postPush"],
+                    "----------": "",
+                    "production!": ["deploy:build", "postPush"]
+                }
+            }
+        },
 
         watch: {
             // options: {
@@ -334,6 +346,107 @@ module.exports = function(grunt){
         grunt.config.set("currentUser", currentUser);
     });
 
+    grunt.registerTask("gitIsDirty", "Checks if git staging is empty and ignores untracked files", function(){
+        // Checks if there are no files currently in staging (important before doing an automated commit)
+        // Fails entire push if that is the case
+        var getExec = grunt.config.data.helpers.getExec,
+            command = "git status --porcelain -uno",
+            isDirty = !!(getExec(command));
+
+        if (isDirty) {
+            grunt.log.errorlns("Please make sure you comitted everything. Push is not possible because it creates inconsistency between the repo and the files on production.")
+            return grunt.fail.fatal("No dirty pushing is allowed!");
+        }
+
+        return true;
+    });
+
+    grunt.task.registerTask("deploy", "Deploys using rsync", function(target) {
+        var getExec = grunt.config.data.helpers.getExec,
+            branch = grunt.config.get("gitBranch"),
+            command = "mkdir -p <%=logFilePath%> && touch <%=logFile%> && rsync <%= src %> --rsync-path=\"mkdir -p <%= dest %> && rsync\" <%= user %>@<%= host %>:<%= dest %> --rsh 'ssh -p 2222' <%= args %> <%= exclude %>",
+            options = {
+                user: credentials.username,
+                src: "build/",
+                host: settings.deploy.host,
+                logFilePath: settings.deploy.logFilePath,
+                logFile: "<%=logFilePath%><%=logFilename%>.log",
+                args: [
+                    "--recursive",
+                    "--delete",
+                    "--progress",
+                    "--compress",
+                    "--human-readable",
+                    "--log-file=<%=logFile%>",
+                    // "--dry-run"
+                ],
+                exclude: [
+                    "*.map",
+                    "Thumbs.db",
+                    ".DS_Store"
+                ]
+            },
+            exec;
+
+        if (target === "build") {
+            if (branch !== "master") {
+                grunt.fail.fatal("Pushing to production is only allowed on master branch!");
+                return;
+            }
+            options.remoteAssetLocation = settings.deploy.productionPath;
+            options.logFilename = "production";
+        }
+        else if (target === "currentBranch") {
+            options.remoteAssetLocation = branch +"/"+ settings.deploy.productionPath;
+            // get rid of the forward slash for Unix-Win consistency how task file is created
+            options.logFilename = branch.replace(/\//g, "-");
+        }
+        else {
+            grunt.fail.fatal("No specified target to push");
+            return;
+        }
+
+        options.exclude.forEach(function(element, i, collection) {
+            options.exclude[i] = "--exclude="+element;
+        });
+        options.args = options.args.join(' ');
+        options.exclude = options.exclude.join(' ');
+        options.dest = settings.deploy.serverDestination + options.remoteAssetLocation;
+
+        command = grunt.template.process(command, {data: options});
+        grunt.log.oklns("rsyncing "+ options.src +" >>>> "+ options.dest+"\n\n");
+        grunt.log.oklns("current branch: "+ branch);
+
+        grunt.log.writeln("\nexecuted: " + command);
+
+        exec = shell.exec(command);
+        if (exec.code !== 0) {
+            grunt.log.writeln("\n"+"Deployment failed!".red);
+            exit(1);
+        }
+        else {
+            grunt.config.set("remoteAssetLocation", options.remoteAssetLocation);
+            grunt.config.set("logFilename", options.logFilename);
+            grunt.log.ok();
+        }
+
+        return;
+    });
+
+    grunt.registerTask("gitPushCommit", "Commit the ftpush json", function(){
+        var command = grunt.template.process('git add <%=logFilePath%><%=logFilename%>.log && git commit -m "<%=environment%> push (from grunt)"', {data: {
+                logFilePath: settings.deploy.logFilePath,
+                logFilename: grunt.config.get("logFilename"),
+                environment: grunt.config.get("environment"),
+        }});
+
+        shell.exec(command);
+    });
+
+    grunt.registerTask("postPushInfo", "Displays info", function(){
+        grunt.log.oklns("Your files are in -> ",  settings.domainName + "/" + grunt.config.get("remoteAssetLocation") + "/");
+    });
+
     grunt.registerTask("default", []);
     grunt.registerTask("production", [
         "setEnvironmentVars",
@@ -348,5 +461,19 @@ module.exports = function(grunt){
         "pug:production",
         "clean:productionPost",
         "htmlhint:production"
+    ]);
+
+    grunt.registerTask("push", [
+        "setEnvironmentVars",
+        "gitIsDirty",
+        "production",
+        "choose"
+    ]);
+
+    grunt.registerTask("postPush", [
+        // "rollBarSourceMaps",
+        // "rollBarDeploy",
+        "gitPushCommit",
+        "postPushInfo"
     ]);
 }
