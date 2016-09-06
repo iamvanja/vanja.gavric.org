@@ -21,5 +21,12 @@
         "src/assets/js/vendor/jquery.backstretch.js",
         "src/assets/js/vendor/skrollr.js",
         "src/assets/js/main.js"
-    ]
+    ],
+    "deploy": {
+        "productionPath": "",
+        "serverDestination": "~/public_html/vanja.gavric.org/",
+        "logFilePath": ".grunt/rsync/",
+        "host": "gavric.org",
+        "domainName": "vanja.gavric.org"
+    }
 }
