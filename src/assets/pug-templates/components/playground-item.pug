@@ -1,0 +1,12 @@
+mixin playground-item(id, href, title, description)
+    article(id!=id, class="playground-item " + id)(role="article")
+        .row
+            a.item-link(href!="/playground/" + href)
+            .columns.large-4.title
+                .wrap
+                    .inner
+                        h2!= title
+            .columns.large-8.description
+                .wrap
+                    .inner
+                        span!= description

@@ -1,7 +1,7 @@
 head
     meta(charset="utf-8")
     title #{title}
-    meta(name="description", content=$i18n.head.description)
+    meta(name="description", content=$i18n.head.description[currentPage.name])
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(name="local-url", content=assetsUrl.local)
     meta(name="environment", content=environment)

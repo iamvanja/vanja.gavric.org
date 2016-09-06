@@ -36,11 +36,11 @@
     App.elements.$introCentered = $('#intro-centered');
     App.elements.$backstretchWrap = $('#photography .backstretch-wrap');
     App.elements.$backToTop = $('#back-to-top');
-    
+
     // App.variables.transformClass = Modernizr.cssfilters ? 'blurred' : 'grayscale';
     App.variables.transformClass = 'grayscale';
     if (window.skrollr){
-        App.variables.isSkrollrAllowed = Modernizr.csstransforms3d;
+        App.variables.isSkrollrAllowed = Modernizr.csstransforms3d && App.elements.$body.hasClass("index");
         App.variables.skrollrInstance = false;
         App.variables.skrollInitObj = {
             forceHeight : false,
@@ -168,7 +168,7 @@
     // essentially a document ready init
     $('#contact-circle > a').attr('href', email.a+email.b+'@'+email.c+email.d);
     App.elements.$intro.addClass('fixed');
-    if ($.fn.backstretch){
+    if ($.fn.backstretch && App.elements.$body.hasClass("index")){
         // photos
         App.elements.$backstretchWrap.backstretch([
             '../assets/images/photos/adriatic-sea.jpg'
@@ -236,7 +236,7 @@
         else if (hash !== '#top') {
             offset = $(hash).offset().top;
         }
-    
+
         if (!$([App.elements.$html[0], App.elements.$body[0]]).is(':animated')) {
             $([App.elements.$html[0], App.elements.$body[0]]).animate({
                 scrollTop: offset
@@ -270,7 +270,7 @@
             // alert(window.location.hash);
             $('a[href="'+ window.location.hash +'"]').trigger('click');
         }
-         if ($.fn.backstretch){
+         if ($.fn.backstretch && App.elements.$body.hasClass("index")){
             // once the loader is removed, add more photos to backstretch
             var backstretchInstance = App.elements.$backstretchWrap.data('backstretch');
             backstretchInstance.images.push(
