@@ -1,0 +1,25 @@
+{
+  "name": "vanja.gavric.org",
+  "version": "1.0.0",
+  "description": "Vanja Gavric's personal website",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-pug-i18n": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/iamvanja/vanja.gavric.org.git"
+  },
+  "author": "Vanja Gavric",
+  "license": "ISC"
+}

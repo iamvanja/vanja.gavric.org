@@ -1,0 +1,86 @@
+article(class="writing", id="writing", role="article", aria-labelledby="main-title-writing")
+    div.row
+        div.large-12.columns
+            div(data-anchor-target="#writing",
+            data-bottom-top="transform:scale(1.2);opacity:0",
+            data-top="transform:scale(1);opacity:1")
+                h2.no-margin-bottom#main-title-writing= $i18n.articleWriting.title
+
+                h2.subheader.no-margin-top
+                    | (
+                    span.click= $i18n.general.click
+                    span.tap= $i18n.general.tap
+                    | 
+                    = $i18n.articleWriting.subtitle + ")"
+
+            div(class="row articles", id="articles",
+                data-anchor-target="#writing",
+                data-bottom-top="transform:translate3d(0px,200px,0px);",
+                data-top="transform:translate3d(0px,0px,0px);")
+                ul(class="article-items large-block-grid-4 small-block-grid-4")
+                    li(data-anchor-target="#writing",
+                    data-bottom-top="transform:translate3d(0px,-60px,0px);",
+                    data-top="transform:translate3d(0px,3px,0px);")
+                        a(href="assets/downloads/pdf/mobil-92-iphone.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/iphone.jpg", alt=$i18n.articleWriting.articleiPhone, height="160", width="117")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/iphone.jpg",
+                                alt=$i18n.articleWriting.articleiPhone,
+                                height="160",
+                                width="117")
+
+                    li(data-anchor-target="#writing",
+                    data-bottom-top="transform:translate3d(0px,-30px,0px);",
+                    data-top="transform:translate3d(0px,10p,0px)x;")
+                        a(href=assetsUrl.local + "downloads/pdf/mobil-35-motorola.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/motorola.jpg", alt=$i18n.articleWriting.articleMotorola, height="160", width="119")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/motorola.jpg", alt=$i18n.articleWriting.articleMotorola, width="119", height="160")
+
+
+                    li(data-anchor-target="#writing",
+                    data-bottom-top="transform:translate3d(0px,-80px,0px);",
+                    data-top="transform:translate3d(0px,0px,0px);")
+                        a(href=assetsUrl.local + "downloads/pdf/mobil-37-microsoft.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/ms.jpg", alt=$i18n.articleWriting.articleMs, height="160", width="120")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/ms.jpg", alt=$i18n.articleWriting.articleMs, width="120", height="160")
+
+                    li(data-anchor-target="#writing",
+                    data-bottom-top="transform:translate3d(0px,-30px,0px);",
+                    data-top="transform:translate3d(0px,4px,0px);")
+                        a(href=assetsUrl.local + "downloads/pdf/mreza-nokia.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/nokia.jpg", alt=$i18n.articleWriting.articleNokia, height="160", width="114")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/nokia.jpg", alt=$i18n.articleWriting.articleNokia, width="114", height="160")
+
+                    li(data-anchor-target="#writing",
+                    data-bottom-top="transform:translate3d(0px,60px,0px);",
+                    data-top="transform:translate3d(0px,3px,0px);")
+                        a(href=assetsUrl.local + "downloads/pdf/mobil-37-stungun.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/stungun.jpg", alt=$i18n.articleWriting.articleStungun, height="160", width="118")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/stungun.jpg", alt=$i18n.articleWriting.articleStungun, width="118", height="160")
+
+                    li(data-anchor-target="#writing",
+                    data-bottom-top="transform:translate3d(0px,60px,0px);",
+                    data-top="transform:translate3d(0px,5px,0px);")
+                        a(href=assetsUrl.local + "downloads/pdf/mobil-40-41-treo.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/treo.jpg", alt=$i18n.articleWriting.articleTreo, height="160", width="120")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/treo.jpg", alt=$i18n.articleWriting.articleTreo, width="120", height="160")
+
+                    li(data-anchor-target="#writing",
+                    data-bottom-top="transform:translate3d(0px,80px,0px);",
+                    data-top="transform:translate3d(0px,0px,0px);")
+                        a(href=assetsUrl.local + "downloads/pdf/mobil-75-usa.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/usa.jpg", alt=$i18n.articleWriting.articleUSA, height="160", width="118")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/usa.jpg", alt=$i18n.articleWriting.articleUSA, width="118", height="160")
+
+
+                    li(data-anchor-target="#writing", data-bottom-top="transform:translate3d(0px,30px,0px);", data-top="transform:translate3d(0px,3px,0px);")
+                        a(href=assetsUrl.local + "downloads/pdf/mobil-40-41-alcatel.pdf")
+                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/alcatel.jpg", alt=$i18n.articleWriting.articleAlcatel, height="160", width="119")
+                            noscript
+                                img(src=assetsUrl.local + "images/articles/alcatel.jpg", alt=$i18n.articleWriting.articleAlcatel, width="119", height="160")

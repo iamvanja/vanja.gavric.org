@@ -171,7 +171,7 @@
     if ($.fn.backstretch){
         // photos
         App.elements.$backstretchWrap.backstretch([
-            '/assets/images/photos/adriatic-sea.jpg'
+            '../assets/images/photos/adriatic-sea.jpg'
             // '/assets/images/photos/coming-down-on-me.jpg', /* Coming down on me */
         // 'http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg', /* Paris opera */
         // 'http://farm9.staticflickr.com/8097/8442056306_0c4c82c808_o.jpg', /* London Big Ben */
@@ -274,10 +274,10 @@
             // once the loader is removed, add more photos to backstretch
             var backstretchInstance = App.elements.$backstretchWrap.data('backstretch');
             backstretchInstance.images.push(
-                '/assets/images/photos/stuck-in-traffic.jpg',
-                '/assets/images/photos/hana.jpg',
-                '/assets/images/photos/autumn-in-zrinjevac.jpg',
-                '/assets/images/photos/double-rainbow-in-paris.jpg'
+                '../assets/images/photos/stuck-in-traffic.jpg',
+                '../assets/images/photos/hana.jpg',
+                '../assets/images/photos/autumn-in-zrinjevac.jpg',
+                '../assets/images/photos/double-rainbow-in-paris.jpg'
             );
         }
 

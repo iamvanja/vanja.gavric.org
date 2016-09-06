@@ -1,0 +1,17 @@
+{
+    "title": "Vanja Gavrić | front-end developer | web developer",
+    "googleAnalytics": "UA-24663272-1",
+    "rollbarToken": "ROLLBAR_TOKEN",
+    "assetsUrl": {
+        "local": "../assets/"
+    },
+    "htmlPages": [
+        "index.pug"
+    ],
+    "jsFiles": [
+        "src/assets/js/vendor/jquery.easing.1.3.js",
+        "src/assets/js/vendor/jquery.backstretch.js",
+        "src/assets/js/vendor/skrollr.js",
+        "src/assets/js/main.js"
+    ]
+}

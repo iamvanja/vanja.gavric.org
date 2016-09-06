@@ -1,0 +1,25 @@
+article(class="photography", id="photography", role="article", aria-labelledby="main-title-photo")
+    div.row
+        div.large-12.columns
+            h2#main-title-photo
+                - var wordsArr = $i18n.articlePhotography.title.split(" ")
+                each word in wordsArr
+                    span= word
+                    | 
+
+            h2(class="subheader",
+            data-anchor-target="#photography",
+            data-bottom="opacity:0",
+            data-top="opacity:1")
+                span= $i18n.articlePhotography.subtitle
+
+            i(class="icon icon-pause-circled", id="pause",
+            data-anchor-target="#photography",
+            data-bottom="opacity:0",
+            data-top="opacity:1")
+
+    div(class="backstretch-wrap",
+    data-anchor-target="#photography",
+    data-bottom-top="transform:translate3d(0px,-30%,0px);",
+    data-top-bottom="transform:translate3d(0px,0%),0px")
+        //- empty

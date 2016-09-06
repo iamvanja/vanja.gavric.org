@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     text-align: left;
     top: 0;
-    z-index: 1000;    
+    z-index: 1000;
 }
 .top-anchor {
     position:absolute;
@@ -191,9 +191,9 @@ h1, h2, h3, h4, h5, h6 {
     // background-color:darken(#00C86A, 5%);
 // @include background(linear-gradient(147deg, #009DEB 1%, #00C86A 75%) repeat scroll 0 0 rgba(0, 0, 0, 0));
 
-// @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), 
+// @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)),
 //                     linear-gradient(108deg, #E5E9BF 10%, #00396F 90%));
-// @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), 
+// @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)),
 //                     linear-gradient(108deg, #26D0CE, #1A2980 90%));
 
 // @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), linear-gradient(108deg, #E0DA81, #E0A681 10%, #0F1B58 90%));
@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 
     // .abs-centered {
     //     margin-top: -5%;
-    // } 
+    // }
     h1 {
         color: #fff;
         // height:200px;
@@ -235,8 +235,8 @@ h1, h2, h3, h4, h5, h6 {
         font-family: 'open_sansregular';
     }
     .profile-pic {
-        width:emCalc(40); 
-        height:auto; 
+        width:emCalc(40);
+        height:auto;
         @include border-radius($global-rounded);
         margin-top:emCalc(6);
     }
@@ -268,12 +268,12 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     .scroll-down {
-        position:absolute; 
+        position:absolute;
         bottom:0;
-        left:50%; 
-        width:emCalc(280); 
-        height:50px; 
-        margin-left:emCalc(-140); 
+        left:50%;
+        width:emCalc(280);
+        height:50px;
+        margin-left:emCalc(-140);
         text-align:center;
         span {
             display: inline-block;
@@ -332,7 +332,7 @@ html.skrollr, .skrollr body {
     // }
 }
 
- 
+
 /* Animation Times - Time for image to fade in
 ---------------------------------------------------- */
 .animation-400ms {
@@ -355,7 +355,7 @@ html.skrollr, .skrollr body {
     -o-animation-duration:1s!important;
     animation-duration:1s!important;
 }
- 
+
 /* Animation Delay - Time for image to be delayed
 ---------------------------------------------------- */
 .animationDelay-400ms {
@@ -462,7 +462,7 @@ html.skrollr, .skrollr body {
                 }
             }
         }
-    }    
+    }
     .technologies-wrap {
         position:relative;
         background:$brown;
@@ -515,7 +515,9 @@ html.skrollr, .skrollr body {
                 position: relative;
                 // padding-left:1.2em;
                 margin-right:1em;
+                margin-bottom:0.4em;
                 white-space: nowrap;
+                display: inline-block;
             }
         }
         .label {
@@ -556,7 +558,7 @@ html.skrollr, .skrollr body {
         margin-left: auto;
         margin-right: auto;
         width:30%;
-    }    
+    }
 }
 .blurred {
     @include filter(blur(2px));
@@ -782,7 +784,7 @@ html.skrollr, .skrollr body {
                 .circle {
                     &:after,
                     &:before {
-                        width:0; 
+                        width:0;
                         height:0;
                     }
                     @include border-radius($global-rounded);
@@ -989,18 +991,18 @@ html.skrollr, .skrollr body {
         font-size:emCalc(12);
         line-height: 1.2;
         color:lighten($asphalt, 40%);
-        a { 
-            color:#fff; 
-            &:hover { 
-                color:lighten($green, 10%); 
-                span { 
-                    color:#fff; 
+        a {
+            color:#fff;
+            &:hover {
+                color:lighten($green, 10%);
+                span {
+                    color:#fff;
                 }
             }
-            span { 
-                color:lighten($green, 10%); 
+            span {
+                color:lighten($green, 10%);
             }
-        }        
+        }
     }
     .right {
         text-align: center;
@@ -1032,7 +1034,7 @@ html.skrollr, .skrollr body {
     }
     > div {
         position: fixed;
-        background: $asphalt; 
+        background: $asphalt;
         // #2c3e52
         &:first-child,
         &:nth-child(3) {
@@ -1044,7 +1046,7 @@ html.skrollr, .skrollr body {
         &:nth-child(4) {
             width: emCalc(50);
             height: 0;
-        } 
+        }
 
         &:first-child {
             top: 0;
@@ -1070,11 +1072,11 @@ html.skrollr, .skrollr body {
         > div {
             &:first-child {
                 width: 100%;
-                @include transition(width 0.9s linear 0.6s);    
+                @include transition(width 0.9s linear 0.6s);
             }
             &:nth-child(2) {
                 height: 100%;
-                @include transition(height 0.9s linear 1.5s);    
+                @include transition(height 0.9s linear 1.5s);
             }
             &:nth-child(3) {
                 width: 100%;
@@ -1090,11 +1092,11 @@ html.skrollr, .skrollr body {
         > div {
             &:first-child {
                 width: 0;
-                @include transition(width 0.9s linear 3.3s);    
+                @include transition(width 0.9s linear 3.3s);
             }
             &:nth-child(2) {
                 height: 0;
-                @include transition(height 0.9s linear 2.4s);    
+                @include transition(height 0.9s linear 2.4s);
             }
             &:nth-child(3) {
                 width: 0;
@@ -1104,7 +1106,7 @@ html.skrollr, .skrollr body {
                 height: 0;
                 @include transition(height 0.9s linear 0.6s);
             }
-            
+
         }
     }
 }
@@ -1114,21 +1116,21 @@ html.skrollr, .skrollr body {
 
 
 
-@-webkit-keyframes fadeIn { 
+@-webkit-keyframes fadeIn {
     from { opacity:0; }
-    to { opacity:1; } 
+    to { opacity:1; }
 }
-@-moz-keyframes fadeIn { 
+@-moz-keyframes fadeIn {
     from { opacity:0; }
-    to { opacity:1; } 
+    to { opacity:1; }
 }
-@-o-keyframes fadeIn { 
+@-o-keyframes fadeIn {
     from { opacity:0; }
-    to { opacity:1; } 
+    to { opacity:1; }
 }
-@keyframes fadeIn { 
+@keyframes fadeIn {
     from { opacity:0; }
-    to { opacity:1; } 
+    to { opacity:1; }
 }
 
 

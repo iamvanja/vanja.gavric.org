@@ -1,0 +1,11 @@
+head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name="description", content=$i18n.head.description)
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="local-url", content=assetsUrl.local)
+    meta(name="environment", content=environment)
+    link(rel="stylesheet", href=assetsUrl.local + "css/main.css")
+    link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+    include js/rollbar.pug
+    include js/modernizr.pug

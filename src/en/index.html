@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vanja Gavrić | front-end developer | web developer</title>
+        <meta name="description" content="Vanja Gavrić is a web developer specializing in front-end. He also enjoys shooting photos and occasionally writes about gadgets. Loves to write about himself in third person.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="local-url" content="../assets/">
+        <meta name="environment" content="development">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <script src="../assets/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+            Modernizr.load([{
+                // The test: does the browser understand Media Queries?
+                test : Modernizr.mq("only all"),
+                // If not, load the respond.js file
+                nope : "../assets/js/vendor/respond.min.js"
+            }]);
+        </script>
+    </head>
+    <body><!--[if lte IE 9]>
+        <p class="chromeframe">Hi, I really want to show you my website, but you are using an outdated browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p><![endif]-->
+        <script>
+            (function(){
+                // to avoid implementing document ready or using ugly onLoad=f(),
+                // this loader code is placed inside body (body element won't be undefined)
+                var loaderHtml = '<div></div><div></div><div></div><div></div><h1 data-alternative="Almost there...">Loading...</h1>',
+                    loader = document.createElement('div');
+                loader.id = 'loader';
+                loader.className = 'loader';
+                loader.innerHTML = loaderHtml;
+                document.getElementsByTagName('body')[0].appendChild(loader);
+            }());
+        </script>
+        <nav class="main-nav fadeIn animation-1s animationDelay-4s" id="main-nav"><a class="logo" id="logo" href="/" title="Vanja Gavrić logo. If you click it, the page will refresh."><span class="circle">VG</span></a>
+            <ul>
+                <li><a href="#developer" title="Developer."><i class="icon-code-1"></i></a></li>
+                <li><a href="#photography" title="Photography."><i class="icon-camera"></i></a></li>
+                <li><a href="#writing" title="Writing."><i class="icon-feather"></i></a></li>
+                <li><a href="#contact" title="Contact."><i class="icon-paper-plane"></i></a></li>
+            </ul>
+        </nav>
+        <div class="top-anchor" id="top"></div>
+        <header class="intro" id="intro">
+            <nav class="lang-selection fadeIn animation-1s animationDelay-4s" id="lang-selection" role="navigation">
+                <ul>
+                    <li><a href="/hr">HR</a></li>
+                    <li><a href="/en">EN</a></li>
+                </ul>
+            </nav>
+            <div class="centered" id="intro-centered">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h1><span class="fadeIn animation-600ms animationDelay-400ms">Hi.</span><br><span class="fadeIn animation-600ms animationDelay-2s">I'm Vanja.</span><br><img class="profile-pic popupOut animation-400ms animationDelay-3s" src="../assets/images/profile.jpg" width="110" height="110" alt="Vanja Gavrić profile photo"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down fadeIn animation-1s animationDelay-4s"><a href="#developer"><span>Scroll down to learn more about me</span><i class="icon-down-circled"></i></a></div>
+        </header>
+        <main role="main">
+            <div id="skrollr-body">
+                <section class="content" id="content">
+                    <article class="developer" id="developer" role="article" aria-labelledby="main-title-dev">
+                        <div data-anchor-target="#developer" data-bottom-top="transform:translate3d(0px,40%,0px);opacity:0;" data-top="transform:translate3d(0px,0%,0px);opacity:1;">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h2 class="main-title-dev no-margin-bottom" id="main-title-dev" data-anchor-target="#developer" data-bottom-top="transform:scale(1.46);opacity:0" data-top="transform:scale(1);opacity:1">I'm a web developer
+                                    </h2>
+                                    <h2 class="subheader no-margin-top" data-anchor-target="#developer" data-center-top="opacity:0" data-200-top="opacity:1"><span>specializing in <i>front-end</i></span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="technologies-wrap" data-anchor-target="#developer" data-bottom-top="transform:translate3d(0px,-10%,0px);opacity:0;" data-center-bottom="transform:translate3d(0px,0%,0px);opacity:1;">
+                            <div class="row experience">
+                                <div class="large-12 columns">
+                                    <h3>I have experience with</h3>
+                                    <div class="technologies legend" id="technologies-legend"><span class="front-end">Front-end frameworks</span><span class="mvc">MVC JS frameworks</span><span class="api">3rd-party APIs</span><span class="test">Test frameworks</span><span class="version-control">Version control</span><span class="lib-fram">Libraries / frameworks</span><span class="back-end">Back-end</span><span class="databases">Databases</span><span class="various">Various</span></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <ul class="technologies" id="technologies-list">
+                                        <li class="label round front-end">Foundation</li>
+                                        <li class="label round front-end">Bootstrap</li>
+                                        <li class="label round mvc">BackboneJS</li>
+                                        <li class="label round mvc">AngularJS</li>
+                                        <li class="label round api">Facebook API</li>
+                                        <li class="label round api">Twitter API</li>
+                                        <li class="label round api">Google APIs</li>
+                                        <li class="label round api">Flickr API</li>
+                                        <li class="label round api">Rdio API</li>
+                                        <li class="label round api">SoundCloud API</li>
+                                        <li class="label round api">hasOffers API</li>
+                                        <li class="label round api">Cake API</li>
+                                        <li class="label round api">SalesForce</li>
+                                        <li class="label round test">Jasmine</li>
+                                        <li class="label round version-control">SVN</li>
+                                        <li class="label round version-control">Git</li>
+                                        <li class="label round lib-fram">jQuery (Zepto.JS)</li>
+                                        <li class="label round lib-fram">Underscore.js (Lo-Dash)</li>
+                                        <li class="label round lib-fram">Slim</li>
+                                        <li class="label round lib-fram">Handlebars</li>
+                                        <li class="label round lib-fram">CodeIgniter</li>
+                                        <li class="label round lib-fram">Express (Node)</li>
+                                        <li class="label round various">SASS + Compass</li>
+                                        <li class="label round various">LESS</li>
+                                        <li class="label round various">Jade</li>
+                                        <li class="label round various">RequireJS</li>
+                                        <li class="label round various">Sphinx</li>
+                                        <li class="label round various">Redmine</li>
+                                        <li class="label round various">Jira</li>
+                                        <li class="label round various">Command line</li>
+                                        <li class="label round various">Agile</li>
+                                        <li class="label round various">Amazon Web Services</li>
+                                        <li class="label round various">A/B testing (VWO)</li>
+                                        <li class="label round various">Grunt</li>
+                                        <li class="label round back-end">Apache</li>
+                                        <li class="label round back-end">PHP</li>
+                                        <li class="label round back-end">NodeJS</li>
+                                        <li class="label round databases">MySQL</li>
+                                        <li class="label round databases">MS SQL</li>
+                                        <li class="label round databases">Mongo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <p class="tc">Language / framework / tool agnostic. Choice of tools depends on the given job.</p>
+                                <p>Web development is my passion. I enjoy translating user-centric design into web applications that users love while developing, testing and deploying production-quality code.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="photography" id="photography" role="article" aria-labelledby="main-title-photo">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <h2 id="main-title-photo"><span>I</span> <span>like</span> <span>to</span> <span>shoot</span> <span>photos</span> 
+                                </h2>
+                                <h2 class="subheader" data-anchor-target="#photography" data-bottom="opacity:0" data-top="opacity:1"><span>Some say I am even good at it</span></h2><i class="icon icon-pause-circled" id="pause" data-anchor-target="#photography" data-bottom="opacity:0" data-top="opacity:1"></i>
+                            </div>
+                        </div>
+                        <div class="backstretch-wrap" data-anchor-target="#photography" data-bottom-top="transform:translate3d(0px,-30%,0px);" data-top-bottom="transform:translate3d(0px,0%),0px"></div>
+                    </article>
+                    <article class="writing" id="writing" role="article" aria-labelledby="main-title-writing">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <div data-anchor-target="#writing" data-bottom-top="transform:scale(1.2);opacity:0" data-top="transform:scale(1);opacity:1">
+                                    <h2 class="no-margin-bottom" id="main-title-writing">Did some writing too (in Croatian)</h2>
+                                    <h2 class="subheader no-margin-top">(<span class="click">click</span><span class="tap">tap</span> on any article to open PDF)
+                                    </h2>
+                                </div>
+                                <div class="row articles" id="articles" data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,200px,0px);" data-top="transform:translate3d(0px,0px,0px);">
+                                    <ul class="article-items large-block-grid-4 small-block-grid-4">
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,-60px,0px);" data-top="transform:translate3d(0px,3px,0px);"><a href="assets/downloads/pdf/mobil-92-iphone.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/iphone.jpg" alt="iPhone on test" height="160" width="117">
+                                                <noscript><img src="../assets/images/articles/iphone.jpg" alt="iPhone on test" height="160" width="117"></noscript></a></li>
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,-30px,0px);" data-top="transform:translate3d(0px,10p,0px)x;"><a href="../assets/downloads/pdf/mobil-35-motorola.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/motorola.jpg" alt="Ambitious 20-year-old Motorola" height="160" width="119">
+                                                <noscript><img src="../assets/images/articles/motorola.jpg" alt="Ambitious 20-year-old Motorola" width="119" height="160"></noscript></a></li>
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,-80px,0px);" data-top="transform:translate3d(0px,0px,0px);"><a href="../assets/downloads/pdf/mobil-37-microsoft.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/ms.jpg" alt="Microsoft conquers new markets" height="160" width="120">
+                                                <noscript><img src="../assets/images/articles/ms.jpg" alt="Microsoft conquers new markets" width="120" height="160"></noscript></a></li>
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,-30px,0px);" data-top="transform:translate3d(0px,4px,0px);"><a href="../assets/downloads/pdf/mreza-nokia.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/nokia.jpg" alt="Giants&amp;rsquo; disproportion" height="160" width="114">
+                                                <noscript><img src="../assets/images/articles/nokia.jpg" alt="Giants&amp;rsquo; disproportion" width="114" height="160"></noscript></a></li>
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,60px,0px);" data-top="transform:translate3d(0px,3px,0px);"><a href="../assets/downloads/pdf/mobil-37-stungun.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/stungun.jpg" alt="Stungun - this phone is not for talking" height="160" width="118">
+                                                <noscript><img src="../assets/images/articles/stungun.jpg" alt="Stungun - this phone is not for talking" width="118" height="160"></noscript></a></li>
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,60px,0px);" data-top="transform:translate3d(0px,5px,0px);"><a href="../assets/downloads/pdf/mobil-40-41-treo.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/treo.jpg" alt="A cell phone, finally!" height="160" width="120">
+                                                <noscript><img src="../assets/images/articles/treo.jpg" alt="A cell phone, finally!" width="120" height="160"></noscript></a></li>
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,80px,0px);" data-top="transform:translate3d(0px,0px,0px);"><a href="../assets/downloads/pdf/mobil-75-usa.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/usa.jpg" alt="Made in U.S.A." height="160" width="118">
+                                                <noscript><img src="../assets/images/articles/usa.jpg" alt="Made in U.S.A." width="118" height="160"></noscript></a></li>
+                                        <li data-anchor-target="#writing" data-bottom-top="transform:translate3d(0px,30px,0px);" data-top="transform:translate3d(0px,3px,0px);"><a href="../assets/downloads/pdf/mobil-40-41-alcatel.pdf"><img class="lazy" src="../assets/images/pixel.gif" data-lazysrc="../assets/images/articles/alcatel.jpg" alt="Alcatel 535 - daltonism cured" height="160" width="119">
+                                                <noscript><img src="../assets/images/articles/alcatel.jpg" alt="Alcatel 535 - daltonism cured" width="119" height="160"></noscript></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="contact" id="contact" role="article" aria-labelledby="main-title-contact">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <h1 id="main-title-contact" data-anchor-target="#contact" data-bottom-top="transform:scale(1.2);opacity:0" data-bottom="transform:scale(1);opacity:1">Contact me
+                                </h1>
+                                <h2 class="subheader no-margin-bottom">via social networks</h2>
+                                <div class="row">
+                                    <ul class="contact-circles large-block-grid-6 small-block-grid-3" data-anchor-target="#contact" data-bottom-top="transform:translate3d(130%,0px,0px)" data-100-bottom="transform:translate3d(0%,0px,0px)">
+                                        <li class="contact-circle"><a href="https://twitter.com/iamvanja"><span class="circle twitter" data-anchor-target="#contact" data-bottom-top="transform:rotate(1080deg)" data-100-bottom="transform:rotate(0deg)"><i class="icon-twitter-1"></i></span><span class="text" data-anchor-target="#contact" data-140-bottom="opacity:0" data-100-bottom="opacity:1">Twitter</span></a></li>
+                                        <li class="contact-circle"><a href="http://www.facebook.com/vanja.gavric"><span class="circle facebook" data-anchor-target="#contact" data-bottom-top="transform:rotate(1020deg)" data-100-bottom="transform:rotate(0deg)"><i class="icon-facebook-1"></i></span><span class="text" data-anchor-target="#contact" data-140-bottom="opacity:0" data-100-bottom="opacity:1">Facebook</span></a></li>
+                                        <li class="contact-circle"><a href="http://www.linkedin.com/in/vanjagavric"><span class="circle linkedin" data-anchor-target="#contact" data-bottom-top="transform:rotate(960deg)" data-100-bottom="transform:rotate(0deg)"><i class="icon-linkedin"></i></span><span class="text" data-anchor-target="#contact" data-140-bottom="opacity:0" data-100-bottom="opacity:1">LinkedIn</span></a></li>
+                                        <li class="contact-circle"><a href="https://github.com/iamvanja"><span class="circle github" data-anchor-target="#contact" data-bottom-top="transform:rotate(900deg)" data-100-bottom="transform:rotate(0deg)"><i class="icon-github-circled"></i></span><span class="text" data-anchor-target="#contact" data-140-bottom="opacity:0" data-100-bottom="opacity:1">GitHub</span></a></li>
+                                        <li class="contact-circle"><a href="http://flickr.com/vanja-gavric"><span class="circle flickr" data-anchor-target="#contact" data-bottom-top="transform:rotate(840deg)" data-100-bottom="transform:rotate(0deg)"><i class="icon-flickr-1"></i></span><span class="text" data-anchor-target="#contact" data-140-bottom="opacity:0" data-100-bottom="opacity:1">Flickr</span></a></li>
+                                        <li class="contact-circle"><a href="http://500px.com/iamvanja"><span class="circle fivehundredpx" data-anchor-target="#contact" data-bottom-top="transform:rotate(780deg)" data-100-bottom="transform:rotate(0deg)"><i class="icon-fivehundredpx"></i></span><span class="text" data-anchor-target="#contact" data-140-bottom="opacity:0" data-100-bottom="opacity:1">500px</span></a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="subheader no-margin-bottom">or</h2>
+                                <ul class="contact-circles small-block-grid-2" data-anchor-target="#contact" data-bottom-top="transform:translate3d(-130%,0px,0px)" data-50-bottom="transform:translate3d(0%,0px,0px)">
+                                    <li class="contact-circle" id="contact-circle"><a href="#"><span class="circle mail" data-anchor-target="#contact" data-bottom-top="transform:rotate(-930deg)" data-50-bottom="transform:rotate(0deg)"><i class="icon-mail"></i></span><span class="text" data-anchor-target="#contact" data-50-bottom="opacity:0" data-20-bottom="opacity:1">drop me an e-mail</span></a>
+                                        <noscript>&#118;&#97;&#110;&#106;&#97;&#91;&#97;&#116;&#93;&#103;&#97;&#118;&#114;&#105;&#99;&#91;&#100;&#111;&#116;&#93;&#111;&#114;&#103;</noscript>
+                                    </li>
+                                    <li class="contact-circle"><a href="skype:vanja1000?call"><span class="circle skype" data-anchor-target="#contact" data-bottom-top="transform:rotate(-720deg)" data-50-bottom="transform:rotate(0deg)"><i class="icon-skype"></i></span><span class="text" data-anchor-target="#contact" data-50-bottom="opacity:0" data-20-bottom="opacity:1">call me on Skype</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <footer class="footer" id="footer" role="contentinfo">
+                        <div class="footer-wrap">
+                            <div class="row">
+                                <div class="large-9 small-7 columns left">
+                                    <p>Handmade using ecologically sustainable code :)</p>
+                                </div>
+                                <div class="large-3 small-5 columns right">
+                                    <p>&copy; <a href="http://vanja.gavric.org" title="Vanja Gavrić web"><span>vanja</span>.gavric</a></p>
+                                    <p class="smaller"><a href="/v1">v1 site </a>| <a href="/playground">playground</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+        </main>
+        <nav><a class="back-to-top" id="back-to-top" href="#top"><i class="icon-up-circled"></i></a></nav>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-1.11.0.min.js"><\/script>')
+            
+        </script>
+        <script>
+            // Opera won't start animation without document ready event
+            $(function() {
+                var $loader = $('#loader'),
+                    $firstBorder = $('#loader > div:nth-child(1)'),
+                    $fourthBorder = $('#loader > div:nth-child(4)'),
+                    transEndEventNames = {
+                        'WebkitTransition' : 'webkitTransitionEnd',
+                        'MozTransition'    : 'transitionend',
+                        'OTransition'      : 'oTransitionEnd otransitionend',
+                        'msTransition'     : 'MSTransitionEnd',
+                        'transition'       : 'transitionend'
+                    },
+                    transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ],
+                    firstAnimationEnd = function() {
+                        $fourthBorder.one(transEndEventName, function() {
+                            $loader.addClass('border-clear');
+                            // console.log('first');
+                            secondAnimationEnd();
+                        });
+                    },
+                    secondAnimationEnd = function() {
+                        $firstBorder.one(transEndEventName, function() {
+                            $loader.removeClass('border-fill border-clear').addClass('border-fill');
+                            // console.log('second');
+                            firstAnimationEnd();
+                        });
+                    };
+            
+                $loader.addClass('border-fill');
+                firstAnimationEnd();
+                secondAnimationEnd();
+            
+                // fires after 4s to change the loading text
+                // if loading is already removed (finished loading),
+                // the $loader won't be found in the DOM and all is still good
+                var loadingTimer = window.setTimeout(function(){
+                    var alternativeText = $loader.find('h1').attr('data-alternative');
+                    $loader.find('h1').fadeOut(function(){
+                        $(this).html(alternativeText).fadeIn();
+                    });
+                }, 10000);
+            });
+        </script>
+        <script src="../assets/js/main.min.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-24663272-1', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
