@@ -158,7 +158,11 @@ module.exports = function(grunt){
                     "src/assets/pug-data/locales/*.json",
                     "settings.json"
                 ],
-                tasks: ["pug:watch"]
+                tasks: ["pug:watch"],
+                options: {
+                    // Start a live reload server on the default port 35729
+                    livereload: true
+                }
             },
             // html: {
             //     files: "<%= htmlWatchFiles.watch %>",
