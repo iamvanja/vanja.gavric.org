@@ -1,0 +1,25 @@
+header#intro.intro
+    nav#lang-selection.lang-selection.fadeIn.animation-1s.animationDelay-4s(role="navigation")
+        ul
+            li
+                a(href="/hr") HR
+            li
+                a(href="/en") EN
+
+    div#intro-centered.centered
+        .row
+            .large-12.columns
+                h1
+                    span.fadeIn.animation-600ms.animationDelay-400ms
+                        =$i18n.header.hi + "."
+                    br
+                    span.fadeIn.animation-600ms.animationDelay-2s
+                        =$i18n.header.iAm + " Vanja."
+                    br
+                    img.profile-pic.popupOut.animation-400ms.animationDelay-3s(src=assetsUrl.local + "images/profile.jpg", width="110", height="110", alt="Vanja Gavrić profile photo")
+
+    .scroll-down.fadeIn.animation-1s.animationDelay-4s
+        a(href="#developer")
+            span
+                =$i18n.header.scrollDown
+            i.icon-down-circled

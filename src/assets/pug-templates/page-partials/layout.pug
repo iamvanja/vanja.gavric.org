@@ -1,0 +1,12 @@
+doctype html
+html(class="no-js", lang=$i18n.lang)
+    block vars
+    include head.pug
+
+    body
+        include ../components/browse-happy.pug
+        block body
+
+
+        block scripts
+            include ../page-partials/scripts.pug
