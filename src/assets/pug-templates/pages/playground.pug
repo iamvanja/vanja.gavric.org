@@ -1,0 +1,22 @@
+extends ../page-partials/layout.pug
+include ../components/playground-item.pug
+
+block vars
+    -
+        var currentPage = {
+            name: "playground"
+        }
+
+block body
+    include ../page-partials/index/main-nav.pug
+
+    main(role="main")
+        h1= $i18n.playground.title
+        section#content.content1.playground-items
+            +playground-item("poof", "poof", "POOF!", "Cross-browser compatible (including legacy browsers) solution for displaying a 'poof' animation on each click or tap (similar to removing icons from a Mac OS X dock).")
+
+            +playground-item("old-tv", "turn-off-tv", "Old TV turn off animation", "This simple jQuery plugin creates a turn off animation of an old TV in the current browser viewport. Its use is meant for situations when the user is logging out or is deleting the content currently on the screen etc. It will create the animation and load the url provided in the href attribute of the targeted element.")
+
+            +playground-item("bb-connections", "social-connections-backbone", "Backbone.js social connections", "Small Backbone app that displays social connections by given data. Data is represented as a group of people and each person has one or more connections to the group.")
+
+            +playground-item("hex-clock", "hexclock", "#clock", "A hexadecimal clock that changes background color depending on the current time - from #000000 to #235959")

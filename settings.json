@@ -6,7 +6,8 @@
         "local": "../assets/"
     },
     "htmlPages": [
-        "index.pug"
+        "index.pug",
+        "playground.pug",
     ],
     "jsFiles": [
         "src/assets/js/vendor/jquery.easing.1.3.js",

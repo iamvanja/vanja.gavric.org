@@ -1,20 +1,25 @@
-nav#main-nav.main-nav.fadeIn.animation-1s.animationDelay-4s
+- var navBase = currentPage.name === "index" ? "" : "/"
+- var navClasses = "main-nav"
+- navClasses += (currentPage.name === "index") ? " fadeIn animation-1s animationDelay-4s" : ""
+nav#main-nav(class=navClasses)
     a#logo.logo(href="/", title="Vanja Gavrić logo. " + $i18n.mainNav.logoTitle)
         span.circle
             | VG
+        span.back
+            | &larr;
 
     ul
         li
-            a(href="#developer", title="Developer.")
+            a(href=navBase + "#developer", title="Developer.")
                 i.icon-code-1
         li
-            a(href="#photography", title= $i18n.general.photography + ".")
+            a(href=navBase + "#photography", title= $i18n.general.photography + ".")
                 i.icon-camera
         li
-            a(href="#writing", title= $i18n.general.writing + ".")
+            a(href=navBase + "#writing", title= $i18n.general.writing + ".")
                 i.icon-feather
         li
-            a(href="#contact", title= $i18n.general.contact + ".")
+            a(href=navBase + "#contact", title= $i18n.general.contact + ".")
                 i.icon-paper-plane
 
 #top.top-anchor
