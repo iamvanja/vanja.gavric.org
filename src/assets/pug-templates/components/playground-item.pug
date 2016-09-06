@@ -1,5 +1,5 @@
 mixin playground-item(id, href, title, description)
-    article(id!=id, class="playground-item " + id)(role="article")
+    article(id!=id, class="playground-item " + id, role="article")
         .row
             a.item-link(href!="/playground/" + href)
             .columns.large-4.title
