@@ -10,6 +10,7 @@ module.exports = {
             javascriptsDir: "src/assets/js",
             outputStyle: "expanded",
             relativeAssets: true,
+            raw: 'Sass::Script::Number.precision = 3\n',
         }
     },
     production: {
@@ -21,6 +22,7 @@ module.exports = {
             javascriptsDir: "build/assets/js",
             outputStyle: "compressed",
             relativeAssets: true,
+            raw: 'Sass::Script::Number.precision = 3\n',
         }
     }
 };
