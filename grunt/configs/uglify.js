@@ -9,16 +9,8 @@ module.exports = function(grunt, data) {
         production: {
             files: [
                 {
-                    dest: "build/assets/js/main.min.js",
+                    dest: "build/assets/js/all.js",
                     src: data.helpers.getProductionFiles(data.settings.jsFiles)
-                },
-                {
-                    expand: true,
-                    cwd: "build/",
-                    src: [
-                        "assets/js/init-*.js",
-                    ],
-                    dest: "build/"
                 }
             ]
         }
