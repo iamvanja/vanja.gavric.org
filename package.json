@@ -19,6 +19,7 @@
     "grunt-pug-i18n": "^1.0.0",
     "grunt-remove-logging": "^0.2.0",
     "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^0.19.2",
     "shelljs": "^0.6.0"
   },
   "scripts": {
