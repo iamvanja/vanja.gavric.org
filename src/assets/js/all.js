@@ -2232,304 +2232,660 @@ jQuery.extend( jQuery.easing,
 	//Animation frame id returned by RequestAnimationFrame (or timeout when RAF is not supported).
 	var _animFrame;
 }(window, document));
-/*!
-  |------------------------
-  | VG custom JS
-  |------------------------
- */
+// starting point, initialize SITE object
+(function(window, document, $) {
+    "use strict";
+    window.SITE = {};
+})(this, this.document, jQuery);
 
-
-(function(){
-    'use strict';
-
-    var App = {
-        variables: {},
-        elements: {},
-        helpers: {}
-    },
-        email = {
-            a : "mailto:",
-            b : "vanja",
-            c : "gavric.org",
-            d : "?subject=From vanja.gavric.org"
-    };
-
-    // App.variables.viewport = App.helpers.viewport();
-    App.elements.$window = $(window);
-    App.elements.$html = $('html');
-    App.elements.$body = $('body');
-    App.elements.$intro = $('#intro');
-    App.elements.$outro = $('#outro');
-    App.elements.$content = $('#content');
-    // App.elements.$top = $('#top');
-    App.elements.$mainNav = $('#main-nav');
-    App.elements.$mainNavUl = $('#main-nav').find('ul');
-    App.elements.$developer = $('#developer');
-    App.elements.$technologiesLegend = $('#technologies-legend');
-    App.elements.$technologiesList = $('#technologies-list li');
-    App.elements.$introCentered = $('#intro-centered');
-    App.elements.$backstretchWrap = $('#photography .backstretch-wrap');
-    App.elements.$backToTop = $('#back-to-top');
-
-    // App.variables.transformClass = Modernizr.cssfilters ? 'blurred' : 'grayscale';
-    App.variables.transformClass = 'grayscale';
-    if (window.skrollr){
-        App.variables.isSkrollrAllowed = Modernizr.csstransforms3d && App.elements.$body.hasClass("index");
-        App.variables.skrollrInstance = false;
-        App.variables.skrollInitObj = {
-            forceHeight : false,
-            mobileDeceleration : 1,
-            render : function(info){
-
-                //Console log
-                // $('#console').empty().append('Scrolled: ' + info.curTop + '<br /> Total: ' + info.maxTop);
-
-                if (info.curTop <= App.elements.$intro.outerHeight()) {
-                    App.elements.$mainNav.find('li').removeClass('active');
-                    App.elements.$backToTop.fadeOut();
-                    App.elements.$mainNavUl.css({
-                        'margin-left' : 0
-                    });
+(function(window, document, $, undefined) {
+    "use strict";
+    // rename to utils?
+    var site = window.SITE,
+        helpers = {
+            shuffleList: function(el){
+                if (el){
+                    var listLength = el.children.length;
+                    for (var i = listLength; i >= 0; i--) {
+                        el.appendChild(el.children[Math.random() * i | 0]);
+                    }
                 }
-                else {
-                    App.elements.$backToTop.fadeIn();
-                    App.elements.$mainNavUl.css({
-                        'margin-left' : '-100%'
-                    });
-                }
-                if (info.curTop >= this.relativeToAbsolute(document.getElementById('developer'), 'top', 'top')) {
-                    App.elements.$mainNav.find('li:eq(0)').addClass('active').siblings().removeClass('active');
-                }
-                if (info.curTop >= this.relativeToAbsolute(document.getElementById('photography'), 'top', 'top')) {
-                    App.elements.$mainNav.find('li:eq(1)').addClass('active').siblings().removeClass('active');
-                }
-                if (info.curTop+10 >= this.relativeToAbsolute(document.getElementById('writing'), 'top', 'top')) {
-                    App.elements.$mainNav.find('li:eq(2)').addClass('active').siblings().removeClass('active');
-                }
-                if (info.curTop === info.maxTop) {
-                    App.elements.$mainNav.find('li:eq(3)').addClass('active').siblings().removeClass('active');
-                }
-            }
+            },
+            getParameterByName: function(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            },
+            rot13: function(s) {
+                return s.replace(/[a-zA-Z]/g, function(c) {
+                    return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+                });
+            },
+            setAllToMaxHeight: function(el) {
+                el.outerHeight("auto");
+                return el.outerHeight(Math.max.apply(el, $.map(el, function(e) {
+                    return $(e).outerHeight();
+                })));
+            },
         };
-    }
-    else {
-        App.variables.isSkrollrAllowed = false;
-    }
 
-    App.helpers.viewport = function() {
-        var e = window,
-            a = 'inner';
-        if ( !( 'innerWidth' in window ) ) {
-            a = 'client';
-            e = document.documentElement || document.body;
-        }
-        return {
-            width : e[ a+'Width' ],
-            height : e[ a+'Height' ]
-        };
-    };
-    App.helpers.shuffleList = function(ul){
-        if (ul){
-            var listLength = ul.children.length;
-            for (var i = listLength; i >= 0; i--) {
-                ul.appendChild(ul.children[Math.random() * i | 0]);
+    site.helpers = helpers;
+
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var controller = {
+        fire : function(func, funcname, args){
+            var namespace = window.SITE.settings.controllerCallbacks;
+
+            funcname = (funcname === undefined) ? "init" : funcname;
+            if (func !== "" && namespace[func] && typeof namespace[func][funcname] === "function") {
+                console.log("controller.fire calling: SITE."+func+ "." +funcname+"()");
+                namespace[func][funcname](args);
             }
-        }
-    };
-    App.helpers.filterTechnologies = function(self){
-        var category = $(self).attr('class');
-        App.elements.$technologiesList.each(function(){
-            if (!$(this).hasClass(category)) {
-                $(this).addClass('scaledOut '+App.variables.transformClass);
-            }
-        });
-    };
-    App.helpers.removeTechnologyClasses = function(){
-            App.elements.$technologiesList.removeClass('scaledOut '+App.variables.transformClass);
-    };
-    App.helpers.init = function() {
-        var absHeight = App.elements.$introCentered.outerHeight(),
-            absWidth = App.elements.$introCentered.outerWidth();
-        App.elements.$introCentered.css({
-            'margin-left' : '-' + absWidth / 2 + 'px',
-            'margin-top' : '-' + absHeight / 2 + 'px',
-            'width' : absWidth + 'px',
-            'height' : absHeight + 'px'
-        }).removeClass('centered').addClass('abs-centered');
-
-        // App.elements.$body.css({height : $(document).height() + 'px' });
-        App.elements.$content.css({
-            'margin-top' : App.elements.$intro.outerHeight() + 'px'
-        });
-
-        if (App.variables.isSkrollrAllowed) {
-            App.variables.skrollrInstance = skrollr.init( App.variables.skrollInitObj );
-            App.variables.skrollrInstance.refresh();
-        }
-
-        if (App.elements.$body.hasClass("playground")){
-             if (App.elements.$window.width() > 768) {
-                 $(".playground-item .columns").setAllToMaxHeight();
-             }
-             else {
-                $(".playground-item .columns").css({"height":"auto"});
-             }
-        }
-
-    };
-    App.helpers.removeLoader = function(){
-        var $loader = $('#loader');
-        $loader.find('div').fadeOut(400, function(){
-            $loader.animate({
-                left:'-200%'
-            }, function(){
-                $loader.remove();
-                // var androidVersion = App.helpers.getAndroidVersion();
-                // if (androidVersion === false || androidVersion >= 4) {
-                    App.elements.$body.addClass('delayedAnimateStuff');
-                // }
-            });
-        });
-    };
-    App.helpers.getAndroidVersion = function() {
-        if( navigator.userAgent.indexOf("Android") >= 0 ) {
-          return parseFloat(ua.slice(ua.indexOf("Android")+8));
-        }
-        return false;
-    };
-
-
-    // essentially a document ready init
-    $('#contact-circle > a').attr('href', email.a+email.b+'@'+email.c+email.d);
-    App.elements.$intro.addClass('fixed');
-    if ($.fn.backstretch && App.elements.$body.hasClass("index")){
-        // photos
-        App.elements.$backstretchWrap.backstretch([
-            '../assets/images/photos/adriatic-sea.jpg'
-            // '/assets/images/photos/coming-down-on-me.jpg', /* Coming down on me */
-        // 'http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg', /* Paris opera */
-        // 'http://farm9.staticflickr.com/8097/8442056306_0c4c82c808_o.jpg', /* London Big Ben */
-        ], {duration: 5000, fade: 750});
-        $('#pause, #play').on('click', function(){
-            var action = 'resume',
-                newId = 'pause',
-                newClass = 'icon icon-pause-circled';
-
-            if ($(this).is('#pause')){
-                action = 'pause';
-                newId = 'play';
-                newClass = 'icon icon-play-circled';
-            }
-            App.elements.$backstretchWrap.backstretch( action );
-            $(this).attr({
-                'id' : newId,
-                'class' : newClass
-            });
-        });
-    }
-    // categories
-    App.helpers.shuffleList(document.getElementById('technologies-list'));
-    App.elements.$technologiesLegend.find('span').on('touchstart', function() {
-            App.helpers.removeTechnologyClasses();
-            App.helpers.filterTechnologies(this);
-    });
-    App.elements.$technologiesLegend.find('span').on({
-        mouseenter: function(){
-            App.helpers.filterTechnologies(this);
         },
-        mouseleave : function(){
-            App.helpers.removeTechnologyClasses();
-        }
-    });
-    App.elements.$developer.on('click', function(e){
-        var $container = App.elements.$technologiesLegend;
-        if ($container.has(e.target).length === 0){
-            App.helpers.removeTechnologyClasses();
-        }
-    });
-    $('a[href^="#"]').on('click', function(e){
-        e.preventDefault();
-        // alert($(this).attr("href"));
-        var $this = $(this),
-            hash = $this.attr('href'),
-            offset = 0,
-            parent = $this.parent('li'),
-            isMobile = $('html').hasClass('skrollr-mobile');
+        loadEvents : function(){
+            var bodyId = document.body.id,
+                classes = document.body.className.split(/\s+/) || [];
 
-        if (isMobile) {
-            if (App.variables.skrollrInstance !== false && hash === '#top'){
-                App.variables.skrollrInstance.setScrollTop(offset);
-            }
-            return;
-        }
+            // hit up common first.
+            controller.fire("common");
 
-        if (hash === '#contact') {
-            var viewport = App.helpers.viewport();
-            offset = $(document).height() - viewport.height;
-        }
-        else if (hash !== '#top') {
-            offset = $(hash).offset().top;
-        }
-
-        if (!$([App.elements.$html[0], App.elements.$body[0]]).is(':animated')) {
-            $([App.elements.$html[0], App.elements.$body[0]]).animate({
-                scrollTop: offset
-            }, 1600, 'easeInOutQuint').promise().done(function(){
-                // alert('done')
-                App.elements.$mainNav.find('li').removeClass('active');
-                if (parent.length) {
-                    parent.addClass('active');
-                }
-                if (hash !== '#top') {
-                    window.location.hash = hash;
-                }
-                else {
-                    window.location.hash = '';
-                }
+            // do all the classes too.
+            classes.forEach(function(classnm, i){
+                controller.fire(classnm);
+                controller.fire(classnm, bodyId);
             });
-        }
-    });
 
-
-    // init all on window ready
-    App.elements.$window.on('load resize', function(){
-        App.helpers.init();
-    });
-
-    // remove loader once everything is set up
-    App.elements.$window.on('load', function(){
-        App.helpers.removeLoader();
-        // on load navigate to the page fragment
-        if (window.location.hash) {
-            // alert(window.location.hash);
-            $('a[href="'+ window.location.hash +'"]').trigger('click');
-        }
-         if ($.fn.backstretch && App.elements.$body.hasClass("index")){
-            // once the loader is removed, add more photos to backstretch
-            var backstretchInstance = App.elements.$backstretchWrap.data('backstretch');
-            backstretchInstance.images.push(
-                '../assets/images/photos/stuck-in-traffic.jpg',
-                '../assets/images/photos/hana.jpg',
-                '../assets/images/photos/autumn-in-zrinjevac.jpg',
-                '../assets/images/photos/double-rainbow-in-paris.jpg'
-            );
-        }
-
-        $('#articles > .article-items > li > a > img.lazy').each(function(){
-            $(this).attr('src', $(this).attr('data-lazysrc'));
-        });
-
-        if (App.variables.skrollrInstance) {
-            App.variables.skrollrInstance.refresh();
-        }
-    });
-
-    $.fn.setAllToMaxHeight = function() {
-        this.outerHeight('auto');
-        return this.outerHeight(Math.max.apply(this, $.map(this, function(e) {
-            return $(e).outerHeight();
-        })));
+            controller.fire("common", "finalize");
+        },
     };
 
-}());
+    window.SITE.controller = controller;
 
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        views = {
+            run: function(viewName, methodName, options) {
+                options = options || {};
+                var view = site.views[viewName],
+                    method = (view || {})[methodName];
+
+                if (!view) {
+                    console.error("View `"+ viewName +"` is undefined.");
+                    return;
+                }
+                if (!method) {
+                    console.error("Method "+ methodName +" in view `"+ viewName +"` is undefined.");
+                    return;
+                }
+
+                return method(options);
+            },
+            register: function(viewName, view){
+                // fail if there is already this view
+                // do not overwrite
+                if (site.views[viewName]) {
+                    console.error("View `"+ viewName +"` already exists!");
+                    return;
+                }
+
+                // the view is global now
+                site.views[viewName] = view;
+            },
+        };
+
+    site.views = views;
+
+})(this, this.document, jQuery);
+
+(function(window, document, $, undefined) {
+    "use strict";
+    var site = window.SITE,
+        viewName = "common",
+        // ui = {},
+        exports = {
+            showLoading: function(options) {
+                var loaderId = "loader",
+                    loadingText = $("meta[name=loading-text]").attr("content"),
+                    loadingTextAlt = $("meta[name=loading-text-alt]").attr("content"),
+                    $loader;
+
+                if (options.toShow) {
+                    if (document.getElementById("loader")){
+                        console.log("Loader already shown!");
+                        return;
+                    }
+                    $loader = $("<div />").addClass(loaderId);
+                    $loader.html("<div></div><div></div><div></div><div></div><h1 class=\"default\">"+ loadingText +"...</h1><h1 class=\"alternative\">" + loadingTextAlt + "</h1>");
+                    $loader.attr({
+                        id: loaderId,
+                        class: loaderId + " animate"
+                    });
+                    // append loader and trigger layout
+                    $("body").append($loader).height();
+
+                    $loader.addClass("animate-headers");
+                }
+                else {
+                    $loader = $("#"+loaderId);
+                    var callback = function(){
+                        $loader.remove();
+                        $(window).trigger("view.common.showLoading.removed");
+                    };
+                    $loader.one(site.settings.transitionEnd, function(){
+                        callback();
+                    });
+                    window.setTimeout(function(){
+                        $loader = $("#"+loaderId);
+                        if ($loader.length) {
+                            callback();
+                        }
+                    }, 3000);
+
+                    $loader.removeClass("animate").addClass("exit");
+                }
+            },
+            viewPortDimensions: function(){
+                var e = window, a = "inner";
+
+                if ( !( "innerWidth" in window ) ) {
+                    a = "client";
+                    e = document.documentElement || document.body;
+                }
+
+                return {
+                    width : e[ a+"Width" ],
+                    height : e[ a+"Height" ]
+                };
+            }
+        };
+
+    site.views.register(viewName, exports);
+
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        viewName = "index",
+        ui = {
+            el: ".index",
+            intro: "#intro",
+            content: "#content",
+            centerIntroContent: "#intro-centered",
+            mainNav: "#main-nav",
+        },
+        isSkrollrAllowed = false,
+        skrollrInstance = false,
+        skrollInitObj = {},
+        isLoaded = $.Deferred(),
+        initSkrollr = function(){
+            if (window.skrollr){
+                isSkrollrAllowed = Modernizr.csstransforms3d;
+                skrollInitObj = {
+                    forceHeight : false,
+                    mobileDeceleration : 1,
+                    render : function(info){
+                        // console.log(info);
+                        //Console log
+                        // $("#console").empty().append("Scrolled: " + info.curTop + "<br /> Total: " + info.maxTop);
+
+                        // when header is shown
+                        // if (info.curTop <= $(ui.intro).outerHeight()) {
+                        //     // hide any active nav item
+                        //     App.elements.$mainNav.find("li").removeClass("active");
+
+                        //     // hide back to top arrow
+                        //     App.elements.$backToTop.fadeOut();
+
+                        //     // show menu
+                        //     App.elements.$mainNavUl.css({
+                        //         "margin-left" : 0
+                        //     });
+                        // }
+                        // // header is hidden
+                        // else {
+                        //     // show back to top arrow
+                        //     App.elements.$backToTop.fadeIn();
+
+                        //     // hide menu
+                        //     App.elements.$mainNavUl.css({
+                        //         "margin-left" : "-100%"
+                        //     });
+                        // }
+
+                        // // when developer is shown
+                        // if (info.curTop >= this.relativeToAbsolute(document.getElementById("developer"), "top", "top")) {
+                        //     // show developer active in the menu
+                        //     App.elements.$mainNav.find("li:eq(0)").addClass("active").siblings().removeClass("active");
+                        // }
+                        // if (info.curTop >= this.relativeToAbsolute(document.getElementById("photography"), "top", "top")) {
+                        //     App.elements.$mainNav.find("li:eq(1)").addClass("active").siblings().removeClass("active");
+                        // }
+                        // if (info.curTop+10 >= this.relativeToAbsolute(document.getElementById("writing"), "top", "top")) {
+                        //     App.elements.$mainNav.find("li:eq(2)").addClass("active").siblings().removeClass("active");
+                        // }
+                        // if (info.curTop === info.maxTop) {
+                        //     App.elements.$mainNav.find("li:eq(3)").addClass("active").siblings().removeClass("active");
+                        // }
+                    }
+                };
+            }
+
+            if (isSkrollrAllowed) {
+                skrollrInstance = skrollr.init( skrollInitObj );
+            }
+        },
+        onLoad = function(){
+            $(window).on("load", function(e) {
+                isLoaded.resolve();
+                if (skrollrInstance) {
+                    skrollrInstance.refresh();
+                }
+            });
+        },
+        onLoadResize = function(){
+            var $content = $(ui.content),
+                $centerIntroContent = $(ui.centerIntroContent);
+
+            $(window).on("load resize", function(e){
+                // allow for the intro el to be shown full-screen
+                $content.css({
+                    "margin-top" : $content.outerHeight() + "px"
+                });
+
+                // center content inside the intro el
+                var absHeight = $centerIntroContent.outerHeight(),
+                    absWidth = $centerIntroContent.outerWidth();
+                $centerIntroContent.css({
+                    "margin-left" : absWidth / -2 + "px",
+                    "margin-top" : absHeight / -2 + "px",
+                    "width" : absWidth + "px",
+                    "height" : absHeight + "px"
+                }).removeClass("centered").addClass("abs-centered");
+            });
+        },
+        initHashClick = function(){
+            $("a[href^=\"#\"]").on("click", function(e){
+                e.preventDefault();
+                // alert($(this).attr("href"));
+                var $this = $(this),
+                    hash = $this.attr("href"),
+                    offset = 0,
+                    parent = $this.parent("li");
+                    // isMobile = $("html").hasClass("skrollr-mobile");
+
+                // if (isMobile) {
+                //     if (App.variables.skrollrInstance !== false && hash === "#top"){
+                //         App.variables.skrollrInstance.setScrollTop(offset);
+                //     }
+                //     return;
+                // }
+
+                if (hash === "#contact") {
+                    var viewport = site.views.run("common", "viewPortDimensions");
+                    offset = $(document).height() - viewport.height;
+                }
+                else if (hash !== "#top") {
+                    offset = $(hash).offset().top;
+                }
+
+                if (!$("html, body").is(":animated")) {
+                    $("html, body").animate({
+                        scrollTop: offset
+                    }, 1600, "easeInOutQuint").promise().done(function(){
+                        // alert("done")
+                        $(ui.mainNav).find("li").removeClass("active");
+                        if (parent.length) {
+                            parent.addClass("active");
+                        }
+
+                        window.location.hash = hash !== "#top" ? hash : "";
+                    });
+                }
+            });
+        },
+        triggerHash = function(){
+            if (window.location.hash) {
+                $("a[href=\""+ window.location.hash +"\"]").trigger("click");
+            }
+        },
+        hideLoader = function(){
+            var timer = $.Deferred();
+            // show timer for at least 3.4s seconds
+            window.setTimeout(function(){
+                timer.resolve();
+            }, 3400);
+
+            // when 2s timer and the page is loaded, remove loader
+            $.when(timer, isLoaded).done(function(){
+                $(window).on("view.common.showLoading.removed", function(){
+                    $("body").addClass("delayedAnimateStuff");
+                    triggerHash();
+                });
+                site.views.run("common", "showLoading", {toShow: false});
+            });
+        },
+        exports = {
+            init: function(){
+                // separate #intro view?
+                $(ui.intro).addClass("fixed");
+                site.views.run("common", "showLoading", {toShow: true});
+
+                onLoad();
+                onLoadResize();
+                initSkrollr();
+                initHashClick();
+
+                site.views.run("index.developer", "init");
+                site.views.run("index.photography", "init");
+                site.views.run("index.writing", "init");
+                site.views.run("index.contact", "init");
+
+                hideLoader();
+            },
+        };
+
+    site.views.register(viewName, exports);
+
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        viewName = "index.developer",
+        ui = {
+            el: "#developer",
+            list: "#technologies-list",
+            legend: "#technologies-legend"
+        },
+        // App.variables.transformClass = Modernizr.cssfilters ? "blurred" : "grayscale";
+        transformClass = "grayscale",
+        shuffleTechnologies = function(){
+            site.helpers.shuffleList($(ui.list)[0] || []);
+        },
+        initTechnologiesLegend = function(){
+            $(ui.legend).find("span").on({
+                mouseenter: function(){
+                    filterTechnologies(this);
+                },
+                mouseleave: function(){
+                    removeTechnologyClasses();
+                },
+                touchstart: function(){
+                    App.helpers.removeTechnologyClasses();
+                    App.helpers.filterTechnologies(this);
+                }
+            });
+        },
+        // @todo: filter through css, apply just parent class
+        filterTechnologies = function(el){
+            var category = $(el).attr("class");
+            $(ui.list).find("li").each(function(){
+                if (!$(this).hasClass(category)) {
+                    $(this).addClass("scaledOut "+transformClass);
+                }
+            });
+        },
+        removeTechnologyClasses = function(){
+            $(ui.list).find("li").removeClass("scaledOut "+transformClass);
+        },
+        resetTechnologiesLegend = function(){
+            $(ui.el).on("click", function(e){
+                var $container = $(ui.legend);
+                if ($container.has(e.target).length === 0){
+                    removeTechnologyClasses();
+                }
+            });
+        },
+
+        exports = {
+            init: function(){
+                shuffleTechnologies();
+                initTechnologiesLegend();
+                resetTechnologiesLegend();
+            },
+        };
+
+    site.views.register(viewName, exports);
+
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        viewName = "index.photography",
+        ui = {
+            el: "#photography",
+            backstretchEl: ".backstretch-wrap",
+            play: "#play",
+            pause: "#pause"
+        },
+        $backstretchEl = $(ui.el).find(ui.backstretchEl),
+        imagesPath,
+        onLoad = function(){
+            $(window).on("load", function(e) {
+                loadMorePhotos();
+            });
+        },
+        initBackstretch = function(){
+            if ($.fn.backstretch){
+                imagesPath = site.settings.assetsUrl.local + "images/photos/";
+                // site.settings.assetsUrl.local + "images/photos/coming-down-on-me.jpg", /* Coming down on me */
+                // "http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg", /* Paris opera */
+                // "http://farm9.staticflickr.com/8097/8442056306_0c4c82c808_o.jpg", /* London Big Ben */
+                $backstretchEl.backstretch(
+                    [imagesPath + "adriatic-sea.jpg"],
+                    {duration: 5000, fade: 750}
+                );
+
+
+                // todo: click on entire container, pause and play zoom in/out and fade effect
+                $(ui.play + ", " + ui.pause).on("click", function(){
+                    var action = "resume",
+                        newId = "pause",
+                        newClass = "icon icon-pause-circled";
+
+                    if ($(this).is(ui.pause)){
+                        action = "pause";
+                        newId = "play";
+                        newClass = "icon icon-play-circled";
+                    }
+
+                    $backstretchEl.backstretch(action);
+
+                    $(this).attr({
+                        "id": newId,
+                        "class": newClass
+                    });
+                });
+            }
+        },
+        loadMorePhotos = function(){
+             if ($.fn.backstretch){
+                // once the initial page load is finished, add more photos to backstretch
+                var backstretchInstance = $backstretchEl.data("backstretch");
+                backstretchInstance.images.push(
+                    imagesPath + "stuck-in-traffic.jpg",
+                    imagesPath + "hana.jpg",
+                    imagesPath + "autumn-in-zrinjevac.jpg",
+                    imagesPath + "double-rainbow-in-paris.jpg"
+                );
+            }
+        },
+        exports = {
+            init: function(){
+                onLoad();
+                initBackstretch();
+            },
+        };
+
+    site.views.register(viewName, exports);
+
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        viewName = "index.writing",
+        ui = {
+            el: "#writing",
+        },
+        onLoad = function(){
+            $(window).on("load", function(e) {
+                lazyLoadImages();
+            });
+        },
+        lazyLoadImages = function(){
+            $(ui.el).find("img.lazy").each(function(){
+                $(this).attr("src", $(this).attr("data-lazysrc"));
+            });
+        },
+        exports = {
+            init: function(){
+                onLoad();
+            },
+        };
+
+    site.views.register(viewName, exports);
+
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        viewName = "index.contact",
+        ui = {
+            el: "#contact",
+            emailCircle: "#email-circle",
+        },
+        initEmail = function(){
+            var $el = $(ui.emailCircle).find("a");
+            $el.attr("href", "mailto:" + $el.attr("data-username") + "@" + $el.attr("data-domain") + "?subject=From "+$el.attr("data-domain"));
+        },
+        exports = {
+            init: function(){
+                initEmail();
+            },
+        };
+
+    site.views.register(viewName, exports);
+
+})(this, this.document, jQuery);
+
+
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        viewName = "playground",
+        ui = {
+            el: ".playground",
+            columns: ".playground-item .columns",
+        },
+        ensureEqualHeight = function(){
+            var $columns = $(ui.columns);
+            $(window).width() > 768 ? site.helpers.setAllToMaxHeight($columns) : $columns.css({"height":"auto"});
+        },
+        onLoadResize = function(){
+            // todo: throttle this event?
+            $(window).on("load resize", function(e){
+                ensureEqualHeight();
+            });
+        },
+        exports = {
+            init: function(){
+                onLoadResize();
+            },
+        };
+
+    site.views.register(viewName, exports);
+
+})(this, this.document, jQuery);
+
+/*
+* SITE control
+* Version 1.1
+*
+* VG
+*
+*/
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE,
+        $html = $("html"),
+        getSettings = function(settings){
+            var finalSettings = $.extend(true, {
+                    controllerCallbacks: {},
+                }, settings);
+
+            return finalSettings;
+        },
+        getEnvVariables = function(settings) {
+            settings.isProduction = $("meta[name=environment]").attr("content") !== "development";
+            settings.isDbg = site.helpers.getParameterByName("isDbg") === "1";
+
+            if (!settings.isProduction) {
+                console.warn("You are in the development mode. Before publishing make sure to run %c\"grunt production\"", "background: #222; color: #31c50f");
+            }
+
+            settings.lang = $html.attr("lang");
+            settings.locale = $html.attr("locale");
+            settings.assetsUrl = {
+                local: $("meta[name=local-url]").attr("content"),
+                remote: $("meta[name=remote-url]").attr("content"),
+            };
+            // https://davidwalsh.name/css-animation-callback (comments)
+            // https://coderwall.com/p/ey5a1w/standarise-transitionend
+            // https://gist.github.com/depoulo/9dc8f59d791ec8f8e40c
+            settings.transitionEnd = (!!window.WebKitAnimationEvent) ? "webkitTransitionEnd" : "transitionend";
+
+            return settings;
+        },
+        init = function(settings){
+            // extend settings
+            site.settings = getSettings(settings);
+            site.settings = getEnvVariables(site.settings);
+
+            site.data = {};
+
+            // kick it all off here
+            $(document).ready(site.controller.loadEvents);
+        };
+
+    site.init = init;
+
+})(this, this.document, jQuery);
+
+(function(window, document, $) {
+    "use strict";
+    var site = window.SITE;
+    site.init({
+        controllerCallbacks: {
+            // common: {
+            //     init: function(){},
+            //     finalize: function(){},
+            // },
+            index: {
+                init: function(){
+                    site.views.run("index", "init");
+                },
+                // "landing-normal": function(){},
+            },
+            playground: {
+                init: function(){
+                    site.views.run("playground", "init");
+                },
+                // "playground-normal": function(){},
+            },
+        },
+    });
+
+})(this, this.document, jQuery);

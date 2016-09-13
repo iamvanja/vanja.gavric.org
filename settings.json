@@ -20,7 +20,20 @@
         "src/assets/js/vendor/jquery.easing.1.3.js",
         "src/assets/js/vendor/jquery.backstretch.js",
         "src/assets/js/vendor/skrollr.js",
-        "src/assets/js/main.js"
+        "src/assets/js/site/start.js",
+        "src/assets/js/site/helpers.js",
+        "src/assets/js/site/controller.js",
+        "src/assets/js/site/views.js",
+        "src/assets/js/site/views/view.common.js",
+        "src/assets/js/site/views/view.index.js",
+        "src/assets/js/site/views/view.index.developer.js",
+        "src/assets/js/site/views/view.index.photography.js",
+        "src/assets/js/site/views/view.index.writing.js",
+        "src/assets/js/site/views/view.index.contact.js",
+        "src/assets/js/site/views/view.playground.js",
+
+        "src/assets/js/site/site-init.js",
+        "src/assets/js/site/init.js"
     ],
     "deploy": {
         "productionPath": "",
@@ -28,5 +41,9 @@
         "logFilePath": ".grunt/rsync/",
         "host": "gavric.org",
         "domainName": "vanja.gavric.org"
+    },
+    "email": {
+        "username": "vanja",
+        "domain": "gavric.org"
     }
 }

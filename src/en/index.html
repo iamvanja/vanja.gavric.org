@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" locale="en">
     <head>
         <meta charset="utf-8">
         <title>Vanja Gavrić | front-end developer | web developer</title>
@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="local-url" content="../assets/">
         <meta name="environment" content="development">
+        <meta name="loading-text" content="Loading">
+        <meta name="loading-text-alt" content="Almost there...">
         <link rel="stylesheet" href="../assets/css/main.css">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <script src="../assets/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -19,20 +21,8 @@
             }]);
         </script>
     </head>
-    <body class="index"><!--[if lte IE 9]>
+    <body class="index" id="landing-normal"><!--[if lte IE 9]>
         <p class="chromeframe">Hi, I really want to show you my website, but you are using an outdated browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p><![endif]-->
-        <script>
-            (function(){
-                // to avoid implementing document ready or using ugly onLoad=f(),
-                // this loader code is placed inside body (body element won't be undefined)
-                var loaderHtml = '<div></div><div></div><div></div><div></div><h1 data-alternative="Almost there...">Loading...</h1>',
-                    loader = document.createElement('div');
-                loader.id = 'loader';
-                loader.className = 'loader';
-                loader.innerHTML = loaderHtml;
-                document.getElementsByTagName('body')[0].appendChild(loader);
-            }());
-        </script>
         <nav class="main-nav fadeIn animation-1s animationDelay-4s" id="main-nav"><a class="logo" id="logo" href="/" title="Vanja Gavrić logo. If you click it, the page will refresh."><span class="circle">VG</span><span class="back">&larr;</span></a>
             <ul>
                 <li><a href="#developer" title="Developer."><i class="icon-code-1"></i></a></li>
@@ -192,9 +182,7 @@
                                 </div>
                                 <h2 class="subheader no-margin-bottom">or</h2>
                                 <ul class="contact-circles small-block-grid-2" data-anchor-target="#contact" data-bottom-top="transform:translate3d(-130%,0px,0px)" data-50-bottom="transform:translate3d(0%,0px,0px)">
-                                    <li class="contact-circle" id="contact-circle"><a href="#"><span class="circle mail" data-anchor-target="#contact" data-bottom-top="transform:rotate(-930deg)" data-50-bottom="transform:rotate(0deg)"><i class="icon-mail"></i></span><span class="text" data-anchor-target="#contact" data-50-bottom="opacity:0" data-20-bottom="opacity:1">drop me an e-mail</span></a>
-                                        <noscript>&#118;&#97;&#110;&#106;&#97;&#91;&#97;&#116;&#93;&#103;&#97;&#118;&#114;&#105;&#99;&#91;&#100;&#111;&#116;&#93;&#111;&#114;&#103;</noscript>
-                                    </li>
+                                    <li class="contact-circle" id="email-circle"><a data-username="vanja" data-domain="gavric.org"><span class="circle mail" data-anchor-target="#contact" data-bottom-top="transform:rotate(-930deg)" data-50-bottom="transform:rotate(0deg)"><i class="icon-mail"></i></span><span class="text" data-anchor-target="#contact" data-50-bottom="opacity:0" data-20-bottom="opacity:1">drop me an e-mail</span></a></li>
                                     <li class="contact-circle"><a href="skype:vanja1000?call"><span class="circle skype" data-anchor-target="#contact" data-bottom-top="transform:rotate(-720deg)" data-50-bottom="transform:rotate(0deg)"><i class="icon-skype"></i></span><span class="text" data-anchor-target="#contact" data-50-bottom="opacity:0" data-20-bottom="opacity:1">call me on Skype</span></a></li>
                                 </ul>
                             </div>
@@ -220,50 +208,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-1.11.0.min.js"><\/script>')
             
-        </script>
-        <script>
-            // Opera won't start animation without document ready event
-            $(function() {
-                var $loader = $('#loader'),
-                    $firstBorder = $('#loader > div:nth-child(1)'),
-                    $fourthBorder = $('#loader > div:nth-child(4)'),
-                    transEndEventNames = {
-                        'WebkitTransition' : 'webkitTransitionEnd',
-                        'MozTransition'    : 'transitionend',
-                        'OTransition'      : 'oTransitionEnd otransitionend',
-                        'msTransition'     : 'MSTransitionEnd',
-                        'transition'       : 'transitionend'
-                    },
-                    transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ],
-                    firstAnimationEnd = function() {
-                        $fourthBorder.one(transEndEventName, function() {
-                            $loader.addClass('border-clear');
-                            // console.log('first');
-                            secondAnimationEnd();
-                        });
-                    },
-                    secondAnimationEnd = function() {
-                        $firstBorder.one(transEndEventName, function() {
-                            $loader.removeClass('border-fill border-clear').addClass('border-fill');
-                            // console.log('second');
-                            firstAnimationEnd();
-                        });
-                    };
-            
-                $loader.addClass('border-fill');
-                firstAnimationEnd();
-                secondAnimationEnd();
-            
-                // fires after 4s to change the loading text
-                // if loading is already removed (finished loading),
-                // the $loader won't be found in the DOM and all is still good
-                var loadingTimer = window.setTimeout(function(){
-                    var alternativeText = $loader.find('h1').attr('data-alternative');
-                    $loader.find('h1').fadeOut(function(){
-                        $(this).html(alternativeText).fadeIn();
-                    });
-                }, 10000);
-            });
         </script>
         <script src="../assets/js/all.js"></script>
         <script>

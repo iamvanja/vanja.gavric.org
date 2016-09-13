@@ -54,13 +54,12 @@ article#contact.contact(role="article", aria-labelledby="main-title-contact")
             h2.subheader.no-margin-bottom= $i18n.general.or
 
             ul.contact-circles.small-block-grid-2(data-anchor-target="#contact", data-bottom-top="transform:translate3d(-130%,0px,0px)", data-50-bottom="transform:translate3d(0%,0px,0px)")
-                li#contact-circle.contact-circle
-                    a(href="#")
+                li#email-circle.contact-circle
+                    a(data-username=email.username, data-domain=email.domain)
                         span.circle.mail(data-anchor-target="#contact", data-bottom-top="transform:rotate(-930deg)", data-50-bottom="transform:rotate(0deg)")
                             i.icon-mail
                         span.text(data-anchor-target="#contact", data-50-bottom="opacity:0", data-20-bottom="opacity:1")
                             = $i18n.articleContact.dropEmail
-                    noscript &#118;&#97;&#110;&#106;&#97;&#91;&#97;&#116;&#93;&#103;&#97;&#118;&#114;&#105;&#99;&#91;&#100;&#111;&#116;&#93;&#111;&#114;&#103;
                 li.contact-circle
                     a(href="skype:vanja1000?call")
                         span.circle.skype(data-anchor-target="#contact", data-bottom-top="transform:rotate(-720deg)", data-50-bottom="transform:rotate(0deg)")
