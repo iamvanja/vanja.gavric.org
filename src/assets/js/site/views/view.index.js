@@ -80,12 +80,13 @@
         },
         onLoadResize = function(){
             var $content = $(ui.content),
+                $intro = $(ui.intro),
                 $centerIntroContent = $(ui.centerIntroContent);
 
             $(window).on("load resize", function(e){
                 // allow for the intro el to be shown full-screen
                 $content.css({
-                    "margin-top" : $content.outerHeight() + "px"
+                    "margin-top" : $intro.outerHeight() + "px"
                 });
 
                 // center content inside the intro el
