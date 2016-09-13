@@ -3,11 +3,11 @@ extends ../page-partials/layout.pug
 block vars
     -
         var currentPage = {
-            name: "index"
+            name: "index",
+            id: "landing-normal"
         }
 
 block body
-    include ../page-partials/js/loader.pug
     include ../page-partials/index/main-nav.pug
     include ../page-partials/index/header.pug
 

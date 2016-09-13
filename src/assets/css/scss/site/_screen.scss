@@ -1013,7 +1013,9 @@ html.skrollr, .skrollr body {
 }
 
 
-
+$singleAnimationDuration: 400;
+$animationPause: 300;
+$totalDuration: ($singleAnimationDuration * 8) + ($animationPause * 2);
 .loader {
     position: fixed;
     z-index: 100;
@@ -1031,23 +1033,22 @@ html.skrollr, .skrollr body {
         height:80px;
         top:50%;
         margin-top:-40px;
+        opacity:1;
+        &.alternative {
+            opacity:0;
+        }
     }
-    > div {
+    div {
         position: fixed;
         background: $asphalt;
         // #2c3e52
-        &:first-child,
-        &:nth-child(3) {
-            width: 0;
-            height: emCalc(50);
-        }
-
+        width: 0;
+        height: emCalc(50);
         &:nth-child(2),
         &:nth-child(4) {
             width: emCalc(50);
             height: 0;
         }
-
         &:first-child {
             top: 0;
             left: 0;
@@ -1065,93 +1066,84 @@ html.skrollr, .skrollr body {
             left: 0;
         }
     }
-    &.border-fill {
+    &.animate {
+        animation: expand-border #{$totalDuration}ms linear infinite;
+        > div {
+            &:first-child {
+                animation: border1 #{$totalDuration}ms linear infinite;
+            }
+            &:nth-child(2) {
+                animation: border2 #{$totalDuration}ms linear infinite;
+            }
+            &:nth-child(3) {
+                animation: border3 #{$totalDuration}ms linear infinite;
+            }
+            &:nth-child(4) {
+                animation: border4 #{$totalDuration}ms linear infinite;
+            }
+        }
+    }
+    &.animate-headers {
+        .default {
+            opacity:0;
+            transition: opacity 300ms linear 5000ms;
+        }
+        .alternative {
+            opacity:1;
+            transition: opacity 300ms linear 5300ms;
+        }
+    }
+    &.exit {
         border-width: emCalc(50);
-        @include transition(border 0.3s 0.3s);
-        -webkit-backface-visibility: hidden;
-        > div {
-            &:first-child {
-                width: 100%;
-                @include transition(width 0.9s linear 0.6s);
-            }
-            &:nth-child(2) {
-                height: 100%;
-                @include transition(height 0.9s linear 1.5s);
-            }
-            &:nth-child(3) {
-                width: 100%;
-                @include transition(width 0.9s linear 2.4s);
-            }
-            &:nth-child(4) {
-                height: 100%;
-                @include transition(height 0.9s linear 3.3s);
-            }
-        }
-    }
-    &.border-clear {
-        > div {
-            &:first-child {
-                width: 0;
-                @include transition(width 0.9s linear 3.3s);
-            }
-            &:nth-child(2) {
-                height: 0;
-                @include transition(height 0.9s linear 2.4s);
-            }
-            &:nth-child(3) {
-                width: 0;
-                @include transition(width 0.9s linear 1.5s);
-            }
-            &:nth-child(4) {
-                height: 0;
-                @include transition(height 0.9s linear 0.6s);
-            }
-
-        }
+        transform: translate3d(-100%,0,0);
+        transition: transform 400ms linear;
     }
 }
 
-
-
-
-
-
-@-webkit-keyframes fadeIn {
-    from { opacity:0; }
-    to { opacity:1; }
+@keyframes border1 {
+    #{percentage(0/$totalDuration)} { width: 0%; }
+    #{percentage($animationPause/$totalDuration)} { width: 0%; }
+    #{percentage(($singleAnimationDuration + $animationPause)/$totalDuration)} { width: 100%; }
+    #{percentage((($singleAnimationDuration*7)+($animationPause*2))/$totalDuration)} { width: 100%; }
+    #{percentage((($singleAnimationDuration*8)+($animationPause*2))/$totalDuration)} { width: 0; }
 }
-@-moz-keyframes fadeIn {
-    from { opacity:0; }
-    to { opacity:1; }
+@keyframes border2 {
+    #{percentage(0/$totalDuration)} { height: 0% }
+    #{percentage(($singleAnimationDuration + $animationPause)/$totalDuration)} { height: 0%; }
+    #{percentage((($singleAnimationDuration*2)+$animationPause)/$totalDuration)} { height: 100%; }
+    #{percentage((($singleAnimationDuration*6)+($animationPause*2))/$totalDuration)} { height: 100%; }
+    #{percentage((($singleAnimationDuration*7)+($animationPause*2))/$totalDuration)}  { height: 0; }
 }
-@-o-keyframes fadeIn {
-    from { opacity:0; }
-    to { opacity:1; }
+@keyframes border3 {
+    #{percentage(0/$totalDuration)} { width: 0% }
+    #{percentage((($singleAnimationDuration*2)+$animationPause)/$totalDuration)} { width: 0%; }
+    #{percentage((($singleAnimationDuration*3)+$animationPause)/$totalDuration)} { width: 100%; }
+    #{percentage((($singleAnimationDuration*5)+($animationPause*2))/$totalDuration)} { width: 100%; }
+    #{percentage((($singleAnimationDuration*6)+($animationPause*2))/$totalDuration)} { width: 0; }
 }
+@keyframes border4 {
+    #{percentage(0/$totalDuration)} { height: 0% }
+    #{percentage((($singleAnimationDuration*3)+$animationPause)/$totalDuration)} { height: 0%; }
+    #{percentage((($singleAnimationDuration*4)+$animationPause)/$totalDuration)} { height: 100%; }
+    #{percentage((($singleAnimationDuration*4)+($animationPause*2))/$totalDuration)} { height: 100%; }
+    #{percentage((($singleAnimationDuration*5)+($animationPause*2))/$totalDuration)} { height: 0; }
+}
+@keyframes expand-border {
+    #{percentage(0/$totalDuration)} { border-width: 0; }
+    #{percentage(($animationPause/2)/$totalDuration)} { border-width: 0; }
+    #{percentage($animationPause/$totalDuration)} { border-width: emCalc(50); }
+    #{percentage($totalDuration/$totalDuration)} { border-width: emCalc(50); }
+}
+
+
 @keyframes fadeIn {
-    from { opacity:0; }
-    to { opacity:1; }
+    0% { opacity:0; }
+    100% { opacity:1; }
 }
 
-
-@-webkit-keyframes popupOut {
-    from{-webkit-transform:scale(0)}
-    80%{-webkit-transform:scale(1.2)}
-    to{-webkit-transform:scale(1)}
-}
-@-moz-keyframes popupOut {
-    from{-moz-transform:scale(0)}
-    80%{-moz-transform:scale(1.2)}
-    to{-moz-transform:scale(1)}
-}
-@-o-keyframes popupOut {
-    from{-o-transform:scale(0)}
-    80%{-o-transform:scale(1.2)}
-    to{-o-transform:scale(1)}
-}
 @keyframes popupOut {
-    from{transform:scale(0)}
+    0%{transform:scale(0)}
     80%{transform:scale(1.2)}
-    to{transform:scale(1)}
+    100%{transform:scale(1)}
 }
 
