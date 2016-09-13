@@ -240,33 +240,33 @@ h1, h2, h3, h4, h5, h6 {
         @include border-radius($global-rounded);
         margin-top:emCalc(6);
     }
-    .lang-selection {
-        position:absolute;
-        top:0;
-        right:emCalc(20);
-        ul {
-            list-style: none;
-            background:#3c6276;
-            background:rgba($asphalt, 0.7);
-            overflow: hidden;
-            li {
-                float:left;
-                a {
-                    display:block;
-                    padding:emCalc(10, 15);
-                    color:darken(#fff, 40%);
-                    font-size:emCalc(16);
-                    &:hover {
-                        color:#fff;
-                    }
-                    &.active {
-                        background:darken($asphalt, 10%);
-                        color:#fff;
-                    }
-                }
-            }
-        }
-    }
+    // .lang-selection {
+    //     position:absolute;
+    //     top:0;
+    //     right:emCalc(20);
+    //     ul {
+    //         list-style: none;
+    //         background:#3c6276;
+    //         background:rgba($asphalt, 0.7);
+    //         overflow: hidden;
+    //         li {
+    //             float:left;
+    //             a {
+    //                 display:block;
+    //                 padding:emCalc(10, 15);
+    //                 color:darken(#fff, 40%);
+    //                 font-size:emCalc(16);
+    //                 &:hover {
+    //                     color:#fff;
+    //                 }
+    //                 &.active {
+    //                     background:darken($asphalt, 10%);
+    //                     color:#fff;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     .scroll-down {
         position:absolute;
         bottom:0;

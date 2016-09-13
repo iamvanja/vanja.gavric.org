@@ -2491,39 +2491,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1000px;
   margin-top: 0.375em;
 }
-/* line 243, scss/site/_screen.scss */
-.intro .lang-selection {
-  position: absolute;
-  top: 0;
-  right: 1.25em;
-}
-/* line 247, scss/site/_screen.scss */
-.intro .lang-selection ul {
-  list-style: none;
-  background: #3c6276;
-  background: rgba(52, 73, 94, 0.7);
-  overflow: hidden;
-}
-/* line 252, scss/site/_screen.scss */
-.intro .lang-selection ul li {
-  float: left;
-}
-/* line 254, scss/site/_screen.scss */
-.intro .lang-selection ul li a {
-  display: block;
-  padding: 0.625em 0.938em;
-  color: #999999;
-  font-size: 1em;
-}
-/* line 259, scss/site/_screen.scss */
-.intro .lang-selection ul li a:hover {
-  color: #fff;
-}
-/* line 262, scss/site/_screen.scss */
-.intro .lang-selection ul li a.active {
-  background: #222f3d;
-  color: #fff;
-}
 /* line 270, scss/site/_screen.scss */
 .intro .scroll-down {
   position: absolute;
@@ -2890,7 +2857,7 @@ html.skrollr, .skrollr body {
 
 /* line 622, scss/site/_screen.scss */
 .no-js .backstretch-wrap {
-  background-image: url('../images/photos/stuck-in-traffic.jpg?1383333302');
+  background-image: url('../images/photos/stuck-in-traffic.jpg?1473751696');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
