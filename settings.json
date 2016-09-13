@@ -3,7 +3,7 @@
     "googleAnalytics": "UA-24663272-1",
     "rollbarToken": "ROLLBAR_TOKEN",
     "assetsUrl": {
-        "local": "../assets/"
+        "local": "assets/"
     },
     "htmlPages": [
         "index.pug",
