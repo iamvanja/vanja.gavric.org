@@ -1,5 +1,6 @@
 {
   "name": "vanja.gavric.org",
+  "homepage": "http://vanja.gavric.org/",
   "version": "1.0.0",
   "description": "Vanja Gavric's personal website",
   "dependencies": {},
@@ -18,6 +19,7 @@
     "grunt-htmlhint": "^0.9.13",
     "grunt-postcss": "^0.8.0",
     "grunt-remove-logging": "^0.2.0",
+    "grunt-sitemap": "^1.2.1",
     "jit-grunt": "^0.10.0",
     "load-grunt-config": "^0.19.2",
     "shelljs": "^0.6.0"

@@ -15,7 +15,8 @@ module.exports = {
         "uglify:production",
         "pug:production",
         "clean:productionPost",
-        "htmlhint:production"
+        "htmlhint:production",
+        "sitemap:production"
     ],
 
     "postPush": [
