@@ -1,12 +1,12 @@
 "use strict";
 module.exports = {
-    // options: {
-    //     atBegin: true
-    // },
-    // onInit: {
-    //     files: [],
-    //     tasks: ["clean:preWatch"]
-    // },
+    options: {
+        atBegin: true
+    },
+    onInit: {
+        files: [],
+        tasks: ["jquery:dev"]
+    },
     pug: {
         files: [
             "src/assets/pug-templates/**/*.pug",
