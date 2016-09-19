@@ -73,9 +73,9 @@
         onLoad = function(){
             $(window).on("load", function(e) {
                 isLoaded.resolve();
-                if (skrollrInstance) {
-                    skrollrInstance.refresh();
-                }
+                // if (skrollrInstance) {
+                //     skrollrInstance.refresh();
+                // }
             });
         },
         onLoadResize = function(){
@@ -128,7 +128,7 @@
                 if (!$("html, body").is(":animated")) {
                     $("html, body").animate({
                         scrollTop: offset
-                    }, 1600, "easeInOutQuint").promise().done(function(){
+                    }, 1600).promise().done(function(){
                         // alert("done")
                         $(ui.mainNav).find("li").removeClass("active");
                         if (parent.length) {
@@ -156,6 +156,7 @@
             $.when(timer, isLoaded).done(function(){
                 $(window).on("view.common.showLoading.removed", function(){
                     $("body").addClass("delayedAnimateStuff");
+                    site.views.run("common", "initWow");
                     triggerHash();
                 });
                 site.views.run("common", "showLoading", {toShow: false});
@@ -169,7 +170,7 @@
 
                 onLoad();
                 onLoadResize();
-                initSkrollr();
+                // initSkrollr();
                 initHashClick();
 
                 site.views.run("index.developer", "init");

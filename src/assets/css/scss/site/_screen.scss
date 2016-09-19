@@ -728,11 +728,11 @@ html.skrollr, .skrollr body {
                 text-align: center;
                 a {
                     display: inline-block;
-                    @include transition(all 0.3s ease-in);
-                    -webkit-backface-visibility: hidden;
+                    // @include transition(all 0.3s ease-in);
+                    // -webkit-backface-visibility: hidden;
                     background:darken(#0e83cd, 10%);
                     &:hover {
-                        @include transform(scale(1.2));
+                        // @include transform(scale(1.2));
                     }
                     img {
                         max-height:160px;
@@ -1145,5 +1145,51 @@ $totalDuration: ($singleAnimationDuration * 8) + ($animationPause * 2);
     0%{transform:scale(0)}
     80%{transform:scale(1.2)}
     100%{transform:scale(1)}
+}
+
+@keyframes fade-in-bottom {
+    0% { opacity: 0; transform: translateY(100%); }
+    60% {opacity: 1; }
+    100% { transform: translateY(0); }
+}
+.fade-in-bottom {
+    animation-name: fade-in-bottom;
+    // animation: fade-in-bottom 1 ease-out forwards;
+    // transform: translateY(100%);
+    // opacity:0;
+}
+
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
 }
 

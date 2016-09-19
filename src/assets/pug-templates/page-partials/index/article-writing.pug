@@ -18,9 +18,15 @@ article(class="writing", id="writing", role="article", aria-labelledby="main-tit
                 data-bottom-top="transform:translate3d(0px,200px,0px);",
                 data-top="transform:translate3d(0px,0px,0px);")
                 ul(class="article-items large-block-grid-4 small-block-grid-4")
-                    li(data-anchor-target="#writing",
-                    data-bottom-top="transform:translate3d(0px,-60px,0px);",
-                    data-top="transform:translate3d(0px,3px,0px);")
+                    //- data-top="transform:translate3d(0px,3px,0px);",
+                    //- data-bottom-top="transform:translate3d(0px,-60px,0px);",
+                    //- data-anchor-target="#writing",
+                    //- data-wow-delay="1.25s")
+                    li(
+                    class="wow bounceInUp"
+                    data-wow-duration="0.8s",
+                    data-wow-delay="0.50s"
+                    )
                         a(href="assets/downloads/pdf/mobil-92-iphone.pdf")
                             img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/iphone.jpg", alt=$i18n.articleWriting.articleiPhone, height="160", width="117")
                             noscript
@@ -29,9 +35,14 @@ article(class="writing", id="writing", role="article", aria-labelledby="main-tit
                                 height="160",
                                 width="117")
 
-                    li(data-anchor-target="#writing",
-                    data-bottom-top="transform:translate3d(0px,-30px,0px);",
-                    data-top="transform:translate3d(0px,10p,0px)x;")
+                    //- data-anchor-target="#writing",
+                    //- data-bottom-top="transform:translate3d(0px,-30px,0px);",
+                    //- data-top="transform:translate3d(0px,10p,0px)x;"
+                        //- data-wow-duration="0.8s",
+                        //- data-wow-delay="0.25s"
+                    li(
+                        class="wow bounceInUp",
+                    )
                         a(href=assetsUrl.local + "downloads/pdf/mobil-35-motorola.pdf")
                             img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/motorola.jpg", alt=$i18n.articleWriting.articleMotorola, height="160", width="119")
                             noscript

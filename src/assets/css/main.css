@@ -2954,16 +2954,7 @@ html.skrollr, .skrollr body {
 /* line 729, scss/site/_screen.scss */
 .writing .articles .article-items li a {
   display: inline-block;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  -webkit-backface-visibility: hidden;
   background: #0b649d;
-}
-/* line 734, scss/site/_screen.scss */
-.writing .articles .article-items li a:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
 }
 /* line 737, scss/site/_screen.scss */
 .writing .articles .article-items li a img {
@@ -3702,6 +3693,122 @@ html.skrollr, .skrollr body {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+@-webkit-keyframes fade-in-left {
+  /* line 1151, scss/site/_screen.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+
+  /* line 1152, scss/site/_screen.scss */
+  60% {
+    opacity: 1;
+  }
+
+  /* line 1153, scss/site/_screen.scss */
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  /* line 1151, scss/site/_screen.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+
+  /* line 1152, scss/site/_screen.scss */
+  60% {
+    opacity: 1;
+  }
+
+  /* line 1153, scss/site/_screen.scss */
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* line 1157, scss/site/_screen.scss */
+.fade-in-left {
+  -webkit-animation-name: fade-in-left;
+          animation-name: fade-in-left;
+}
+
+@-webkit-keyframes bounceInUp {
+  /* line 1166, scss/site/_screen.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  /* line 1173, scss/site/_screen.scss */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  /* line 1180, scss/site/_screen.scss */
+  80% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  /* line 1186, scss/site/_screen.scss */
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInUp {
+  /* line 1166, scss/site/_screen.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  /* line 1173, scss/site/_screen.scss */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  /* line 1180, scss/site/_screen.scss */
+  80% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  /* line 1186, scss/site/_screen.scss */
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 1193, scss/site/_screen.scss */
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
 }
 
 /* ==========================================================================
