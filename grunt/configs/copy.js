@@ -19,5 +19,18 @@ module.exports = {
                 dest: "build/"
             }
         ]
+    },
+    npmAssetsJsDev: {
+        files: [
+            {
+                expand: true,
+                flatten: true,
+                cwd: "node_modules/",
+                src: [
+                    "wowjs/dist/wow.js",
+                ],
+                dest: "src/assets/js/vendor/"
+            }
+        ]
     }
 };

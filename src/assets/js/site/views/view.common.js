@@ -5,6 +5,7 @@
         // ui = {},
         exports = {
             showLoading: function(options) {
+                // @todo: fallback for not animation support
                 var loaderId = "loader",
                     loadingText = $("meta[name=loading-text]").attr("content"),
                     loadingTextAlt = $("meta[name=loading-text-alt]").attr("content"),
@@ -57,7 +58,15 @@
                     width : e[ a+"Width" ],
                     height : e[ a+"Height" ]
                 };
-            }
+            },
+            initWow: function(){
+                new window.WOW({
+                    offset: 20,
+                    callback: function(box){
+                        console.log("finished", box);
+                    }
+                }).init();
+            },
         };
 
     site.views.register(viewName, exports);

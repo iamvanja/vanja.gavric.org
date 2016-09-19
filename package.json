@@ -3,7 +3,9 @@
   "homepage": "http://vanja.gavric.org/",
   "version": "1.0.0",
   "description": "Vanja Gavric's personal website",
-  "dependencies": {},
+  "dependencies": {
+    "wowjs": "^1.1.3"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "grunt": "^1.0.1",
