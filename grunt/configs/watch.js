@@ -5,7 +5,7 @@ module.exports = {
     },
     onInit: {
         files: [],
-        tasks: ["copy:npmAssetsJsDev", "jquery:dev"]
+        tasks: ["copy:npmAssetsDev", "jquery:dev"]
     },
     pug: {
         files: [
