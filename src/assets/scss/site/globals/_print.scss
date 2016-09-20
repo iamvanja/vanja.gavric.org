@@ -96,7 +96,7 @@
     .developer {
         page-break-before: avoid;
         h2 {
-            margin-bottom:emCalc(6)!important;
+            margin-bottom:rem-calc(6)!important;
         }
         .skills,
         .technologies-wrap {

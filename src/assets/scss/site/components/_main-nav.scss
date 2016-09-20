@@ -8,8 +8,8 @@
         display:block;
         float:left;
         background:$green-sea;
-        width:emCalc(86);
-        height:emCalc(72);
+        width:rem-calc(86);
+        height:rem-calc(72);
         position:relative;
         z-index:2;
         border-bottom:1px solid rgba(darken($green-sea, 20%), 0.4);
@@ -17,23 +17,23 @@
         .circle,
         .back {
             border-radius: $global-rounded;
-            width:emCalc(58);
-            height:emCalc(58);
+            width:rem-calc(58);
+            height:rem-calc(58);
             text-align: center;
-            line-height:emCalc(58);
+            line-height:rem-calc(58);
             display:block;
             margin:0 auto;
-            margin-top:emCalc(7);
+            margin-top:rem-calc(7);
             // border:1px solid transparent;
             border:1px solid darken($green-sea, 20%);
             color:darken($green-sea, 20%);
         }
         .back {
-            font-size: emCalc(22);
-            line-height:emCalc(38);
-            width:emCalc(42);
-            height:emCalc(42);
-            margin-top:emCalc(5);
+            font-size: rem-calc(22);
+            line-height:rem-calc(38);
+            width:rem-calc(42);
+            height:rem-calc(42);
+            margin-top:rem-calc(5);
         }
     }
     &:hover {
@@ -60,16 +60,16 @@
         // border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
         li {
             float:left;
-            height:emCalc(72);
-            line-height: emCalc(72);
+            height:rem-calc(72);
+            line-height: rem-calc(72);
             a {
                 border-bottom:1px solid rgba(darken($asphalt, 20%), 0.2);
-                padding:0 emCalc(8);
+                padding:0 rem-calc(8);
                 display:block;
                 background:#2b4f62;
                 background:rgba($asphalt, 0.9);
                 color:darken(#fff, 40%);
-                font-size:emCalc(20);
+                font-size:rem-calc(20);
                 &:hover {
                     color:#fff;
                     background:darken($asphalt, 4%);

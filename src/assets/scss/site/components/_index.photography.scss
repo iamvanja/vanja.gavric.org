@@ -20,19 +20,19 @@
             background: $brown;
             background: rgba($brown, 0.8);
             color:lighten($brown, 60%);
-            padding:emCalc(2, 4);
+            padding:rem-calc(2, 4);
         }
         &.subheader {
-            font-size:emCalc(22);
+            font-size:rem-calc(22);
             // background: rgba(lighten($brown, 5%), 0.8);
             // color:lighten($brown, 30%);
-            // padding:emCalc(1, 2);
+            // padding:rem-calc(1, 2);
         }
     }
     .icon {
         position:relative;
         z-index: 1;
-        font-size:emCalc(24);
+        font-size:rem-calc(24);
         cursor: pointer;
         color:#fff;
         background: $brown;

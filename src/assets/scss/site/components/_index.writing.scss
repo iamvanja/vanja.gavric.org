@@ -8,13 +8,13 @@
         position: relative;
         &.subheader {
             color:darken(#0e83cd, 10%);
-            font-size:emCalc(28);
+            font-size:rem-calc(28);
         }
     }
     .articles {
         // min-height: 280px;
         // position:relative;
-        margin-top:emCalc(30);
+        margin-top:rem-calc(30);
         // z-index:2;
         .article-items {
             li {

@@ -28,10 +28,10 @@ $totalDuration: ($singleAnimationDuration * 8) + ($animationPause * 2);
         background: $asphalt;
         // #2c3e52
         width: 0;
-        height: emCalc(50);
+        height: rem-calc(50);
         &:nth-child(2),
         &:nth-child(4) {
-            width: emCalc(50);
+            width: rem-calc(50);
             height: 0;
         }
         &:first-child {
@@ -79,7 +79,7 @@ $totalDuration: ($singleAnimationDuration * 8) + ($animationPause * 2);
         }
     }
     &.exit {
-        border-width: emCalc(50);
+        border-width: rem-calc(50);
         transform: translate3d(-100%,0,0);
         transition: transform 400ms linear;
     }
@@ -116,6 +116,6 @@ $totalDuration: ($singleAnimationDuration * 8) + ($animationPause * 2);
 @keyframes expand-border {
     #{percentage(0/$totalDuration)} { border-width: 0; }
     #{percentage(($animationPause/2)/$totalDuration)} { border-width: 0; }
-    #{percentage($animationPause/$totalDuration)} { border-width: emCalc(50); }
-    #{percentage($totalDuration/$totalDuration)} { border-width: emCalc(50); }
+    #{percentage($animationPause/$totalDuration)} { border-width: rem-calc(50); }
+    #{percentage($totalDuration/$totalDuration)} { border-width: rem-calc(50); }
 }

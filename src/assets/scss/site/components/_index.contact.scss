@@ -1,12 +1,12 @@
 .contact {
     // background:$purple;
     background:$green; /* #2ecc71 */
-    padding:emCalc(50) 0;
+    padding:rem-calc(50) 0;
     h2 {
         color:darken($green, 10%);
     }
     .text {
-        margin-top:emCalc(4);
+        margin-top:rem-calc(4);
         display:inline-block;
     }
     .contact-circles{
@@ -15,12 +15,12 @@
     .contact-circle {
         text-align: center;
         padding-bottom:0!important;
-        margin-bottom:emCalc(8);
+        margin-bottom:rem-calc(8);
         position:relative;
         a {
             display:block;
             color:darken($green, 20%);
-            width:emCalc(76);
+            width:rem-calc(76);
             height:auto;
             margin:0 auto;
             line-height: 1.2;
@@ -81,18 +81,18 @@
             // background:rgba(#000, 0.4);
             color:#fff;
             // @include border-radius($global-rounded);
-            border-radius: emCalc(22);
-            width:emCalc(76);
-            height:emCalc(76);
-            line-height: emCalc(76);
+            border-radius: rem-calc(22);
+            width:rem-calc(76);
+            height:rem-calc(76);
+            line-height: rem-calc(76);
             text-align:center;
             color:$green;
             position:relative;
             // overflow:hidden;
             &:after,
             &:before {
-                // width:emCalc(38);
-                // height:emCalc(76);
+                // width:rem-calc(38);
+                // height:rem-calc(76);
                 // content:'';
                 // background:transparent;
                 // background:rgba(0,0,0,0);
@@ -108,7 +108,7 @@
                 /*time to transform the circle into fish-eye shape. iOS7 style now.*/
                 transform: scaleX(1.9) scaleY(1.04);
                 /*clipping the left and right sides - 48px from the left and right*/
-                clip: rect(0, emCalc(48), emCalc(76), emCalc(28));
+                clip: rect(0, rem-calc(48), rem-calc(76), rem-calc(28));
                 /*pushing it behind the icon*/
                 z-index: -1;
             }
@@ -117,7 +117,7 @@
                 transform: scaleY(1.9) scaleX(1.04) rotate(90deg);
             }
             i {
-                font-size:emCalc(22);
+                font-size:rem-calc(22);
                 position:relative;
                 z-index:1;
             }
