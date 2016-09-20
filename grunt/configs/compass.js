@@ -5,7 +5,7 @@ module.exports = {
         options: {
             // httpPath: "/",
             cssDir: "src/assets/css",
-            sassDir: "src/assets/css/scss",
+            sassDir: "src/assets/scss",
             imagesDir: "src/assets/images",
             javascriptsDir: "src/assets/js",
             outputStyle: "expanded",
@@ -17,7 +17,7 @@ module.exports = {
         options: {
             // httpPath: "/",
             cssDir: "build/assets/css",
-            sassDir: "build/assets/css/scss",
+            sassDir: "build/assets/scss",
             imagesDir: "build/assets/images",
             javascriptsDir: "build/assets/js",
             outputStyle: "compressed",

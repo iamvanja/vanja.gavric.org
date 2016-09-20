@@ -30,9 +30,8 @@ module.exports = {
         }
     },
     css: {
-        files: ["src/assets/css/scss/**/*.scss"],
+        files: ["src/assets/scss/**/*.scss"],
         tasks: ["compass:watch", "postcss:watch"],
-        // tasks: ["compass:watch"],
         options: {
             // Start a live reload server on the default port 35729
             livereload: true
