@@ -42,13 +42,13 @@
     .developer {
         h2 {
             &.subheader {
-                font-size:emCalc(24)!important;
+                font-size:rem-calc(24)!important;
             }
         }
     }
     .photography {
         h2 {
-            font-size:emCalc(30);
+            font-size:rem-calc(30);
             padding-top:10%;
             line-height:1.6;
             &.subheader {
@@ -59,11 +59,11 @@
     }
     .writing {
         h2.subheader {
-            font-size:emCalc(24)!important;
+            font-size:rem-calc(24)!important;
         }
         .small-block-grid-4 {
-            padding-left:emCalc(8);
-            padding-right:emCalc(8);
+            padding-left:rem-calc(8);
+            padding-right:rem-calc(8);
         }
     }
 }

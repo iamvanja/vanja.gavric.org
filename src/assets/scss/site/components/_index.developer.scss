@@ -1,10 +1,10 @@
 .developer {
-    padding: emCalc(30) 0;
+    padding: rem-calc(30) 0;
     background-color: $brown;
     // background-color: $asphalt;
     h2 {
         &.subheader {
-            font-size:emCalc(28);
+            font-size:rem-calc(28);
             color:lighten($brown, 30%);
         }
     }
@@ -14,9 +14,9 @@
         li {
             line-height: 1.8;
             // height:$progress-bar-height;
-            text-indent: emCalc(8);
+            text-indent: rem-calc(8);
             .category {
-                font-size:emCalc(14);
+                font-size:rem-calc(14);
                 font-weight: bold;
                 white-space: nowrap;
             }
@@ -125,8 +125,8 @@
             }
         }
         .label {
-            margin-bottom:emCalc(2);
-            margin-right:emCalc(2);
+            margin-bottom:rem-calc(2);
+            margin-right:rem-calc(2);
             transition: all 0.3s ease-in;
             -webkit-backface-visibility: hidden;
             &.front-end {

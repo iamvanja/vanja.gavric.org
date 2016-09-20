@@ -9,9 +9,9 @@
     .back-to-top {
         position:fixed;
         z-index:10;
-        bottom:emCalc(22);
-        right:emCalc(6);
-        font-size:emCalc(34);
+        bottom:rem-calc(22);
+        right:rem-calc(6);
+        font-size:rem-calc(34);
         color:#fff;
         &:hover {
             color:darken($asphalt, 10%);
