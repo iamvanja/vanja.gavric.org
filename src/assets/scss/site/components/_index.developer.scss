@@ -1,0 +1,166 @@
+.developer {
+    padding: emCalc(30) 0;
+    background-color: $brown;
+    // background-color: $asphalt;
+    h2 {
+        &.subheader {
+            font-size:emCalc(28);
+            color:lighten($brown, 30%);
+        }
+    }
+    .skills {
+        list-style: none;
+        color:#fff;
+        li {
+            line-height: 1.8;
+            // height:$progress-bar-height;
+            text-indent: emCalc(8);
+            .category {
+                font-size:emCalc(14);
+                font-weight: bold;
+                white-space: nowrap;
+            }
+            .meter {
+                background-color:$green;
+            }
+            &:nth-child(1){
+                .meter {
+                    background-color:$purple;
+                    // color:lighten($purple, 20%);
+                    // text-shadow:0 1px 1px rgba(lighten($purple, 30%), 0.4);
+                }
+            }
+            &:nth-child(2){
+                .meter {
+                    background-color:$blue;
+                    // color:darken($blue, 30%);
+                    // text-shadow:0 1px 1px rgba(lighten($blue, 30%), 0.4);
+                }
+            }
+            &:nth-child(3){
+                .meter {
+                    background-color:darken($green, 5%);
+                    // color:darken($green, 30%);
+                    // text-shadow:0 1px 1px rgba(lighten($green, 30%), 0.4);
+                }
+            }
+            &:nth-child(4){
+                .meter {
+                    background-color:$pumpkin;
+                    // color:darken($pumpkin, 30%);
+                    // text-shadow:0 1px 1px rgba(lighten($pumpkin, 30%), 0.4);
+                }
+            }
+            &:nth-child(5){
+                .meter {
+                    background-color:$yellow;
+                    // color:darken($yellow, 40%);
+                    // text-shadow:0 1px 1px rgba(lighten($yellow, 30%), 0.4);
+                }
+            }
+            &:nth-child(6){
+                .meter {
+                    background-color:$skin;
+                    // color:darken($skin, 40%);
+                    // text-shadow:0 1px 1px rgba(lighten($skin, 30%), 0.4);
+                }
+            }
+        }
+    }
+    .technologies-wrap {
+        position:relative;
+        background:$brown;
+    }
+    .technologies {
+        &.legend {
+            text-align: center;
+            // for mobile text-align:left;
+            span {
+                cursor: help;
+                &:before {
+                    content:'';
+                    height:1em;
+                    width: 1em;
+                    left: 0;
+                    top:2px;
+                    margin-right:4px;
+                    display:inline-block;
+                    // top: 50%;
+                    // margin-top:-0.5em;
+                    position: relative;
+                }
+                &.front-end:before {
+                    background-color:$skin;
+                }
+                &.mvc:before {
+                    background-color:$purple;
+                }
+                &.api:before {
+                    background-color:$blue;
+                }
+                &.test:before {
+                    background-color:$pumpkin;
+                }
+                &.version-control:before {
+                    background-color:$green;
+                }
+                &.lib-fram:before {
+                    background-color:$yellow;
+                }
+                &.various:before {
+                    background-color: darken($asphalt, 5%);
+                }
+                &.back-end:before {
+                    background-color:darken($green-sea, 16%);
+                }
+                &.databases:before {
+                    background-color:darken($brown, 10%);
+                }
+                position: relative;
+                // padding-left:1.2em;
+                margin-right:1em;
+                margin-bottom:0.4em;
+                white-space: nowrap;
+                display: inline-block;
+            }
+        }
+        .label {
+            margin-bottom:emCalc(2);
+            margin-right:emCalc(2);
+            transition: all 0.3s ease-in;
+            -webkit-backface-visibility: hidden;
+            &.front-end {
+                background-color:$skin;
+            }
+            &.mvc {
+                background-color:$purple;
+            }
+            &.api {
+                background-color:$blue;
+            }
+            &.test {
+                background-color:$pumpkin;
+            }
+            &.version-control {
+                background-color:$green;
+            }
+            &.lib-fram {
+                background-color:$yellow;
+            }
+            &.various {
+                background-color: darken($asphalt, 5%);
+            }
+            &.back-end {
+                background-color:darken($green-sea, 16%);
+            }
+            &.databases {
+                background-color:darken($brown, 10%);
+            }
+        }
+    }
+    .experience hr {
+        margin-left: auto;
+        margin-right: auto;
+        width:30%;
+    }
+}

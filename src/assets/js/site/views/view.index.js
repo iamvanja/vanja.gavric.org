@@ -85,9 +85,9 @@
 
             $(window).on("load resize", function(e){
                 // allow for the intro el to be shown full-screen
-                $content.css({
-                    "margin-top" : $intro.outerHeight() + "px"
-                });
+                // $content.css({
+                //     "margin-top" : $intro.outerHeight() + "px"
+                // });
 
                 // center content inside the intro el
                 var absHeight = $centerIntroContent.outerHeight(),
@@ -155,7 +155,7 @@
             // when 2s timer and the page is loaded, remove loader
             $.when(timer, isLoaded).done(function(){
                 $(window).on("view.common.showLoading.removed", function(){
-                    $("body").addClass("delayedAnimateStuff");
+                    $("body").addClass("animate-on-load");
                     site.views.run("common", "initWow");
                     triggerHash();
                 });
@@ -165,7 +165,7 @@
         exports = {
             init: function(){
                 // separate #intro view?
-                $(ui.intro).addClass("fixed");
+                // $(ui.intro).addClass("fixed");
                 site.views.run("common", "showLoading", {toShow: true});
 
                 onLoad();

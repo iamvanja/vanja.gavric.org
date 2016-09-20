@@ -10,11 +10,11 @@
         box-shadow: none !important;
         text-shadow: none !important;
         opacity:1!important;
-        @include transform(scale(1)!important);
+        transform: scale(1)!important;
         // @include transform(translate3d(0,0,0)!important);
     }
 
-    body, 
+    body,
     h1, h2, h3, h4, h5, h6 {
         font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     }
@@ -137,7 +137,7 @@
             list-style: none!important;
             margin-right:140px!important;
             .circle {
-                @include transform(rotate(0deg!important));
+                transform: rotate(0deg!important);
             }
         }
     }

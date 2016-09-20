@@ -1,0 +1,38 @@
+.writing {
+    background-color:#0e83cd;
+    overflow: hidden;
+    padding:4% 0;
+    position:relative;
+    z-index: 2;
+    h2 {
+        position: relative;
+        &.subheader {
+            color:darken(#0e83cd, 10%);
+            font-size:emCalc(28);
+        }
+    }
+    .articles {
+        // min-height: 280px;
+        // position:relative;
+        margin-top:emCalc(30);
+        // z-index:2;
+        .article-items {
+            li {
+                // position: relative;
+                text-align: center;
+                a {
+                    display: inline-block;
+                    // @include transition(all 0.3s ease-in);
+                    // -webkit-backface-visibility: hidden;
+                    background:darken(#0e83cd, 10%);
+                    &:hover {
+                        // @include transform(scale(1.2));
+                    }
+                    img {
+                        max-height:160px;
+                    }
+                }
+            }
+        }
+    }
+}

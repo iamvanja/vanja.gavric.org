@@ -10,15 +10,15 @@ header#intro.intro
         .row
             .large-12.columns
                 h1
-                    span.fadeIn.animation-600ms.animationDelay-400ms
+                    span.hi
                         =$i18n.header.hi + "."
                     br
-                    span.fadeIn.animation-600ms.animationDelay-2s
+                    span.i-am
                         =$i18n.header.iAm + " Vanja."
                     br
-                    img.profile-pic.popupOut.animation-400ms.animationDelay-3s(src=assetsUrl.local + "images/profile.jpg", width="110", height="110", alt="Vanja Gavrić profile photo")
+                    img.profile-pic(src=assetsUrl.local + "images/profile.jpg", width="110", height="110", alt="Vanja Gavrić profile photo")
 
-    .scroll-down.fadeIn.animation-1s.animationDelay-4s
+    .scroll-down
         a(href="#developer")
             span
                 =$i18n.header.scrollDown

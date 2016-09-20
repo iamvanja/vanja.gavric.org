@@ -1,0 +1,21 @@
+.index {
+    .top-anchor {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:-100000;
+    }
+
+    .back-to-top {
+        position:fixed;
+        z-index:10;
+        bottom:emCalc(22);
+        right:emCalc(6);
+        font-size:emCalc(34);
+        color:#fff;
+        &:hover {
+            color:darken($asphalt, 10%);
+        }
+    }
+}
+

@@ -1,7 +1,6 @@
 "use strict";
 
 module.exports = function(grunt, data) {
-    console.log("hahaha", data);
     var defaults = {
             options: {
                 prefix: "jquery-",
