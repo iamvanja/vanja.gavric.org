@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Vanja Gavric's personal website",
   "dependencies": {
+    "foundation-sites": "^6.2.3",
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
