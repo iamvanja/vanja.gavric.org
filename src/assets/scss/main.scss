@@ -9,8 +9,11 @@
 // variables
 @import "site/variables";
 
-// import main foundation scss
-@import "vendor/foundation/foundation";
+// import main foundation scss (old)
+// @import "vendor/foundation/foundation-old";
+
+// import main foundation scss (new)
+@import "vendor/foundation/foundation-importer";
 
 // import main site scss
 @import "site/site";

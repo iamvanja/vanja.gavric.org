@@ -10,7 +10,8 @@ module.exports = {
             javascriptsDir: "src/assets/js",
             outputStyle: "expanded",
             relativeAssets: true,
-            raw: 'Sass::Script::Number.precision = 3\n',
+            raw: "Sass::Script::Number.precision = 3\n",
+            importPath: "node_modules/foundation-sites/scss/"
         }
     },
     production: {
@@ -22,7 +23,8 @@ module.exports = {
             javascriptsDir: "build/assets/js",
             outputStyle: "compressed",
             relativeAssets: true,
-            raw: 'Sass::Script::Number.precision = 3\n',
+            raw: "Sass::Script::Number.precision = 3\n",
+            importPath: "node_modules/foundation-sites/scss/"
         }
     }
 };

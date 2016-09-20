@@ -1,0 +1,9 @@
+// https://raw.githubusercontent.com/zurb/foundation-sites/master/scss/settings/_settings.scss
+@import "settings";
+
+// import foundation
+@import "foundation";
+
+// include all components
+// todo: include only needed components
+@include foundation-everything;
