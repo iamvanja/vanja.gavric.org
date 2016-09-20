@@ -1,0 +1,16 @@
+@charset "UTF-8"; // Make sure the charset is set appropriately
+
+// Compass CSS3 mixins
+@import "compass/css3";
+
+// Normalize across different browsers
+@import "vendor/normalize";
+
+// variables
+@import "site/variables";
+
+// import main foundation scss
+@import "vendor/foundation/foundation";
+
+// import main site scss
+@import "site/site";

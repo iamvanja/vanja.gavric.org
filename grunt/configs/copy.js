@@ -12,7 +12,7 @@ module.exports = {
                     "!old/**",
                     "!assets/js/foundation/**",
                     "!**/*.psd",
-                    "!assets/css/main.css",
+                    "!assets/css/**",
                     // "!_src/**",
                     // "!assets/_psd_other/**",
                 ],
