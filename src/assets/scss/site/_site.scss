@@ -1,9 +1,25 @@
 @import
-    "site/_fonts.scss",
-    "site/_screen.scss",
-    "site/_helpers.scss",
-    "site/_print.scss",
-    "site/_ie.scss";
+    "helpers",
+
+    "globals/fonts",
+    "globals/print",
+    "globals/animations",
+    "globals/general",
+
+    "components/loader",
+    "components/intro",
+    "components/main-nav",
+    "components/index.developer",
+    "components/index.photography",
+    "components/index.writing",
+    "components/index.contact",
+    "components/footer",
+
+    "pages/playground",
+    "pages/index",
+
+    "screen"
+    ;
 
 
 

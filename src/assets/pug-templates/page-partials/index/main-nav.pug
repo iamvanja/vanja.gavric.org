@@ -1,7 +1,5 @@
 - var navBase = currentPage.name === "index" ? "" : "/"
-- var navClasses = "main-nav"
-- navClasses += (currentPage.name === "index") ? " fadeIn animation-1s animationDelay-4s" : ""
-nav#main-nav(class=navClasses)
+nav#main-nav.main-nav
     a#logo.logo(href="/", title="Vanja Gavrić logo. " + $i18n.mainNav.logoTitle)
         span.circle
             | VG
