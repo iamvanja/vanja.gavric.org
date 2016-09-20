@@ -17,9 +17,10 @@
         margin-top:rem-calc(30);
         // z-index:2;
         .article-items {
-            li {
+            div {
                 // position: relative;
                 text-align: center;
+                margin-bottom:rem-calc(14px);
                 a {
                     display: inline-block;
                     // @include transition(all 0.3s ease-in);
