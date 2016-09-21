@@ -2,6 +2,9 @@
     // background:$purple;
     background:$green; /* #2ecc71 */
     padding:rem-calc(50) 0;
+    h1 {
+        margin-bottom: rem-calc(20);
+    }
     h2 {
         color:darken($green, 10%);
     }
@@ -9,8 +12,11 @@
         margin-top:rem-calc(4);
         display:inline-block;
     }
-    .contact-circles{
+    .contact-circles {
         position:relative;
+        &.social-networks {
+            margin-bottom: rem-calc(20);
+        }
     }
     .contact-circle {
         text-align: center;
@@ -26,7 +32,7 @@
             line-height: 1.2;
             letter-spacing: -1px;
             transition: all 0.15s ease;
-            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
             &:hover {
                 .circle {
                     &:after,
@@ -41,9 +47,9 @@
                     background:#33ccff;
                     // color:#fff;
                 }
-                .facebook {
-                    background:#3B5998;
-                }
+                // .facebook {
+                //     background:#3B5998;
+                // }
                 .linkedin {
                     background:#0077b5;
                 }
@@ -81,7 +87,7 @@
             // background:rgba(#000, 0.4);
             color:#fff;
             // @include border-radius($global-rounded);
-            border-radius: rem-calc(22);
+            border-radius: rem-calc(30);
             width:rem-calc(76);
             height:rem-calc(76);
             line-height: rem-calc(76);
@@ -108,7 +114,7 @@
                 /*time to transform the circle into fish-eye shape. iOS7 style now.*/
                 transform: scaleX(1.9) scaleY(1.04);
                 /*clipping the left and right sides - 48px from the left and right*/
-                clip: rect(0, rem-calc(48), rem-calc(76), rem-calc(28));
+                clip: rect(0, rem-calc(48), rem-calc(76), rem-calc(48));
                 /*pushing it behind the icon*/
                 z-index: -1;
             }
