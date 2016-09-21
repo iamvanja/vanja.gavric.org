@@ -16,10 +16,11 @@
         // text-shadow: 0 1px 1px rgba(#000, 0.8);
         position: relative;
         z-index: 1;
+        margin-bottom: rem-calc(22);
         span {
             background: $brown;
             background: rgba($brown, 0.8);
-            color:lighten($brown, 60%);
+            // color:lighten($brown, 60%);
             padding:rem-calc(2, 4);
         }
         &.subheader {
@@ -39,6 +40,34 @@
         background: rgba($brown, 0.8);
         &:hover {
             color:darken(#fff, 20%);
+        }
+    }
+
+    @media #{$media-phone} {
+        h2 {
+            font-size:rem-calc(30);
+            padding-top:10%;
+            line-height:1.6;
+            &.subheader {
+                padding-top:0;
+                padding-bottom:6%;
+            }
+        }
+    }
+}
+
+.no-js {
+    .photography {
+        .backstretch-wrap {
+            background-image:image_url('photos/stuck-in-traffic.jpg');
+            background-repeat:no-repeat;
+            background-position: 50% 0;
+            background-size: cover;
+            // background-attachment: fixed;
+            height:100%;
+        }
+        .icon {
+            display:none;
         }
     }
 }
