@@ -9,6 +9,7 @@ module.exports = {
         "build/assets/js/foundation.min.js",
         "build/assets/js/main.js",
         "build/assets/js/site/**",
-        "build/assets/pug-*/**"
+        "build/assets/pug-*/**",
+        "build/assets/fonts/*.json"
     ]
 };
