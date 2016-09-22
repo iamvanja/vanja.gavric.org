@@ -7,8 +7,7 @@
             list: "#technologies-list",
             legend: "#technologies-legend"
         },
-        // App.variables.transformClass = Modernizr.cssfilters ? "blurred" : "grayscale";
-        transformClass = "grayscale",
+        activeCategoryName,
         shuffleTechnologies = function(){
             site.helpers.shuffleList($(ui.list)[0] || []);
         },
@@ -26,17 +25,13 @@
                 }
             });
         },
-        // @todo: filter through css, apply just parent class
         filterTechnologies = function(el){
-            var category = $(el).attr("class");
-            $(ui.list).find("li").each(function(){
-                if (!$(this).hasClass(category)) {
-                    $(this).addClass("scaledOut "+transformClass);
-                }
-            });
+            activeCategoryName = $(el).attr("class");
+            $(ui.list).addClass(activeCategoryName);
         },
         removeTechnologyClasses = function(){
-            $(ui.list).find("li").removeClass("scaledOut "+transformClass);
+            $(ui.list).removeClass(activeCategoryName);
+            activeCategoryName = null;
         },
         resetTechnologiesLegend = function(){
             $(ui.el).on("click", function(e){

@@ -2,99 +2,38 @@
     width:100%;
     height:100%;
     z-index:1;
-    position:relative;
-    // background: image_url('intro_bg1.jpg');
-    // background-repeat:no-repeat;
-    // background-position: 50% 0;
-    // background-attachment: fixed;
-    // background-size: 100% auto;
-  // background: -webkit-linear-gradient(#fff, $asphalt);
-
-
+    position:fixed;
+    top:0;right:0;bottom:0;left:0;
 
     background: radial-gradient(ellipse farthest-side at -10% 90%, rgba($green, 0.9) 20%, rgba($green,0.1)),
                         radial-gradient(ellipse farthest-side at 100% 75%, $purple, rgba($purple,0) 80%);
     background-color:darken($blue,4%);
-    // background-color:lighten($green,34%);
-    // background-color:darken(#00C86A, 5%);
-// @include background(linear-gradient(147deg, #009DEB 1%, #00C86A 75%) repeat scroll 0 0 rgba(0, 0, 0, 0));
 
-// @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)),
-//                     linear-gradient(108deg, #E5E9BF 10%, #00396F 90%));
-// @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)),
-//                     linear-gradient(108deg, #26D0CE, #1A2980 90%));
+    // background: linear-gradient( $green, transparent), linear-gradient( -45deg, $blue, transparent), linear-gradient( 45deg, $purple, transparent), url(http://192.168.0.27/vhosts/vanja.gavric.org/src/assets/images/photos/autumn-in-zrinjevac.jpg) center center / cover no-repeat;
+    // background: linear-gradient( rgba($green, 0.9), transparent), linear-gradient( -45deg, $purple, transparent), linear-gradient( 45deg, $blue, transparent);
+    // background-blend-mode: exclusion;
+    // hana + hard-light
+    // autumn-in-zrinjevac + hard-light
 
-// @include background(radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), linear-gradient(108deg, #E0DA81, #E0A681 10%, #0F1B58 90%));
-    // linear-gradient(left bottom, #fff 0%, $asphalt 100%)
-  // @include background(radial-gradient(ellipse farthest-side at -10% 90%, rgba($asphalt, 0.9) 20%, rgba($asphalt,0)), /* #505A6A */
-  //             radial-gradient(ellipse farthest-side at 100% 75%, #fff, rgba(#fff,0) 80%),
-  //             radial-gradient(ellipse farthest-side at 85% 60%, lighten($asphalt,30%) 10%, rgba(lighten($asphalt,30%),0)), /* 787F8A */
-  //             radial-gradient(circle closest-corner at 50% 0, #fff, #afb4bc));
-
-
-
-// iPad Air
-// background-color: #1e488f; // Old browsers
-// @include filter-gradient(#1e488f, #91d8b8, horizontal); // IE6-9 fallback on horizontal gradient
-// @include background-image(linear-gradient(left top,  #1e488f 0%,#8bb6ee 68%,#91d8b8 100%));
-
-
-    .abs-centered {
-        position:absolute;
-        top:50%;
-        left:50%;
-    }
-    .centered {
-        top:24%;
-        position:relative;
-    }
-    max-height:100%;
-
-    // .abs-centered {
-    //     margin-top: -5%;
-    // }
+    min-height:100vh;
     h1 {
         color: #fff;
-        // height:200px;
-        // margin-top:-100px;
-        // top:50%;
-        // position: relative;
         text-align: center;
         font-family: 'open_sansregular';
+
     }
-    .profile-pic {
-        width:rem-calc(110);
-        height:auto;
-        border-radius: $global-rounded;
-        margin-top:rem-calc(6);
+    .main-intro-content {
+        top: 45%;
+        transform: translateY(-45%);
+        position:absolute;
+        width:100%;
+        .profile-pic {
+            width:rem-calc(110);
+            height:auto;
+            border-radius: $global-rounded;
+            margin-top:rem-calc(6);
+        }
     }
-    // .lang-selection {
-    //     position:absolute;
-    //     top:0;
-    //     right:rem-calc(20);
-    //     ul {
-    //         list-style: none;
-    //         background:#3c6276;
-    //         background:rgba($asphalt, 0.7);
-    //         overflow: hidden;
-    //         li {
-    //             float:left;
-    //             a {
-    //                 display:block;
-    //                 padding:rem-calc(10, 15);
-    //                 color:darken(#fff, 40%);
-    //                 font-size:rem-calc(16);
-    //                 &:hover {
-    //                     color:#fff;
-    //                 }
-    //                 &.active {
-    //                     background:darken($asphalt, 10%);
-    //                     color:#fff;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
     .scroll-down {
         position:absolute;
         bottom:0;
@@ -112,6 +51,11 @@
             font-size:rem-calc(18);
             display:block;
         }
+    }
+
+    @include breakpoint(small down) {
+        position:relative;
+        min-height:100%;
     }
 }
 
@@ -134,17 +78,17 @@
         .hi,
         .i-am,
         .scroll-down {
-            animation: fadeIn 600ms 400ms ease-in forwards;
+            animation: fadeIn 400ms 400ms ease-in forwards;
         }
         .i-am {
-            animation-delay: 2000ms;
+            animation-delay: 1400ms;
         }
         .profile-pic {
-            animation: popupOut 400ms 3000ms linear forwards;
+            animation: popupOut 300ms 2400ms linear forwards;
         }
         .scroll-down {
-            animation-duration: 1000ms;
-            animation-delay: 4000ms;
+            animation-duration: 400ms;
+            animation-delay: 2800ms;
         }
     }
 }

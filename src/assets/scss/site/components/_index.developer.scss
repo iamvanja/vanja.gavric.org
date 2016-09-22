@@ -1,116 +1,21 @@
 .developer {
-    padding: rem-calc(30) 0;
-    background-color: $brown;
+    $bg: darken($asphalt, 5%);
+    background-color: $bg;
     // background-color: $asphalt;
     h2 {
         margin-bottom:0;
         line-height: 1.2;
         &.subheader {
             font-size:rem-calc(28);
-            color:lighten($brown, 30%);
+            color:$green;
             margin-bottom: rem-calc(20);
         }
     }
-    // .skills {
-    //     list-style: none;
-    //     color:#fff;
-    //     li {
-    //         line-height: 1.8;
-    //         // height:$progress-bar-height;
-    //         text-indent: rem-calc(8);
-    //         .category {
-    //             font-size:rem-calc(14);
-    //             font-weight: bold;
-    //             white-space: nowrap;
-    //         }
-    //         .meter {
-    //             background-color:$green;
-    //         }
-    //         &:nth-child(1){
-    //             .meter {
-    //                 background-color:$purple;
-    //                 // color:lighten($purple, 20%);
-    //                 // text-shadow:0 1px 1px rgba(lighten($purple, 30%), 0.4);
-    //             }
-    //         }
-    //         &:nth-child(2){
-    //             .meter {
-    //                 background-color:$blue;
-    //                 // color:darken($blue, 30%);
-    //                 // text-shadow:0 1px 1px rgba(lighten($blue, 30%), 0.4);
-    //             }
-    //         }
-    //         &:nth-child(3){
-    //             .meter {
-    //                 background-color:darken($green, 5%);
-    //                 // color:darken($green, 30%);
-    //                 // text-shadow:0 1px 1px rgba(lighten($green, 30%), 0.4);
-    //             }
-    //         }
-    //         &:nth-child(4){
-    //             .meter {
-    //                 background-color:$pumpkin;
-    //                 // color:darken($pumpkin, 30%);
-    //                 // text-shadow:0 1px 1px rgba(lighten($pumpkin, 30%), 0.4);
-    //             }
-    //         }
-    //         &:nth-child(5){
-    //             .meter {
-    //                 background-color:$yellow;
-    //                 // color:darken($yellow, 40%);
-    //                 // text-shadow:0 1px 1px rgba(lighten($yellow, 30%), 0.4);
-    //             }
-    //         }
-    //         &:nth-child(6){
-    //             .meter {
-    //                 background-color:$skin;
-    //                 // color:darken($skin, 40%);
-    //                 // text-shadow:0 1px 1px rgba(lighten($skin, 30%), 0.4);
-    //             }
-    //         }
-    //     }
-    // }
     .technologies-wrap {
         position:relative;
-        background:$brown;
+        // background:$brown;
         h3 {
             margin-bottom: rem-calc(14);
-        }
-        %techology-item-front-end {
-            background-color:$skin;
-            border-color:darken($skin, 10%);
-        }
-        %techology-item-mvc {
-            background-color:$purple;
-            border-color:darken($purple, 3%);
-        }
-        %techology-item-api {
-            background-color:$blue;
-            border-color:darken($blue, 10%);
-        }
-        %techology-item-test {
-            background-color:$pumpkin;
-            border-color:darken($pumpkin, 10%);
-        }
-        %techology-item-version-control {
-            background-color:$green;
-            border-color:darken($green, 10%);
-        }
-        %techology-item-lib-fram {
-            background-color:$yellow;
-            border-color:darken($yellow, 10%);
-        }
-        %techology-item-various {
-            background-color: darken($asphalt, 5%);
-            border-color: darken($asphalt, 8%);
-        }
-        %techology-item-back-end {
-            background-color:darken($green-sea, 16%);
-            border-color:darken($green-sea, 21%);
-        }
-        %techology-item-databases {
-            background-color:darken($brown, 10%);
-            border-color:darken($brown, 25%);
         }
         .legend {
             text-align: center;
@@ -136,86 +41,41 @@
                     position: relative;
                     border: 1px solid;
                 }
-                &.front-end:before {
-                    @extend %techology-item-front-end;
-                }
-                &.mvc:before {
-                    @extend %techology-item-mvc;
-                }
-                &.api:before {
-                    @extend %techology-item-api;
-                }
-                &.test:before {
-                    @extend %techology-item-test;
-                }
-                &.version-control:before {
-                    @extend %techology-item-version-control;
-                }
-                &.lib-fram:before {
-                    @extend %techology-item-lib-fram;
-                }
-                &.various:before {
-                    @extend %techology-item-various;
-                }
-                &.back-end:before {
-                    @extend %techology-item-back-end;
-                }
-                &.databases:before {
-                    @extend %techology-item-databases;
-                }
             }
         }
         .label {
             margin-bottom:rem-calc(2);
             margin-right:rem-calc(2);
-            transition: all 0.3s ease-in;
-            -webkit-backface-visibility: hidden;
+            transition: all 0.2s ease-in;
+            backface-visibility: hidden;
             border:1px solid;
-            &.front-end {
-                @extend %techology-item-front-end;
+        }
+
+        // while this loop produces a bit more output code,
+        // it allows for:
+        // easier DOM manipulation (simple class addition vs traversing through elements)
+        // easier maintenance (declared once in variables/$technology-label-map)
+        @each $label, $map in $technology-label-map {
+            .legend span.#{$label}:before,
+            .label.#{$label} {
+                background-color: map-get($map, background-color);
+                border-color: map-get($map, border-color);
             }
-            &.mvc {
-                @extend %techology-item-mvc;
-            }
-            &.api {
-                @extend %techology-item-api;
-            }
-            &.test {
-                @extend %techology-item-test;
-            }
-            &.version-control {
-                @extend %techology-item-version-control;
-            }
-            &.lib-fram {
-                @extend %techology-item-lib-fram;
-            }
-            &.various {
-                @extend %techology-item-various;
-            }
-            &.back-end {
-                @extend %techology-item-back-end;
-            }
-            &.databases {
-                @extend %techology-item-databases;
+
+            .technologies.list.#{$label} {
+                .label:not(.#{$label}) {
+                    background-color:lighten($bg, 3%);
+                    color:darken(#fff, 20%);
+                    border-color: lighten($bg, 3%);
+                    transform: scale(0.7);
+                }
             }
         }
+
         .experience hr {
             margin-left: auto;
             margin-right: auto;
             width:30%;
-        }
-        .blurred {
-            filter: blur(2px);
-        }
-
-        .scaledOut {
-            transform: scale(0.6);
-        }
-
-        .grayscale.grayscale {
-            background-color:lighten($brown, 3%);
-            color:darken(#fff, 20%);
-            border-color: lighten($brown, 3%);
         }
     }
 
