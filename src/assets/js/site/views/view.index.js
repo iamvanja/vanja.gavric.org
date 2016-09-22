@@ -4,9 +4,6 @@
         viewName = "index",
         ui = {
             el: ".index",
-            intro: "#intro",
-            content: "#content",
-            centerIntroContent: "#intro-centered",
             mainNav: "#main-nav",
         },
         isSkrollrAllowed = false,
@@ -73,31 +70,6 @@
         onLoad = function(){
             $(window).on("load", function(e) {
                 isLoaded.resolve();
-                // if (skrollrInstance) {
-                //     skrollrInstance.refresh();
-                // }
-            });
-        },
-        onLoadResize = function(){
-            var $content = $(ui.content),
-                $intro = $(ui.intro),
-                $centerIntroContent = $(ui.centerIntroContent);
-
-            $(window).on("load resize", function(e){
-                // allow for the intro el to be shown full-screen
-                // $content.css({
-                //     "margin-top" : $intro.outerHeight() + "px"
-                // });
-
-                // center content inside the intro el
-                var absHeight = $centerIntroContent.outerHeight(),
-                    absWidth = $centerIntroContent.outerWidth();
-                $centerIntroContent.css({
-                    "margin-left" : absWidth / -2 + "px",
-                    "margin-top" : absHeight / -2 + "px",
-                    "width" : absWidth + "px",
-                    "height" : absHeight + "px"
-                }).removeClass("centered").addClass("abs-centered");
             });
         },
         initHashClick = function(){
@@ -164,12 +136,9 @@
         },
         exports = {
             init: function(){
-                // separate #intro view?
-                // $(ui.intro).addClass("fixed");
                 site.views.run("common", "showLoading", {toShow: true});
 
                 onLoad();
-                onLoadResize();
                 // initSkrollr();
                 initHashClick();
 

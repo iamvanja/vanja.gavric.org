@@ -6,17 +6,15 @@ header#intro.intro
             li
                 a(href="/en") EN
 
-    div#intro-centered.centered
-        .row
-            .large-12.columns
-                h1
-                    span.hi
-                        =$i18n.header.hi + "."
-                    br
-                    span.i-am
-                        =$i18n.header.iAm + " Vanja."
-                    br
-                    img.profile-pic(src=assetsUrl.local + "images/profile.jpg", width="110", height="110", alt="Vanja Gavrić profile photo")
+    .main-intro-content
+        h1
+            span.hi
+                =$i18n.header.hi + "."
+            br
+            span.i-am
+                =$i18n.header.iAm + " Vanja."
+            br
+            img.profile-pic(src=assetsUrl.local + "images/profile.jpg", width="110", height="110", alt="Vanja Gavrić profile photo")
 
     .scroll-down
         a(href="#developer")
