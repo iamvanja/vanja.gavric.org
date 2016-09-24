@@ -27,7 +27,6 @@ module.exports = {
                 flatten: true,
                 cwd: "node_modules/",
                 src: [
-                    "wowjs/dist/wow.js",
                 ],
                 dest: "src/assets/js/vendor/"
             }
