@@ -128,7 +128,6 @@
             $.when(timer, isLoaded).done(function(){
                 $(window).on("view.common.showLoading.removed", function(){
                     $("body").addClass("animate-on-load");
-                    site.views.run("common", "initWow");
                     triggerHash();
                 });
                 site.views.run("common", "showLoading", {toShow: false});
