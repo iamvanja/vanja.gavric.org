@@ -13,8 +13,12 @@
         right:rem-calc(6);
         font-size:rem-calc(34);
         color:#fff;
+        opacity:0;
         &:hover {
             color:darken($asphalt, 10%);
+        }
+        &.fade-in {
+            animation: fadeIn 400ms ease forwards;
         }
     }
 

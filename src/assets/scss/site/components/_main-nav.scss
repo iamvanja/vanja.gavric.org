@@ -34,9 +34,9 @@
         }
     }
     &:hover {
-        ul {
-            margin-left:0!important;
-        }
+        // ul {
+        //     margin-left:0!important;
+        // }
         .circle,
         .back {
             background:darken($green-sea, 20%);
@@ -52,7 +52,7 @@
         z-index:1;
         transition: all 0.3s linear;
         -webkit-backface-visibility: hidden;
-        margin-left:-100%;
+        // margin-left:-100%;
         // border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
         // border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
         li {
