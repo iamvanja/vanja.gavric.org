@@ -67,6 +67,12 @@
                     }
                 }).init();
             },
+            lazyLoadImages: function(options){
+                var $el = $(options.el) || $("body");
+                $el.find("img.lazy").each(function(){
+                    $(this).attr("src", $(this).attr("data-lazysrc"));
+                });
+            },
         };
 
     site.views.register(viewName, exports);

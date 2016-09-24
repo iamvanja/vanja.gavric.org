@@ -7,12 +7,7 @@
         },
         onLoad = function(){
             $(window).on("load", function(e) {
-                lazyLoadImages();
-            });
-        },
-        lazyLoadImages = function(){
-            $(ui.el).find("img.lazy").each(function(){
-                $(this).attr("src", $(this).attr("data-lazysrc"));
+                site.views.run("common", "lazyLoadImages", {el: ui.el});
             });
         },
         exports = {
