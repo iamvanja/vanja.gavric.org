@@ -65,18 +65,6 @@
                     $(this).attr("src", $(this).attr("data-lazysrc"));
                 });
             },
-            inView: function(options) {
-                for (var i=0; i<options.el.length; i++) {
-                    if (_inView(options.el[i], options.offset)) {
-                        return options.cb(options.el);
-                    }
-                }
-            },
-            isInView: function(options) {
-                for (var i=0; i<options.el.length; i++) {
-                    return _inView(options.el[i], options.offset);
-                };
-            },
         };
 
     site.views.register(viewName, exports);
