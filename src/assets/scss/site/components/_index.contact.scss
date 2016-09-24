@@ -134,4 +134,38 @@
             }
         }
     }
+
+    // transitions
+    .contact-circles-wrap {
+        overflow: hidden;
+        .contact-circle {
+            $transition-duration: 800ms;
+            transform: translate3d(600%,0,0) rotate(1200deg);
+            transition: transform $transition-duration linear;
+            .text {
+                opacity:0;
+                visibility: hidden;
+                transition: opacity 100ms $transition-duration ease;
+            }
+        }
+    }
+    .roll-in-right {
+        &.contact-circles-wrap {
+            overflow: initial;
+        }
+        .contact-circles {
+            .contact-circle {
+                transform: translate3d(0,0,0) rotate(0);
+                .text {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            @for $i from 1 through 5 {
+                .contact-circle:nth-child(#{$i}) {
+                    transition-delay: 50ms * $i;
+                }
+            }
+        }
+    }
 }

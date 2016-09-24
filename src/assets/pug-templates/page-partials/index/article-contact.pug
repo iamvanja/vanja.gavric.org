@@ -1,12 +1,10 @@
 article.main-article.contact#contact(role="article", aria-labelledby="main-title-contact")
     .row
         .large-12.columns
-            h1#main-title-contact(data-anchor-target="#contact",
-            data-bottom-top="transform:scale(1.2);opacity:0",
-            data-bottom="transform:scale(1);opacity:1")
+            h1#main-title-contact
                 = $i18n.articleContact.contactMe
 
-    .row
+    .row.contact-circles-wrap#contact-circles-wrap.roll-in-right
         .large-12.columns
             h2.subheader= $i18n.articleContact.viaSocial
             .contact-circles
