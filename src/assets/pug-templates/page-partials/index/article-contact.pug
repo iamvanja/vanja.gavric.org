@@ -6,67 +6,53 @@ article.main-article.contact#contact(role="article", aria-labelledby="main-title
             data-bottom="transform:scale(1);opacity:1")
                 = $i18n.articleContact.contactMe
 
-            .row
-                .large-12.columns
-                    h2.subheader= $i18n.articleContact.viaSocial
+    .row
+        .large-12.columns
+            h2.subheader= $i18n.articleContact.viaSocial
+            .contact-circles
+                .contact-circle
+                    a(href="https://twitter.com/iamvanja")
+                        span.circle.twitter
+                            i.icon-twitter
+                        span.text
+                            | Twitter
+                .contact-circle
+                    a(href="http://www.linkedin.com/in/vanjagavric")
+                        span.circle.linkedin
+                            i.icon-linkedin
+                        span.text
+                            | LinkedIn
+                .contact-circle
+                    a(href="https://github.com/iamvanja")
+                        span.circle.github
+                            i.icon-github-circled
+                        span.text
+                            | GitHub
+                .contact-circle
+                    a(href="http://flickr.com/vanja-gavric")
+                        span.circle.flickr
+                            i.icon-flickr
+                        span.text
+                            | Flickr
+                .contact-circle
+                    a(href="http://500px.com/iamvanja")
+                        span.circle.fivehundredpx
+                            i.icon-fivehundredpx
+                        span.text
+                            | 500px
 
-                    div(class="contact-circles social-networks row large-up-5 small-up-3",
-                    data-anchor-target="#contact",
-                    data-bottom-top="transform:translate3d(130%,0px,0px)",
-                    data-100-bottom="transform:translate3d(0%,0px,0px)")
-                        div.contact-circle.column
-                            a(href="https://twitter.com/iamvanja")
-                                span.circle.twitter(data-anchor-target="#contact", data-bottom-top="transform:rotate(1080deg)", data-100-bottom="transform:rotate(0deg)")
-                                    i.icon-twitter
-                                span.text(data-anchor-target="#contact", data-140-bottom="opacity:0", data-100-bottom="opacity:1")
-                                    | Twitter
+            h2.subheader= $i18n.general.or
 
-                        //- div.contact-circle.column
-                            a(href="http://www.facebook.com/vanja.gavric")
-                                span.circle.facebook(data-anchor-target="#contact", data-bottom-top="transform:rotate(1020deg)", data-100-bottom="transform:rotate(0deg)")
-                                    i.icon-facebook
-                                span.text(data-anchor-target="#contact", data-140-bottom="opacity:0", data-100-bottom="opacity:1")
-                                    | Facebook
-                        div.contact-circle.column
-                            a(href="http://www.linkedin.com/in/vanjagavric")
-                                span.circle.linkedin(data-anchor-target="#contact", data-bottom-top="transform:rotate(960deg)", data-100-bottom="transform:rotate(0deg)")
-                                    i.icon-linkedin
-                                span.text(data-anchor-target="#contact", data-140-bottom="opacity:0", data-100-bottom="opacity:1")
-                                    | LinkedIn
-                        div.contact-circle.column
-                            a(href="https://github.com/iamvanja")
-                                span.circle.github(data-anchor-target="#contact", data-bottom-top="transform:rotate(900deg)", data-100-bottom="transform:rotate(0deg)")
-                                    i.icon-github-circled
-                                span.text(data-anchor-target="#contact", data-140-bottom="opacity:0", data-100-bottom="opacity:1")
-                                    | GitHub
-                        div.contact-circle.column
-                            a(href="http://flickr.com/vanja-gavric")
-                                span.circle.flickr(data-anchor-target="#contact", data-bottom-top="transform:rotate(840deg)", data-100-bottom="transform:rotate(0deg)")
-                                    i.icon-flickr
-                                span.text(data-anchor-target="#contact", data-140-bottom="opacity:0", data-100-bottom="opacity:1")
-                                    | Flickr
-                        div.contact-circle.column
-                            a(href="http://500px.com/iamvanja")
-                                span.circle.fivehundredpx(data-anchor-target="#contact", data-bottom-top="transform:rotate(780deg)", data-100-bottom="transform:rotate(0deg)")
-                                    i.icon-fivehundredpx
-                                span.text(data-anchor-target="#contact", data-140-bottom="opacity:0", data-100-bottom="opacity:1")
-                                    | 500px
-
-            .row
-                .large-8.small-12.large-centered.columns
-                    h2.subheader= $i18n.general.or
-
-                    div(class="contact-circles email-skype row small-up-2",
-                    data-anchor-target="#contact", data-bottom-top="transform:translate3d(-130%,0px,0px)", data-50-bottom="transform:translate3d(0%,0px,0px)")
-                        div#email-circle.contact-circle.column
-                            a(data-username=email.username, data-domain=email.domain)
-                                span.circle.mail(data-anchor-target="#contact", data-bottom-top="transform:rotate(-930deg)", data-50-bottom="transform:rotate(0deg)")
-                                    i.icon-email
-                                span.text(data-anchor-target="#contact", data-50-bottom="opacity:0", data-20-bottom="opacity:1")
-                                    = $i18n.articleContact.dropEmail
-                        div.contact-circle.column
-                            a(href="skype:vanja1000?call")
-                                span.circle.skype(data-anchor-target="#contact", data-bottom-top="transform:rotate(-720deg)", data-50-bottom="transform:rotate(0deg)")
-                                    i.icon-skype
-                                span.text(data-anchor-target="#contact", data-50-bottom="opacity:0", data-20-bottom="opacity:1")
-                                    = $i18n.articleContact.callSkype
+            .contact-circles
+                #email-circle.contact-circle
+                    a(data-username=email.username, data-domain=email.domain)
+                        span.circle.mail
+                            i.icon-email
+                        span.text
+                            = $i18n.articleContact.dropEmail
+                .contact-circle
+                    a(href="skype:vanja1000?call")
+                        span.circle.skype
+                            i.icon-skype
+                        span.text
+                            = $i18n.articleContact.callSkype

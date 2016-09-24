@@ -11,7 +11,10 @@ module.exports = {
             outputStyle: "expanded",
             relativeAssets: true,
             raw: "Sass::Script::Number.precision = 3\n",
-            importPath: "node_modules/foundation-sites/scss/"
+            importPath: "node_modules/foundation-sites/scss/",
+            require: [
+                "ceaser-easing"
+            ]
         }
     },
     production: {
@@ -24,7 +27,10 @@ module.exports = {
             outputStyle: "compressed",
             relativeAssets: true,
             raw: "Sass::Script::Number.precision = 3\n",
-            importPath: "node_modules/foundation-sites/scss/"
+            importPath: "node_modules/foundation-sites/scss/",
+            require: [
+                "ceaser-easing"
+            ]
         }
     }
 };

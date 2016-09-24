@@ -10,7 +10,7 @@ $asphalt:#34495e;
 $green-sea:#16a085;
 $brown:#3a3a3a;
 $asbestos:#7f8c8d;
-$light-gray: #93b1c5;
+$my-gray: #738aa0;
 $light-purple: #a9a9d4;
 
 $media-phone: "only screen and (max-width : 480px)";
@@ -43,8 +43,8 @@ $technology-label-map: (
         border-color:darken($yellow, 10%)
     ),
     various: (
-        background-color: darken($light-gray, 5%),
-        border-color: darken($light-gray, 8%)
+        background-color: darken($my-gray, 5%),
+        border-color: darken($my-gray, 8%)
     ),
     back-end: (
         background-color:darken($green-sea, 16%),

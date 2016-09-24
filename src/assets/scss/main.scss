@@ -3,10 +3,15 @@
 // Compass CSS3 mixins
 @import "compass/css3";
 
+// import ceaser-easing
+// https://github.com/jhardy/compass-ceaser-easing
+// http://easings.net/
+@import "ceaser-easing";
+
 // Normalize across different browsers
 @import "vendor/normalize";
 
-// variables
+// site variables - extend foundation
 @import "site/variables";
 
 // import main foundation scss (old)

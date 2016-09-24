@@ -1,29 +1,25 @@
 .developer {
     $bg: darken($asphalt, 5%);
     background-color: $bg;
-    // background-color: $asphalt;
     h2 {
         margin-bottom:0;
         line-height: 1.2;
         &.subheader {
             font-size:rem-calc(28);
-            color:$green;
+            color:lighten($bg,30%);
             margin-bottom: rem-calc(20);
         }
     }
     .technologies-wrap {
         position:relative;
-        // background:$brown;
         h3 {
             margin-bottom: rem-calc(14);
         }
         .legend {
             text-align: center;
-            // for mobile text-align:left;
             span {
                 cursor: help;
                 position: relative;
-                // padding-left:1.2em;
                 margin-right:1em;
                 margin-bottom:0.4em;
                 white-space: nowrap;
@@ -36,8 +32,6 @@
                     top:2px;
                     margin-right:4px;
                     display:inline-block;
-                    // top: 50%;
-                    // margin-top:-0.5em;
                     position: relative;
                     border: 1px solid;
                 }
