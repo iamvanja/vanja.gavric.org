@@ -19,7 +19,6 @@
     "jsFiles": [
         "src/assets/js/vendor/jquery-2.1.1.js",
         "src/assets/js/vendor/jquery.backstretch.js",
-        "src/assets/js/vendor/wow.js",
         "src/assets/js/site/start.js",
         "src/assets/js/site/helpers.js",
         "src/assets/js/site/controller.js",

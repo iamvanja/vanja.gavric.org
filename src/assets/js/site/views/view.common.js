@@ -59,19 +59,23 @@
                     height : e[ a+"Height" ]
                 };
             },
-            initWow: function(){
-                new window.WOW({
-                    offset: 20,
-                    callback: function(box){
-                        console.log("finished", box);
-                    }
-                }).init();
-            },
             lazyLoadImages: function(options){
                 var $el = $(options.el) || $("body");
                 $el.find("img.lazy").each(function(){
                     $(this).attr("src", $(this).attr("data-lazysrc"));
                 });
+            },
+            inView: function(options) {
+                for (var i=0; i<options.el.length; i++) {
+                    if (_inView(options.el[i], options.offset)) {
+                        return options.cb(options.el);
+                    }
+                }
+            },
+            isInView: function(options) {
+                for (var i=0; i<options.el.length; i++) {
+                    return _inView(options.el[i], options.offset);
+                };
             },
         };
 
