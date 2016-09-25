@@ -141,6 +141,7 @@
                 // initSkrollr();
                 initHashClick();
 
+                site.views.run("index.scrollspy", "init");
                 site.views.run("index.developer", "init");
                 site.views.run("index.photography", "init");
                 site.views.run("index.writing", "init");
