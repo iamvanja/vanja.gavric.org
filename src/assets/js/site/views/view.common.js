@@ -3,6 +3,15 @@
     var site = window.SITE,
         viewName = "common",
         // ui = {},
+        // https://github.com/Josh-Miller/isInViewport
+        // used by `isInView` and `inView`
+        // forked due to module.exports
+        _inView = function(el, offset) {
+            var bounds = el.getBoundingClientRect();
+            offset = offset || 0;
+            // console.log("offset", offset);
+            return bounds.top + offset < window.innerHeight && bounds.bottom > 0;
+        },
         exports = {
             showLoading: function(options) {
                 // @todo: fallback for not animation support
@@ -64,6 +73,18 @@
                 $el.find("img.lazy").each(function(){
                     $(this).attr("src", $(this).attr("data-lazysrc"));
                 });
+            },
+            inView: function(options) {
+                for (var i=0; i<options.el.length; i++) {
+                    if (_inView(options.el[i], options.offset)) {
+                        return options.cb(options.el);
+                    }
+                }
+            },
+            isInView: function(options) {
+                for (var i=0; i<options.el.length; i++) {
+                    return _inView(options.el[i], options.offset);
+                };
             },
         };
 
