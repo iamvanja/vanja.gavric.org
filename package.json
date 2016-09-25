@@ -5,6 +5,7 @@
   "description": "Vanja Gavric's personal website",
   "dependencies": {
     "foundation-sites": "^6.2.3",
+    "scrollmonitor": "github:stutrek/scrollMonitor"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
