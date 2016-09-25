@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Vanja Gavric's personal website",
   "dependencies": {
-    "foundation-sites": "^6.2.3",
+    "foundation-sites": "^6.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
@@ -20,11 +20,13 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-htmlhint": "^0.9.13",
     "grunt-jquery-builder": "^0.2.1",
+    "grunt-lodash": "^0.5.1",
     "grunt-postcss": "^0.8.0",
     "grunt-remove-logging": "^0.2.0",
     "grunt-sitemap": "^1.2.1",
     "jit-grunt": "^0.10.0",
     "load-grunt-config": "^0.19.2",
+    "lodash-cli": "^4.16.1",
     "shelljs": "^0.6.0"
   },
   "scripts": {
