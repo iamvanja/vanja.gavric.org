@@ -35,6 +35,12 @@
             // https://coderwall.com/p/ey5a1w/standarise-transitionend
             // https://gist.github.com/depoulo/9dc8f59d791ec8f8e40c
             settings.transitionEnd = (!!window.WebKitAnimationEvent) ? "webkitTransitionEnd" : "transitionend";
+            settings.requestAnimationFrame = window.requestAnimationFrame
+                                            || window.webkitRequestAnimationFrame
+                                            || window.mozRequestAnimationFrame
+                                            || window.msRequestAnimationFrame
+                                            || window.oRequestAnimationFrame
+                                            || function(callback) { return setTimeout(callback, 1000 / 60); };
 
             return settings;
         },
