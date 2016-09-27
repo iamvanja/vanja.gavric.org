@@ -14,11 +14,15 @@
         font-size:rem-calc(34);
         color:#fff;
         opacity:0;
+        visibility: hidden;
+        transition: 400ms ease;
+        transition-property: opacity, visibility;
         &:hover {
             color:darken($asphalt, 10%);
         }
         &.fade-in {
-            animation: fadeIn 400ms ease forwards;
+            opacity:1;
+            visibility: visible;
         }
     }
 
