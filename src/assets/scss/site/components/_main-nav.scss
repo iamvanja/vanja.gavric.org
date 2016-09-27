@@ -86,13 +86,13 @@
         }
     }
 
-    @include breakpoint(small down) {
-        position:absolute;
-        z-index: 2;
-        display: inline-block;
-        ul {
-            display:none;
-            margin-left:-100%;
-        }
-    }
+    // @include breakpoint(small down) {
+    //     position:absolute;
+    //     z-index: 2;
+    //     display: inline-block;
+    //     ul {
+    //         display:none;
+    //         margin-left:-100%;
+    //     }
+    // }
 }

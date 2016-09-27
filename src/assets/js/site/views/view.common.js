@@ -3,15 +3,6 @@
     var site = window.SITE,
         viewName = "common",
         // ui = {},
-        // https://github.com/Josh-Miller/isInViewport
-        // used by `isInView` and `inView`
-        // forked due to module.exports
-        _inView = function(el, offset) {
-            var bounds = el.getBoundingClientRect();
-            offset = offset || 0;
-            // console.log("offset", offset);
-            return bounds.top + offset < window.innerHeight && bounds.bottom > 0;
-        },
         exports = {
             showLoading: function(options) {
                 // @todo: fallback for not animation support
@@ -55,7 +46,7 @@
                     $loader.removeClass("animate").addClass("exit");
                 }
             },
-            viewPortDimensions: function(){
+            getViewportDimensions: function(){
                 var e = window, a = "inner";
 
                 if ( !( "innerWidth" in window ) ) {
@@ -68,23 +59,19 @@
                     height : e[ a+"Height" ]
                 };
             },
+            getDocumentHeight: function() {
+                var d = document;
+                return Math.max(
+                    d.body.scrollHeight, d.documentElement.scrollHeight,
+                    d.body.offsetHeight, d.documentElement.offsetHeight,
+                    d.body.clientHeight, d.documentElement.clientHeight
+                );
+            },
             lazyLoadImages: function(options){
                 var $el = $(options.el) || $("body");
                 $el.find("img.lazy").each(function(){
                     $(this).attr("src", $(this).attr("data-lazysrc"));
                 });
-            },
-            inView: function(options) {
-                for (var i=0; i<options.el.length; i++) {
-                    if (_inView(options.el[i], options.offset)) {
-                        return options.cb(options.el);
-                    }
-                }
-            },
-            isInView: function(options) {
-                for (var i=0; i<options.el.length; i++) {
-                    return _inView(options.el[i], options.offset);
-                };
             },
         };
 
