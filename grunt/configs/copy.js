@@ -26,9 +26,7 @@ module.exports = {
                 expand: true,
                 flatten: true,
                 cwd: "node_modules/",
-                src: [
-                    "scrollmonitor/scrollMonitor.js",
-                ],
+                src: [],
                 dest: "src/assets/js/vendor/"
             }
         ]
