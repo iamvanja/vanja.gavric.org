@@ -40,7 +40,9 @@
                                             || window.mozRequestAnimationFrame
                                             || window.msRequestAnimationFrame
                                             || window.oRequestAnimationFrame
-                                            || function(callback) { return setTimeout(callback, 1000 / 60); };
+                                            || function(callback) {
+                                                return setTimeout(callback, 1000 / 60);
+                                            };
 
             return settings;
         },
