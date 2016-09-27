@@ -1,28 +1,16 @@
 article.main-article.developer#developer(role="article", aria-labelledby="main-title-dev")
-    div(data-anchor-target="#developer",
-    data-bottom-top="transform:translate3d(0px,40%,0px);opacity:0;",
-    data-top="transform:translate3d(0px,0%,0px);opacity:1;")
+    div
         div.row
             div.large-12.columns
-                h2(class="main-title-dev no-margin-bottom",
-                id="main-title-dev",
-                data-anchor-target="#developer",
-                data-bottom-top="transform:scale(1.46);opacity:0",
-                data-top="transform:scale(1);opacity:1")
+                h2.main-title-dev.no-margin-bottom#main-title-dev
                     =$i18n.header.iAm + " " + $i18n.articleDeveloper.whoAmI
 
-                h2(class="subheader no-margin-top",
-                data-anchor-target="#developer",
-                data-center-top="opacity:0",
-                data-200-top="opacity:1")
+                h2.subheader.no-margin-top
                     span
                         =$i18n.articleDeveloper.specializing + " "
                         i front-end
 
-    div(class="technologies-wrap",
-    data-anchor-target="#developer",
-    data-bottom-top="transform:translate3d(0px,-10%,0px);opacity:0;",
-    data-center-bottom="transform:translate3d(0px,0%,0px);opacity:1;")
+    div.technologies-wrap
         div.row.experience
             div.large-12.columns
                 h3= $i18n.articleDeveloper.iHaveExperienceWith
