@@ -122,9 +122,9 @@
             // show timer for at least 3.4s seconds
             window.setTimeout(function(){
                 timer.resolve();
-            }, 3400);
+            }, 500);
 
-            // when 2s timer and the page is loaded, remove loader
+            // when timer is finished and the page is loaded, remove loader
             $.when(timer, isLoaded).done(function(){
                 $(window).on("view.common.showLoading.removed", function(){
                     $("body").addClass("animate-on-load");
