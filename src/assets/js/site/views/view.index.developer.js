@@ -20,8 +20,8 @@
                     removeTechnologyClasses();
                 },
                 touchstart: function(){
-                    App.helpers.removeTechnologyClasses();
-                    App.helpers.filterTechnologies(this);
+                    removeTechnologyClasses();
+                    filterTechnologies(this);
                 }
             });
         },

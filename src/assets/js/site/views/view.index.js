@@ -59,6 +59,7 @@
         exports = {
             init: function(){
                 site.views.run("common", "showLoading", {toShow: true});
+                $("body").removeClass("state-before-loader");
 
                 onLoad();
                 initHashClick();
