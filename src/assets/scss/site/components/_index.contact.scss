@@ -138,9 +138,10 @@
     // transitions
     .contact-circles-wrap {
         overflow: hidden;
+        $transition-duration: 800ms;
+        $rotationValue: 1200deg;
         .contact-circle {
-            $transition-duration: 800ms;
-            transform: translate3d(600%,0,0) rotate(1200deg);
+            transform: translate3d(600%,0,0) rotate($rotationValue);
             transition: transform $transition-duration linear;
             .text {
                 opacity:0;
@@ -148,12 +149,17 @@
                 transition: opacity 100ms $transition-duration ease;
             }
         }
+        .contact-circles.alternative {
+            .contact-circle {
+                transform: translate3d(-600%,0,0) rotate($rotationValue);
+            }
+        }
     }
     .roll-in-right {
         &.contact-circles-wrap {
             overflow: initial;
         }
-        .contact-circles {
+        .contact-circles.contact-circles {
             .contact-circle {
                 transform: translate3d(0,0,0) rotate(0);
                 .text {
