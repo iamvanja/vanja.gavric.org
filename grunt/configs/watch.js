@@ -39,8 +39,7 @@ module.exports = {
     },
     js: {
         files: "<%= settings.jsFiles %>",
-        // tasks: ["eslint", "concat:watch"],
-        tasks: ["concat:watch"],
+        tasks: ["eslint", "concat:watch"],
         options: {
             // Start a live reload server on the default port 35729
             livereload: true
