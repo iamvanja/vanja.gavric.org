@@ -34,6 +34,7 @@ module.exports = function(grunt) {
                 // here you can specify static mappings, for example:
                 removelogging: "grunt-remove-logging",
                 jquery: "grunt-jquery-builder",
+                lodash: "grunt-lodash",
             },
             customTasksDir: "grunt/tasks"
         },

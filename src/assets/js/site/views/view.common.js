@@ -46,7 +46,7 @@
                     $loader.removeClass("animate").addClass("exit");
                 }
             },
-            viewPortDimensions: function(){
+            getViewportDimensions: function(){
                 var e = window, a = "inner";
 
                 if ( !( "innerWidth" in window ) ) {
@@ -58,6 +58,14 @@
                     width : e[ a+"Width" ],
                     height : e[ a+"Height" ]
                 };
+            },
+            getDocumentHeight: function() {
+                var d = document;
+                return Math.max(
+                    d.body.scrollHeight, d.documentElement.scrollHeight,
+                    d.body.offsetHeight, d.documentElement.offsetHeight,
+                    d.body.clientHeight, d.documentElement.clientHeight
+                );
             },
             lazyLoadImages: function(options){
                 var $el = $(options.el) || $("body");
