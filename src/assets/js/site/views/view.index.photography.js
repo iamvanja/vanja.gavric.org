@@ -45,10 +45,18 @@
                 // once the initial page load is finished, add more photos to backstretch
                 var backstretchInstance = $backstretchEl.data("backstretch");
                 backstretchInstance.images.push(
-                    imagesPath + "stuck-in-traffic.jpg",
-                    imagesPath + "hana.jpg",
-                    imagesPath + "autumn-in-zrinjevac.jpg",
-                    imagesPath + "double-rainbow-in-paris.jpg"
+                    {
+                        url: imagesPath + "stuck-in-traffic.jpg",
+                    },
+                    {
+                        url: imagesPath + "hana.jpg",
+                    },
+                    {
+                        url: imagesPath + "autumn-in-zrinjevac.jpg",
+                    },
+                    {
+                        url: imagesPath + "double-rainbow-in-paris.jpg",
+                    }
                 );
             }
         },

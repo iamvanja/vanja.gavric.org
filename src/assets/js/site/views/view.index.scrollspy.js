@@ -21,9 +21,9 @@
                 animateOnScroll: {
                     selector: ".spy:not(."+ processedClass +")",
                 },
-                parallax: {
-                    selector: "#photography .backstretch-wrap",
-                },
+                // parallax: {
+                //     selector: "#photography .backstretch-wrap",
+                // },
             },
         },
         isUiCached = false,
