@@ -25,6 +25,12 @@
         span {
             @extend %type-background;
         }
+        &.heading {
+            span {
+                display: inline-block;
+                margin-bottom: rem-calc(6);
+            }
+        }
         &.subheader {
             font-size:rem-calc(22);
             // background: rgba(lighten($brown, 5%), 0.8);
