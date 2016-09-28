@@ -5,8 +5,6 @@
         ui = {
             el: "#photography",
             backstretchEl: ".backstretch-wrap",
-            play: "#play",
-            pause: "#pause"
         },
         $backstretchEl = $(ui.el).find(ui.backstretchEl),
         imagesPath,

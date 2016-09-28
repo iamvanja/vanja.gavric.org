@@ -5,7 +5,7 @@
         // ui = {},
         exports = {
             showLoading: function(options) {
-                // @todo: fallback for not animation support
+                // @todo: fallback for no animation support
                 var loaderId = "loader",
                     loadingText = $("meta[name=loading-text]").attr("content"),
                     loadingTextAlt = $("meta[name=loading-text-alt]").attr("content"),
@@ -20,7 +20,7 @@
                     $loader.html("<div></div><div></div><div></div><div></div><h1 class=\"default\">"+ loadingText +"...</h1><h1 class=\"alternative\">" + loadingTextAlt + "</h1>");
                     $loader.attr({
                         id: loaderId,
-                        class: loaderId + " animate"
+                        class: loaderId + " animate",
                     });
                     // append loader and trigger layout
                     $("body").append($loader).height();
@@ -56,7 +56,7 @@
 
                 return {
                     width : e[ a+"Width" ],
-                    height : e[ a+"Height" ]
+                    height : e[ a+"Height" ],
                 };
             },
             getDocumentHeight: function() {

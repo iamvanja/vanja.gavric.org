@@ -28,7 +28,7 @@
                 }
 
                 $("html, body").stop().animate({
-                    scrollTop: offset
+                    scrollTop: offset,
                 }, 1000, function(){
                     e.preventDefault();
                     window.location.hash = hash !== "#top" ? hash : "";
