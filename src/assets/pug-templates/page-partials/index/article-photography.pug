@@ -1,4 +1,9 @@
 article.main-article.photography#photography(role="article", aria-labelledby="main-title-photo")
+    div.paused-message
+        | slideshow paused. 
+        span.click= $i18n.general.click 
+        span.tap= $i18n.general.tap 
+        |  to resume.
     div.row
         div.large-12.columns
             h2#main-title-photo
@@ -10,7 +15,9 @@ article.main-article.photography#photography(role="article", aria-labelledby="ma
             h2.subheader
                 span= $i18n.articlePhotography.subtitle
 
-            i.icon.icon-pause-circled#pause
+    .icon-container
+        i.icon.icon-pause-circled#pause
+        i.icon.icon-play-circled#play
 
     div.backstretch-wrap
         //- empty
