@@ -68,6 +68,20 @@
                 }
             });
         },
+        // cssTransform = Modernizr.prefixed("transform"),
+        // doParallax = function(scrollTop) {
+        //     var element = cachedUi.parallax,
+        //         yAxis = 0,
+        //         cssObj = {};
+
+        //     // for this to be functional, set .backstretch-wrap to `height:130%` in index.photography.scss
+        //     if (scrollTop + cachedUi._general.viewport.height >= element.offset.top && scrollTop < element.offset.bottom) {
+
+        //         yAxis = (0 - ((scrollTop - element.offset.top) * -0.1))+"px";
+        //         cssObj[cssTransform] = "translate3d(0,"+yAxis+",0)";
+        //         element.$el.css(cssObj);
+        //     }
+        // },
         onScroll = function(scrollTop) {
             var isIntroShown = scrollTop <= cachedUi.intro.height;
 
@@ -79,6 +93,9 @@
 
             // animations on scroll
             animateOnScroll(scrollTop);
+
+            // do parallax
+            // doParallax(scrollTop);
         },
         scrollHandler = function(e){
             if (isUiCached) {
@@ -144,7 +161,7 @@
             // http://kristerkari.github.io/adventures-in-webkit-land/blog/2013/08/30/fixing-a-parallax-scrolling-website-to-run-in-60-fps/
             $(window).on("scroll.scrollspy", _.throttle(function(e){
                 site.settings.requestAnimationFrame.call(window, scrollHandler);
-            }, 500));
+            }, 250));
         },
         exports = {
             init: function(){
