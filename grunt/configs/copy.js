@@ -26,7 +26,9 @@ module.exports = {
                 expand: true,
                 flatten: true,
                 cwd: "node_modules/",
-                src: [],
+                src: [
+                    "jquery.backstretch/jquery.backstretch.js"
+                ],
                 dest: "src/assets/js/vendor/"
             }
         ]
