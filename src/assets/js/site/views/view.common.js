@@ -36,6 +36,7 @@
                     $loader.one(site.settings.transitionEnd, function(){
                         callback();
                     });
+                    // remove loader in case transitionEnd event did not fire
                     window.setTimeout(function(){
                         $loader = $("#"+loaderId);
                         if ($loader.length) {
