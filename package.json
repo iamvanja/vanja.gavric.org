@@ -22,6 +22,7 @@
     "grunt-htmlhint": "^0.9.13",
     "grunt-jquery-builder": "^0.2.1",
     "grunt-lodash": "^0.5.1",
+    "grunt-modernizr": "^1.0.2",
     "grunt-postcss": "^0.8.0",
     "grunt-remove-logging": "^0.2.0",
     "grunt-sitemap": "^1.2.1",
