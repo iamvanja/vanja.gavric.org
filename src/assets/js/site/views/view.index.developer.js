@@ -5,7 +5,7 @@
         ui = {
             el: "#developer",
             list: "#technologies-list",
-            legend: "#technologies-legend"
+            legend: "#technologies-legend",
         },
         activeCategoryName,
         shuffleTechnologies = function(){
@@ -22,7 +22,7 @@
                 touchstart: function(){
                     removeTechnologyClasses();
                     filterTechnologies(this);
-                }
+                },
             });
         },
         filterTechnologies = function(el){

@@ -7,21 +7,24 @@
             el: window,
             scrollUi: {
                 mainNav: {
-                    selector: "#main-nav"
+                    selector: "#main-nav",
                 },
                 backToTop: {
-                    selector: "#back-to-top"
+                    selector: "#back-to-top",
                 },
                 intro: {
-                    selector: "#intro"
+                    selector: "#intro",
                 },
                 articles: {
-                    selector: "#content .main-article"
+                    selector: "#content .main-article",
                 },
                 animateOnScroll: {
-                    selector: ".spy:not(."+ processedClass +")"
-                }
-            }
+                    selector: ".spy:not(."+ processedClass +")",
+                },
+                parallax: {
+                    selector: "#photography .backstretch-wrap",
+                },
+            },
         },
         isUiCached = false,
         cachedUi = {},
@@ -89,11 +92,16 @@
                         offset: $el.offset(),
                         height: $el.outerHeight(),
                         id: $el.attr("id"),
-                        userOffset: parseInt($el.attr("data-spy-offset"), 10) || 0
+                        userOffset: parseInt($el.attr("data-spy-offset"), 10) || 0,
                     };
                     obj.offset.bottom = obj.offset.top + obj.height;
 
                     return obj;
+                },
+                pushToArray = function($singleEl, elName) {
+                    $singleEl.each(function(i, el){
+                        cachedUi[elName].push(getOptions($(el)));
+                    });
                 },
                 $singleEl, elOptions;
 
@@ -106,9 +114,7 @@
                 if ($singleEl.length) {
                     if ($singleEl.length > 1) {
                         cachedUi[elName] = [];
-                        $singleEl.each(function(i, el){
-                            cachedUi[elName].push(getOptions($(el)));
-                        });
+                        pushToArray($singleEl, elName);
                     }
                     else {
                         cachedUi[elName] = getOptions($singleEl);
@@ -121,15 +127,16 @@
 
             cachedUi._general = {
                 viewport: site.views.run("common", "getViewportDimensions"),
-                documentHeight: site.views.run("common", "getDocumentHeight")
+                documentHeight: site.views.run("common", "getDocumentHeight"),
             };
 
             evaluateLastArticle();
+            // console.log(cachedUi);
             isUiCached = true;
         },
         evaluateLastArticle = function(){
             var lastSectionClass = "last-section-smaller-than-viewport",
-                isViewportBigger = cachedUi._general.viewport.height <=  $("#developer").outerHeight() + $("#footer").outerHeight();
+                isViewportBigger = cachedUi._general.viewport.height <= $("#developer").outerHeight() + $("#footer").outerHeight();
 
             $("body").toggleClass(lastSectionClass, isViewportBigger);
         },

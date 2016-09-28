@@ -2,6 +2,6 @@
 
 module.exports = {
     target: [
-        "src/assets/js/site/*.js",
+        "src/assets/js/site/**/*.js",
     ]
 };
