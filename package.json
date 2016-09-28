@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Vanja Gavric's personal website",
   "dependencies": {
-    "foundation-sites": "^6.2.3"
+    "foundation-sites": "^6.2.3",
+    "jquery.backstretch": "^2.1.13"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
