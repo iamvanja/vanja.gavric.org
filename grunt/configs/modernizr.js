@@ -42,7 +42,7 @@ module.exports = function(grunt, data) {
     config.dev.dest = "src/" + config.dev.dest;
     config.production.dest = "build/" + config.production.dest;
 
-    console.log(config);
+    // console.log(config);
 
     return config;
 };
