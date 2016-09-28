@@ -40,6 +40,18 @@
                 $("a[href=\""+ window.location.hash +"\"]").trigger("click");
             }
         },
+        onHashChange = function(){
+            $(window).on("hashchange", function(e){
+                // setTimeout to ensure it fires after the scroll events
+                // that might override this
+                window.setTimeout(function(){
+                    exports.setMainNavCategoryActive({
+                        $el: $(ui.mainNav),
+                        categoryName: window.location.hash.replace("#", ""),
+                    });
+                }, 150);
+            });
+        },
         hideLoader = function(){
             var timer = $.Deferred();
             // show timer for at least 3.4s seconds
@@ -62,6 +74,7 @@
                 $("body").removeClass("state-before-loader");
 
                 onLoad();
+                onHashChange();
                 initHashClick();
 
                 site.views.run("index.scrollspy", "init");
@@ -71,6 +84,12 @@
                 site.views.run("index.contact", "init");
 
                 hideLoader();
+            },
+            setMainNavCategoryActive: function(options) {
+                options.categoryName = options.categoryName ? "."+options.categoryName : "";
+                options.$el.find("li"+options.categoryName)
+                    .addClass("active")
+                    .siblings().removeClass("active");
             },
         };
 

@@ -35,20 +35,21 @@
             if (!isIntroShown) {
                 cachedUi.articles.forEach(function(el, i, arr){
                     if (scrollTop >= el.offset.top && scrollTop < el.offset.bottom) {
-                        activeArticleClass = "."+el.id;
+                        activeArticleClass = el.id;
                     }
                 });
 
                 // take care of the contact section (or last section)
                 // if the element top does not hit the viewport top
-                if (scrollTop + cachedUi._general.viewport.height >= cachedUi._general.documentHeight - 100 && activeArticleClass !== "."+lastArticleId) {
-                    activeArticleClass = "."+lastArticleId;
+                if (scrollTop + cachedUi._general.viewport.height >= cachedUi._general.documentHeight - 100 && activeArticleClass !== lastArticleId) {
+                    activeArticleClass = lastArticleId;
                 }
             }
 
-            cachedUi.mainNav.$el.find("li"+activeArticleClass)
-                .addClass("active")
-                .siblings().removeClass("active");
+            site.views.run("index", "setMainNavCategoryActive", {
+                $el: cachedUi.mainNav.$el,
+                categoryName: activeArticleClass,
+            });
         },
         animateOnScroll = function(scrollTop) {
             var namespace = "animateOnScroll",
