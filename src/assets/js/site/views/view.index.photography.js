@@ -26,26 +26,20 @@
                     {duration: 5000, fade: 750}
                 );
 
+                $(ui.el).on("click", function(){
+                    var $el = $(this),
+                        pausedClass = "paused",
+                        playingClass = "playing",
+                        isPaused = $el.is("."+pausedClass);
 
-                // todo: click on entire container, pause and play zoom in/out and fade effect
-                $(ui.play + ", " + ui.pause).on("click", function(){
-                    var action = "resume",
-                        newId = "pause",
-                        newClass = "icon icon-pause-circled";
+                    $el.toggleClass(pausedClass, !isPaused);
+                    $el.toggleClass(playingClass, isPaused);
 
-                    if ($(this).is(ui.pause)){
-                        action = "pause";
-                        newId = "play";
-                        newClass = "icon icon-play-circled";
-                    }
-
-                    $backstretchEl.backstretch(action);
-
-                    $(this).attr({
-                        "id": newId,
-                        "class": newClass
-                    });
+                    $backstretchEl.backstretch(isPaused ? "resume" : "pause");
                 });
+            }
+            else {
+                console.warn("Backstretch init failed");
             }
         },
         loadMorePhotos = function(){

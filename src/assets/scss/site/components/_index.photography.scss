@@ -11,16 +11,19 @@
         width:100%;
         height:130%;
     }
+    %type-background {
+        background: $brown;
+        background: rgba($brown, 0.8);
+        // color:lighten($brown, 60%);
+        padding:rem-calc(2, 4);
+    }
     h2 {
         // text-shadow: 0 1px 1px rgba(#000, 0.8);
         position: relative;
         z-index: 1;
         margin-bottom: rem-calc(22);
         span {
-            background: $brown;
-            background: rgba($brown, 0.8);
-            // color:lighten($brown, 60%);
-            padding:rem-calc(2, 4);
+            @extend %type-background;
         }
         &.subheader {
             font-size:rem-calc(22);
@@ -29,16 +32,46 @@
             // padding:rem-calc(1, 2);
         }
     }
+    .paused-message {
+        position:absolute;
+        top:0;
+        z-index:1;
+        width:100%;
+        @extend %type-background;
+        font-size: rem-calc(12);
+        opacity:0;
+        visibility: hidden;
+        transition: all 200ms ease;
+    }
     .icon {
-        position:relative;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        position:absolute;
         z-index: 1;
         font-size:rem-calc(24);
-        cursor: pointer;
+        display:block;
         color:#fff;
-        background: $brown;
-        background: rgba($brown, 0.8);
-        &:hover {
-            color:darken(#fff, 20%);
+        opacity:0;
+        visibility: hidden;
+        transform-origin: center center;
+    }
+    %animation-on-state-change {
+        visibility: visible;
+        animation: poputFade 500ms ease;
+    }
+    &.paused {
+        .icon-pause-circled {
+            @extend %animation-on-state-change;
+        }
+        .paused-message {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &.playing {
+        .icon-play-circled {
+            @extend %animation-on-state-change;
         }
     }
 
