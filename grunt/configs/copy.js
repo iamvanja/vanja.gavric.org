@@ -13,8 +13,7 @@ module.exports = {
                     "!assets/js/foundation/**",
                     "!**/*.psd",
                     "!assets/css/**",
-                    // "!_src/**",
-                    // "!assets/_psd_other/**",
+                    "!assets/js/all.js",
                 ],
                 dest: "build/"
             }
