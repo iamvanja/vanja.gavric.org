@@ -18,13 +18,13 @@
 .tap {
     display:none;
 }
-.no-touch,
+.no-touchevents,
 .no-js {
     .click {
         display:inline;
     }
 }
-.touch {
+.touchevents {
     .tap {
         display:inline;
     }

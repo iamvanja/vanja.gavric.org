@@ -5,13 +5,15 @@ module.exports = {
 
     "production": [
         "setEnvironmentVars",
-        // "jshint",
+        "eslint",
         "clean:productionPre",
         "copy:production",
         "imagemin:production",
         "compass:production",
         "postcss:production",
         "removelogging:production",
+        "modernizr:production",
+        "jquery:production",
         "uglify:production",
         "pug:production",
         "clean:productionPost",
