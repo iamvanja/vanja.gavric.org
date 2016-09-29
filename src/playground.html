@@ -15,82 +15,46 @@
     </head>
     <body class="playground" id="playground-normal"><!--[if lte IE 9]>
         <p class="chromeframe">Hi, I really want to show you my website, but you are using an outdated browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p><![endif]-->
-        <nav class="main-nav" id="main-nav"><a class="logo" id="logo" href="/" title="Vanja Gavrić logo. If you click it, the page will refresh."><span class="circle">VG</span><span class="back">&larr;</span></a>
-            <ul>
-                <li class="developer"><a href="/#developer" title="Developer."><i class="icon-code"></i></a></li>
-                <li class="photography"><a href="/#photography" title="Photography."><i class="icon-camera"></i></a></li>
-                <li class="writing"><a href="/#writing" title="Writing."><i class="icon-feather"></i></a></li>
-                <li class="contact"><a href="/#contact" title="Contact."><i class="icon-paper-plane"></i></a></li>
-            </ul>
-        </nav>
-        <div class="top-anchor" id="top"></div>
         <main role="main">
-            <h1>Playground</h1>
-            <section class="content1 playground-items" id="content">
-                <article class="playground-item poof" id="poof" role="article">
-                    <div class="row"><a class="item-link" href="/playground/poof"></a>
-                        <div class="columns large-4 title">
-                            <div class="wrap">
-                                <div class="inner">
-                                    <h2>POOF!</h2>
-                                </div>
-                            </div>
+            <section class="content" id="content">
+                <div class="header">
+                    <nav class="main-nav" id="main-nav"><a class="logo" id="logo" href="/" title="Vanja Gavrić logo. If you click it, the page will refresh."><span class="circle">VG</span><span class="back">&larr;</span></a>
+                        <ul>
+                            <li class="developer"><a href="/#developer" title="Developer."><i class="icon-code"></i></a></li>
+                            <li class="photography"><a href="/#photography" title="Photography."><i class="icon-camera"></i></a></li>
+                            <li class="writing"><a href="/#writing" title="Writing."><i class="icon-feather"></i></a></li>
+                            <li class="contact"><a href="/#contact" title="Contact."><i class="icon-paper-plane"></i></a></li>
+                        </ul>
+                    </nav>
+                    <div class="top-anchor" id="top"></div>
+                    <h1>Playground</h1>
+                </div>
+                <div class="playground-items">
+                    <article class="playground-item poof" id="poof" role="article"><a class="item-link" href="/playground/poof"></a>
+                        <div class="title inner">
+                            <h2>POOF!</h2>
                         </div>
-                        <div class="columns large-8 description">
-                            <div class="wrap">
-                                <div class="inner"><span>Cross-browser compatible (including legacy browsers) solution for displaying a 'poof' animation on each click or tap (similar to removing icons from a Mac OS X dock).</span></div>
-                            </div>
+                        <div class="description inner">Cross-browser compatible (including legacy browsers) solution for displaying a 'poof' animation on each click or tap (similar to removing icons from a Mac OS X dock).</div>
+                    </article>
+                    <article class="playground-item old-tv" id="old-tv" role="article"><a class="item-link" href="/playground/turn-off-tv"></a>
+                        <div class="title inner">
+                            <h2>Old TV turn off animation</h2>
                         </div>
-                    </div>
-                </article>
-                <article class="playground-item old-tv" id="old-tv" role="article">
-                    <div class="row"><a class="item-link" href="/playground/turn-off-tv"></a>
-                        <div class="columns large-4 title">
-                            <div class="wrap">
-                                <div class="inner">
-                                    <h2>Old TV turn off animation</h2>
-                                </div>
-                            </div>
+                        <div class="description inner">This simple jQuery plugin creates a turn off animation of an old TV in the current browser viewport. Its use is meant for situations when the user is logging out or is deleting the content currently on the screen etc. It will create the animation and load the url provided in the href attribute of the targeted element.</div>
+                    </article>
+                    <article class="playground-item bb-connections" id="bb-connections" role="article"><a class="item-link" href="/playground/social-connections-backbone"></a>
+                        <div class="title inner">
+                            <h2>Backbone.js social connections</h2>
                         </div>
-                        <div class="columns large-8 description">
-                            <div class="wrap">
-                                <div class="inner"><span>This simple jQuery plugin creates a turn off animation of an old TV in the current browser viewport. Its use is meant for situations when the user is logging out or is deleting the content currently on the screen etc. It will create the animation and load the url provided in the href attribute of the targeted element.</span></div>
-                            </div>
+                        <div class="description inner">Small Backbone app that displays social connections by given data. Data is represented as a group of people and each person has one or more connections to the group.</div>
+                    </article>
+                    <article class="playground-item hex-clock" id="hex-clock" role="article"><a class="item-link" href="/playground/hexclock"></a>
+                        <div class="title inner">
+                            <h2>#clock</h2>
                         </div>
-                    </div>
-                </article>
-                <article class="playground-item bb-connections" id="bb-connections" role="article">
-                    <div class="row"><a class="item-link" href="/playground/social-connections-backbone"></a>
-                        <div class="columns large-4 title">
-                            <div class="wrap">
-                                <div class="inner">
-                                    <h2>Backbone.js social connections</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="columns large-8 description">
-                            <div class="wrap">
-                                <div class="inner"><span>Small Backbone app that displays social connections by given data. Data is represented as a group of people and each person has one or more connections to the group.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="playground-item hex-clock" id="hex-clock" role="article">
-                    <div class="row"><a class="item-link" href="/playground/hexclock"></a>
-                        <div class="columns large-4 title">
-                            <div class="wrap">
-                                <div class="inner">
-                                    <h2>#clock</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="columns large-8 description">
-                            <div class="wrap">
-                                <div class="inner"><span>A hexadecimal clock that changes background color depending on the current time - from #000000 to #235959</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                        <div class="description inner">A hexadecimal clock that changes background color depending on the current time - from #000000 to #235959</div>
+                    </article>
+                </div>
             </section>
         </main>
         <script src="assets/js/all.js"></script>
