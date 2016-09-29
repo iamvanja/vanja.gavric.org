@@ -13,7 +13,7 @@
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <script src="assets/js/vendor/modernizr.js"></script>
     </head>
-    <body class="index" id="landing-normal"><!--[if lte IE 9]>
+    <body class="index state-before-loader" id="landing-normal"><!--[if lte IE 9]>
         <p class="chromeframe">Hi, I really want to show you my website, but you are using an outdated browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p><![endif]-->
         <nav class="main-nav" id="main-nav"><a class="logo" id="logo" href="/" title="Vanja Gavrić logo. If you click it, the page will refresh."><span class="circle">VG</span><span class="back">&larr;</span></a>
             <ul>
@@ -46,22 +46,40 @@
                         <div class="row experience">
                             <div class="large-12 columns">
                                 <h3>I have experience with</h3>
-                                <div class="technologies legend" id="technologies-legend"><span class="front-end">Front-end frameworks</span><span class="mvc">MVC JS frameworks</span><span class="api">3rd-party APIs</span><span class="test">Test frameworks</span><span class="version-control">Version control</span><span class="lib-fram">Libraries / frameworks</span><span class="back-end">Back-end</span><span class="databases">Databases</span><span class="various">Various</span></div>
-                                <hr>
+                                <div class="technologies legend">
+                                    <div class="labels-wrap" id="technologies-legend"><span class="front-end">Front-end frameworks</span><span class="mvc">MVC JS frameworks</span><span class="api">3rd-party APIs</span><span class="test">Test frameworks</span><span class="version-control">Version control</span><span class="lib-fram">Libraries / frameworks</span><span class="back-end">Back-end</span><span class="databases">Databases</span><span class="various">Various</span>
+                                    </div>
+                                    <div class="select-wrap">
+                                        <label>
+                                            <select id="technologies-select">
+                                                <option value="">-- all skills --</option>
+                                                <option value="front-end">Front-end frameworks</option>
+                                                <option value="mvc">MVC JS frameworks</option>
+                                                <option value="api">3rd-party APIs</option>
+                                                <option value="test">Test frameworks</option>
+                                                <option value="version-control">Version control</option>
+                                                <option value="lib-fram">Libraries / frameworks</option>
+                                                <option value="back-end">Back-end</option>
+                                                <option value="databases">Databases</option>
+                                                <option value="various">Various</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="large-12 columns">
                                 <ul class="technologies list" id="technologies-list">
-                                    <li class="label front-end">Foundation</li>
                                     <li class="label front-end">Bootstrap</li>
+                                    <li class="label front-end">Foundation</li>
                                     <li class="label mvc">BackboneJS</li>
                                     <li class="label mvc">AngularJS</li>
                                     <li class="label api">Facebook API</li>
-                                    <li class="label api">Twitter API</li>
-                                    <li class="label api">Google APIs</li>
-                                    <li class="label api">Flickr API</li>
-                                    <li class="label api">Rdio API</li>
-                                    <li class="label api">SoundCloud API</li>
-                                    <li class="label api">hasOffers API</li>
+                                    <li class="label api">Twitter</li>
+                                    <li class="label api">Google</li>
+                                    <li class="label api">Flickr</li>
+                                    <li class="label api">Rdio</li>
+                                    <li class="label api">SoundCloud</li>
+                                    <li class="label api">hasOffers</li>
                                     <li class="label api">Cake API</li>
                                     <li class="label api">SalesForce</li>
                                     <li class="label test">Jasmine</li>
@@ -73,9 +91,13 @@
                                     <li class="label lib-fram">Handlebars</li>
                                     <li class="label lib-fram">CodeIgniter</li>
                                     <li class="label lib-fram">Express (Node)</li>
+                                    <li class="label lib-fram">Sails (Node)</li>
+                                    <li class="label back-end">Apache</li>
+                                    <li class="label back-end">PHP</li>
+                                    <li class="label back-end">NodeJS</li>
                                     <li class="label various">SASS + Compass</li>
                                     <li class="label various">LESS</li>
-                                    <li class="label various">Jade</li>
+                                    <li class="label various">Jade (Pug)</li>
                                     <li class="label various">RequireJS</li>
                                     <li class="label various">Sphinx</li>
                                     <li class="label various">Redmine</li>
@@ -85,13 +107,11 @@
                                     <li class="label various">Amazon Web Services</li>
                                     <li class="label various">A/B testing (VWO)</li>
                                     <li class="label various">Grunt</li>
-                                    <li class="label back-end">Apache</li>
-                                    <li class="label back-end">PHP</li>
-                                    <li class="label back-end">NodeJS</li>
                                     <li class="label databases">MySQL</li>
                                     <li class="label databases">MS SQL</li>
                                     <li class="label databases">Mongo</li>
                                 </ul>
+                                <hr>
                             </div>
                         </div>
                     </div>
@@ -103,13 +123,15 @@
                     </div>
                 </article>
                 <article class="main-article photography" id="photography" role="article" aria-labelledby="main-title-photo">
+                    <div class="paused-message">slideshow paused. <span class="click">click</span><span class="tap">tap</span> to resume.</div>
                     <div class="row">
                         <div class="large-12 columns">
-                            <h2 id="main-title-photo"><span>I</span> <span>like</span> <span>to</span> <span>shoot</span> <span>photos</span> 
+                            <h2 class="heading"><span>I</span> <span>like</span> <span>to</span> <span>shoot</span> <span>photos</span> 
                             </h2>
-                            <h2 class="subheader"><span>Some say I am even good at it</span></h2><i class="icon icon-pause-circled" id="pause"></i>
+                            <h2 class="subheader"><span>Some say I am even good at it.</span></h2>
                         </div>
                     </div>
+                    <div class="icon-container"><i class="icon icon-pause-circled"></i><i class="icon icon-play-circled"></i></div>
                     <div class="backstretch-wrap"></div>
                 </article>
                 <article class="main-article writing" id="writing" role="article" aria-labelledby="main-title-writing">

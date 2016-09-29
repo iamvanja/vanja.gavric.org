@@ -33,7 +33,6 @@
                     activeCategoryName = val;
                     filterTechnologies(val);
                 }
-
             });
         },
         filterTechnologies = function(activeCategoryName){
