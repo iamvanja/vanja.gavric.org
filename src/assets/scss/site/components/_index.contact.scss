@@ -41,7 +41,53 @@
                 letter-spacing: -1px;
                 transition: all 0.15s ease;
                 backface-visibility: hidden;
+                .circle {
+                    display:block;
+                    background:#055a49;
+                    color:#fff;
+                    border-radius: rem-calc(30);
+                    width:rem-calc(76);
+                    height:rem-calc(76);
+                    line-height: rem-calc(76);
+                    text-align:center;
+                    color:$green;
+                    position:relative;
+                    // overflow:hidden;
+                    &:after,
+                    &:before {
+                        // width:rem-calc(38);
+                        // height:rem-calc(76);
+                        // content:'';
+                        // background:transparent;
+                        // background:rgba(0,0,0,0);
+                        // position:absolute;
+                        // top:0;
+                        // left:0;
+                        // @include border-radius($global-rounded 0 0 $global-rounded);
+                        content: '';
+                        position: absolute; left: 0; top: 0;
+                        width: 100%; height: 100%;
+                        background: inherit;
+                        border-radius: 100%; /*circle*/
+                        /*time to transform the circle into fish-eye shape. iOS7 style now.*/
+                        transform: scaleX(1.9) scaleY(1.04);
+                        /*clipping the left and right sides - 48px from the left and right*/
+                        clip: rect(0, rem-calc(48), 0, rem-calc(48));
+                        /*pushing it behind the icon*/
+                        z-index: -1;
+                    }
+                    /*duplicating the :before element and rotating it 90deg and swapping the X/Y transforms*/
+                    &:after {
+                        transform: scaleY(1.9) scaleX(1.04) rotate(90deg);
+                    }
+                    i {
+                        font-size:rem-calc(22);
+                        position:relative;
+                        z-index:1;
+                    }
+                }
                 &:hover {
+                    transform: scale(1.16);
                     .circle {
                         &:after,
                         &:before {
@@ -50,7 +96,6 @@
                         }
                         border-radius: $global-rounded;
                     }
-                    transform: scale(1.16);
                     .twitter{
                         background:#33ccff;
                     }
@@ -64,14 +109,17 @@
                         background:#333;
                     }
                     .flickr {
-                        &:after {
+                        overflow:hidden;
+                        background:#ff0084;
+                        .stripe {
                             background:#0063dc;
                             width:100%;
-                            height:100%;
+                            height:50%;
+                            z-index:0;
+                            top: 25%;
+                            left: 0;
+                            position:absolute;
                         }
-                        // background:#ed1384;
-                        overflow:hidden;
-                        background:#ff0084!important;
                     }
                     .fivehundredpx{
                         background:#222;
@@ -85,51 +133,6 @@
                     i {
                         color:#fff;
                     }
-                }
-            }
-            .circle {
-                display:block;
-                background:#055a49;
-                color:#fff;
-                border-radius: rem-calc(30);
-                width:rem-calc(76);
-                height:rem-calc(76);
-                line-height: rem-calc(76);
-                text-align:center;
-                color:$green;
-                position:relative;
-                // overflow:hidden;
-                &:after,
-                &:before {
-                    // width:rem-calc(38);
-                    // height:rem-calc(76);
-                    // content:'';
-                    // background:transparent;
-                    // background:rgba(0,0,0,0);
-                    // position:absolute;
-                    // top:0;
-                    // left:0;
-                    // @include border-radius($global-rounded 0 0 $global-rounded);
-                    content: '';
-                    position: absolute; left: 0; top: 0;
-                    width: 100%; height: 100%;
-                    background: inherit;
-                    border-radius: 100%; /*circle*/
-                    /*time to transform the circle into fish-eye shape. iOS7 style now.*/
-                    transform: scaleX(1.9) scaleY(1.04);
-                    /*clipping the left and right sides - 48px from the left and right*/
-                    clip: rect(0, rem-calc(48), rem-calc(76), rem-calc(48));
-                    /*pushing it behind the icon*/
-                    z-index: -1;
-                }
-                /*duplicating the :before element and rotating it 90deg and swapping the X/Y transforms*/
-                &:after {
-                    transform: scaleY(1.9) scaleX(1.04) rotate(90deg);
-                }
-                i {
-                    font-size:rem-calc(22);
-                    position:relative;
-                    z-index:1;
                 }
             }
         }
