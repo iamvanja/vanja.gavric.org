@@ -39,7 +39,7 @@
         .column {
             transform: translate3d(0,300%,0);
             transition: transform 400ms;
-            transition-timing-function: ceaser($easeOutBack);
+            transition-timing-function: ceaser($easeOutQuint);
         }
         &.fade-in-bottom {
             .column {

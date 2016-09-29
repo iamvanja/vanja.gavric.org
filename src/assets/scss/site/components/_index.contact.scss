@@ -145,11 +145,11 @@
         $rotationValue: 1200deg;
         .contact-circle {
             transform: translate3d(600%,0,0) rotate($rotationValue);
-            transition: transform $transition-duration linear;
+            transition: transform $transition-duration ceaser($easeOutQuint);
             .text {
                 opacity:0;
                 visibility: hidden;
-                transition: opacity 100ms $transition-duration*1.2 ease;
+                transition: opacity 200ms $transition-duration*1.1 ease;
             }
         }
         .contact-circles.alternative {
