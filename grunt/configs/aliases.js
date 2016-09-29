@@ -18,7 +18,8 @@ module.exports = {
         "pug:production",
         "clean:productionPost",
         "htmlhint:production",
-        "sitemap:production"
+        "sitemap:production",
+        "unusedImages"
     ],
 
     "postPush": [
