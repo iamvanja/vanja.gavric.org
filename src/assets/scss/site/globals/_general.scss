@@ -32,3 +32,11 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -1px;
     text-align: center;
 }
+
+@media only screen and (min-device-width: 320px)
+                   and (max-device-width: 640px)
+                   and (orientation: landscape) {
+    html {
+        font-size:80%;
+    }
+}

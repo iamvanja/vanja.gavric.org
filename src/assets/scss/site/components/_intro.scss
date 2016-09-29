@@ -39,7 +39,7 @@
         bottom:0;
         left:50%;
         width:rem-calc(280);
-        height:50px;
+        height: rem-calc(50px);
         margin-left:rem-calc(-140);
         text-align:center;
         span {
@@ -68,7 +68,8 @@
             opacity:0;
         }
         .profile-pic {
-            transform: scale(0);
+            opacity:0;
+            transform: scale3d(0,0,0);
         }
     }
 }
