@@ -36,6 +36,17 @@
         "src/assets/js/site/site-init.js",
         "src/assets/js/site/init.js"
     ],
+    "skills": {
+        "front-end": ["Bootstrap", "Foundation"],
+        "mvc": ["BackboneJS", "AngularJS"],
+        "api": ["Facebook API", "Twitter", "Google", "Flickr", "Rdio", "SoundCloud", "hasOffers", "Cake API", "SalesForce"],
+        "test": ["Jasmine"],
+        "version-control": ["SVN", "Git"],
+        "lib-fram": ["jQuery (Zepto.JS)", "Underscore.js (Lo-Dash)", "Slim", "Handlebars", "CodeIgniter", "Express (Node)", "Sails (Node)"],
+        "back-end": ["Apache", "PHP", "NodeJS"],
+        "various": ["SASS + Compass", "LESS", "Jade (Pug)", "RequireJS", "Sphinx", "Redmine", "Jira", "Command line", "Agile", "Amazon Web Services", "A/B testing (VWO)", "Grunt"],
+        "databases": ["MySQL", "MS SQL", "Mongo"]
+    },
     "deploy": {
         "productionPath": "",
         "serverDestination": "~/public_html/vanja.gavric.org/",
