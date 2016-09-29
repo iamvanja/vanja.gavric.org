@@ -14,61 +14,26 @@ article.main-article.developer#developer(role="article", aria-labelledby="main-t
         div.row.experience
             div.large-12.columns
                 h3= $i18n.articleDeveloper.iHaveExperienceWith
-                div#technologies-legend.technologies.legend
-                    span.front-end Front-end frameworks
-                    span.mvc MVC JS frameworks
-                    span.api 3rd-party APIs
-                    span.test Test frameworks
-                    span.version-control Version control
-                    span.lib-fram Libraries / frameworks
-                    span.back-end Back-end
-                    span.databases= $i18n.articleDeveloper.databases
-                    span.various= $i18n.articleDeveloper.various
 
-                hr
+                div.technologies.legend
+                    div#technologies-legend.labels-wrap
+                        - for (var categoryClass in $i18n.articleDeveloper.categories)
+                            span(class=categoryClass)= $i18n.articleDeveloper.categories[categoryClass]
+
+                    div.select-wrap
+                        label
+                            select#technologies-select
+                                option(value="") -- all skills --
+                                - for (var categoryClass in $i18n.articleDeveloper.categories)
+                                    option(value=categoryClass)= $i18n.articleDeveloper.categories[categoryClass]
 
             div.large-12.columns
                 ul#technologies-list.technologies.list
-                    li.label.front-end Foundation
-                    li.label.front-end Bootstrap
-                    li.label.mvc BackboneJS
-                    li.label.mvc AngularJS
-                    li.label.api Facebook API
-                    li.label.api Twitter API
-                    li.label.api Google APIs
-                    li.label.api Flickr API
-                    li.label.api Rdio API
-                    li.label.api SoundCloud API
-                    li.label.api hasOffers API
-                    li.label.api Cake API
-                    li.label.api SalesForce
-                    li.label.test Jasmine
-                    li.label.version-control SVN
-                    li.label.version-control Git
-                    li.label.lib-fram jQuery (Zepto.JS)
-                    li.label.lib-fram Underscore.js (Lo-Dash)
-                    li.label.lib-fram Slim
-                    li.label.lib-fram Handlebars
-                    li.label.lib-fram CodeIgniter
-                    li.label.lib-fram Express (Node)
-                    li.label.various SASS + Compass
-                    li.label.various LESS
-                    li.label.various Jade
-                    li.label.various RequireJS
-                    li.label.various Sphinx
-                    li.label.various Redmine
-                    li.label.various Jira
-                    li.label.various= $i18n.articleDeveloper.commandLine
-                    li.label.various Agile
-                    li.label.various Amazon Web Services
-                    li.label.various A/B testing (VWO)
-                    li.label.various Grunt
-                    li.label.back-end Apache
-                    li.label.back-end PHP
-                    li.label.back-end NodeJS
-                    li.label.databases MySQL
-                    li.label.databases MS SQL
-                    li.label.databases Mongo
+                    - for (var categoryClass in skills)
+                        each skill in skills[categoryClass]
+                            li(class="label "+categoryClass)= skill
+
+                hr
 
     .row
         .large-12.columns

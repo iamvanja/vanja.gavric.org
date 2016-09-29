@@ -34,9 +34,18 @@
         "whoAmI": "a web developer",
         "specializing": "specializing in",
         "iHaveExperienceWith": "I have experience with",
-        "various": "Various",
+        "categories": {
+            "front-end": "Front-end frameworks",
+            "mvc": "MVC JS frameworks",
+            "api": "3rd-party APIs",
+            "test": "Test frameworks",
+            "version-control": "Version control",
+            "lib-fram": "Libraries / frameworks",
+            "back-end": "Back-end",
+            "databases": "Databases",
+            "various": "Various"
+        },
         "commandLine": "Command line",
-        "databases": "Databases",
         "skillsExplanation": "Language / framework / tool agnostic. Choice of tools depends on the given job.",
         "developerText": "Web development is my passion. I enjoy translating user-centric design into web applications that users love while developing, testing and deploying production-quality code."
     },
