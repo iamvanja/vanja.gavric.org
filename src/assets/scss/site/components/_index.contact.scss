@@ -149,7 +149,7 @@
             .text {
                 opacity:0;
                 visibility: hidden;
-                transition: opacity 100ms $transition-duration ease;
+                transition: opacity 100ms $transition-duration*1.2 ease;
             }
         }
         .contact-circles.alternative {
