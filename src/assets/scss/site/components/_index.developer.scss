@@ -1,6 +1,9 @@
 .main-article.developer {
     $bg: darken($asphalt, 5%);
     background-color: $bg;
+    .article-icon {
+        color:lighten($bg,30%);
+    }
     h2 {
         margin-bottom:0;
         line-height: 1.2;

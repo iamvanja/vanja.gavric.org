@@ -3,10 +3,14 @@
     overflow: hidden;
     position:relative;
     z-index: 2;
+    $emboss: darken(#0e83cd, 10%);
+    .article-icon {
+        color: $emboss;
+    }
     h2 {
         position: relative;
         &.subheader {
-            color:darken(#0e83cd, 10%);
+            color:$emboss;
             font-size:rem-calc(28);
         }
     }
