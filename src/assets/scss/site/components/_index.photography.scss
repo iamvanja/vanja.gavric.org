@@ -17,6 +17,14 @@
         // color:lighten($brown, 60%);
         padding:rem-calc(2, 4);
     }
+    .article-icon {
+        position:relative;
+        z-index:1;
+        @extend %type-background;
+        margin-bottom:rem-calc(10px);
+        display:inline-block;
+        color: $subheader-color;
+    }
     h2 {
         position: relative;
         z-index: 1;

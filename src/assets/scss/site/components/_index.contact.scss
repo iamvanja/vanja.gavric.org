@@ -2,11 +2,15 @@
     // background:$purple;
     background:$green; /* #2ecc71 */
     overflow: hidden;
+    $emboss: darken($green, 10%);
+    .article-icon {
+        color: $emboss;
+    }
     h1 {
         margin-bottom: rem-calc(20);
     }
     h2 {
-        color:darken($green, 10%);
+        color: $emboss;
     }
     .text {
         margin-top:rem-calc(4);

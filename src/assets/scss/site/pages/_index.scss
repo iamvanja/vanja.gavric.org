@@ -47,11 +47,14 @@
 
     .main-article {
         padding: rem-calc(50) 0;
+        .article-icon {
+            text-align: center;
+            font-size: rem-calc(34);
+        }
         &.photography {
             padding:14% 0 18%;
         }
     }
-
 
     @include breakpoint(small down) {
         .content {
