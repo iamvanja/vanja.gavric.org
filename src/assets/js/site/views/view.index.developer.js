@@ -42,6 +42,12 @@
                 }
             });
         },
+        initResetSelection = function(){
+            cachedUi.$list.on("click", function(){
+                removeTechnologyClasses();
+                cachedUi.$select.val("");
+            });
+        },
         removeTechnologyClasses = function(){
             cachedUi.$list.find("li").removeClass("animated-hide");
             activeCategoryName = null;
@@ -75,6 +81,7 @@
                     shuffleTechnologies();
                     initTechnologiesLegend();
                     initTechnologiesSelect();
+                    initResetSelection();
                 });
             },
         };
