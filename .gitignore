@@ -18,3 +18,4 @@ ignore-me
 node_modules
 build
 .credentials.json
+*.psd
