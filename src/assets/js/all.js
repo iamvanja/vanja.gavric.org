@@ -10366,6 +10366,8 @@ return jQuery;
         },
         isUiCached = false,
         cachedUi = {},
+        previousScrollTop = 0,
+        scrollDirection = "down",
         updateMainNavPerSection = function(scrollTop, isIntroShown) {
             var lastArticleId = cachedUi.articles[cachedUi.articles.length-1].id,
                 activeArticleClass = "";
@@ -10388,6 +10390,16 @@ return jQuery;
                 $el: cachedUi.mainNav.$el,
                 categoryName: activeArticleClass,
             });
+        },
+        showHideMainNav = function(scrollTop) {
+            // Further decrease unnecessary computation
+            if (Math.abs(previousScrollTop - scrollTop) <= 5) {
+                return;
+            }
+
+            var isScrollingDown = scrollDirection === "down";
+            cachedUi.mainNav.$el.toggleClass("scroll-down", isScrollingDown)
+                                .toggleClass("scroll-up", !isScrollingDown);
         },
         animateOnScroll = function(scrollTop) {
             var namespace = "animateOnScroll",
@@ -10424,17 +10436,25 @@ return jQuery;
         onScroll = function(scrollTop) {
             var isIntroShown = scrollTop <= cachedUi.intro.height;
 
+            scrollDirection = scrollTop >= previousScrollTop ? "down" : "up";
+
             // back-to-top
             cachedUi.backToTop.$el.toggleClass("fade-in", !isIntroShown);
 
             // sections
             updateMainNavPerSection(scrollTop, isIntroShown);
 
+            // hide main nav when scrolling down
+            // show main nav when scrolling up
+            showHideMainNav(scrollTop);
+
             // animations on scroll
             animateOnScroll(scrollTop);
 
             // do parallax
             // doParallax(scrollTop);
+
+            previousScrollTop = scrollTop;
         },
         scrollHandler = function(e){
             if (isUiCached) {
@@ -10562,6 +10582,12 @@ return jQuery;
                 }
             });
         },
+        initResetSelection = function(){
+            cachedUi.$list.on("click", function(){
+                removeTechnologyClasses();
+                cachedUi.$select.val("");
+            });
+        },
         removeTechnologyClasses = function(){
             cachedUi.$list.find("li").removeClass("animated-hide");
             activeCategoryName = null;
@@ -10595,6 +10621,7 @@ return jQuery;
                     shuffleTechnologies();
                     initTechnologiesLegend();
                     initTechnologiesSelect();
+                    initResetSelection();
                 });
             },
         };
@@ -10612,22 +10639,56 @@ return jQuery;
             backstretchEl: ".backstretch-wrap",
         },
         $backstretchEl = $(ui.el).find(ui.backstretchEl),
-        imagesPath,
-        onLoad = function(){
-            $(window).on("load", function(e) {
-                loadMorePhotos();
-            });
-        },
+        partialImagesPath = "images/photos/",
         initBackstretch = function(){
             if ($.fn.backstretch){
-                imagesPath = site.settings.assetsUrl.local + "images/photos/";
-                // site.settings.assetsUrl.local + "images/photos/coming-down-on-me.jpg", /* Coming down on me */
+                var imagesArr = [
+                        {
+                            url: "stuck-in-traffic.jpg",
+                        },
+                        {
+                            url: "hana.jpg",
+                        },
+                        {
+                            url: "big-ben.jpg",
+                            alignY: 0.7,
+                        },
+                        {
+                            url: "cat.jpg",
+                            alignY: 0,
+                        },
+                        {
+                            url: "double-rainbow-in-paris.jpg",
+                        },
+                        {
+                            url: "autumn-in-zrinjevac.jpg",
+                        },
+                        {
+                            url: "paris-sunset.jpg",
+                        },
+                        {
+                            url: "flowers.jpg",
+                        },
+                        {
+                            url: "tower-bridge.jpg",
+                        },
+                        {
+                            url: "adriatic-sea.jpg",
+                        },
+                        {
+                            url: "dijana.jpg",
+                            alignY: 1,
+                        },
+                    ],
+                    options = {
+                        duration: 5000,
+                        fade: 750,
+                        preload: 1,
+                    };
+
                 // "http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg", /* Paris opera */
-                // "http://farm9.staticflickr.com/8097/8442056306_0c4c82c808_o.jpg", /* London Big Ben */
-                $backstretchEl.backstretch(
-                    [imagesPath + "adriatic-sea.jpg"],
-                    {duration: 5000, fade: 750}
-                );
+
+                $backstretchEl.backstretch(addImagePath(imagesArr), options);
 
                 $(ui.el).on("click", function(){
                     var $el = $(this),
@@ -10645,29 +10706,17 @@ return jQuery;
                 console.warn("Backstretch init failed");
             }
         },
-        loadMorePhotos = function(){
-             if ($.fn.backstretch){
-                // once the initial page load is finished, add more photos to backstretch
-                var backstretchInstance = $backstretchEl.data("backstretch");
-                backstretchInstance.images.push(
-                    {
-                        url: imagesPath + "stuck-in-traffic.jpg",
-                    },
-                    {
-                        url: imagesPath + "hana.jpg",
-                    },
-                    {
-                        url: imagesPath + "autumn-in-zrinjevac.jpg",
-                    },
-                    {
-                        url: imagesPath + "double-rainbow-in-paris.jpg",
-                    }
-                );
-            }
+        addImagePath = function(imagesArr){
+            var fullImagesPath = site.settings.assetsUrl.local + partialImagesPath;
+
+            imagesArr.forEach(function(el, i, arr){
+                el.url = fullImagesPath + el.url;
+            });
+
+            return imagesArr;
         },
         exports = {
             init: function(){
-                onLoad();
                 initBackstretch();
             },
         };
