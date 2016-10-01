@@ -5,6 +5,12 @@
     position:relative;
     text-align: center;
     z-index: 3;
+    &:after {
+        // prevent right click to save images
+        content: "";
+        position:absolute;
+        top:0;left:0;right:0;bottom:0;
+    }
     .backstretch-wrap {
         position:absolute;
         top:0;right:0;left:0;width:0;
@@ -16,14 +22,6 @@
         background: rgba($brown, 0.8);
         // color:lighten($brown, 60%);
         padding:rem-calc(2, 4);
-    }
-    .article-icon {
-        position:relative;
-        z-index:1;
-        @extend %type-background;
-        margin-bottom:rem-calc(10px);
-        display:inline-block;
-        color: $subheader-color;
     }
     h2 {
         position: relative;

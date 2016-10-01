@@ -7,22 +7,56 @@
             backstretchEl: ".backstretch-wrap",
         },
         $backstretchEl = $(ui.el).find(ui.backstretchEl),
-        imagesPath,
-        onLoad = function(){
-            $(window).on("load", function(e) {
-                loadMorePhotos();
-            });
-        },
+        partialImagesPath = "images/photos/",
         initBackstretch = function(){
             if ($.fn.backstretch){
-                imagesPath = site.settings.assetsUrl.local + "images/photos/";
-                // site.settings.assetsUrl.local + "images/photos/coming-down-on-me.jpg", /* Coming down on me */
+                var imagesArr = [
+                        {
+                            url: "stuck-in-traffic.jpg",
+                        },
+                        {
+                            url: "hana.jpg",
+                        },
+                        {
+                            url: "big-ben.jpg",
+                            alignY: 0.7,
+                        },
+                        {
+                            url: "cat.jpg",
+                            alignY: 0,
+                        },
+                        {
+                            url: "double-rainbow-in-paris.jpg",
+                        },
+                        {
+                            url: "autumn-in-zrinjevac.jpg",
+                        },
+                        {
+                            url: "paris-sunset.jpg",
+                        },
+                        {
+                            url: "flowers.jpg",
+                        },
+                        {
+                            url: "tower-bridge.jpg",
+                        },
+                        {
+                            url: "adriatic-sea.jpg",
+                        },
+                        {
+                            url: "dijana.jpg",
+                            alignY: 1,
+                        },
+                    ],
+                    options = {
+                        duration: 5000,
+                        fade: 750,
+                        preload: 1,
+                    };
+
                 // "http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg", /* Paris opera */
-                // "http://farm9.staticflickr.com/8097/8442056306_0c4c82c808_o.jpg", /* London Big Ben */
-                $backstretchEl.backstretch(
-                    [imagesPath + "adriatic-sea.jpg"],
-                    {duration: 5000, fade: 750}
-                );
+
+                $backstretchEl.backstretch(addImagePath(imagesArr), options);
 
                 $(ui.el).on("click", function(){
                     var $el = $(this),
@@ -40,29 +74,17 @@
                 console.warn("Backstretch init failed");
             }
         },
-        loadMorePhotos = function(){
-             if ($.fn.backstretch){
-                // once the initial page load is finished, add more photos to backstretch
-                var backstretchInstance = $backstretchEl.data("backstretch");
-                backstretchInstance.images.push(
-                    {
-                        url: imagesPath + "stuck-in-traffic.jpg",
-                    },
-                    {
-                        url: imagesPath + "hana.jpg",
-                    },
-                    {
-                        url: imagesPath + "autumn-in-zrinjevac.jpg",
-                    },
-                    {
-                        url: imagesPath + "double-rainbow-in-paris.jpg",
-                    }
-                );
-            }
+        addImagePath = function(imagesArr){
+            var fullImagesPath = site.settings.assetsUrl.local + partialImagesPath;
+
+            imagesArr.forEach(function(el, i, arr){
+                el.url = fullImagesPath + el.url;
+            });
+
+            return imagesArr;
         },
         exports = {
             init: function(){
-                onLoad();
                 initBackstretch();
             },
         };
