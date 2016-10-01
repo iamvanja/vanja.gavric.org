@@ -28,6 +28,8 @@
         },
         isUiCached = false,
         cachedUi = {},
+        previousScrollTop = 0,
+        scrollDirection = "down",
         updateMainNavPerSection = function(scrollTop, isIntroShown) {
             var lastArticleId = cachedUi.articles[cachedUi.articles.length-1].id,
                 activeArticleClass = "";
@@ -50,6 +52,16 @@
                 $el: cachedUi.mainNav.$el,
                 categoryName: activeArticleClass,
             });
+        },
+        showHideMainNav = function(scrollTop) {
+            // Further decrease unnecessary computation
+            if (Math.abs(previousScrollTop - scrollTop) <= 5) {
+                return;
+            }
+
+            var isScrollingDown = scrollDirection === "down";
+            cachedUi.mainNav.$el.toggleClass("scroll-down", isScrollingDown)
+                                .toggleClass("scroll-up", !isScrollingDown);
         },
         animateOnScroll = function(scrollTop) {
             var namespace = "animateOnScroll",
@@ -86,17 +98,25 @@
         onScroll = function(scrollTop) {
             var isIntroShown = scrollTop <= cachedUi.intro.height;
 
+            scrollDirection = scrollTop >= previousScrollTop ? "down" : "up";
+
             // back-to-top
             cachedUi.backToTop.$el.toggleClass("fade-in", !isIntroShown);
 
             // sections
             updateMainNavPerSection(scrollTop, isIntroShown);
 
+            // hide main nav when scrolling down
+            // show main nav when scrolling up
+            showHideMainNav(scrollTop);
+
             // animations on scroll
             animateOnScroll(scrollTop);
 
             // do parallax
             // doParallax(scrollTop);
+
+            previousScrollTop = scrollTop;
         },
         scrollHandler = function(e){
             if (isUiCached) {

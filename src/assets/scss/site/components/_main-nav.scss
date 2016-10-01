@@ -43,6 +43,13 @@
             color:$green-sea;
         }
     }
+    transition: transform 0.25s ease;
+    &.scroll-down {
+        transform: translate3d(-100%, 0, 0);
+    }
+    &.scroll-up {
+        transform: translate3d(0, 0, 0);
+    }
     ul {
         list-style: none;
         margin:0;
