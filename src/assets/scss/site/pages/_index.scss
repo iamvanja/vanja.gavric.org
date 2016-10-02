@@ -1,0 +1,65 @@
+.index {
+    &.state-before-loader {
+        position:relative;
+        overflow:hidden;
+        &:after {
+            content: "";
+            position:fixed;
+            top:0;right:0;bottom:0;left:0;
+            background:white;
+            z-index:6;
+        }
+    }
+    .top-anchor {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:-100000;
+    }
+
+    .back-to-top {
+        position:fixed;
+        z-index:10;
+        bottom:rem-calc(22);
+        right:rem-calc(6);
+        font-size:rem-calc(34);
+        color:#fff;
+        opacity:0;
+        visibility: hidden;
+        transition: 400ms ease;
+        transition-property: opacity, visibility;
+        &:hover {
+            color:darken($asphalt, 10%);
+        }
+        &.fade-in {
+            opacity:1;
+            visibility: visible;
+        }
+    }
+
+    .content {
+        position:relative;
+        z-index:2;
+        margin-top:100vh;
+        background:darken(#fff, 5%);
+        box-shadow: 0 -1px 2px rgba(60,60,60,0.4), 0 1px 2px rgba(60,60,60,0.4);
+    }
+
+    .main-article {
+        padding: rem-calc(50) 0;
+        .article-icon {
+            text-align: center;
+            font-size: rem-calc(34);
+        }
+        &.photography {
+            padding:18% 0;
+        }
+    }
+
+    @include breakpoint(small down) {
+        .content {
+            margin-top:0;
+        }
+    }
+}
+

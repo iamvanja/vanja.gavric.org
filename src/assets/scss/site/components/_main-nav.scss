@@ -1,0 +1,105 @@
+.main-nav {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:5;
+    overflow:hidden;
+    .logo {
+        display:block;
+        float:left;
+        background:$green-sea;
+        width:rem-calc(86);
+        height:rem-calc(72);
+        position:relative;
+        z-index:2;
+        border-bottom:1px solid rgba(darken($green-sea, 20%), 0.4);
+        border-right:1px solid rgba(darken($green-sea, 20%), 0.4);
+        .circle,
+        .back {
+            border-radius: $global-rounded;
+            width:rem-calc(58);
+            height:rem-calc(58);
+            text-align: center;
+            line-height:rem-calc(58);
+            display:block;
+            margin:0 auto;
+            margin-top:rem-calc(7);
+            // border:1px solid transparent;
+            border:1px solid darken($green-sea, 20%);
+            color:darken($green-sea, 20%);
+        }
+        .back {
+            font-size: rem-calc(22);
+            line-height:rem-calc(50);
+        }
+    }
+    &:hover {
+        // ul {
+        //     margin-left:0!important;
+        // }
+        .circle,
+        .back {
+            background:darken($green-sea, 20%);
+            color:$green-sea;
+        }
+    }
+    transition: transform 0.25s ease;
+    &.scroll-down {
+        transform: translate3d(-100%, 0, 0);
+    }
+    &.scroll-up {
+        transform: translate3d(0, 0, 0);
+    }
+    ul {
+        list-style: none;
+        margin:0;
+        float:left;
+        overflow:hidden;
+        position:relative;
+        z-index:1;
+        transition: all 0.3s linear;
+        -webkit-backface-visibility: hidden;
+        // margin-left:-100%;
+        // border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
+        // border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
+        li {
+            float:left;
+            height:rem-calc(72);
+            line-height: rem-calc(72);
+            a {
+                border-bottom:1px solid rgba(darken($asphalt, 20%), 0.2);
+                padding:0 rem-calc(8);
+                display:block;
+                background:#2b4f62;
+                background:rgba($asphalt, 0.9);
+                color:darken(#fff, 40%);
+                font-size:rem-calc(20);
+                &:hover {
+                    color:#fff;
+                    background:darken($asphalt, 4%);
+                }
+            }
+            &:last-child {
+                a {
+                    border-right:1px solid rgba(darken($asphalt, 20%), 0.2);
+                }
+            }
+            &.active {
+                a {
+                    background:darken($asphalt, 10%);
+                    color:#fff;
+                }
+            }
+        }
+    }
+
+    // @include breakpoint(small down) {
+    //     position:absolute;
+    //     z-index: 2;
+    //     display: inline-block;
+    //     ul {
+    //         display:none;
+    //         margin-left:-100%;
+    //     }
+    // }
+}

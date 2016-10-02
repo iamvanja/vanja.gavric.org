@@ -5,9 +5,12 @@ module.exports = {
         "build"
     ],
     productionPost: [
-        "build/assets/css/scss/**",
-        "build/assets/js/foundation.min.js",
-        "build/assets/js/main.js",
-        "build/assets/pug-*/**"
+        "build/assets/scss/**",
+        "build/assets/js/**/*.js",
+        "!build/assets/js/all.js",
+        "!build/assets/js/vendor/modernizr.js",
+        "build/assets/js/site/",
+        "build/assets/pug-*/**",
+        "build/assets/fonts/*.json"
     ]
 };

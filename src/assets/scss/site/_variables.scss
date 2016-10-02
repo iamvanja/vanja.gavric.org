@@ -1,0 +1,58 @@
+
+$skin:#dd514c;
+$purple:#725eed;
+$blue:#0e90d2;
+$pumpkin:#d35400;
+// $green:#3eb941;
+$green:#02b875;
+$yellow:darken(#fcad26, 5%);
+$asphalt:#34495e;
+$green-sea:#16a085;
+$brown:#3a3a3a;
+$asbestos:#7f8c8d;
+$my-gray: #738aa0;
+$light-purple: #a9a9d4;
+
+$media-phone: "only screen and (max-width : 480px)";
+$footer-height: 86px;
+$green:$green-sea;
+$global-rounded: 1000px;
+$technology-label-map: (
+    front-end: (
+        background-color: $skin,
+        border-color: darken($skin, 10%)
+    ),
+    mvc: (
+        background-color:$purple,
+        border-color:darken($purple, 3%)
+    ),
+    api: (
+        background-color:$blue,
+        border-color:darken($blue, 10%)
+    ),
+    test: (
+        background-color:$pumpkin,
+        border-color:darken($pumpkin, 10%)
+    ),
+    version-control: (
+        background-color:$green,
+        border-color:darken($green, 10%)
+    ),
+    lib-fram: (
+        background-color:$yellow,
+        border-color:darken($yellow, 10%)
+    ),
+    various: (
+        background-color: darken($my-gray, 5%),
+        border-color: darken($my-gray, 8%)
+    ),
+    back-end: (
+        background-color:darken($green-sea, 16%),
+        border-color:darken($green-sea, 21%)
+    ),
+    databases: (
+        background-color:darken($brown, 10%),
+        border-color:darken($brown, 25%)
+    ),
+);
+
