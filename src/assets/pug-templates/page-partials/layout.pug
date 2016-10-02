@@ -1,9 +1,9 @@
 doctype html
-html(class="no-js", lang=$i18n.lang)
+html(class="no-js", lang=$i18n.lang, locale=$localeName)
     block vars
     include head.pug
 
-    body(class=currentPage ? currentPage.customClass || currentPage.name : null)
+    body(class=currentPage ? currentPage.customClass || currentPage.name : null, id=currentPage.id)
         include ../components/browse-happy.pug
         block body
 

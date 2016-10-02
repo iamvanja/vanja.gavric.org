@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.no-margin-bottom {
+    margin-bottom:0!important;
+}
+.no-margin-top {
+    margin-top:0!important;
+}
+
+.no-margin-vertical {
+    margin-bottom:0!important;
+    margin-top:0!important;
+}
+
+.click,
+.tap {
+    display:none;
+}
+.no-touchevents,
+.no-js {
+    .click {
+        display:inline;
+    }
+}
+.touchevents {
+    .tap {
+        display:inline;
+    }
+}

@@ -12,11 +12,23 @@ module.exports = {
                     "!old/**",
                     "!assets/js/foundation/**",
                     "!**/*.psd",
-                    "!assets/css/main.css",
-                    // "!_src/**",
-                    // "!assets/_psd_other/**",
+                    "!assets/css/**",
+                    "!assets/js/all.js",
                 ],
                 dest: "build/"
+            }
+        ]
+    },
+    npmAssetsDev: {
+        files: [
+            {
+                expand: true,
+                flatten: true,
+                cwd: "node_modules/",
+                src: [
+                    "jquery.backstretch/jquery.backstretch.js"
+                ],
+                dest: "src/assets/js/vendor/"
             }
         ]
     }

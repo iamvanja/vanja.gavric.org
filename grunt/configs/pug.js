@@ -5,6 +5,7 @@ module.exports = function(grunt, data) {
         pugData = function(options) {
             options = options || {};
             var data = settings,
+                langData = grunt.file.readJSON("src/assets/pug-data/locales/en.json"),
                 preparedData = {},
                 keys = {
                     environment: "development"
@@ -19,8 +20,8 @@ module.exports = function(grunt, data) {
                 preparedData[prop] = data[prop];
             }
 
-            preparedData.slider = data.products;
-            // preparedData.camelProductName = grunt.config.data.helpers.camelize(data.productName);
+            preparedData.$localeName = "en";
+            preparedData.$i18n = langData;
 
             preparedData.environment = options.isProduction ? grunt.config.get("environment") : "development";
             preparedData.gitHash = grunt.config.get("gitHash");
@@ -39,16 +40,17 @@ module.exports = function(grunt, data) {
                     },
                     pretty: "    ",
                     // pug i18n specific options
-                    i18n: {
-                        locales: getLocale(),
-                        namespace: "$i18n"
-                    }
+                    // i18n: {
+                    //     locales: getLocale(),
+                    //     namespace: "$i18n"
+                    // }
                 },
                 files: [{
                     expand: true,
                     cwd: "src/assets/pug-templates/pages",
                     src: settings.htmlPages,
-                    dest: "src/"
+                    dest: "src/",
+                    ext: ".html"
                 }]
             },
             production: {
@@ -58,16 +60,17 @@ module.exports = function(grunt, data) {
                     },
                     pretty: false,
                     // pug i18n specific options
-                    i18n: {
-                        locales: "src/assets/pug-data/locales/*.json",
-                        namespace: "$i18n"
-                    }
+                    // i18n: {
+                    //     locales: "src/assets/pug-data/locales/*.json",
+                    //     namespace: "$i18n"
+                    // }
                 },
                 files: [{
                     expand: true,
                     cwd: "build/assets/pug-templates/pages",
                     src: settings.htmlPages,
-                    dest: "build/"
+                    dest: "build/",
+                    ext: ".html"
                 }]
             }
     };

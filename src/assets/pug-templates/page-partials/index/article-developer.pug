@@ -1,87 +1,44 @@
-article.developer#developer(role="article", aria-labelledby="main-title-dev")
-    div(data-anchor-target="#developer",
-    data-bottom-top="transform:translate3d(0px,40%,0px);opacity:0;",
-    data-top="transform:translate3d(0px,0%,0px);opacity:1;")
+article.main-article.developer#developer(role="article", aria-labelledby="main-title-dev")
+    div
         div.row
             div.large-12.columns
-                h2(class="main-title-dev no-margin-bottom",
-                id="main-title-dev",
-                data-anchor-target="#developer",
-                data-bottom-top="transform:scale(1.46);opacity:0",
-                data-top="transform:scale(1);opacity:1")
+                .article-icon
+                    i.icon-code
+
+                h2.main-title-dev.no-margin-bottom#main-title-dev
                     =$i18n.header.iAm + " " + $i18n.articleDeveloper.whoAmI
 
-                h2(class="subheader no-margin-top",
-                data-anchor-target="#developer",
-                data-center-top="opacity:0",
-                data-200-top="opacity:1")
+                h2.subheader.no-margin-top
                     span
                         =$i18n.articleDeveloper.specializing + " "
                         i front-end
 
-    div(class="technologies-wrap",
-    data-anchor-target="#developer",
-    data-bottom-top="transform:translate3d(0px,-10%,0px);opacity:0;",
-    data-center-bottom="transform:translate3d(0px,0%,0px);opacity:1;")
+    div.technologies-wrap
         div.row.experience
             div.large-12.columns
                 h3= $i18n.articleDeveloper.iHaveExperienceWith
-                div#technologies-legend.technologies.legend
-                    span.front-end Front-end frameworks
-                    span.mvc MVC JS frameworks
-                    span.api 3rd-party APIs
-                    span.test Test frameworks
-                    span.version-control Version control
-                    span.lib-fram Libraries / frameworks
-                    span.back-end Back-end
-                    span.databases= $i18n.articleDeveloper.databases
-                    span.various= $i18n.articleDeveloper.various
-                hr
-        div.row
+
+                div.technologies.legend
+                    div#technologies-legend.labels-wrap
+                        - for (var categoryClass in $i18n.articleDeveloper.categories)
+                            span(class=categoryClass)= $i18n.articleDeveloper.categories[categoryClass]
+
+                    div.select-wrap
+                        label
+                            select#technologies-select
+                                option(value="") -- all technologies --
+                                - for (var categoryClass in $i18n.articleDeveloper.categories)
+                                    option(value=categoryClass)= $i18n.articleDeveloper.categories[categoryClass]
+
             div.large-12.columns
-                ul#technologies-list.technologies
-                    li.label.round.front-end Foundation
-                    li.label.round.front-end Bootstrap
-                    li.label.round.mvc BackboneJS
-                    li.label.round.mvc AngularJS
-                    li.label.round.api Facebook API
-                    li.label.round.api Twitter API
-                    li.label.round.api Google APIs
-                    li.label.round.api Flickr API
-                    li.label.round.api Rdio API
-                    li.label.round.api SoundCloud API
-                    li.label.round.api hasOffers API
-                    li.label.round.api Cake API
-                    li.label.round.api SalesForce
-                    li.label.round.test Jasmine
-                    li.label.round.version-control SVN
-                    li.label.round.version-control Git
-                    li.label.round.lib-fram jQuery (Zepto.JS)
-                    li.label.round.lib-fram Underscore.js (Lo-Dash)
-                    li.label.round.lib-fram Slim
-                    li.label.round.lib-fram Handlebars
-                    li.label.round.lib-fram CodeIgniter
-                    li.label.round.lib-fram Express (Node)
-                    li.label.round.various SASS + Compass
-                    li.label.round.various LESS
-                    li.label.round.various Jade
-                    li.label.round.various RequireJS
-                    li.label.round.various Sphinx
-                    li.label.round.various Redmine
-                    li.label.round.various Jira
-                    li.label.round.various= $i18n.articleDeveloper.commandLine
-                    li.label.round.various Agile
-                    li.label.round.various Amazon Web Services
-                    li.label.round.various A/B testing (VWO)
-                    li.label.round.various Grunt
-                    li.label.round.back-end Apache
-                    li.label.round.back-end PHP
-                    li.label.round.back-end NodeJS
-                    li.label.round.databases MySQL
-                    li.label.round.databases MS SQL
-                    li.label.round.databases Mongo
+                ul#technologies-list.technologies.list
+                    - for (var categoryClass in skills)
+                        each skill in skills[categoryClass]
+                            li(class="label "+categoryClass)= skill
+
+                hr
 
     .row
         .large-12.columns
-            p.tc= $i18n.articleDeveloper.skillsExplanation
+            p.text-center= $i18n.articleDeveloper.skillsExplanation
             p= $i18n.articleDeveloper.developerText

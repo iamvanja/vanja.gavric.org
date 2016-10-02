@@ -1,0 +1,102 @@
+.main-article.writing {
+    background-color:#0e83cd;
+    overflow: hidden;
+    position:relative;
+    z-index: 2;
+    $emboss: darken(#0e83cd, 10%);
+    .article-icon {
+        color: $emboss;
+    }
+    h2 {
+        position: relative;
+        &.subheader {
+            color:$emboss;
+            font-size:rem-calc(28);
+        }
+    }
+    .articles {
+        margin-top:rem-calc(30);
+        .article-items {
+            div {
+                // position: relative;
+                text-align: center;
+                margin-bottom:rem-calc(14px);
+                a {
+                    display: inline-block;
+                    transition: transform 0.1s ease-in;
+                    backface-visibility: hidden;
+                    background:darken(#0e83cd, 10%);
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    img {
+                        width:100%;
+                        max-width: rem-calc(116);
+                    }
+                }
+            }
+        }
+    }
+
+    // transitions
+    .article-items {
+        .column {
+            transform: translate3d(0,300%,0);
+            transition: transform 400ms;
+            transition-timing-function: ceaser($easeOutQuint);
+        }
+        &.fade-in-bottom {
+            .column {
+                transform: translate3d(0,0,0);
+                // transition-delay: 0.3s;
+            }
+            %minusTen {
+                transform: translate3d(0, -10px, 0);
+            }
+            %fourteen {
+                transform: translate3d(0, 14px, 0);
+            }
+            .column:nth-child(1) {
+                @extend %minusTen;
+                transition-delay: 50ms;
+            }
+            .column:nth-child(2) {
+                transform: translate3d(0, -4px, 0);
+                transition-delay: 100ms;
+            }
+            .column:nth-child(3) {
+                @extend %fourteen;
+            }
+            .column:nth-child(4) {
+                transform: translate3d(0, -12px, 0);
+                transition-delay: 200ms;
+            }
+            .column:nth-child(5) {
+                transition-delay: 250ms;
+            }
+            .column:nth-child(6) {
+                transition-delay: 400ms;
+            }
+            .column:nth-child(7) {
+                @extend %fourteen;
+                transition-delay: 300ms;
+            }
+            .column:nth-child(8) {
+                @extend %minusTen;
+                transition-delay: 350ms;
+            }
+        }
+    }
+
+    @media #{$media-phone} {
+        h2.subheader {
+            font-size:rem-calc(24);
+        }
+    }
+    @include breakpoint(medium down) {
+        .article-items {
+            padding-left:rem-calc(8);
+            padding-right:rem-calc(8);
+        }
+    }
+}

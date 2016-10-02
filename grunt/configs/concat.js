@@ -5,7 +5,7 @@ module.exports = {
     //     separator: ";",
     // },
     watch: {
-        dest: "src/assets/js/main.min.js",
+        dest: "src/assets/js/all.js",
         src: "<%= settings.jsFiles %>"
     }
 };

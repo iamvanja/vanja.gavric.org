@@ -32,8 +32,9 @@ module.exports = function(grunt) {
             // here you can pass options to jit-grunt (or just jitGrunt: true)
             staticMappings: {
                 // here you can specify static mappings, for example:
-                pug: "grunt-pug-i18n",
                 removelogging: "grunt-remove-logging",
+                jquery: "grunt-jquery-builder",
+                lodash: "grunt-lodash",
             },
             customTasksDir: "grunt/tasks"
         },

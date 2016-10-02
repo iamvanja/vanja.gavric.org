@@ -1,12 +1,12 @@
 "use strict";
 module.exports = {
-    // options: {
-    //     atBegin: true
-    // },
-    // onInit: {
-    //     files: [],
-    //     tasks: ["clean:preWatch"]
-    // },
+    options: {
+        atBegin: true
+    },
+    onInit: {
+        files: [],
+        tasks: ["copy:npmAssetsDev", "jquery:dev", "lodash:dev", "modernizr:dev"]
+    },
     pug: {
         files: [
             "src/assets/pug-templates/**/*.pug",
@@ -18,7 +18,7 @@ module.exports = {
         tasks: ["pug:watch"],
         options: {
             // Start a live reload server on the default port 35729
-            livereload: true
+            // livereload: true
         }
     },
     html: {
@@ -30,9 +30,8 @@ module.exports = {
         }
     },
     css: {
-        files: ["src/assets/css/scss/**/*.scss"],
+        files: ["src/assets/scss/**/*.scss"],
         tasks: ["compass:watch", "postcss:watch"],
-        // tasks: ["compass:watch"],
         options: {
             // Start a live reload server on the default port 35729
             livereload: true
@@ -40,8 +39,7 @@ module.exports = {
     },
     js: {
         files: "<%= settings.jsFiles %>",
-        // tasks: ["eslint", "concat:watch"],
-        tasks: ["concat:watch"],
+        tasks: ["eslint", "concat:watch"],
         options: {
             // Start a live reload server on the default port 35729
             livereload: true

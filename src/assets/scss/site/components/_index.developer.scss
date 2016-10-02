@@ -1,0 +1,106 @@
+.main-article.developer {
+    $bg: darken($asphalt, 5%);
+    background-color: $bg;
+    .article-icon {
+        color:lighten($bg,30%);
+    }
+    h2 {
+        margin-bottom:0;
+        line-height: 1.2;
+        &.subheader {
+            font-size:rem-calc(28);
+            color:lighten($bg,30%);
+            margin-bottom: rem-calc(20);
+        }
+    }
+    .technologies-wrap {
+        position:relative;
+        h3 {
+            margin-bottom: rem-calc(14);
+        }
+        &.desktop {
+            .legend {
+                text-align: center;
+                margin-bottom: rem-calc(16);
+                span {
+                    cursor: help;
+                    position: relative;
+                    margin-right:1em;
+                    margin-bottom:0.4em;
+                    white-space: nowrap;
+                    display: inline-block;
+                    &:before {
+                        content:'';
+                        height:1em;
+                        width: 1em;
+                        left: 0;
+                        top:2px;
+                        margin-right:4px;
+                        display:inline-block;
+                        position: relative;
+                        border: 1px solid;
+                    }
+                }
+            }
+            .select-wrap {
+                display:none;
+            }
+        }
+        &.mobile {
+            .select-wrap {
+                display:block;
+                width:80%;
+                margin:0 auto;
+                select {
+                    text-align-last:center; // align on Chrome (possibly other WebKits?)
+                }
+            }
+            .labels-wrap {
+                display:none;
+            }
+        }
+        .list {
+            .label {
+                $duration: 0.25s;
+                margin-bottom:rem-calc(2);
+                margin-right:rem-calc(2);
+                transition: opacity $duration ease-in;
+                border:1px solid;
+                opacity:1;
+                width: auto;
+                height: auto;
+                left:0;
+                position:relative;
+                @for $i from 1 through 60 {
+                    &:nth-of-type(#{$i}) {
+                        transition-delay: 0.005s * $i;
+                    }
+                }
+                &.animated-hide {
+                    opacity:0.05;
+                }
+            }
+        }
+        @each $label, $map in $technology-label-map {
+            .legend span.#{$label}:before,
+            .label.#{$label} {
+                background-color: map-get($map, background-color);
+                border-color: map-get($map, border-color);
+            }
+        }
+
+        .experience hr {
+            margin-left: auto;
+            margin-right: auto;
+            width:30%;
+        }
+    }
+
+    @media #{$media-phone} {
+        h2 {
+            &.subheader {
+                font-size:rem-calc(24);
+            }
+        }
+    }
+}
