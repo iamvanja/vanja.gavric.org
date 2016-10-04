@@ -10735,7 +10735,7 @@ return jQuery;
             el: "#writing",
         },
         onLoad = function(){
-            $(window).on("load", function(e) {
+            $(window).on("load."+viewName, function(){
                 site.views.run("common", "lazyLoadImages", {el: ui.el});
             });
         },
