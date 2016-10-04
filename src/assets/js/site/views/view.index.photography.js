@@ -85,7 +85,9 @@
         },
         exports = {
             init: function(){
-                initBackstretch();
+                $(window).on("load."+viewName, function(){
+                    initBackstretch();
+                });
             },
         };
 
