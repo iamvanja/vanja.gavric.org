@@ -8,7 +8,6 @@ module.exports = {
         "build/assets/scss/**",
         "build/assets/js/**/*.js",
         "!build/assets/js/all.js",
-        "!build/assets/js/vendor/modernizr.js",
         "build/assets/js/site/",
         "build/assets/pug-*/**",
         "build/assets/fonts/*.json"

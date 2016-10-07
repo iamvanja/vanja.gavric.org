@@ -17,6 +17,7 @@
         "!src/v1/**/*.html"
     ],
     "jsFiles": [
+        "src/assets/js/vendor/modernizr.js",
         "src/assets/js/vendor/jquery-2.1.1.js",
         "src/assets/js/vendor/jquery.backstretch.js",
         "src/assets/js/vendor/lodash.build.js",
