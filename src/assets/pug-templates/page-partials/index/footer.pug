@@ -1,16 +1,20 @@
 footer#footer.footer(role="contentinfo")
-    .footer-wrap
-        .row
-            .large-9.small-7.columns.left
-                p= $i18n.footer.handmade + " :)"
+    .row
+        .large-12.columns
+            .wrapper
+                .container.info
+                    p= $i18n.footer.handmade + " :)"
 
-            .large-3.small-5.columns.right
-                p
-                  | &copy; 
-                  a(href="http://vanja.gavric.org", title="Vanja Gavrić web")
-                    span vanja
-                    | .gavric
-                p.smaller
-                    a(href="/v1") v1 site 
-                    | | 
-                    a(href="playground.html")= $i18n.footer.playground
+                .container.links
+                    .link-container.copyright-link
+                      | &copy; 
+                      a(href="http://vanja.gavric.org", title="Vanja Gavrić web")
+                        span vanja
+                        | .gavric
+                    .link-container.site-link
+                        a(href="/v1") v1 site 
+                        //- | |
+                    .link-container.playground-link
+                        a(href="playground.html")= $i18n.footer.playground
+
+

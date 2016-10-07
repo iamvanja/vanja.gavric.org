@@ -3933,7 +3933,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url('../images/bg.jpg?1475223164') no-repeat center center;
+  background: url('../images/bg.jpg?1475393621') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
 }
@@ -4690,7 +4690,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 105, ../scss/site/components/_index.photography.scss */
 .no-js .photography .backstretch-wrap {
-  background-image: url('../images/photos/stuck-in-traffic.jpg?1475217939');
+  background-image: url('../images/photos/stuck-in-traffic.jpg?1475393621');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -5079,44 +5079,100 @@ h1, h2, h3, h4, h5, h6 {
 /* line 1, ../scss/site/components/_footer.scss */
 .footer {
   background: #34495e;
-  padding: 0.25rem 0;
+  padding: 1.125rem 0;
   z-index: 11;
   position: relative;
 }
 /* line 7, ../scss/site/components/_footer.scss */
-.footer .footer-wrap {
-  padding: 0.5rem 0;
-}
-/* line 10, ../scss/site/components/_footer.scss */
 .footer p {
-  margin-bottom: 0;
-  font-size: 0.75rem;
-  line-height: 1.2;
+  margin: 0;
   color: #98afc6;
 }
-/* line 15, ../scss/site/components/_footer.scss */
-.footer p a {
-  color: #fff;
-}
-/* line 17, ../scss/site/components/_footer.scss */
-.footer p a:hover {
-  color: #1ccdaa;
-}
-/* line 19, ../scss/site/components/_footer.scss */
-.footer p a:hover span {
-  color: #fff;
-}
-/* line 23, ../scss/site/components/_footer.scss */
-.footer p a span {
-  color: #1ccdaa;
-}
-/* line 28, ../scss/site/components/_footer.scss */
-.footer .right {
+/* line 11, ../scss/site/components/_footer.scss */
+.footer .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
-/* line 31, ../scss/site/components/_footer.scss */
-.footer .smaller {
-  font-size: 0.688rem;
+/* line 16, ../scss/site/components/_footer.scss */
+.footer .container {
+  width: 100%;
+}
+/* line 19, ../scss/site/components/_footer.scss */
+.footer .container.links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 22, ../scss/site/components/_footer.scss */
+.footer .container.links .link-container {
+  padding: 0 0.938rem;
+  margin: 0.313rem 0;
+  width: 33.33%;
+}
+/* line 26, ../scss/site/components/_footer.scss */
+.footer .container.links .link-container a {
+  color: #fff;
+}
+/* line 28, ../scss/site/components/_footer.scss */
+.footer .container.links .link-container a:hover {
+  color: #1ccdaa;
+}
+/* line 30, ../scss/site/components/_footer.scss */
+.footer .container.links .link-container a:hover span {
+  color: #fff;
+}
+/* line 34, ../scss/site/components/_footer.scss */
+.footer .container.links .link-container a span {
+  color: #1ccdaa;
+}
+/* line 38, ../scss/site/components/_footer.scss */
+.footer .container.links .link-container.site-link {
+  border: 1px solid #98afc6;
+  border-width: 0 1px;
+}
+@media screen and (max-width: 63.938em) {
+  /* line 47, ../scss/site/components/_footer.scss */
+  .footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  /* line 51, ../scss/site/components/_footer.scss */
+  .footer .container.info {
+    padding: 0.938rem 1.875rem;
+    padding-bottom: 0.563rem;
+    font-size: 1.063rem;
+  }
+  /* line 56, ../scss/site/components/_footer.scss */
+  .footer .container.links {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 64, ../scss/site/components/_footer.scss */
+  .footer .container.info {
+    text-align: left;
+  }
+  /* line 67, ../scss/site/components/_footer.scss */
+  .footer .container.links {
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
 }
 
 /* line 1, ../scss/site/pages/_playground.scss */
