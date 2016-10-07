@@ -18,6 +18,8 @@ module.exports = {
         "uglify:production",
         "pug:production",
         "clean:productionPost",
+        "critical:production",
+        "htmlLocalUrl",
         "htmlhint:production",
         "sitemap:production",
         "unusedImages"
