@@ -25,7 +25,12 @@
         <div class="top-anchor" id="top"></div>
         <header class="intro" id="intro">
             <div class="main-intro-content">
-                <h1><span class="hi">Hi.</span><br><span class="i-am">I'm Vanja.</span><br><img class="profile-pic" src="assets/images/profile.jpg" width="110" height="110" alt="Vanja Gavrić profile photo"></h1>
+                <h1><span class="hi">Hi.</span><br><span class="i-am">I'm Vanja.</span><br>
+                    <picture>
+                        <source srcset="assets/images/profile.webp, assets/images/profile@2x.webp 2x" type="image/webp">
+                        <source srcset="assets/images/profile.jpg, assets/images/profile@2x.jpg 2x" type="image/jpeg"><img class="profile-pic" src="assets/images/profile.jpg" width="110" height="110" alt="Vanja Gavrić profile photo">
+                    </picture>
+                </h1>
             </div>
             <div class="scroll-down"><a href="#developer"><span>Scroll down to learn more about me</span><i class="icon-down-circled"></i></a></div>
         </header>
