@@ -69,9 +69,16 @@
                 );
             },
             lazyLoadImages: function(options){
-                var $el = $(options.el) || $("body");
+                var $el = $(options.el) || $("body"),
+                    isWebpSupported = $("html").hasClass("webp"),
+                    src;
                 $el.find("img.lazy").each(function(){
-                    $(this).attr("src", $(this).attr("data-lazysrc"));
+                    src = $(this).attr("data-lazysrc");
+                    if ($(this).attr("data-use-webp") === "true" && isWebpSupported) {
+                        src = src.replace(".jpg", ".webp");
+                    }
+
+                    $(this).attr("src", src);
                 });
             },
         };
