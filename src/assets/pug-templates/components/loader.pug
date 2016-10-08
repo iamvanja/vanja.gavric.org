@@ -1,7 +1,11 @@
-#loader.loader.animate.animate-headers
+#loader.loader.animate.animate-headers.hide
     div
     div
     div
     div
     h1.default= $i18n.loader.loading
     h1.alternative= $i18n.loader.loadingAlt
+
+script.
+    //- show loader for users with js enabled
+    document.getElementById("loader").classList.remove("hide");

@@ -7,22 +7,24 @@ module.exports = function(grunt, data) {
     var options = {
         cache: false,
         optimizationLevel: 6,
-        use: [
-            mozjpeg({
-                quality: 90,
-            }),
-            webp({
-                quality: 90
-            }),
-        ]
     },
+    useJpg = [
+        mozjpeg({
+            quality: 95,
+        }),
+    ],
+    useWebp = [
+        webp({
+            quality: 90
+        }),
+    ],
     config = {
-        productionAll: {
+        productionJpg: {
             options: {},
             files:[
                 {
                     expand: true,
-                    cwd: "build/assets/images/",
+                    cwd: "src/assets/images/",
                     src: [
                         "**/*.{png,jpg,gif}"
                     ],
@@ -30,7 +32,7 @@ module.exports = function(grunt, data) {
                 },
                 {
                     expand: true,
-                    cwd: "build/v1/images/",
+                    cwd: "src/v1/images/",
                     src: [
                         "**/*.{png,jpg,gif}"
                     ],
@@ -38,9 +40,20 @@ module.exports = function(grunt, data) {
                 },
             ]
         },
+        productionWebp: {
+            options: {},
+            files: [],
+        }
     };
 
-    extend(config.productionAll.options, options);
+    // use mozjpeg for jpg images
+    extend(config.productionJpg.options, options, {use: useJpg});
+
+    // use webp for webp images
+    extend(config.productionWebp.options, options, {use: useWebp});
+
+    // exclude v1 images from webp build
+    config.productionWebp.files.push(config.productionJpg.files[0]);
 
     return config;
 };
