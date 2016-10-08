@@ -1,15 +1,15 @@
 .index {
-    &.state-before-loader {
-        position:relative;
-        overflow:hidden;
-        &:after {
-            content: "";
-            position:fixed;
-            top:0;right:0;bottom:0;left:0;
-            background:white;
-            z-index:6;
-        }
-    }
+    // &.state-before-loader {
+    //     position:relative;
+    //     overflow:hidden;
+    //     &:after {
+    //         content: "";
+    //         position:fixed;
+    //         top:0;right:0;bottom:0;left:0;
+    //         background:white;
+    //         z-index:6;
+    //     }
+    // }
     .top-anchor {
         position:absolute;
         top:0;
