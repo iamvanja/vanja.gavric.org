@@ -17,7 +17,7 @@
                         return;
                     }
                     $loader = $("<div />").addClass(loaderId);
-                    $loader.html("<div></div><div></div><div></div><div></div><h1 class=\"default\">"+ loadingText +"...</h1><h1 class=\"alternative\">" + loadingTextAlt + "</h1>");
+                    $loader.html("<div></div><div></div><div></div><div></div><h1 class=\"default\">"+ loadingText +"</h1><h1 class=\"alternative\">" + loadingTextAlt + "</h1>");
                     $loader.attr({
                         id: loaderId,
                         class: loaderId + " animate",

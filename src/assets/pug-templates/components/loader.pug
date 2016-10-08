@@ -1,4 +1,4 @@
-#loader.loader.animate.animate-headers.hide
+#loader.loader.animate.hide
     div
     div
     div
@@ -7,5 +7,10 @@
     h1.alternative= $i18n.loader.loadingAlt
 
 script.
-    //- show loader for users with js enabled
-    document.getElementById("loader").classList.remove("hide");
+    // show loader for users with js enabled
+    var loaderEl = document.getElementById("loader");
+    loaderEl.classList.remove("hide");
+    // trigger layout
+    loaderEl.offsetLeft;
+    // animate header (Almost there)
+    loaderEl.classList.add("animate-headers");
