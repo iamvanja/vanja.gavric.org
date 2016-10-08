@@ -1,3 +1,5 @@
+include ../../components/article-item
+
 article.main-article.writing#writing(role="article", aria-labelledby="main-title-writing")
     div.row
         div.large-12.columns
@@ -16,35 +18,18 @@ article.main-article.writing#writing(role="article", aria-labelledby="main-title
 
             div.articles#articles
                 div.article-items.row.small-up-4.spy(data-spy-class="fade-in-bottom", data-spy-offset="150")
-                    div.column
-                        a(href="assets/downloads/pdf/mobil-92-iphone.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/iphone.jpg", alt=$i18n.articleWriting.articleiPhone, height="160", width="117")
+                    +article-item("mobil-92-iphone.pdf", "iphone.jpg", $i18n.articleWriting.articleiPhone, 160, 117)
 
-                    div.column
-                        a(href=assetsUrl.local + "downloads/pdf/mobil-35-motorola.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/motorola.jpg", alt=$i18n.articleWriting.articleMotorola, height="160", width="119")
+                    +article-item("mobil-35-motorola.pdf", "motorola.jpg", $i18n.articleWriting.articleMotorola, 160, 119)
 
+                    +article-item("mobil-37-microsoft.pdf", "ms.jpg", $i18n.articleWriting.articleMs, 160, 120)
 
-                    div.column
-                        a(href=assetsUrl.local + "downloads/pdf/mobil-37-microsoft.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/ms.jpg", alt=$i18n.articleWriting.articleMs, height="160", width="120")
+                    +article-item("mreza-nokia.pdf", "nokia.jpg", $i18n.articleWriting.articleNokia, 160, 114)
 
-                    div.column
-                        a(href=assetsUrl.local + "downloads/pdf/mreza-nokia.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/nokia.jpg", alt=$i18n.articleWriting.articleNokia, height="160", width="114")
+                    +article-item("mobil-37-stungun.pdf", "stungun.jpg", $i18n.articleWriting.articleStungun, 160, 118)
 
-                    div.column
-                        a(href=assetsUrl.local + "downloads/pdf/mobil-37-stungun.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/stungun.jpg", alt=$i18n.articleWriting.articleStungun, height="160", width="118")
+                    +article-item("mobil-40-41-treo.pdf", "treo.jpg", $i18n.articleWriting.articleTreo, 160, 120)
 
-                    div.column
-                        a(href=assetsUrl.local + "downloads/pdf/mobil-40-41-treo.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/treo.jpg", alt=$i18n.articleWriting.articleTreo, height="160", width="120")
+                    +article-item("mobil-75-usa.pdf", "usa.jpg", $i18n.articleWriting.articleUSA, 160, 118)
 
-                    div.column
-                        a(href=assetsUrl.local + "downloads/pdf/mobil-75-usa.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/usa.jpg", alt=$i18n.articleWriting.articleUSA, height="160", width="118")
-
-                    div.column
-                        a(href=assetsUrl.local + "downloads/pdf/mobil-40-41-alcatel.pdf")
-                            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/alcatel.jpg", alt=$i18n.articleWriting.articleAlcatel, height="160", width="119")
+                    +article-item("mobil-40-41-alcatel.pdf", "alcatel.jpg", $i18n.articleWriting.articleAlcatel, 160, 119)
