@@ -19,7 +19,7 @@
         }
     },
     "loader": {
-        "loading": "Loading",
+        "loading": "Loading...",
         "loadingAlt": "Almost there..."
     },
     "mainNav": {

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="local-url" content="assets/">
         <meta name="environment" content="development">
-        <meta name="loading-text" content="Loading">
+        <meta name="loading-text" content="Loading...">
         <meta name="loading-text-alt" content="Almost there...">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -216,17 +216,22 @@
                 <nav><a class="back-to-top" id="back-to-top" href="#top"><i class="icon-up-circled"></i></a></nav>
             </section>
         </main>
-        <div class="loader animate animate-headers hide" id="loader">
+        <div class="loader animate hide" id="loader">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
-            <h1 class="default">Loading</h1>
+            <h1 class="default">Loading...</h1>
             <h1 class="alternative">Almost there...</h1>
         </div>
         <script>
-            //- show loader for users with js enabled
-            document.getElementById("loader").classList.remove("hide");
+            // show loader for users with js enabled
+            var loaderEl = document.getElementById("loader");
+            loaderEl.classList.remove("hide");
+            // trigger layout
+            loaderEl.offsetLeft;
+            // animate header (Almost there)
+            loaderEl.classList.add("animate-headers");
         </script>
         <script src="assets/js/all.js"></script>
         <script>
