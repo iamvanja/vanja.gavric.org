@@ -12,39 +12,39 @@
             if ($.fn.backstretch){
                 var imagesArr = [
                         {
-                            url: "stuck-in-traffic.jpg",
+                            url: "stuck-in-traffic",
                         },
                         {
-                            url: "hana.jpg",
+                            url: "hana",
                         },
                         {
-                            url: "big-ben.jpg",
+                            url: "big-ben",
                             alignY: 0.7,
                         },
                         {
-                            url: "cat.jpg",
+                            url: "cat",
                             alignY: 0,
                         },
                         {
-                            url: "double-rainbow-in-paris.jpg",
+                            url: "double-rainbow-in-paris",
                         },
                         {
-                            url: "autumn-in-zrinjevac.jpg",
+                            url: "autumn-in-zrinjevac",
                         },
                         {
-                            url: "paris-sunset.jpg",
+                            url: "paris-sunset",
                         },
                         {
-                            url: "flowers.jpg",
+                            url: "flowers",
                         },
                         {
-                            url: "tower-bridge.jpg",
+                            url: "tower-bridge",
                         },
                         {
-                            url: "adriatic-sea.jpg",
+                            url: "adriatic-sea",
                         },
                         {
-                            url: "dijana.jpg",
+                            url: "dijana",
                             alignY: 1,
                         },
                     ],
@@ -56,7 +56,7 @@
 
                 // "http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg", /* Paris opera */
 
-                $backstretchEl.backstretch(addImagePath(imagesArr), options);
+                $backstretchEl.backstretch(prepareImages(imagesArr), options);
 
                 $(ui.el).on("click", function(){
                     var $el = $(this),
@@ -74,11 +74,12 @@
                 console.warn("Backstretch init failed");
             }
         },
-        addImagePath = function(imagesArr){
-            var fullImagesPath = site.settings.assetsUrl.local + partialImagesPath;
+        prepareImages = function(imagesArr){
+            var fullImagesPath = site.settings.assetsUrl.local + partialImagesPath,
+                isWebPSupported = $("html").hasClass("webp");
 
             imagesArr.forEach(function(el, i, arr){
-                el.url = fullImagesPath + el.url;
+                el.url = fullImagesPath + el.url + "." + (isWebPSupported ? "webp" : "jpg");
             });
 
             return imagesArr;
