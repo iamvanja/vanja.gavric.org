@@ -25,8 +25,7 @@ module.exports = {
     ],
 
     "postPush": [
-        // "rollBarSourceMaps",
-        // "rollBarDeploy",
+        "rollbar",
         "gitPushCommit",
         "postPushInfo"
     ],
