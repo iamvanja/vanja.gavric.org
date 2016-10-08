@@ -13,9 +13,9 @@
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.16.1';
+  var VERSION = '4.16.4';
 
-  /** Used as the `TypeError` message for "Functions" methods. */
+  /** Error message constants. */
   var FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used as references for various `Number` constants. */
