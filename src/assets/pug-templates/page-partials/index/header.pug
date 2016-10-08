@@ -14,7 +14,11 @@ header#intro.intro
             span.i-am
                 =$i18n.header.iAm + " Vanja."
             br
-            img.profile-pic(src=assetsUrl.local + "images/profile.jpg", width="110", height="110", alt="Vanja Gavrić profile photo")
+            picture
+                - var srcset = assetsUrl.local + "images/profile.jpg, " + assetsUrl.local + "images/profile@2x.jpg 2x"
+                source(srcset=srcset.replace(/.jpg/g, ".webp") type="image/webp")
+                source(srcset=srcset, type="image/jpeg")
+                img.profile-pic(src=srcset.split(",")[0], width="110", height="110", alt="Vanja Gavrić profile photo")
 
     .scroll-down
         a(href="#developer")

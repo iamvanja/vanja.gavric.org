@@ -70,8 +70,6 @@
         },
         exports = {
             init: function(){
-                $("body").removeClass("state-before-loader");
-
                 onLoad();
                 onHashChange();
                 initHashClick();

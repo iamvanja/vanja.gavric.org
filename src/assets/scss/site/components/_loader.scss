@@ -11,6 +11,9 @@ $totalDuration: ($singleAnimationDuration * 8) + ($animationPause * 2);
     // pointer-events: none;
     background:$green;
     margin:auto;
+    &.hide {
+        display:none;
+    }
     h1 {
         position:absolute;
         left:0;
