@@ -14,7 +14,8 @@ module.exports = function(grunt, data) {
                 "fontface",
                 "csstransforms",
                 "csstransforms3d",
-                "csstransitions"
+                "csstransitions",
+                "webp"
             ],
             "options": [
                 "domPrefixes",
