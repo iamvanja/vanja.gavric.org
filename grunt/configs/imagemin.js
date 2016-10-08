@@ -1,14 +1,20 @@
 "use strict";
 var mozjpeg = require("imagemin-mozjpeg");
+var webp = require("imagemin-webp");
 var extend = require("extend");
 
 module.exports = function(grunt, data) {
     var options = {
         cache: false,
         optimizationLevel: 6,
-        use: [mozjpeg({
-            quality: 90,
-        })]
+        use: [
+            mozjpeg({
+                quality: 90,
+            }),
+            webp({
+                quality: 90
+            }),
+        ]
     },
     config = {
         productionAll: {
@@ -18,8 +24,7 @@ module.exports = function(grunt, data) {
                     expand: true,
                     cwd: "build/assets/images/",
                     src: [
-                        "**/*.{png,jpg,gif}",
-                        "!profile.jpg"
+                        "**/*.{png,jpg,gif}"
                     ],
                     dest: "build/assets/images/"
                 },
@@ -33,16 +38,9 @@ module.exports = function(grunt, data) {
                 },
             ]
         },
-        productionProfile: {
-            options: {},
-            files: {
-               "build/assets/images/profile.jpg": "build/assets/images/profile.jpg",
-            }
-        }
     };
 
     extend(config.productionAll.options, options);
-    extend(config.productionProfile.options, options, {use: [mozjpeg({quality: 32})]});
 
     return config;
 };
