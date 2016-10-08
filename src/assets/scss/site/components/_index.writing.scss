@@ -38,6 +38,20 @@
         }
     }
 
+    @media #{$media-phone} {
+        h2.subheader {
+            font-size:rem-calc(24);
+        }
+    }
+    @include breakpoint(medium down) {
+        .article-items {
+            padding-left:rem-calc(8);
+            padding-right:rem-calc(8);
+        }
+    }
+}
+
+.js .writing {
     // transitions
     .article-items {
         .column {
@@ -87,16 +101,10 @@
             }
         }
     }
+}
 
-    @media #{$media-phone} {
-        h2.subheader {
-            font-size:rem-calc(24);
-        }
-    }
-    @include breakpoint(medium down) {
-        .article-items {
-            padding-left:rem-calc(8);
-            padding-right:rem-calc(8);
-        }
+.no-js .writing {
+    .lazy {
+        display:none;
     }
 }
