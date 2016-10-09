@@ -73,12 +73,11 @@ $totalDuration: ($singleAnimationDuration * 8) + ($animationPause * 2);
     }
     &.animate-headers {
         .default {
-            opacity:0;
-            transition: opacity 300ms linear 5000ms;
+            animation: fadeIn 300ms linear 5000ms forwards reverse;
         }
         .alternative {
-            opacity:1;
-            transition: opacity 300ms linear 5300ms;
+            animation: fadeIn 300ms linear 5400ms forwards;
+
         }
     }
     &.exit {

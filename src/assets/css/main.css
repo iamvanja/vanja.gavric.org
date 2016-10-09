@@ -3741,17 +3741,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* line 75, ../scss/site/components/_loader.scss */
 .loader.animate-headers .default {
-  opacity: 0;
-  -webkit-transition: opacity 300ms linear 5000ms;
-  transition: opacity 300ms linear 5000ms;
+  -webkit-animation: fadeIn 300ms linear 5000ms forwards reverse;
+          animation: fadeIn 300ms linear 5000ms forwards reverse;
 }
-/* line 79, ../scss/site/components/_loader.scss */
+/* line 78, ../scss/site/components/_loader.scss */
 .loader.animate-headers .alternative {
-  opacity: 1;
-  -webkit-transition: opacity 300ms linear 5300ms;
-  transition: opacity 300ms linear 5300ms;
+  -webkit-animation: fadeIn 300ms linear 5400ms forwards;
+          animation: fadeIn 300ms linear 5400ms forwards;
 }
-/* line 84, ../scss/site/components/_loader.scss */
+/* line 83, ../scss/site/components/_loader.scss */
 .loader.exit {
   border-width: 3.125rem;
   -webkit-transform: translate3d(-100%, 0, 0);

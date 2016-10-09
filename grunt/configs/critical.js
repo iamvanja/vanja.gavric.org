@@ -21,11 +21,18 @@ module.exports = {
                     height: 960
                 }
             ],
+            cache: false,
             inline: true,
+            // @todo: research why extract does not work
             extract: true,
-            minify: true,
+            minify: false,
             include: [
-                /^\.loader/
+                /^\.loader/,
+            ],
+            ignore: [
+                /select/,
+                /.writing/,
+                ".index .back-to-top"
             ],
         },
         src: "build/index.html",
