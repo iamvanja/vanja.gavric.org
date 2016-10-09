@@ -5100,7 +5100,11 @@ h1, h2, h3, h4, h5, h6 {
 .footer .container {
   width: 100%;
 }
-/* line 19, ../scss/site/components/_footer.scss */
+/* line 18, ../scss/site/components/_footer.scss */
+.footer .container.info {
+  font-size: 0.75rem;
+}
+/* line 21, ../scss/site/components/_footer.scss */
 .footer .container.links {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5111,35 +5115,35 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
 }
-/* line 22, ../scss/site/components/_footer.scss */
+/* line 24, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container {
   padding: 0 0.938rem;
   margin: 0.313rem 0;
   width: 33.33%;
 }
-/* line 26, ../scss/site/components/_footer.scss */
+/* line 28, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a {
   color: #fff;
 }
-/* line 28, ../scss/site/components/_footer.scss */
+/* line 30, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a:hover {
   color: #1ccdaa;
 }
-/* line 30, ../scss/site/components/_footer.scss */
+/* line 32, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a:hover span {
   color: #fff;
 }
-/* line 34, ../scss/site/components/_footer.scss */
+/* line 36, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a span {
   color: #1ccdaa;
 }
-/* line 38, ../scss/site/components/_footer.scss */
+/* line 40, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container.site-link {
   border: 1px solid #98afc6;
   border-width: 0 1px;
 }
 @media screen and (max-width: 63.938em) {
-  /* line 47, ../scss/site/components/_footer.scss */
+  /* line 49, ../scss/site/components/_footer.scss */
   .footer .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -5147,23 +5151,22 @@ h1, h2, h3, h4, h5, h6 {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  /* line 51, ../scss/site/components/_footer.scss */
+  /* line 53, ../scss/site/components/_footer.scss */
   .footer .container.info {
     padding: 0.938rem 1.875rem;
     padding-bottom: 0.563rem;
-    font-size: 1.063rem;
   }
-  /* line 56, ../scss/site/components/_footer.scss */
+  /* line 57, ../scss/site/components/_footer.scss */
   .footer .container.links {
     font-size: 0.875rem;
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 64, ../scss/site/components/_footer.scss */
+  /* line 65, ../scss/site/components/_footer.scss */
   .footer .container.info {
     text-align: left;
   }
-  /* line 67, ../scss/site/components/_footer.scss */
+  /* line 68, ../scss/site/components/_footer.scss */
   .footer .container.links {
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
