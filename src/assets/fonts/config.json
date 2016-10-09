@@ -101,6 +101,30 @@
       "css": "play-circled",
       "code": 59397,
       "src": "elusive"
+    },
+    {
+      "uid": "b013f6403e5ab0326614e68d1850fd6b",
+      "css": "fullscreen-on",
+      "code": 61618,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3c24ee33c9487bbf18796ca6dffa1905",
+      "css": "fullscreen-off",
+      "code": 59398,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "705a184307d39acdb41b595fef478416",
+      "css": "prev-circled",
+      "code": 59399,
+      "src": "elusive"
+    },
+    {
+      "uid": "b9589ab3313e83200f5e16e1c0c7cfa1",
+      "css": "next-circled",
+      "code": 59400,
+      "src": "elusive"
     }
   ]
 }
