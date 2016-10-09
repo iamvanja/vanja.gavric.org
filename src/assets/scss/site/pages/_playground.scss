@@ -14,9 +14,6 @@
             }
         }
     }
-    .main-nav {
-        position:relative;
-    }
     h1 {
         margin-top:0;
         padding-top:10px;
@@ -101,6 +98,13 @@
 
     .back-to-top {
         z-index:11;
+    }
+
+
+    @include breakpoint(large down) {
+        .main-nav {
+            position:relative;
+        }
     }
 
     @include breakpoint(small down) {

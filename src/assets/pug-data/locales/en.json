@@ -23,7 +23,8 @@
         "loadingAlt": "Almost there..."
     },
     "mainNav": {
-        "logoTitle": "If you click it, the page will refresh."
+        "logoTitle": "If you click it, the page will refresh.",
+        "logoTitleNonIndex": "Click to go back to home."
     },
     "header": {
         "hi": "Hi",
