@@ -30,6 +30,8 @@ $main-nav-anchor-bg-hover: darken($main-nav-anchor-bg, 4%);
 $main-nav-anchor-bg-active: darken($main-nav-anchor-bg, 10%);
 
 // developer
+$developer-bg: darken($asphalt, 5%);
+$developer-text-accent: darken(#fff, 40%);
 $technology-label-map: (
     front-end: (
         background-color: $skin,
@@ -68,6 +70,10 @@ $technology-label-map: (
         border-color:darken($brown, 25%)
     ),
 );
+
+// footer
+$footer-bg: $asphalt;
+$footer-text-color: darken(#fff, 40%);
 
 // error-page
 $error-page-bg: darken($purple, 5%);

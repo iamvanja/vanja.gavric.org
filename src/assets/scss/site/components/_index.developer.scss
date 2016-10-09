@@ -1,15 +1,14 @@
 .main-article.developer {
-    $bg: darken($asphalt, 5%);
-    background-color: $bg;
+    background-color: $developer-bg;
     .article-icon {
-        color:lighten($bg,30%);
+        color:$developer-text-accent;
     }
     h2 {
         margin-bottom:0;
         line-height: 1.2;
         &.subheader {
             font-size:rem-calc(28);
-            color:lighten($bg,30%);
+            color:$developer-text-accent;
             margin-bottom: rem-calc(20);
         }
     }
