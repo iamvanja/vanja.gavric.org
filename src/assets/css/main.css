@@ -4662,7 +4662,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 46, ../scss/site/components/_index.photography.scss */
 .main-article.photography .paused-message {
   position: absolute;
-  top: 0;
+  bottom: 0;
   z-index: 1;
   width: 100%;
   font-size: 0.75rem;
