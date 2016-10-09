@@ -1,23 +1,29 @@
-- var navBase = currentPage.name === "index" ? "" : "/"
+- var navBase = currentPage.name === "index" ? "" : "index.html"
+- var logoTitle = $i18n.mainNav[ currentPage.name === "index" ? "logoTitle" : "logoTitleNonIndex" ]
 nav#main-nav.main-nav
-    a#logo.logo(href="/", title="Vanja Gavrić logo. " + $i18n.mainNav.logoTitle)
-        span.circle
-            | VG
-        span.back
-            | &larr;
+    a#logo.logo(href="index.html", title="Vanja Gavrić logo. " + logoTitle)
+        span.wrap
+            span.circle
+                | VG
+            span.back
+                | &larr;
 
     ul
         li.developer
             a(href=navBase + "#developer", title="Developer.")
                 i.icon-code
+                span.text Developer
         li.photography
             a(href=navBase + "#photography", title= $i18n.general.photography + ".")
                 i.icon-camera
+                span.text= $i18n.general.photography
         li.writing
             a(href=navBase + "#writing", title= $i18n.general.writing + ".")
                 i.icon-feather
+                span.text= $i18n.general.writing
         li.contact
             a(href=navBase + "#contact", title= $i18n.general.contact + ".")
                 i.icon-paper-plane
+                span.text= $i18n.general.contact
 
 #top.top-anchor

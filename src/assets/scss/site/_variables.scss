@@ -17,6 +17,19 @@ $media-phone: "only screen and (max-width : 480px)";
 $footer-height: 86px;
 $green:$green-sea;
 $global-rounded: 1000px;
+
+// main-nav
+$main-nav-color: #fff;
+$main-nav-logo-bg: $green-sea;
+$main-nav-logo-color: darken($main-nav-logo-bg, 20%);
+$main-nav-logo-border-color: darken($main-nav-logo-bg, 20%);
+$main-nav-logo-wrap-size: 58;
+$main-nav-anchor-bg: $asphalt;
+$main-nav-anchor-border-color: darken($main-nav-anchor-bg, 20%);
+$main-nav-anchor-bg-hover: darken($main-nav-anchor-bg, 4%);
+$main-nav-anchor-bg-active: darken($main-nav-anchor-bg, 10%);
+
+// developer
 $technology-label-map: (
     front-end: (
         background-color: $skin,
@@ -55,4 +68,6 @@ $technology-label-map: (
         border-color:darken($brown, 25%)
     ),
 );
+
+
 
