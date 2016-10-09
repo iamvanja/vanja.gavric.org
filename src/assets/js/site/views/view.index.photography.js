@@ -58,16 +58,46 @@
 
                 $backstretchEl.backstretch(prepareImages(imagesArr), options);
 
-                $(ui.el).on("click", function(){
+                $(ui.el).on("click", function(e){
+                    e.preventDefault();
                     var $el = $(this),
+                        $target = $(e.target),
                         pausedClass = "paused",
                         playingClass = "playing",
                         isPaused = $el.is("."+pausedClass);
 
-                    $el.toggleClass(pausedClass, !isPaused);
-                    $el.toggleClass(playingClass, isPaused);
+                    if ($target.is(".full-screen-control")) {
+                        var baseClassName = "icon-fullscreen-";
+                        // running in the blind here, but there does not seem to be a reliable/trivial method
+                        // to figure out the fullscreen state
+                        var isEnabled = $target.hasClass(baseClassName+"on");
 
-                    $backstretchEl.backstretch(isPaused ? "resume" : "pause");
+                        // trigger fullscreen or close it
+                        site.views.run("common", "fullScreen" + (isEnabled ? "Request" : "Exit"), {element: this});
+
+                        // trigger resize just in case
+                        $backstretchEl.backstretch("resize");
+
+                        // take care of the presentation
+                        $target.toggleClass(baseClassName+"on", !isEnabled)
+                                .toggleClass(baseClassName+"off", isEnabled);
+
+                        // @todo: hide headers
+                    }
+                    else if ($target.is(".direction-control")) {
+                        var direction = $target.attr("data-direction");
+                        $backstretchEl.backstretch(direction);
+
+                        $el.removeClass("prev next");
+                        this.getClientRects(); // trigger layout
+                        $el.addClass(direction);
+                    }
+                    else {
+                        $el.toggleClass(pausedClass, !isPaused)
+                            .toggleClass(playingClass, isPaused);
+
+                        $backstretchEl.backstretch(isPaused ? "resume" : "pause");
+                    }
                 });
             }
             else {

@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.3.1
- * Build http://modernizr.com/download?-cssanimations-cssfilters-csstransforms-csstransforms3d-csstransitions-fontface-touchevents-webp-domprefixes-mq-prefixed-prefixedcss-prefixedcssvalue-prefixes-printshiv-setclasses-testallprops-testprop-teststyles-dontmin
+ * Build http://modernizr.com/download?-cssanimations-cssfilters-csstransforms-csstransforms3d-csstransitions-fontface-fullscreen-touchevents-webp-domprefixes-mq-prefixed-prefixedcss-prefixedcssvalue-prefixes-printshiv-setclasses-testallprops-testprop-teststyles-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -2315,6 +2315,26 @@ Tests for all forms of webp support (lossless, lossy, alpha, and animated)..
 
   });
 
+
+/*!
+{
+  "name": "Fullscreen API",
+  "property": "fullscreen",
+  "caniuse": "fullscreen",
+  "notes": [{
+    "name": "MDN documentation",
+    "href": "https://developer.mozilla.org/en/API/Fullscreen"
+  }],
+  "polyfills": ["screenfulljs"],
+  "builderAliases": ["fullscreen_api"]
+}
+!*/
+/* DOC
+Detects support for the ability to make the current website take over the user's entire screen
+*/
+
+  // github.com/Modernizr/Modernizr/issues/739
+  Modernizr.addTest('fullscreen', !!(prefixed('exitFullscreen', document, false) || prefixed('cancelFullScreen', document, false)));
 
 
   // Run each test
@@ -12582,6 +12602,36 @@ return jQuery;
                     });
                 });
             },
+            // https://davidwalsh.name/fullscreen
+            // https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
+           fullScreenRequest: function(options) {
+                if (options.element.requestFullscreen) {
+                    options.element.requestFullscreen();
+                }
+                else if (options.element.mozRequestFullScreen) {
+                    options.element.mozRequestFullScreen();
+                }
+                else if (options.element.webkitRequestFullscreen) {
+                    options.element.webkitRequestFullscreen();
+                }
+                else if (options.element.msRequestFullscreen) {
+                    options.element.msRequestFullscreen();
+                }
+            },
+            fullScreenExit: function() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+                else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                }
+                else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+                else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            },
         };
 
     site.views.register(viewName, exports);
@@ -12707,6 +12757,9 @@ return jQuery;
                 animateOnScroll: {
                     selector: ".spy:not(."+ processedClass +")",
                 },
+                photography: {
+                    selector: "#photography",
+                },
                 // parallax: {
                 //     selector: "#photography .backstretch-wrap",
                 // },
@@ -12716,6 +12769,7 @@ return jQuery;
         cachedUi = {},
         previousScrollTop = 0,
         scrollDirection = "down",
+        photographyPlayTimeout = null,
         updateMainNavPerSection = function(scrollTop, isIntroShown) {
             var lastArticleId = cachedUi.articles[cachedUi.articles.length-1].id,
                 activeArticleClass = "";
@@ -12767,6 +12821,25 @@ return jQuery;
                 }
             });
         },
+        togglePhotographyHeadersVisibility = function(scrollTop) {
+            var el = cachedUi.photography,
+                isTopVisible = scrollTop + cachedUi._general.viewport.height > el.offset.top,
+                isBottomVisible = scrollTop < el.offset.bottom,
+                isVisible = isTopVisible && isBottomVisible;
+
+            if (isVisible && !photographyPlayTimeout) {
+                console.log("timer started");
+                photographyPlayTimeout = window.setTimeout(function(){
+                    el.$el.addClass("hide-headers");
+                }, 10*1000);
+            }
+            else if (!isVisible && photographyPlayTimeout) {
+                console.log("timer cleared");
+                window.clearTimeout(photographyPlayTimeout);
+                photographyPlayTimeout = null;
+                el.$el.removeClass("hide-headers");
+            }
+        },
         // cssTransform = Modernizr.prefixed("transform"),
         // doParallax = function(scrollTop) {
         //     var element = cachedUi.parallax,
@@ -12798,6 +12871,9 @@ return jQuery;
 
             // animations on scroll
             animateOnScroll(scrollTop);
+
+            // hide headers when visible after timeout
+            togglePhotographyHeadersVisibility(scrollTop);
 
             // do parallax
             // doParallax(scrollTop);
@@ -13038,16 +13114,46 @@ return jQuery;
 
                 $backstretchEl.backstretch(prepareImages(imagesArr), options);
 
-                $(ui.el).on("click", function(){
+                $(ui.el).on("click", function(e){
+                    e.preventDefault();
                     var $el = $(this),
+                        $target = $(e.target),
                         pausedClass = "paused",
                         playingClass = "playing",
                         isPaused = $el.is("."+pausedClass);
 
-                    $el.toggleClass(pausedClass, !isPaused);
-                    $el.toggleClass(playingClass, isPaused);
+                    if ($target.is(".full-screen-control")) {
+                        var baseClassName = "icon-fullscreen-";
+                        // running in the blind here, but there does not seem to be a reliable/trivial method
+                        // to figure out the fullscreen state
+                        var isEnabled = $target.hasClass(baseClassName+"on");
 
-                    $backstretchEl.backstretch(isPaused ? "resume" : "pause");
+                        // trigger fullscreen or close it
+                        site.views.run("common", "fullScreen" + (isEnabled ? "Request" : "Exit"), {element: this});
+
+                        // trigger resize just in case
+                        $backstretchEl.backstretch("resize");
+
+                        // take care of the presentation
+                        $target.toggleClass(baseClassName+"on", !isEnabled)
+                                .toggleClass(baseClassName+"off", isEnabled);
+
+                        // @todo: hide headers
+                    }
+                    else if ($target.is(".direction-control")) {
+                        var direction = $target.attr("data-direction");
+                        $backstretchEl.backstretch(direction);
+
+                        $el.removeClass("prev next");
+                        this.getClientRects(); // trigger layout
+                        $el.addClass(direction);
+                    }
+                    else {
+                        $el.toggleClass(pausedClass, !isPaused)
+                            .toggleClass(playingClass, isPaused);
+
+                        $backstretchEl.backstretch(isPaused ? "resume" : "pause");
+                    }
                 });
             }
             else {
