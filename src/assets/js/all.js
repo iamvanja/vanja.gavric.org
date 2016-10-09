@@ -12825,19 +12825,20 @@ return jQuery;
             var el = cachedUi.photography,
                 isTopVisible = scrollTop + cachedUi._general.viewport.height > el.offset.top,
                 isBottomVisible = scrollTop < el.offset.bottom,
-                isVisible = isTopVisible && isBottomVisible;
+                isVisible = isTopVisible && isBottomVisible,
+                classToApply = site.views["index.photography"].classNames.hideHeaders;
 
             if (isVisible && !photographyPlayTimeout) {
                 console.log("timer started");
                 photographyPlayTimeout = window.setTimeout(function(){
-                    el.$el.addClass("hide-headers");
+                    el.$el.addClass(classToApply);
                 }, 10*1000);
             }
             else if (!isVisible && photographyPlayTimeout) {
                 console.log("timer cleared");
                 window.clearTimeout(photographyPlayTimeout);
                 photographyPlayTimeout = null;
-                el.$el.removeClass("hide-headers");
+                el.$el.removeClass(classToApply);
             }
         },
         // cssTransform = Modernizr.prefixed("transform"),
@@ -13064,6 +13065,9 @@ return jQuery;
         },
         $backstretchEl = $(ui.el).find(ui.backstretchEl),
         partialImagesPath = "images/photos/",
+        classNames = {
+            hideHeaders: "hide-headers",
+        },
         initBackstretch = function(){
             if ($.fn.backstretch){
                 var imagesArr = [
@@ -13137,8 +13141,7 @@ return jQuery;
                         // take care of the presentation
                         $target.toggleClass(baseClassName+"on", !isEnabled)
                                 .toggleClass(baseClassName+"off", isEnabled);
-
-                        // @todo: hide headers
+                        $el.toggleClass(classNames.hideHeaders, isEnabled);
                     }
                     else if ($target.is(".direction-control")) {
                         var direction = $target.attr("data-direction");
@@ -13176,6 +13179,7 @@ return jQuery;
                     initBackstretch();
                 });
             },
+            classNames: classNames,
         };
 
     site.views.register(viewName, exports);
