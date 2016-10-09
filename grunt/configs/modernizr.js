@@ -15,7 +15,8 @@ module.exports = function(grunt, data) {
                 "csstransforms",
                 "csstransforms3d",
                 "csstransitions",
-                "webp"
+                "webp",
+                "fullscreen",
             ],
             "options": [
                 "domPrefixes",
