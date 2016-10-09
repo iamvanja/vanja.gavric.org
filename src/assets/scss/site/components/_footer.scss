@@ -15,7 +15,9 @@
     }
     .container {
         width:100%;
-        // &.info {}
+        &.info {
+            font-size: rem-calc(12);
+        }
         &.links {
             display:flex;
             align-items: center;
@@ -51,7 +53,6 @@
             &.info {
                 padding: rem-calc(15) rem-calc(30);
                 padding-bottom: rem-calc(9);
-                font-size: rem-calc(17);
             }
             &.links {
                 font-size: rem-calc(14);
