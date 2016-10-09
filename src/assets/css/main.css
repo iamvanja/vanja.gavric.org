@@ -4737,7 +4737,7 @@ h1, h2, h3, h4, h5, h6 {
           transform: scale(1.1);
 }
 /* line 32, ../scss/site/components/_index.writing.scss */
-.main-article.writing .articles .article-items div a img {
+.main-article.writing .articles .article-items div a img.loaded {
   width: 100%;
   max-width: 7.25rem;
 }
