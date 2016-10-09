@@ -5613,3 +5613,49 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
   }
 }
+
+/* line 1, ../scss/site/pages/_error-page.scss */
+.error-page {
+  background: #5e47ea;
+  min-height: 18.75rem;
+}
+/* line 4, ../scss/site/pages/_error-page.scss */
+.error-page .container {
+  width: 100%;
+  position: relative;
+}
+/* line 8, ../scss/site/pages/_error-page.scss */
+.error-page h2 {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 11, ../scss/site/pages/_error-page.scss */
+.error-page hr {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+/* line 14, ../scss/site/pages/_error-page.scss */
+.error-page ul.reasons {
+  padding-left: 2.5rem;
+  line-height: 1.4;
+}
+@media only screen and (min-height: 370px) {
+  /* line 19, ../scss/site/pages/_error-page.scss */
+  .error-page .container {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+  }
+}
+@media screen and (max-width: 74.938em) {
+  /* line 26, ../scss/site/pages/_error-page.scss */
+  .error-page .main-nav {
+    position: relative;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 31, ../scss/site/pages/_error-page.scss */
+  .error-page .container {
+    width: 80%;
+  }
+}
