@@ -21,6 +21,9 @@
                 animateOnScroll: {
                     selector: ".spy:not(."+ processedClass +")",
                 },
+                photography: {
+                    selector: "#photography",
+                },
                 // parallax: {
                 //     selector: "#photography .backstretch-wrap",
                 // },
@@ -30,6 +33,7 @@
         cachedUi = {},
         previousScrollTop = 0,
         scrollDirection = "down",
+        photographyPlayTimeout = null,
         updateMainNavPerSection = function(scrollTop, isIntroShown) {
             var lastArticleId = cachedUi.articles[cachedUi.articles.length-1].id,
                 activeArticleClass = "";
@@ -81,6 +85,25 @@
                 }
             });
         },
+        togglePhotographyHeadersVisibility = function(scrollTop) {
+            var el = cachedUi.photography,
+                isTopVisible = scrollTop + cachedUi._general.viewport.height > el.offset.top,
+                isBottomVisible = scrollTop < el.offset.bottom,
+                isVisible = isTopVisible && isBottomVisible;
+
+            if (isVisible && !photographyPlayTimeout) {
+                console.log("timer started");
+                photographyPlayTimeout = window.setTimeout(function(){
+                    el.$el.addClass("hide-headers");
+                }, 10*1000);
+            }
+            else if (!isVisible && photographyPlayTimeout) {
+                console.log("timer cleared");
+                window.clearTimeout(photographyPlayTimeout);
+                photographyPlayTimeout = null;
+                el.$el.removeClass("hide-headers");
+            }
+        },
         // cssTransform = Modernizr.prefixed("transform"),
         // doParallax = function(scrollTop) {
         //     var element = cachedUi.parallax,
@@ -112,6 +135,9 @@
 
             // animations on scroll
             animateOnScroll(scrollTop);
+
+            // hide headers when visible after timeout
+            togglePhotographyHeadersVisibility(scrollTop);
 
             // do parallax
             // doParallax(scrollTop);

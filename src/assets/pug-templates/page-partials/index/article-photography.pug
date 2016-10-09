@@ -4,6 +4,9 @@ article.main-article.photography#photography(role="article", aria-labelledby="ma
         span.click= $i18n.general.click 
         span.tap= $i18n.general.tap 
         |  to resume.
+    i.full-screen-control.icon-fullscreen-on
+    .direction-control(data-direction="prev")
+    .direction-control(data-direction="next")
     div.row
         div.large-12.columns
             h2.heading
@@ -18,6 +21,8 @@ article.main-article.photography#photography(role="article", aria-labelledby="ma
     .icon-container
         i.icon.icon-pause-circled
         i.icon.icon-play-circled
+        i.icon.icon-prev-circled
+        i.icon.icon-next-circled
 
     div.backstretch-wrap
         //- empty

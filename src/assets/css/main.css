@@ -3233,65 +3233,89 @@ select[multiple] {
 
 /* '' */
 /* line 64, ../scss/site/globals/fonts/_icons.scss */
+.icon-fullscreen-off:before {
+  content: '\e806';
+}
+
+/* '' */
+/* line 65, ../scss/site/globals/fonts/_icons.scss */
+.icon-prev-circled:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 66, ../scss/site/globals/fonts/_icons.scss */
+.icon-next-circled:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 67, ../scss/site/globals/fonts/_icons.scss */
 .icon-pause-circled:before {
   content: '\e809';
 }
 
 /* '' */
-/* line 65, ../scss/site/globals/fonts/_icons.scss */
+/* line 68, ../scss/site/globals/fonts/_icons.scss */
 .icon-camera:before {
   content: '\e80a';
 }
 
 /* '' */
-/* line 66, ../scss/site/globals/fonts/_icons.scss */
+/* line 69, ../scss/site/globals/fonts/_icons.scss */
 .icon-feather:before {
   content: '\e80b';
 }
 
 /* '' */
-/* line 67, ../scss/site/globals/fonts/_icons.scss */
+/* line 70, ../scss/site/globals/fonts/_icons.scss */
 .icon-code:before {
   content: '\e80c';
 }
 
 /* '' */
-/* line 68, ../scss/site/globals/fonts/_icons.scss */
+/* line 71, ../scss/site/globals/fonts/_icons.scss */
 .icon-paper-plane:before {
   content: '\e80d';
 }
 
 /* '' */
-/* line 69, ../scss/site/globals/fonts/_icons.scss */
+/* line 72, ../scss/site/globals/fonts/_icons.scss */
 .icon-fivehundredpx:before {
   content: '\e80e';
 }
 
 /* '' */
-/* line 70, ../scss/site/globals/fonts/_icons.scss */
+/* line 73, ../scss/site/globals/fonts/_icons.scss */
 .icon-flickr:before {
   content: '\e80f';
 }
 
 /* '' */
-/* line 71, ../scss/site/globals/fonts/_icons.scss */
+/* line 74, ../scss/site/globals/fonts/_icons.scss */
 .icon-skype:before {
   content: '\e810';
 }
 
 /* '' */
-/* line 72, ../scss/site/globals/fonts/_icons.scss */
+/* line 75, ../scss/site/globals/fonts/_icons.scss */
 .icon-up-circled:before {
   content: '\f0aa';
 }
 
 /* '' */
-/* line 73, ../scss/site/globals/fonts/_icons.scss */
+/* line 76, ../scss/site/globals/fonts/_icons.scss */
 .icon-down-circled:before {
   content: '\f0ab';
 }
 
 /* '' */
+/* line 77, ../scss/site/globals/fonts/_icons.scss */
+.icon-fullscreen-on:before {
+  content: '\f0b2';
+}
+
+/* '' */
 @font-face {
   font-family: 'open_sansregular';
   src: url("../fonts/OpenSans-Regular-webfont.eot");
@@ -4615,7 +4639,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 /* line 20, ../scss/site/components/_index.photography.scss */
-.main-article.photography h2 span, .main-article.photography .paused-message {
+.main-article.photography h2 span, .main-article.photography .paused-message, .fullscreen .main-article.photography .full-screen-control {
   background: #3a3a3a;
   background: rgba(58, 58, 58, 0.8);
   padding: 0.5rem;
@@ -4666,7 +4690,7 @@ h1, h2, h3, h4, h5, h6 {
           transform-origin: center center;
 }
 /* line 71, ../scss/site/components/_index.photography.scss */
-.main-article.photography.paused .icon-pause-circled, .main-article.photography.playing .icon-play-circled {
+.main-article.photography.paused .icon-pause-circled, .main-article.photography.playing .icon-play-circled, .main-article.photography.prev .icon-prev-circled, .main-article.photography.next .icon-next-circled {
   visibility: visible;
   -webkit-animation: poputFade 500ms ease;
           animation: poputFade 500ms ease;
@@ -4676,18 +4700,103 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
   opacity: 1;
 }
-@media only screen and (max-width: 480px) {
-  /* line 91, ../scss/site/components/_index.photography.scss */
+/* line 100, ../scss/site/components/_index.photography.scss */
+.main-article.photography .heading,
+.main-article.photography .subheader {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 800ms linear, -webkit-transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+  transition: opacity 800ms linear, -webkit-transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+  transition: transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000), opacity 800ms linear;
+  transition: transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000), opacity 800ms linear, -webkit-transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+/* line 107, ../scss/site/components/_index.photography.scss */
+.main-article.photography.hide-headers .heading {
+  -webkit-transform: translate3d(-200%, 0, 0);
+          transform: translate3d(-200%, 0, 0);
+  opacity: 0;
+}
+/* line 111, ../scss/site/components/_index.photography.scss */
+.main-article.photography.hide-headers .subheader {
+  -webkit-transform: translate3d(200%, 0, 0);
+          transform: translate3d(200%, 0, 0);
+  opacity: 0;
+}
+/* line 116, ../scss/site/components/_index.photography.scss */
+.main-article.photography .full-screen-control,
+.main-article.photography .direction-control {
+  display: none;
+}
+@media screen and (max-width: 63.938em) {
+  /* line 122, ../scss/site/components/_index.photography.scss */
   .main-article.photography h2 {
     font-size: 1.875rem;
     padding-top: 10%;
     line-height: 1.6;
   }
-  /* line 95, ../scss/site/components/_index.photography.scss */
+  /* line 126, ../scss/site/components/_index.photography.scss */
   .main-article.photography h2.subheader {
     padding-top: 0;
     padding-bottom: 6%;
   }
+}
+
+/* line 134, ../scss/site/components/_index.photography.scss */
+.js .main-article.photography {
+  cursor: pointer;
+}
+/* line 136, ../scss/site/components/_index.photography.scss */
+.js .main-article.photography .direction-control {
+  display: block;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+@media screen and (max-width: 63.938em) {
+  /* line 136, ../scss/site/components/_index.photography.scss */
+  .js .main-article.photography .direction-control {
+    width: 25%;
+  }
+}
+/* line 146, ../scss/site/components/_index.photography.scss */
+.js .main-article.photography .direction-control[data-direction="prev"] {
+  left: 0;
+}
+/* line 149, ../scss/site/components/_index.photography.scss */
+.js .main-article.photography .direction-control[data-direction="next"] {
+  right: 0;
+}
+
+/* line 157, ../scss/site/components/_index.photography.scss */
+.fullscreen .main-article.photography:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+.fullscreen .main-article.photography:-moz-full-screen {
+  width: 100%;
+  height: 100%;
+}
+.fullscreen .main-article.photography:-ms-fullscreen {
+  width: 100%;
+  height: 100%;
+}
+.fullscreen .main-article.photography:fullscreen {
+  width: 100%;
+  height: 100%;
+}
+/* line 161, ../scss/site/components/_index.photography.scss */
+.fullscreen .main-article.photography .full-screen-control {
+  display: inline-block;
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  z-index: 5;
+  font-size: 1.25rem;
+  color: #b3b3b3;
 }
 
 /* line 1, ../scss/site/components/_index.writing.scss */

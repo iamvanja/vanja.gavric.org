@@ -85,6 +85,36 @@
                     });
                 });
             },
+            // https://davidwalsh.name/fullscreen
+            // https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
+           fullScreenRequest: function(options) {
+                if (options.element.requestFullscreen) {
+                    options.element.requestFullscreen();
+                }
+                else if (options.element.mozRequestFullScreen) {
+                    options.element.mozRequestFullScreen();
+                }
+                else if (options.element.webkitRequestFullscreen) {
+                    options.element.webkitRequestFullscreen();
+                }
+                else if (options.element.msRequestFullscreen) {
+                    options.element.msRequestFullscreen();
+                }
+            },
+            fullScreenExit: function() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+                else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                }
+                else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+                else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            },
         };
 
     site.views.register(viewName, exports);
