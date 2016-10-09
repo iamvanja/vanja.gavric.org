@@ -10,101 +10,109 @@
         partialImagesPath = "images/photos/",
         classNames = {
             hideHeaders: "hide-headers",
+            fullScreenControl: "full-screen-control",
+            iconFullScreenBase: "icon-fullscreen-",
+            directionControl: "direction-control",
+            paused: "paused",
+            playing: "playing",
+        },
+        backstretchImages = [
+            // "http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg", /* Paris opera */
+            {
+                url: "stuck-in-traffic",
+            },
+            {
+                url: "hana",
+            },
+            {
+                url: "big-ben",
+                alignY: 0.7,
+            },
+            {
+                url: "cat",
+                alignY: 0,
+            },
+            {
+                url: "double-rainbow-in-paris",
+            },
+            {
+                url: "autumn-in-zrinjevac",
+            },
+            {
+                url: "paris-sunset",
+            },
+            {
+                url: "flowers",
+            },
+            {
+                url: "tower-bridge",
+            },
+            {
+                url: "adriatic-sea",
+            },
+            {
+                url: "dijana",
+                alignY: 1,
+            },
+        ],
+        backstretchOptions = {
+            duration: 5000,
+            fade: 750,
+            preload: 1,
         },
         initBackstretch = function(){
             if ($.fn.backstretch){
-                var imagesArr = [
-                        {
-                            url: "stuck-in-traffic",
-                        },
-                        {
-                            url: "hana",
-                        },
-                        {
-                            url: "big-ben",
-                            alignY: 0.7,
-                        },
-                        {
-                            url: "cat",
-                            alignY: 0,
-                        },
-                        {
-                            url: "double-rainbow-in-paris",
-                        },
-                        {
-                            url: "autumn-in-zrinjevac",
-                        },
-                        {
-                            url: "paris-sunset",
-                        },
-                        {
-                            url: "flowers",
-                        },
-                        {
-                            url: "tower-bridge",
-                        },
-                        {
-                            url: "adriatic-sea",
-                        },
-                        {
-                            url: "dijana",
-                            alignY: 1,
-                        },
-                    ],
-                    options = {
-                        duration: 5000,
-                        fade: 750,
-                        preload: 1,
-                    };
+                // init backstrect plugin
+                $backstretchEl.backstretch(prepareImages(backstretchImages), backstretchOptions);
 
-                // "http://farm8.staticflickr.com/7035/6464821765_36a618a812_o.jpg", /* Paris opera */
-
-                $backstretchEl.backstretch(prepareImages(imagesArr), options);
-
-                $(ui.el).on("click", function(e){
-                    e.preventDefault();
-                    var $el = $(this),
-                        $target = $(e.target),
-                        pausedClass = "paused",
-                        playingClass = "playing",
-                        isPaused = $el.is("."+pausedClass);
-
-                    if ($target.is(".full-screen-control")) {
-                        var baseClassName = "icon-fullscreen-";
-                        // running in the blind here, but there does not seem to be a reliable/trivial method
-                        // to figure out the fullscreen state
-                        var isEnabled = $target.hasClass(baseClassName+"on");
-
-                        // trigger fullscreen or close it
-                        site.views.run("common", "fullScreen" + (isEnabled ? "Request" : "Exit"), {element: this});
-
-                        // trigger resize just in case
-                        $backstretchEl.backstretch("resize");
-
-                        // take care of the presentation
-                        $target.toggleClass(baseClassName+"on", !isEnabled)
-                                .toggleClass(baseClassName+"off", isEnabled);
-                        $el.toggleClass(classNames.hideHeaders, isEnabled);
-                    }
-                    else if ($target.is(".direction-control")) {
-                        var direction = $target.attr("data-direction");
-                        $backstretchEl.backstretch(direction);
-
-                        $el.removeClass("prev next");
-                        this.getClientRects(); // trigger layout
-                        $el.addClass(direction);
-                    }
-                    else {
-                        $el.toggleClass(pausedClass, !isPaused)
-                            .toggleClass(playingClass, isPaused);
-
-                        $backstretchEl.backstretch(isPaused ? "resume" : "pause");
-                    }
-                });
+                // init events
+                initEvents();
             }
             else {
                 console.warn("Backstretch init failed");
             }
+        },
+        initEvents = function(){
+            $(ui.el).on("click", function(e){
+                e.preventDefault();
+                var $el = $(this),
+                    $target = $(e.target);
+
+                if ($target.is("."+classNames.fullScreenControl)) {
+                    // running in the blind here, but there does not seem to be a reliable/trivial method
+                    // to figure out the fullscreen state
+                    var isEnabled = $target.hasClass(classNames.iconFullScreenBase+"on");
+
+                    // trigger fullscreen or close it
+                    site.views.run("common", "fullScreen" + (isEnabled ? "Request" : "Exit"), {element: this});
+
+                    // trigger resize just in case
+                    $backstretchEl.backstretch("resize");
+
+                    // take care of the presentation
+                    $target.toggleClass(classNames.iconFullScreenBase+"on", !isEnabled)
+                            .toggleClass(classNames.iconFullScreenBase+"off", isEnabled);
+
+                    window.setTimeout(function(){
+                        $el.toggleClass(classNames.hideHeaders, isEnabled);
+                    }, 3*1000);
+                }
+                else if ($target.is("."+classNames.directionControl)) {
+                    var direction = $target.attr("data-direction");
+                    $backstretchEl.backstretch(direction);
+
+                    $el.removeClass("prev next");
+                    this.getClientRects(); // trigger layout
+                    $el.addClass(direction);
+                }
+                else {
+                    var isPaused = $el.hasClass(classNames.paused);
+                    $el.toggleClass(classNames.paused, !isPaused)
+                        .toggleClass(classNames.playing, isPaused);
+
+                    $backstretchEl.backstretch(isPaused ? "resume" : "pause");
+                }
+            });
         },
         prepareImages = function(imagesArr){
             var fullImagesPath = site.settings.assetsUrl.local + partialImagesPath,
