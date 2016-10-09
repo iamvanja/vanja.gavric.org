@@ -13155,12 +13155,7 @@ return jQuery;
                     }, 3*1000);
                 }
                 else if ($target.is("."+classNames.directionControl)) {
-                    var direction = $target.attr("data-direction");
-                    $backstretchEl.backstretch(direction);
-
-                    $el.removeClass("prev next");
-                    this.getClientRects(); // trigger layout
-                    $el.addClass(direction);
+                    cycleThroughSlides($target.attr("data-direction"));
                 }
                 else {
                     var isPaused = $el.hasClass(classNames.paused);
@@ -13170,6 +13165,25 @@ return jQuery;
                     $backstretchEl.backstretch(isPaused ? "resume" : "pause");
                 }
             });
+
+            $(document).on("keydown", function(e){
+                switch (e.keyCode) {
+                    case 37:
+                        cycleThroughSlides("prev");
+                    break;
+                    case 39:
+                        cycleThroughSlides("next");
+                    break;
+                }
+            });
+        },
+        cycleThroughSlides = function(direction) {
+            var $el = $(ui.el);
+            $backstretchEl.backstretch(direction);
+
+            $el.removeClass("prev next");
+            $el[0].getClientRects(); // trigger layout
+            $el.addClass(direction);
         },
         prepareImages = function(imagesArr){
             var fullImagesPath = site.settings.assetsUrl.local + partialImagesPath,
