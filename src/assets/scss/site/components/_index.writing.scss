@@ -29,7 +29,7 @@
                     &:hover {
                         transform: scale(1.1);
                     }
-                    img {
+                    img.loaded {
                         width:100%;
                         max-width: rem-calc(116);
                     }

@@ -25,7 +25,7 @@ module.exports = {
             inline: true,
             // @todo: research why extract does not work
             extract: true,
-            minify: false,
+            minify: true,
             include: [
                 /^\.loader/,
             ],

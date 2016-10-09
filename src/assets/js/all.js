@@ -12570,12 +12570,16 @@ return jQuery;
                     isWebpSupported = $("html").hasClass("webp"),
                     src;
                 $el.find("img.lazy").each(function(){
-                    src = $(this).attr("data-lazysrc");
-                    if ($(this).attr("data-use-webp") === "true" && isWebpSupported) {
+                    var $this = $(this);
+                    src = $this.attr("data-lazysrc");
+                    if ($this.attr("data-use-webp") === "true" && isWebpSupported) {
                         src = src.replace(".jpg", ".webp");
                     }
 
-                    $(this).attr("src", src);
+                    $this.attr("src", src);
+                    $this.on("load", function(){
+                        $this.addClass("loaded");
+                    });
                 });
             },
         };
