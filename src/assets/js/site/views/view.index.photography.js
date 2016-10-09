@@ -8,6 +8,9 @@
         },
         $backstretchEl = $(ui.el).find(ui.backstretchEl),
         partialImagesPath = "images/photos/",
+        classNames = {
+            hideHeaders: "hide-headers",
+        },
         initBackstretch = function(){
             if ($.fn.backstretch){
                 var imagesArr = [
@@ -81,8 +84,7 @@
                         // take care of the presentation
                         $target.toggleClass(baseClassName+"on", !isEnabled)
                                 .toggleClass(baseClassName+"off", isEnabled);
-
-                        // @todo: hide headers
+                        $el.toggleClass(classNames.hideHeaders, isEnabled);
                     }
                     else if ($target.is(".direction-control")) {
                         var direction = $target.attr("data-direction");
@@ -120,6 +122,7 @@
                     initBackstretch();
                 });
             },
+            classNames: classNames,
         };
 
     site.views.register(viewName, exports);

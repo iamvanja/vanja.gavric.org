@@ -89,19 +89,20 @@
             var el = cachedUi.photography,
                 isTopVisible = scrollTop + cachedUi._general.viewport.height > el.offset.top,
                 isBottomVisible = scrollTop < el.offset.bottom,
-                isVisible = isTopVisible && isBottomVisible;
+                isVisible = isTopVisible && isBottomVisible,
+                classToApply = site.views["index.photography"].classNames.hideHeaders;
 
             if (isVisible && !photographyPlayTimeout) {
                 console.log("timer started");
                 photographyPlayTimeout = window.setTimeout(function(){
-                    el.$el.addClass("hide-headers");
+                    el.$el.addClass(classToApply);
                 }, 10*1000);
             }
             else if (!isVisible && photographyPlayTimeout) {
                 console.log("timer cleared");
                 window.clearTimeout(photographyPlayTimeout);
                 photographyPlayTimeout = null;
-                el.$el.removeClass("hide-headers");
+                el.$el.removeClass(classToApply);
             }
         },
         // cssTransform = Modernizr.prefixed("transform"),
