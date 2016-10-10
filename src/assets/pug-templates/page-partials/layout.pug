@@ -1,6 +1,10 @@
 doctype html
 html(class="no-js", lang=$i18n.lang, locale=$localeName)
     block vars
+    - 
+        if (currentPage.wantAbsoluteAssets) {
+            assetsUrl.local = "/" + assetsUrl.local;
+        }
     include head.pug
 
     body(class=currentPage ? currentPage.customClass || currentPage.name : null, id=currentPage.id)
