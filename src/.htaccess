@@ -323,6 +323,13 @@ AddDefaultCharset utf-8
 
     # (5)
     # RewriteOptions <options>
+    # Redirect 301 /oldfile.htm /newfile.htm
+
+    # redirect the old url structure to the new one
+    Redirect 301 /hr /
+    Redirect 301 /en /
+    Redirect 301 /playground /playground.html
+
 
     # (6)
     RewriteCond %{HTTPS} =on
