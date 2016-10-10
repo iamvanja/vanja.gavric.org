@@ -325,6 +325,11 @@ AddDefaultCharset utf-8
     # RewriteOptions <options>
     # Redirect 301 /oldfile.htm /newfile.htm
 
+    # enforce a no-trailing-slash policy.
+    # http://stackoverflow.com/questions/21417263/htaccess-add-remove-trailing-slash-from-url
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
     # redirect the old url structure to the new one
     Redirect 301 /hr /
     Redirect 301 /en /
