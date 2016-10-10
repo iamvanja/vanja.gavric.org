@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "restricted area"
-AuthUserFile /home/vanja/public_html/vanja.gavric.org/1/.htpasswd
-require valid-user

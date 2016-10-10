@@ -1,0 +1,6 @@
+mixin article-item(pdfFile, imgFile, alt, h, w)
+    div.column
+        a(href=assetsUrl.local + "downloads/pdf/"+ pdfFile)
+            img.lazy(src=assetsUrl.local + "images/pixel.gif", data-lazysrc=assetsUrl.local + "images/articles/"+imgFile, alt=alt, height=h, width=w, data-use-webp="true")
+            noscript
+                img(src=assetsUrl.local + "images/articles/"+imgFile, alt=alt, height=h, weight=w)

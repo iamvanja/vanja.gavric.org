@@ -1,0 +1,26 @@
+extends ../page-partials/layout.pug
+
+block vars
+    -
+        var currentPage = {
+            name: "index",
+            customClass: "index",
+            id: "landing-normal"
+        }
+
+block body
+    include ../page-partials/index/main-nav.pug
+    include ../page-partials/index/header.pug
+
+    main(role="main")
+        section#content.content
+            include ../page-partials/index/article-developer.pug
+            include ../page-partials/index/article-photography.pug
+            include ../page-partials/index/article-writing.pug
+            include ../page-partials/index/article-contact.pug
+            include ../page-partials/index/footer.pug
+
+            nav
+                a#back-to-top.back-to-top(href="#top")
+                    i.icon-up-circled
+    include ../components/loader.pug

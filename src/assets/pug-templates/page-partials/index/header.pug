@@ -1,0 +1,27 @@
+header#intro.intro
+    //- nav#lang-selection.lang-selection.fadeIn.animation-1s.animationDelay-4s(role="navigation")
+        ul
+            li
+                a(href="/hr") HR
+            li
+                a(href="/en") EN
+
+    .main-intro-content
+        h1
+            span.hi
+                =$i18n.header.hi + "."
+            br
+            span.i-am
+                =$i18n.header.iAm + " Vanja."
+            br
+            picture
+                - var srcset = assetsUrl.local + "images/profile.jpg, " + assetsUrl.local + "images/profile@2x.jpg 2x"
+                source(srcset=srcset.replace(/.jpg/g, ".webp") type="image/webp")
+                source(srcset=srcset, type="image/jpeg")
+                img.profile-pic(src=srcset.split(",")[0], width="110", height="110", alt="Vanja Gavrić profile photo")
+
+    .scroll-down
+        a(href="#developer")
+            span
+                =$i18n.header.scrollDown
+            i.icon-down-circled

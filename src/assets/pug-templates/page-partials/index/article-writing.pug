@@ -1,0 +1,35 @@
+include ../../components/article-item
+
+article.main-article.writing#writing(role="article", aria-labelledby="main-title-writing")
+    div.row
+        div.large-12.columns
+            div
+                .article-icon
+                    i.icon-feather
+                        
+                h2.no-margin-bottom#main-title-writing= $i18n.articleWriting.title
+
+                h2.subheader.no-margin-top
+                    | (
+                    span.click= $i18n.general.click
+                    span.tap= $i18n.general.tap
+                    | 
+                    = $i18n.articleWriting.subtitle + ")"
+
+            div.articles#articles
+                div.article-items.row.small-up-4.spy(data-spy-class="fade-in-bottom", data-spy-offset="150")
+                    +article-item("mobil-92-iphone.pdf", "iphone.jpg", $i18n.articleWriting.articleiPhone, 160, 117)
+
+                    +article-item("mobil-35-motorola.pdf", "motorola.jpg", $i18n.articleWriting.articleMotorola, 160, 119)
+
+                    +article-item("mobil-37-microsoft.pdf", "ms.jpg", $i18n.articleWriting.articleMs, 160, 120)
+
+                    +article-item("mreza-nokia.pdf", "nokia.jpg", $i18n.articleWriting.articleNokia, 160, 114)
+
+                    +article-item("mobil-37-stungun.pdf", "stungun.jpg", $i18n.articleWriting.articleStungun, 160, 118)
+
+                    +article-item("mobil-40-41-treo.pdf", "treo.jpg", $i18n.articleWriting.articleTreo, 160, 120)
+
+                    +article-item("mobil-75-usa.pdf", "usa.jpg", $i18n.articleWriting.articleUSA, 160, 118)
+
+                    +article-item("mobil-40-41-alcatel.pdf", "alcatel.jpg", $i18n.articleWriting.articleAlcatel, 160, 119)

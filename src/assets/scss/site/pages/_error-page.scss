@@ -1,0 +1,36 @@
+.error-page {
+    background:$error-page-bg;
+    min-height: rem-calc(300);
+    .container {
+        width:100%;
+        position:relative;
+    }
+    h2 {
+        color:rgba(0,0,0,0.3);
+    }
+    hr {
+        border-color: rgba(0,0,0,0.2);
+    }
+    ul.reasons {
+        padding-left: rem-calc(40);
+        line-height: 1.4;
+    }
+    @media only screen and (min-height: 370px) {
+        .container {
+            top: 50%;
+            transform: translateY(-50%);
+            position:absolute;
+        }
+    }
+    @include breakpoint(large down) {
+        .main-nav {
+            position:relative;
+        }
+    }
+    @include breakpoint(xlarge up) {
+        .container {
+            width: 80%;
+        }
+    }
+}
+

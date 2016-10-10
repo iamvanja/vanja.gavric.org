@@ -1,0 +1,44 @@
+article.main-article.developer#developer(role="article", aria-labelledby="main-title-dev")
+    div
+        div.row
+            div.large-12.columns
+                .article-icon
+                    i.icon-code
+
+                h2.main-title-dev.no-margin-bottom#main-title-dev
+                    =$i18n.header.iAm + " " + $i18n.articleDeveloper.whoAmI
+
+                h2.subheader.no-margin-top
+                    span
+                        =$i18n.articleDeveloper.specializing + " "
+                        i front-end
+
+    div.technologies-wrap.desktop
+        div.row.experience
+            div.large-12.columns
+                h3= $i18n.articleDeveloper.iHaveExperienceWith
+
+                div.technologies.legend
+                    div#technologies-legend.labels-wrap
+                        - for (var categoryClass in $i18n.articleDeveloper.categories)
+                            span(class=categoryClass)= $i18n.articleDeveloper.categories[categoryClass]
+
+                    div.select-wrap
+                        label
+                            select#technologies-select
+                                option(value="") -- all technologies --
+                                - for (var categoryClass in $i18n.articleDeveloper.categories)
+                                    option(value=categoryClass)= $i18n.articleDeveloper.categories[categoryClass]
+
+            div.large-12.columns
+                ul#technologies-list.technologies.list
+                    - for (var categoryClass in skills)
+                        each skill in skills[categoryClass]
+                            li(class="label "+categoryClass)= skill
+
+                hr
+
+    .row
+        .large-12.columns
+            p.text-center= $i18n.articleDeveloper.skillsExplanation
+            p= $i18n.articleDeveloper.developerText

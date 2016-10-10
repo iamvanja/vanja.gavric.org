@@ -1,0 +1,177 @@
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+        opacity:1!important;
+        transform: scale(1)!important;
+        // @include transform(translate3d(0,0,0)!important);
+    }
+
+    body,
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img,
+    .contact-circle {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    .intro {
+        height:360px!important;
+        width:auto!important;
+        position:relative!important;
+        min-height: auto!important;
+        page-break-before: avoid;
+        .main-intro-content {
+            top:16%!important;
+        }
+    }
+    .main-article,
+    .intro {
+        border-bottom: 1px solid black;
+    }
+    .main-article.developer {
+        page-break-before: avoid;
+        h2 {
+            margin-bottom:rem-calc(6)!important;
+        }
+        .skills,
+        .technologies-wrap {
+            margin-top:0!important;
+        }
+    }
+    .main-article.photography {
+        padding: 10% 0!important;
+    }
+    .main-article.writing {
+        h2 {
+            margin-bottom:0!important;
+            &.subheader {
+                display:none!important;
+            }
+        }
+        .articles {
+            top:0!important;
+            img {
+                max-width:100px!important;
+            }
+        }
+    }
+    .main-article.contact {
+        page-break-before: always;
+        h1 {
+            margin-bottom:0!important;
+        }
+        .contact-circles {
+            flex-direction: column!important;
+            .contact-circle {
+                text-align: left!important;
+                a {
+                    margin: 0!important;
+                    width:100%!important;
+                    .circle,
+                    .text,
+                    &:after {
+                        float:left!important;
+                        height:rem-calc(76)!important;
+                        line-height:rem-calc(76)!important;
+                    }
+                    .circle {
+                        border:1px solid black!important;
+                    }
+                    .text {
+                        visibility: visible!important;
+                        opacity:1!important;
+                        padding-left:rem-calc(10)!important;
+                    }
+                    &:after {
+                        padding: rem-calc(4) 0 0 rem-calc(10)!important;
+                    }
+                }
+                // flex-basis: 10%!important;
+            }
+        }
+    }
+
+    .subheader {
+        color:gray!important;
+    }
+    .content {
+        margin-top:0!important;
+    }
+    .footer .right {
+        text-align: left!important;
+    }
+    .main-nav,
+    #console,
+    .scroll-down,
+    .back-to-top,
+    .lang-selection,
+    .photography .icon,
+    .backstretch-wrap,
+    .loader {
+        display:none!important;
+    }
+}

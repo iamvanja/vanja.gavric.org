@@ -1,0 +1,35 @@
+extends ../page-partials/layout.pug
+
+block vars
+    -
+        var currentPage = {
+            name: "404",
+            customClass: "error-page 404"
+        }
+
+block head
+    style.
+        html, body {
+            min-height: 100%;
+        }
+
+block body
+
+    main(role="main")
+        section#content.content
+            include ../page-partials/index/main-nav.pug
+            .container
+                .row
+                    .large-8.columns.large-centered
+                        h1.no-margin-bottom Not found
+                        h2.no-margin-top
+                            span 404
+                        p.tc
+                            | Sorry, but the page you were trying to view does not exist.
+                        p.no-margin-bottom
+                            | It looks like this was the result of either:
+                        ul.reasons
+                            li a mistyped address
+                            li an out-of-date link
+
+
