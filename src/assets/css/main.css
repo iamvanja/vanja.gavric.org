@@ -5392,23 +5392,24 @@ h1, h2, h3, h4, h5, h6 {
   .footer .container.info {
     padding: 0.938rem 1.875rem;
     padding-bottom: 0.563rem;
+    width: 100%;
   }
-  /* line 60, ../scss/site/components/_footer.scss */
+  /* line 61, ../scss/site/components/_footer.scss */
   .footer .container.links {
     font-size: 0.875rem;
     width: 100%;
   }
-  /* line 63, ../scss/site/components/_footer.scss */
+  /* line 64, ../scss/site/components/_footer.scss */
   .footer .container.links .link-container {
     width: 33.33%;
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 73, ../scss/site/components/_footer.scss */
+  /* line 74, ../scss/site/components/_footer.scss */
   .footer .container.info {
     text-align: left;
   }
-  /* line 76, ../scss/site/components/_footer.scss */
+  /* line 77, ../scss/site/components/_footer.scss */
   .footer .container.links {
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
