@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Vanja Gavrić -- developer -- @iamvanja
+
+# THANKS
+    Mom :)
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3
+    Grunt, custom js framework, ...

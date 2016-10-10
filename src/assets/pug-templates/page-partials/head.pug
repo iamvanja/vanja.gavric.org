@@ -1,0 +1,12 @@
+head
+    meta(charset="utf-8")
+    title= $i18n.head.title[currentPage.name] || title
+    meta(name="description", content=$i18n.head.description[currentPage.name] || "")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="local-url", content=assetsUrl.local)
+    meta(name="environment", content=environment)
+    meta(name="loading-text", content=$i18n.loader.loading)
+    meta(name="loading-text-alt", content=$i18n.loader.loadingAlt)
+    link(rel="stylesheet", href=assetsUrl.local + "css/main.css")
+    link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+    block head

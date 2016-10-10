@@ -1,0 +1,73 @@
+{
+    "lang": "hr",
+    "settings": {},
+    "general": {
+        "photography": "Fotografija",
+        "writing": "Pisanje",
+        "contact": "Kontakt",
+        "or": "ili",
+        "click": "kliknite",
+        "tap": "tapnite"
+    },
+    "head": {
+        "description": {
+            "index": "Vanja Gavrić je web developer orijentiran na front-end. Voli fotografiju i povremeno piše o gadgetima.",
+            "playground": "Vanja Gavrić je web developer orijentiran na front-end. Ovo je njegovo igralište."
+        },
+        "title": {
+            "404": "Page Not Found :("
+        }
+    },
+    "loader": {
+        "loading": "Učitavanje",
+        "loadingAlt": "Još malo..."
+    },
+    "mainNav": {
+        "logoTitle": "Ako kliknete, stranica će se ponovno osvježiti."
+    },
+    "header": {
+        "hi": "Bok",
+        "iAm": "Ja sam",
+        "scrollDown": "Više informacija o meni dolje"
+    },
+    "articleDeveloper": {
+        "whoAmI": "web developer",
+        "specializing": "orijentiran na",
+        "iHaveExperienceWith": "Imam iskustva sa",
+        "various": "Razno",
+        "commandLine": "Komandna linija",
+        "databases": "Baze podataka",
+        "skillsExplanation": "Nisam vezan ni za jedan programski jezik / framework. Moj izbor je obično onaj koji će omogućiti da se projekt završi što kvalitetnije i u što kraćem roku.",
+        "developerText": ""
+    },
+    "articlePhotography": {
+        "title": "Volim fotkati",
+        "subtitle": "Neki kažu da sam čak i dobar"
+    },
+    "articleWriting": {
+        "title": "Nešto sam i pisao",
+        "subtitle": "na članak za otvaranje PDF-a",
+        "articleiPhone": "iPhone na testu",
+        "articleMotorola": "Ambiciozna 20-godišnja Motorola",
+        "articleMs": "Microsoft kreće u nove pohode",
+        "articleNokia": "Divovski nesklad",
+        "articleStungun": "Ovaj telefon ne služi za pričanje",
+        "articleTreo": "Mobitel, napokon!",
+        "articleUSA": "Made in U.S.A.",
+        "articleAlcatel": "Alcatel 535 - daltonizam izliječen"
+    },
+    "articleContact": {
+        "contactMe": "Kontaktirajte me",
+        "viaSocial": "putem društvenih mreža",
+        "dropEmail": "pošaljite mi e-mail",
+        "callSkype": "nazovite me na Skype"
+    },
+    "footer": {
+        "siteBy": "a site by",
+        "handmade": "Ručno izrađeno korišteći ekološki prihvatljiv kod",
+        "playground": "igralište"
+    },
+    "playground": {
+        "title": "Igralište"
+    }
+}

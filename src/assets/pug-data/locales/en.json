@@ -1,0 +1,83 @@
+{
+    "lang": "en",
+    "settings": {},
+    "general": {
+        "photography": "Photography",
+        "writing": "Writing",
+        "contact": "Contact",
+        "or": "or",
+        "click": "click",
+        "tap": "tap"
+    },
+    "head": {
+        "description": {
+            "index": "Vanja Gavrić is a web developer specializing in front-end. He also enjoys shooting photos and occasionally writes about gadgets. Loves to write about himself in third person.",
+            "playground": "Vanja Gavrić is a web developer specializing in front-end. This is his playground."
+        },
+        "title": {
+            "404": "Page Not Found :("
+        }
+    },
+    "loader": {
+        "loading": "Loading...",
+        "loadingAlt": "Almost there..."
+    },
+    "mainNav": {
+        "logoTitle": "If you click it, the page will refresh.",
+        "logoTitleNonIndex": "Click to go back to home."
+    },
+    "header": {
+        "hi": "Hi",
+        "iAm": "I'm",
+        "scrollDown": "Scroll down to learn more about me"
+    },
+    "articleDeveloper": {
+        "whoAmI": "a web developer",
+        "specializing": "specializing in",
+        "iHaveExperienceWith": "I have experience with",
+        "categories": {
+            "front-end": "Front-end frameworks",
+            "mvc": "MVC JS frameworks",
+            "api": "3rd-party APIs",
+            "test": "Test frameworks",
+            "version-control": "Version control",
+            "lib-fram": "Libraries / frameworks",
+            "back-end": "Back-end",
+            "databases": "Databases",
+            "various": "Various"
+        },
+        "commandLine": "Command line",
+        "skillsExplanation": "Language / framework / tool agnostic. Choice of tools depends on the given job.",
+        "developerText": "Web development is my passion. I enjoy translating user-centric design into web applications that users love while developing, testing and deploying production-quality code."
+    },
+    "articlePhotography": {
+        "title": "I like to shoot photos",
+        "subtitle": "Some say I am even good at it."
+    },
+    "articleWriting": {
+        "title": "Did some writing too (in Croatian)",
+        "subtitle": "on any article to open PDF",
+        "articleiPhone": "iPhone on test",
+        "articleMotorola": "Ambitious 20-year-old Motorola",
+        "articleMs": "Microsoft conquers new markets",
+        "articleNokia": "Giants' disproportion",
+        "articleStungun": "Stungun - this phone is not for talking",
+        "articleTreo": "A cell phone, finally!",
+        "articleUSA": "Made in U.S.A.",
+        "articleAlcatel": "Alcatel 535 - daltonism cured"
+    },
+    "articleContact": {
+        "contactMe": "Contact me",
+        "viaSocial": "via social networks",
+        "dropEmail": "drop me an e-mail",
+        "callSkype": "call me on Skype"
+    },
+    "footer": {
+        "siteBy": "a site by",
+        "handmade": "Handmade using ecologically sustainable code",
+        "playground": "playground"
+    },
+    "playground": {
+        "title": "Playground"
+    }
+}

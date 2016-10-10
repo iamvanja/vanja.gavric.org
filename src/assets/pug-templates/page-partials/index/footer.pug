@@ -1,0 +1,19 @@
+footer#footer.footer(role="contentinfo")
+    .row
+        .large-12.columns
+            .wrapper
+                .container.info
+                    p= $i18n.footer.handmade + " :)"
+
+                .container.links
+                    .link-container.copyright-link
+                      | &copy; 
+                      a(href="http://vanja.gavric.org", title="Vanja Gavrić web")
+                        span vanja
+                        | .gavric
+                    .link-container.site-link
+                        a(href="/v1") v1 site 
+                    .link-container.playground-link
+                        a(href="playground.html")= $i18n.footer.playground
+
+

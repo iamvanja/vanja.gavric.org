@@ -1,0 +1,28 @@
+article.main-article.photography#photography(role="article", aria-labelledby="main-title-photo")
+    div.paused-message
+        | slideshow paused. 
+        span.click= $i18n.general.click 
+        span.tap= $i18n.general.tap 
+        |  to resume.
+    i.full-screen-control.icon-fullscreen-on
+    .direction-control(data-direction="prev")
+    .direction-control(data-direction="next")
+    div.row
+        div.large-12.columns
+            h2.heading
+                - var wordsArr = $i18n.articlePhotography.title.split(" ")
+                each word in wordsArr
+                    span= word
+                    | 
+
+            h2.subheader
+                span= $i18n.articlePhotography.subtitle
+
+    .icon-container
+        i.icon.icon-pause-circled
+        i.icon.icon-play-circled
+        i.icon.icon-prev-circled
+        i.icon.icon-next-circled
+
+    div.backstretch-wrap
+        //- empty
