@@ -27,22 +27,20 @@
             padding: 0 0 rem-calc(10);
         }
         .playground-items {
-            flex-grow: 1;
-            flex-shrink: 1;
+            flex: 1 1 auto;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             .playground-item {
                 position:relative;
-                flex-grow: 1;
                 display: flex;
+                flex: 1 1 auto;
                 padding: rem-calc(14) 0;
                 .inner {
                     display:flex;
                     align-items: center;
                     padding: 0 rem-calc(10);
                     &.title {
-                        flex: 35% 1;
+                        flex: 35% 1 1;
                         h2 {
                             line-height: 1.2;
                             margin-top:0;
@@ -51,8 +49,11 @@
                         }
                     }
                     &.description {
-                        flex: 65% 1;
-                        line-height: 1.4;
+                        flex: 65% 1 1;
+                        div {
+                            line-height: 1.4;
+                            width:100%;
+                        }
                     }
                 }
             }

@@ -3,4 +3,5 @@ mixin playground-item(id, href, title, description)
         a.item-link(href!="/playground/" + href)
         .title.inner
             h2= title
-        .description.inner= description
+        .description.inner
+            div= description
