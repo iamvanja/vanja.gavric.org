@@ -3982,7 +3982,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url('../images/bg.jpg?1475393621') no-repeat center center;
+  background: url('../images/bg.jpg?1476057991') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
 }
@@ -5306,60 +5306,81 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-/* line 15, ../scss/site/components/_footer.scss */
-.footer .container {
-  width: 100%;
-}
-/* line 17, ../scss/site/components/_footer.scss */
+/* line 19, ../scss/site/components/_footer.scss */
 .footer .container.info {
   font-size: 0.75rem;
 }
-/* line 20, ../scss/site/components/_footer.scss */
+/* line 22, ../scss/site/components/_footer.scss */
 .footer .container.links {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-/* line 23, ../scss/site/components/_footer.scss */
+/* line 28, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container {
   padding: 0 0.938rem;
   margin: 0.313rem 0;
-  width: 33.33%;
 }
-/* line 27, ../scss/site/components/_footer.scss */
+/* line 31, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a {
   color: #fff;
 }
-/* line 29, ../scss/site/components/_footer.scss */
+/* line 33, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a:hover {
   color: #1ccdaa;
 }
-/* line 31, ../scss/site/components/_footer.scss */
+/* line 35, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a:hover span {
   color: #fff;
 }
-/* line 35, ../scss/site/components/_footer.scss */
+/* line 39, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container a span {
   color: #1ccdaa;
 }
-/* line 39, ../scss/site/components/_footer.scss */
+/* line 43, ../scss/site/components/_footer.scss */
 .footer .container.links .link-container.site-link {
   border: 1px solid #999999;
   border-width: 0 1px;
 }
 @media screen and (max-width: 63.938em) {
-  /* line 48, ../scss/site/components/_footer.scss */
+  /* line 52, ../scss/site/components/_footer.scss */
   .footer .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -5367,22 +5388,27 @@ h1, h2, h3, h4, h5, h6 {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  /* line 52, ../scss/site/components/_footer.scss */
+  /* line 56, ../scss/site/components/_footer.scss */
   .footer .container.info {
     padding: 0.938rem 1.875rem;
     padding-bottom: 0.563rem;
   }
-  /* line 56, ../scss/site/components/_footer.scss */
+  /* line 60, ../scss/site/components/_footer.scss */
   .footer .container.links {
     font-size: 0.875rem;
+    width: 100%;
+  }
+  /* line 63, ../scss/site/components/_footer.scss */
+  .footer .container.links .link-container {
+    width: 33.33%;
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 64, ../scss/site/components/_footer.scss */
+  /* line 73, ../scss/site/components/_footer.scss */
   .footer .container.info {
     text-align: left;
   }
-  /* line 67, ../scss/site/components/_footer.scss */
+  /* line 76, ../scss/site/components/_footer.scss */
   .footer .container.links {
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
@@ -5432,12 +5458,9 @@ h1, h2, h3, h4, h5, h6 {
 /* line 29, ../scss/site/pages/_playground.scss */
 .playground .content .playground-items {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5447,25 +5470,21 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
-/* line 35, ../scss/site/pages/_playground.scss */
+/* line 33, ../scss/site/pages/_playground.scss */
 .playground .content .playground-items .playground-item {
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding: 0.875rem 0;
 }
-/* line 40, ../scss/site/pages/_playground.scss */
+/* line 38, ../scss/site/pages/_playground.scss */
 .playground .content .playground-items .playground-item .inner {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5477,45 +5496,49 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
   padding: 0 0.625rem;
 }
-/* line 44, ../scss/site/pages/_playground.scss */
+/* line 42, ../scss/site/pages/_playground.scss */
 .playground .content .playground-items .playground-item .inner.title {
   -webkit-box-flex: 35%;
-  -webkit-flex: 35% 1;
-      -ms-flex: 35% 1;
-          flex: 35% 1;
+  -webkit-flex: 35% 1 1;
+      -ms-flex: 35% 1 1;
+          flex: 35% 1 1;
 }
-/* line 46, ../scss/site/pages/_playground.scss */
+/* line 44, ../scss/site/pages/_playground.scss */
 .playground .content .playground-items .playground-item .inner.title h2 {
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 53, ../scss/site/pages/_playground.scss */
+/* line 51, ../scss/site/pages/_playground.scss */
 .playground .content .playground-items .playground-item .inner.description {
   -webkit-box-flex: 65%;
-  -webkit-flex: 65% 1;
-      -ms-flex: 65% 1;
-          flex: 65% 1;
-  line-height: 1.4;
+  -webkit-flex: 65% 1 1;
+      -ms-flex: 65% 1 1;
+          flex: 65% 1 1;
 }
-/* line 65, ../scss/site/pages/_playground.scss */
+/* line 53, ../scss/site/pages/_playground.scss */
+.playground .content .playground-items .playground-item .inner.description div {
+  line-height: 1.4;
+  width: 100%;
+}
+/* line 66, ../scss/site/pages/_playground.scss */
 .playground .playground-item.poof {
   background-color: #725eed;
 }
-/* line 68, ../scss/site/pages/_playground.scss */
+/* line 69, ../scss/site/pages/_playground.scss */
 .playground .playground-item.old-tv {
   background-color: #d35400;
 }
-/* line 71, ../scss/site/pages/_playground.scss */
+/* line 72, ../scss/site/pages/_playground.scss */
 .playground .playground-item.bb-connections {
   background-color: #0e90d2;
 }
-/* line 74, ../scss/site/pages/_playground.scss */
+/* line 75, ../scss/site/pages/_playground.scss */
 .playground .playground-item.hex-clock {
   background-color: #16a085;
 }
-/* line 77, ../scss/site/pages/_playground.scss */
+/* line 78, ../scss/site/pages/_playground.scss */
 .playground .playground-item a.item-link {
   display: block;
   width: 100%;
@@ -5525,7 +5548,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   z-index: 1;
 }
-/* line 84, ../scss/site/pages/_playground.scss */
+/* line 85, ../scss/site/pages/_playground.scss */
 .playground .playground-item a.item-link:after {
   content: "";
   position: absolute;
@@ -5536,32 +5559,32 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
 }
-/* line 92, ../scss/site/pages/_playground.scss */
+/* line 93, ../scss/site/pages/_playground.scss */
 .playground .playground-item a.item-link:hover:after {
   background: rgba(0, 0, 0, 0.05);
 }
-/* line 99, ../scss/site/pages/_playground.scss */
+/* line 100, ../scss/site/pages/_playground.scss */
 .playground .back-to-top {
   z-index: 11;
 }
 @media screen and (max-width: 74.938em) {
-  /* line 105, ../scss/site/pages/_playground.scss */
+  /* line 106, ../scss/site/pages/_playground.scss */
   .playground .main-nav {
     position: relative;
   }
 }
 @media screen and (max-width: 39.938em) {
-  /* line 113, ../scss/site/pages/_playground.scss */
+  /* line 114, ../scss/site/pages/_playground.scss */
   .playground .content .playground-items .playground-item {
     padding: 6% 0;
     display: block;
   }
-  /* line 116, ../scss/site/pages/_playground.scss */
+  /* line 117, ../scss/site/pages/_playground.scss */
   .playground .content .playground-items .playground-item .inner.inner {
     display: block;
     width: 100%;
   }
-  /* line 120, ../scss/site/pages/_playground.scss */
+  /* line 121, ../scss/site/pages/_playground.scss */
   .playground .content .playground-items .playground-item .inner.inner.title h2 {
     font-size: 1.625rem;
     padding-bottom: 0.5rem;

@@ -9,21 +9,25 @@
     }
     .wrapper {
         display:flex;
+        flex-direction: row; // explicit for IE
+        flex: 0 1 auto; // explicit for IE
         align-items: center;
         text-align: center;
+        justify-content: space-between;
     }
     .container {
-        width:100%;
         &.info {
             font-size: rem-calc(12);
         }
         &.links {
             display:flex;
+            flex-direction: row; // explicit for IE
+            flex: 0 1 auto; // explicit for IE
             align-items: center;
+            justify-content: space-between;
             .link-container {
                 padding: 0 rem-calc(15);
                 margin: rem-calc(5) 0;
-                width: 33.33%;
                 a {
                     color:#fff;
                     &:hover {
@@ -55,6 +59,11 @@
             }
             &.links {
                 font-size: rem-calc(14);
+                width:100%;
+                .link-container {
+                    width:33.33%;
+                }
+
             }
         }
     }
