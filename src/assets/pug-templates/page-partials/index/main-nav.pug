@@ -1,7 +1,8 @@
-- var navBase = currentPage.name === "index" ? "" : "index.html"
+//- slash needed because of 404 page that may not be located in the same level
+- var navBase = currentPage.name === "index" ? "" : "/index.html"
 - var logoTitle = $i18n.mainNav[ currentPage.name === "index" ? "logoTitle" : "logoTitleNonIndex" ]
 nav#main-nav.main-nav
-    a#logo.logo(href="index.html", title="Vanja Gavrić logo. " + logoTitle)
+    a#logo.logo(href="/index.html", title="Vanja Gavrić logo. " + logoTitle)
         span.wrap
             span.circle
                 | VG
