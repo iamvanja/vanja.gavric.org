@@ -28,7 +28,10 @@ module.exports = function(grunt) {
                 exclude: [
                     "*.map",
                     "Thumbs.db",
-                    ".DS_Store"
+                    ".DS_Store",
+                    "old/",
+                    "various/",
+                    "dropbox/",
                 ]
             },
             exec;
@@ -40,6 +43,8 @@ module.exports = function(grunt) {
             }
             options.remoteAssetLocation = settings.deploy.productionPath;
             options.logFilename = "production";
+            // do not delete features dir from features branches
+            options.exclude.push("features/");
         }
         else if (target === "currentBranch") {
             options.remoteAssetLocation = branch +"/"+ settings.deploy.productionPath;
