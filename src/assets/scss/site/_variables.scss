@@ -33,42 +33,42 @@ $main-nav-anchor-bg-active: darken($main-nav-anchor-bg, 10%);
 $developer-bg: darken($asphalt, 5%);
 $developer-text-accent: darken(#fff, 40%);
 $technology-label-map: (
-    front-end: (
-        background-color: $skin,
-        border-color: darken($skin, 10%)
-    ),
-    mvc: (
-        background-color:$purple,
-        border-color:darken($purple, 3%)
-    ),
-    api: (
+    html-css: (
         background-color:$blue,
         border-color:darken($blue, 10%)
     ),
-    test: (
+    js: (
         background-color:$pumpkin,
         border-color:darken($pumpkin, 10%)
     ),
-    version-control: (
+    back-end: (
         background-color:$green,
         border-color:darken($green, 10%)
-    ),
-    lib-fram: (
-        background-color:$yellow,
-        border-color:darken($yellow, 10%)
-    ),
-    various: (
-        background-color: darken($my-gray, 5%),
-        border-color: darken($my-gray, 8%)
-    ),
-    back-end: (
-        background-color:darken($green-sea, 16%),
-        border-color:darken($green-sea, 21%)
     ),
     databases: (
         background-color:darken($brown, 10%),
         border-color:darken($brown, 25%)
     ),
+    api: (
+        background-color: darken($my-gray, 5%),
+        border-color: darken($my-gray, 8%)
+    ),
+    // test: (
+    // background-color:darken($green-sea, 16%),
+    // border-color:darken($green-sea, 21%)
+    // ),
+    version-control: (
+        background-color: $skin,
+        border-color: darken($skin, 10%)
+    ),
+    various: (
+        background-color:$purple,
+        border-color:darken($purple, 3%)
+    ),
+    // lib-fram: (
+    //     background-color:$yellow,
+    //     border-color:darken($yellow, 10%)
+    // ),
 );
 
 // footer

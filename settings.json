@@ -38,15 +38,65 @@
         "src/assets/js/site/init.js"
     ],
     "skills": {
-        "front-end": ["Bootstrap", "Foundation"],
-        "mvc": ["BackboneJS", "AngularJS"],
-        "api": ["Facebook API", "Twitter", "Google", "Flickr", "Rdio", "SoundCloud", "hasOffers", "Cake API", "SalesForce"],
-        "test": ["Jasmine"],
-        "version-control": ["SVN", "Git"],
-        "lib-fram": ["jQuery (Zepto.JS)", "Underscore.js (Lo-Dash)", "Slim", "Handlebars", "CodeIgniter", "Express (Node)", "Sails (Node)"],
-        "back-end": ["Apache", "PHP", "NodeJS"],
-        "various": ["SASS + Compass", "LESS", "Jade (Pug)", "RequireJS", "Sphinx", "Redmine", "Jira", "Command line", "Agile", "Amazon Web Services", "A/B testing (VWO)", "Grunt"],
-        "databases": ["MySQL", "MS SQL", "Mongo"]
+        "html-css": [
+            "Bootstrap",
+            "Foundation",
+            "SASS + Compass",
+            "LESS",
+            "PostCSS",
+            "Jade (Pug)",
+            "Handlebars"
+        ],
+        "js": [
+            "BackboneJS",
+            "AngularJS",
+            "ReactJS",
+            "jQuery / Zepto)",
+            "Underscore/Lo-Dash)",
+            "RequireJS",
+            "Grunt",
+            "ES2015",
+            "Webpack"
+        ],
+        "back-end": [
+            "Apache",
+            "PHP",
+            "NodeJS",
+            "Slim (PHP)",
+            "CodeIgniter (PHP)",
+            "Express (Node)",
+            "Sails (Node)",
+            "Sphinx"
+        ],
+        "databases": [
+            "MySQL",
+            "MS SQL",
+            "MongoDB"
+        ],
+        "api": [
+            "Facebook API",
+            "Twitter",
+            "Google",
+            "Flickr",
+            "Rdio",
+            "SoundCloud",
+            "hasOffers",
+            "Cake API",
+            "SalesForce"
+        ],
+        "version-control": [
+            "SVN",
+            "Git"
+        ],
+        "various": [
+            "Redmine",
+            "Jira",
+            "Command line",
+            "Agile",
+            "Amazon Web Services",
+            "A/B testing (VWO)",
+            "Jasmine (test)"
+        ]
     },
     "deploy": {
         "productionPath": "",

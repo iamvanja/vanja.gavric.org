@@ -36,14 +36,12 @@
         "specializing": "specializing in",
         "iHaveExperienceWith": "I have experience with",
         "categories": {
-            "front-end": "Front-end frameworks",
-            "mvc": "MVC JS frameworks",
-            "api": "3rd-party APIs",
-            "test": "Test frameworks",
-            "version-control": "Version control",
-            "lib-fram": "Libraries / frameworks",
+            "html-css": "HTML / CSS",
+            "js": "Javascript (front-end, back-end, tooling)",
             "back-end": "Back-end",
             "databases": "Databases",
+            "api": "3rd-party APIs",
+            "version-control": "Version control",
             "various": "Various"
         },
         "commandLine": "Command line",
