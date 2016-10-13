@@ -32,7 +32,8 @@
         "scrollDown": "Scroll down to learn more about me"
     },
     "articleDeveloper": {
-        "whoAmI": "a web developer",
+        "article": "a",
+        "whoAmI": "web developer",
         "specializing": "specializing in",
         "iHaveExperienceWith": "I have experience with",
         "categories": {
@@ -42,6 +43,7 @@
             "databases": "Databases",
             "api": "3rd-party APIs",
             "version-control": "Version control",
+            "project-management": "Project management",
             "various": "Various"
         },
         "commandLine": "Command line",

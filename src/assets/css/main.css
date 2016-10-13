@@ -4280,20 +4280,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #999999;
   margin-bottom: 1.25rem;
 }
-/* line 15, ../scss/site/components/_index.developer.scss */
+/* line 14, ../scss/site/components/_index.developer.scss */
+.main-article.developer h2 .full-stack {
+  padding-right: 0.188rem;
+}
+/* line 19, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap {
   position: relative;
 }
-/* line 17, ../scss/site/components/_index.developer.scss */
+/* line 21, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap h3 {
   margin-bottom: 0.875rem;
 }
-/* line 21, ../scss/site/components/_index.developer.scss */
+/* line 25, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap.desktop .legend {
   text-align: center;
   margin-bottom: 1rem;
 }
-/* line 24, ../scss/site/components/_index.developer.scss */
+/* line 28, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap.desktop .legend span {
   cursor: help;
   position: relative;
@@ -4302,7 +4306,7 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   display: inline-block;
 }
-/* line 31, ../scss/site/components/_index.developer.scss */
+/* line 35, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap.desktop .legend span:before {
   content: '';
   height: 1em;
@@ -4314,26 +4318,26 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   border: 1px solid;
 }
-/* line 44, ../scss/site/components/_index.developer.scss */
+/* line 48, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap.desktop .select-wrap {
   display: none;
 }
-/* line 49, ../scss/site/components/_index.developer.scss */
+/* line 53, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap.mobile .select-wrap {
   display: block;
   width: 80%;
   margin: 0 auto;
 }
-/* line 53, ../scss/site/components/_index.developer.scss */
+/* line 57, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap.mobile .select-wrap select {
   -moz-text-align-last: center;
        text-align-last: center;
 }
-/* line 57, ../scss/site/components/_index.developer.scss */
+/* line 61, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap.mobile .labels-wrap {
   display: none;
 }
-/* line 62, ../scss/site/components/_index.developer.scss */
+/* line 66, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label {
   margin-bottom: 0.125rem;
   margin-right: 0.125rem;
@@ -4346,366 +4350,372 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   position: relative;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(1) {
   -webkit-transition-delay: 0.005s;
           transition-delay: 0.005s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(2) {
   -webkit-transition-delay: 0.01s;
           transition-delay: 0.01s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(3) {
   -webkit-transition-delay: 0.015s;
           transition-delay: 0.015s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(4) {
   -webkit-transition-delay: 0.02s;
           transition-delay: 0.02s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(5) {
   -webkit-transition-delay: 0.025s;
           transition-delay: 0.025s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(6) {
   -webkit-transition-delay: 0.03s;
           transition-delay: 0.03s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(7) {
   -webkit-transition-delay: 0.035s;
           transition-delay: 0.035s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(8) {
   -webkit-transition-delay: 0.04s;
           transition-delay: 0.04s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(9) {
   -webkit-transition-delay: 0.045s;
           transition-delay: 0.045s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(10) {
   -webkit-transition-delay: 0.05s;
           transition-delay: 0.05s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(11) {
   -webkit-transition-delay: 0.055s;
           transition-delay: 0.055s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(12) {
   -webkit-transition-delay: 0.06s;
           transition-delay: 0.06s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(13) {
   -webkit-transition-delay: 0.065s;
           transition-delay: 0.065s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(14) {
   -webkit-transition-delay: 0.07s;
           transition-delay: 0.07s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(15) {
   -webkit-transition-delay: 0.075s;
           transition-delay: 0.075s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(16) {
   -webkit-transition-delay: 0.08s;
           transition-delay: 0.08s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(17) {
   -webkit-transition-delay: 0.085s;
           transition-delay: 0.085s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(18) {
   -webkit-transition-delay: 0.09s;
           transition-delay: 0.09s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(19) {
   -webkit-transition-delay: 0.095s;
           transition-delay: 0.095s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(20) {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(21) {
   -webkit-transition-delay: 0.105s;
           transition-delay: 0.105s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(22) {
   -webkit-transition-delay: 0.11s;
           transition-delay: 0.11s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(23) {
   -webkit-transition-delay: 0.115s;
           transition-delay: 0.115s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(24) {
   -webkit-transition-delay: 0.12s;
           transition-delay: 0.12s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(25) {
   -webkit-transition-delay: 0.125s;
           transition-delay: 0.125s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(26) {
   -webkit-transition-delay: 0.13s;
           transition-delay: 0.13s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(27) {
   -webkit-transition-delay: 0.135s;
           transition-delay: 0.135s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(28) {
   -webkit-transition-delay: 0.14s;
           transition-delay: 0.14s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(29) {
   -webkit-transition-delay: 0.145s;
           transition-delay: 0.145s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(30) {
   -webkit-transition-delay: 0.15s;
           transition-delay: 0.15s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(31) {
   -webkit-transition-delay: 0.155s;
           transition-delay: 0.155s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(32) {
   -webkit-transition-delay: 0.16s;
           transition-delay: 0.16s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(33) {
   -webkit-transition-delay: 0.165s;
           transition-delay: 0.165s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(34) {
   -webkit-transition-delay: 0.17s;
           transition-delay: 0.17s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(35) {
   -webkit-transition-delay: 0.175s;
           transition-delay: 0.175s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(36) {
   -webkit-transition-delay: 0.18s;
           transition-delay: 0.18s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(37) {
   -webkit-transition-delay: 0.185s;
           transition-delay: 0.185s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(38) {
   -webkit-transition-delay: 0.19s;
           transition-delay: 0.19s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(39) {
   -webkit-transition-delay: 0.195s;
           transition-delay: 0.195s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(40) {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(41) {
   -webkit-transition-delay: 0.205s;
           transition-delay: 0.205s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(42) {
   -webkit-transition-delay: 0.21s;
           transition-delay: 0.21s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(43) {
   -webkit-transition-delay: 0.215s;
           transition-delay: 0.215s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(44) {
   -webkit-transition-delay: 0.22s;
           transition-delay: 0.22s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(45) {
   -webkit-transition-delay: 0.225s;
           transition-delay: 0.225s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(46) {
   -webkit-transition-delay: 0.23s;
           transition-delay: 0.23s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(47) {
   -webkit-transition-delay: 0.235s;
           transition-delay: 0.235s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(48) {
   -webkit-transition-delay: 0.24s;
           transition-delay: 0.24s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(49) {
   -webkit-transition-delay: 0.245s;
           transition-delay: 0.245s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(50) {
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(51) {
   -webkit-transition-delay: 0.255s;
           transition-delay: 0.255s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(52) {
   -webkit-transition-delay: 0.26s;
           transition-delay: 0.26s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(53) {
   -webkit-transition-delay: 0.265s;
           transition-delay: 0.265s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(54) {
   -webkit-transition-delay: 0.27s;
           transition-delay: 0.27s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(55) {
   -webkit-transition-delay: 0.275s;
           transition-delay: 0.275s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(56) {
   -webkit-transition-delay: 0.28s;
           transition-delay: 0.28s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(57) {
   -webkit-transition-delay: 0.285s;
           transition-delay: 0.285s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(58) {
   -webkit-transition-delay: 0.29s;
           transition-delay: 0.29s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(59) {
   -webkit-transition-delay: 0.295s;
           transition-delay: 0.295s;
 }
-/* line 74, ../scss/site/components/_index.developer.scss */
+/* line 78, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label:nth-of-type(60) {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
-/* line 78, ../scss/site/components/_index.developer.scss */
+/* line 82, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .list .label.animated-hide {
   opacity: 0.05;
 }
-/* line 84, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.html-css:before,
 .main-article.developer .technologies-wrap .label.html-css {
   background-color: #0e90d2;
   border-color: #0b6fa2;
 }
-/* line 84, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.js:before,
 .main-article.developer .technologies-wrap .label.js {
   background-color: #d35400;
   border-color: #a04000;
 }
-/* line 84, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.back-end:before,
 .main-article.developer .technologies-wrap .label.back-end {
   background-color: #16a085;
   border-color: #107360;
 }
-/* line 84, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.databases:before,
 .main-article.developer .technologies-wrap .label.databases {
   background-color: #212121;
   border-color: black;
 }
-/* line 84, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.api:before,
 .main-article.developer .technologies-wrap .label.api {
   background-color: #657d95;
   border-color: #5f768c;
 }
-/* line 84, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.version-control:before,
 .main-article.developer .technologies-wrap .label.version-control {
   background-color: #dd514c;
   border-color: #cf2d27;
 }
-/* line 84, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.various:before,
 .main-article.developer .technologies-wrap .label.various {
   background-color: #725eed;
   border-color: #6650eb;
 }
-/* line 91, ../scss/site/components/_index.developer.scss */
+/* line 88, ../scss/site/components/_index.developer.scss */
+.main-article.developer .technologies-wrap .legend span.project-management:before,
+.main-article.developer .technologies-wrap .label.project-management {
+  background-color: #fca30d;
+  border-color: #d38603;
+}
+/* line 95, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .experience hr {
   margin-left: auto;
   margin-right: auto;
   width: 30%;
 }
 @media only screen and (max-width: 480px) {
-  /* line 100, ../scss/site/components/_index.developer.scss */
+  /* line 104, ../scss/site/components/_index.developer.scss */
   .main-article.developer h2.subheader {
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 107, ../scss/site/components/_index.developer.scss */
+  /* line 111, ../scss/site/components/_index.developer.scss */
   .main-article.developer .labels-wrap {
     width: 80%;
     margin-left: auto;

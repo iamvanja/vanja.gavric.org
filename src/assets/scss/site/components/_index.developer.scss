@@ -11,6 +11,10 @@
             color:$developer-text-accent;
             margin-bottom: rem-calc(20);
         }
+        .full-stack {
+            // fix for italic text not adding enough space after end
+            padding-right: rem-calc(3);
+        }
     }
     .technologies-wrap {
         position:relative;
