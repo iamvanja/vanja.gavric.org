@@ -4651,58 +4651,46 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.05;
 }
 /* line 84, ../scss/site/components/_index.developer.scss */
-.main-article.developer .technologies-wrap .legend span.front-end:before,
-.main-article.developer .technologies-wrap .label.front-end {
-  background-color: #dd514c;
-  border-color: #cf2d27;
-}
-/* line 84, ../scss/site/components/_index.developer.scss */
-.main-article.developer .technologies-wrap .legend span.mvc:before,
-.main-article.developer .technologies-wrap .label.mvc {
-  background-color: #725eed;
-  border-color: #6650eb;
-}
-/* line 84, ../scss/site/components/_index.developer.scss */
-.main-article.developer .technologies-wrap .legend span.api:before,
-.main-article.developer .technologies-wrap .label.api {
+.main-article.developer .technologies-wrap .legend span.html-css:before,
+.main-article.developer .technologies-wrap .label.html-css {
   background-color: #0e90d2;
   border-color: #0b6fa2;
 }
 /* line 84, ../scss/site/components/_index.developer.scss */
-.main-article.developer .technologies-wrap .legend span.test:before,
-.main-article.developer .technologies-wrap .label.test {
+.main-article.developer .technologies-wrap .legend span.js:before,
+.main-article.developer .technologies-wrap .label.js {
   background-color: #d35400;
   border-color: #a04000;
 }
 /* line 84, ../scss/site/components/_index.developer.scss */
-.main-article.developer .technologies-wrap .legend span.version-control:before,
-.main-article.developer .technologies-wrap .label.version-control {
-  background-color: #16a085;
-  border-color: #107360;
-}
-/* line 84, ../scss/site/components/_index.developer.scss */
-.main-article.developer .technologies-wrap .legend span.lib-fram:before,
-.main-article.developer .technologies-wrap .label.lib-fram {
-  background-color: #fca30d;
-  border-color: #d38603;
-}
-/* line 84, ../scss/site/components/_index.developer.scss */
-.main-article.developer .technologies-wrap .legend span.various:before,
-.main-article.developer .technologies-wrap .label.various {
-  background-color: #657d95;
-  border-color: #5f768c;
-}
-/* line 84, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.back-end:before,
 .main-article.developer .technologies-wrap .label.back-end {
-  background-color: #0c5849;
-  border-color: #094237;
+  background-color: #16a085;
+  border-color: #107360;
 }
 /* line 84, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.databases:before,
 .main-article.developer .technologies-wrap .label.databases {
   background-color: #212121;
   border-color: black;
+}
+/* line 84, ../scss/site/components/_index.developer.scss */
+.main-article.developer .technologies-wrap .legend span.api:before,
+.main-article.developer .technologies-wrap .label.api {
+  background-color: #657d95;
+  border-color: #5f768c;
+}
+/* line 84, ../scss/site/components/_index.developer.scss */
+.main-article.developer .technologies-wrap .legend span.version-control:before,
+.main-article.developer .technologies-wrap .label.version-control {
+  background-color: #dd514c;
+  border-color: #cf2d27;
+}
+/* line 84, ../scss/site/components/_index.developer.scss */
+.main-article.developer .technologies-wrap .legend span.various:before,
+.main-article.developer .technologies-wrap .label.various {
+  background-color: #725eed;
+  border-color: #6650eb;
 }
 /* line 91, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .experience hr {
@@ -4714,6 +4702,14 @@ h1, h2, h3, h4, h5, h6 {
   /* line 100, ../scss/site/components/_index.developer.scss */
   .main-article.developer h2.subheader {
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 107, ../scss/site/components/_index.developer.scss */
+  .main-article.developer .labels-wrap {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
