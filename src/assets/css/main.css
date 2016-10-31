@@ -4171,24 +4171,25 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 74.938em) {
   /* line 1, ../scss/site/components/_main-nav.scss */
   .main-nav {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     -webkit-transition: -webkit-transform 0.25s ease;
     transition: -webkit-transform 0.25s ease;
     transition: transform 0.25s ease;
     transition: transform 0.25s ease, -webkit-transform 0.25s ease;
   }
-  /* line 90, ../scss/site/components/_main-nav.scss */
+  /* line 91, ../scss/site/components/_main-nav.scss */
   .main-nav.scroll-down {
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
   }
-  /* line 93, ../scss/site/components/_main-nav.scss */
+  /* line 94, ../scss/site/components/_main-nav.scss */
   .main-nav.scroll-up {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
 }
 @media screen and (max-width: 39.938em) {
-  /* line 98, ../scss/site/components/_main-nav.scss */
+  /* line 99, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a .text {
     display: none;
   }
@@ -4202,7 +4203,7 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 1px solid rgba(16, 22, 28, 0.2);
     overflow-y: auto;
   }
-  /* line 110, ../scss/site/components/_main-nav.scss */
+  /* line 111, ../scss/site/components/_main-nav.scss */
   .main-nav .logo {
     font-size: 120%;
     float: none;
@@ -4211,7 +4212,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 8.75rem;
     position: relative;
   }
-  /* line 118, ../scss/site/components/_main-nav.scss */
+  /* line 119, ../scss/site/components/_main-nav.scss */
   .main-nav .logo .wrap {
     position: absolute;
     width: 5.075rem;
@@ -4222,11 +4223,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: -2.537rem;
     left: 50%;
   }
-  /* line 128, ../scss/site/components/_main-nav.scss */
+  /* line 129, ../scss/site/components/_main-nav.scss */
   .main-nav .logo .back {
     line-height: 4.568rem;
   }
-  /* line 133, ../scss/site/components/_main-nav.scss */
+  /* line 134, ../scss/site/components/_main-nav.scss */
   .main-nav ul {
     float: none;
     width: 100%;
@@ -4234,28 +4235,28 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 28.125rem;
     text-align: center;
   }
-  /* line 139, ../scss/site/components/_main-nav.scss */
+  /* line 140, ../scss/site/components/_main-nav.scss */
   .main-nav ul li {
     float: none;
     height: auto;
     line-height: 1.4;
   }
-  /* line 143, ../scss/site/components/_main-nav.scss */
+  /* line 144, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a {
     padding: 1.625rem 0.375rem;
     height: 100%;
     width: 100%;
   }
-  /* line 147, ../scss/site/components/_main-nav.scss */
+  /* line 148, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a span.text {
     display: block;
     font-size: 1.125rem;
   }
-  /* line 153, ../scss/site/components/_main-nav.scss */
+  /* line 154, ../scss/site/components/_main-nav.scss */
   .main-nav ul li:first-child a {
     border-top-width: 1px;
   }
-  /* line 158, ../scss/site/components/_main-nav.scss */
+  /* line 159, ../scss/site/components/_main-nav.scss */
   .main-nav ul li:last-child a {
     border-right: 0;
   }
@@ -4726,13 +4727,14 @@ h1, h2, h3, h4, h5, h6 {
 /* line 1, ../scss/site/components/_index.photography.scss */
 .main-article.photography {
   background-color: #725eed;
-  max-height: 100%;
+  max-height: 95%;
+  max-height: 95vh;
   overflow: hidden;
   position: relative;
   text-align: center;
   z-index: 3;
 }
-/* line 8, ../scss/site/components/_index.photography.scss */
+/* line 9, ../scss/site/components/_index.photography.scss */
 .main-article.photography:after {
   content: "";
   position: absolute;
@@ -4741,7 +4743,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
 }
-/* line 14, ../scss/site/components/_index.photography.scss */
+/* line 15, ../scss/site/components/_index.photography.scss */
 .main-article.photography .backstretch-wrap {
   position: absolute;
   top: 0;
@@ -4751,28 +4753,28 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
 }
-/* line 20, ../scss/site/components/_index.photography.scss */
+/* line 21, ../scss/site/components/_index.photography.scss */
 .main-article.photography h2 span, .main-article.photography .paused-message, .fullscreen .main-article.photography .full-screen-control {
   background: #3a3a3a;
   background: rgba(58, 58, 58, 0.8);
   padding: 0.5rem;
 }
-/* line 26, ../scss/site/components/_index.photography.scss */
+/* line 27, ../scss/site/components/_index.photography.scss */
 .main-article.photography h2 {
   position: relative;
   z-index: 1;
   margin-bottom: 1.375rem;
 }
-/* line 34, ../scss/site/components/_index.photography.scss */
+/* line 35, ../scss/site/components/_index.photography.scss */
 .main-article.photography h2.heading span {
   display: inline-block;
   margin-bottom: 0.375rem;
 }
-/* line 39, ../scss/site/components/_index.photography.scss */
+/* line 40, ../scss/site/components/_index.photography.scss */
 .main-article.photography h2.subheader {
   font-size: 1.375rem;
 }
-/* line 46, ../scss/site/components/_index.photography.scss */
+/* line 47, ../scss/site/components/_index.photography.scss */
 .main-article.photography .paused-message {
   position: absolute;
   bottom: 0;
@@ -4785,7 +4787,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 200ms ease;
   color: #b3b3b3;
 }
-/* line 58, ../scss/site/components/_index.photography.scss */
+/* line 59, ../scss/site/components/_index.photography.scss */
 .main-article.photography .icon {
   top: 48%;
   left: 48%;
@@ -4802,18 +4804,18 @@ h1, h2, h3, h4, h5, h6 {
       -ms-transform-origin: center center;
           transform-origin: center center;
 }
-/* line 71, ../scss/site/components/_index.photography.scss */
+/* line 72, ../scss/site/components/_index.photography.scss */
 .main-article.photography.paused .icon-pause-circled, .main-article.photography.playing .icon-play-circled, .main-article.photography.prev .icon-prev-circled, .main-article.photography.next .icon-next-circled {
   visibility: visible;
   -webkit-animation: poputFade 500ms ease;
           animation: poputFade 500ms ease;
 }
-/* line 79, ../scss/site/components/_index.photography.scss */
+/* line 80, ../scss/site/components/_index.photography.scss */
 .main-article.photography.paused .paused-message {
   visibility: visible;
   opacity: 1;
 }
-/* line 100, ../scss/site/components/_index.photography.scss */
+/* line 101, ../scss/site/components/_index.photography.scss */
 .main-article.photography .heading,
 .main-article.photography .subheader {
   opacity: 1;
@@ -4824,42 +4826,42 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000), opacity 800ms linear;
   transition: transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000), opacity 800ms linear, -webkit-transform 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
-/* line 107, ../scss/site/components/_index.photography.scss */
+/* line 108, ../scss/site/components/_index.photography.scss */
 .main-article.photography.hide-headers .heading {
   -webkit-transform: translate3d(-200%, 0, 0);
           transform: translate3d(-200%, 0, 0);
   opacity: 0;
 }
-/* line 111, ../scss/site/components/_index.photography.scss */
+/* line 112, ../scss/site/components/_index.photography.scss */
 .main-article.photography.hide-headers .subheader {
   -webkit-transform: translate3d(200%, 0, 0);
           transform: translate3d(200%, 0, 0);
   opacity: 0;
 }
-/* line 116, ../scss/site/components/_index.photography.scss */
+/* line 117, ../scss/site/components/_index.photography.scss */
 .main-article.photography .full-screen-control,
 .main-article.photography .direction-control {
   display: none;
 }
 @media screen and (max-width: 63.938em) {
-  /* line 122, ../scss/site/components/_index.photography.scss */
+  /* line 123, ../scss/site/components/_index.photography.scss */
   .main-article.photography h2 {
     font-size: 1.875rem;
     padding-top: 10%;
     line-height: 1.6;
   }
-  /* line 126, ../scss/site/components/_index.photography.scss */
+  /* line 127, ../scss/site/components/_index.photography.scss */
   .main-article.photography h2.subheader {
     padding-top: 0;
     padding-bottom: 6%;
   }
 }
 
-/* line 134, ../scss/site/components/_index.photography.scss */
+/* line 135, ../scss/site/components/_index.photography.scss */
 .js .main-article.photography {
   cursor: pointer;
 }
-/* line 136, ../scss/site/components/_index.photography.scss */
+/* line 137, ../scss/site/components/_index.photography.scss */
 .js .main-article.photography .direction-control {
   display: block;
   width: 15%;
@@ -4870,21 +4872,21 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
 }
 @media screen and (max-width: 63.938em) {
-  /* line 136, ../scss/site/components/_index.photography.scss */
+  /* line 137, ../scss/site/components/_index.photography.scss */
   .js .main-article.photography .direction-control {
     width: 25%;
   }
 }
-/* line 146, ../scss/site/components/_index.photography.scss */
+/* line 147, ../scss/site/components/_index.photography.scss */
 .js .main-article.photography .direction-control[data-direction="prev"] {
   left: 0;
 }
-/* line 149, ../scss/site/components/_index.photography.scss */
+/* line 150, ../scss/site/components/_index.photography.scss */
 .js .main-article.photography .direction-control[data-direction="next"] {
   right: 0;
 }
 
-/* line 157, ../scss/site/components/_index.photography.scss */
+/* line 158, ../scss/site/components/_index.photography.scss */
 .fullscreen .main-article.photography:-webkit-full-screen {
   width: 100%;
   height: 100%;
@@ -4901,7 +4903,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
 }
-/* line 161, ../scss/site/components/_index.photography.scss */
+/* line 162, ../scss/site/components/_index.photography.scss */
 .fullscreen .main-article.photography .full-screen-control {
   display: inline-block;
   position: absolute;
