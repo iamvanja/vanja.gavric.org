@@ -333,7 +333,7 @@ AddDefaultCharset utf-8
     # redirect the old url structure to the new one
     Redirect 301 /hr /
     Redirect 301 /en /
-    Redirect 301 /playground /playground.html
+    RedirectMatch 301 /playground/?$ /playground.html
     # old v1
     RewriteRule ^v1/vg-en.html(/?)+$ /v1/index.php?lang=en [L]
     RewriteRule ^v1/vg-hr.html(/?)+$ /v1/index.php?lang=hr [L]
