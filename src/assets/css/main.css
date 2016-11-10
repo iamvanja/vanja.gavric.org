@@ -4133,12 +4133,10 @@ h1, h2, h3, h4, h5, h6 {
 /* line 50, ../scss/site/components/_main-nav.scss */
 .main-nav ul li {
   float: left;
-  height: 4.5rem;
-  line-height: 4.5rem;
 }
-/* line 54, ../scss/site/components/_main-nav.scss */
+/* line 52, ../scss/site/components/_main-nav.scss */
 .main-nav ul li a {
-  border-color: rgba(16, 22, 28, 0.2);
+  border-color: rgba(0, 0, 0, 0.15);
   border-style: solid;
   border-width: 0 0 1px 0;
   padding: 0 0.5rem;
@@ -4148,22 +4146,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #999999;
   font-size: 1.25rem;
 }
-/* line 64, ../scss/site/components/_main-nav.scss */
+/* line 62, ../scss/site/components/_main-nav.scss */
 .main-nav ul li a:hover {
   color: #fff;
   background: #2d3f51;
 }
-/* line 68, ../scss/site/components/_main-nav.scss */
+/* line 66, ../scss/site/components/_main-nav.scss */
 .main-nav ul li a .text {
   font-size: 0.875rem;
   padding-right: 0.5rem;
   padding-left: 0.25rem;
 }
-/* line 75, ../scss/site/components/_main-nav.scss */
+/* line 73, ../scss/site/components/_main-nav.scss */
 .main-nav ul li:last-child a {
-  border-width: 0 1px 1px 0;
+  border-right-width: 1px;
 }
-/* line 80, ../scss/site/components/_main-nav.scss */
+/* line 78, ../scss/site/components/_main-nav.scss */
 .main-nav ul li.active a {
   background: #22303d;
   color: #fff;
@@ -4171,25 +4169,33 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 74.938em) {
   /* line 1, ../scss/site/components/_main-nav.scss */
   .main-nav {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     -webkit-transition: -webkit-transform 0.25s ease;
     transition: -webkit-transform 0.25s ease;
     transition: transform 0.25s ease;
     transition: transform 0.25s ease, -webkit-transform 0.25s ease;
   }
-  /* line 91, ../scss/site/components/_main-nav.scss */
+  /* line 88, ../scss/site/components/_main-nav.scss */
   .main-nav.scroll-down {
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
   }
-  /* line 94, ../scss/site/components/_main-nav.scss */
+  /* line 91, ../scss/site/components/_main-nav.scss */
   .main-nav.scroll-up {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+  /* line 94, ../scss/site/components/_main-nav.scss */
+  .main-nav .logo {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  /* line 97, ../scss/site/components/_main-nav.scss */
+  .main-nav ul li a {
+    height: 4.531rem;
+    line-height: 4.531rem;
+  }
 }
 @media screen and (max-width: 39.938em) {
-  /* line 99, ../scss/site/components/_main-nav.scss */
+  /* line 103, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a .text {
     display: none;
   }
@@ -4203,7 +4209,7 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 1px solid rgba(16, 22, 28, 0.2);
     overflow-y: auto;
   }
-  /* line 111, ../scss/site/components/_main-nav.scss */
+  /* line 115, ../scss/site/components/_main-nav.scss */
   .main-nav .logo {
     font-size: 120%;
     float: none;
@@ -4212,7 +4218,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 8.75rem;
     position: relative;
   }
-  /* line 119, ../scss/site/components/_main-nav.scss */
+  /* line 123, ../scss/site/components/_main-nav.scss */
   .main-nav .logo .wrap {
     position: absolute;
     width: 5.075rem;
@@ -4223,11 +4229,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: -2.537rem;
     left: 50%;
   }
-  /* line 129, ../scss/site/components/_main-nav.scss */
+  /* line 133, ../scss/site/components/_main-nav.scss */
   .main-nav .logo .back {
     line-height: 4.568rem;
   }
-  /* line 134, ../scss/site/components/_main-nav.scss */
+  /* line 138, ../scss/site/components/_main-nav.scss */
   .main-nav ul {
     float: none;
     width: 100%;
@@ -4235,28 +4241,28 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 28.125rem;
     text-align: center;
   }
-  /* line 140, ../scss/site/components/_main-nav.scss */
+  /* line 144, ../scss/site/components/_main-nav.scss */
   .main-nav ul li {
     float: none;
     height: auto;
     line-height: 1.4;
   }
-  /* line 144, ../scss/site/components/_main-nav.scss */
+  /* line 148, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a {
     padding: 1.625rem 0.375rem;
     height: 100%;
     width: 100%;
   }
-  /* line 148, ../scss/site/components/_main-nav.scss */
+  /* line 152, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a span.text {
     display: block;
     font-size: 1.125rem;
   }
-  /* line 154, ../scss/site/components/_main-nav.scss */
+  /* line 158, ../scss/site/components/_main-nav.scss */
   .main-nav ul li:first-child a {
     border-top-width: 1px;
   }
-  /* line 159, ../scss/site/components/_main-nav.scss */
+  /* line 163, ../scss/site/components/_main-nav.scss */
   .main-nav ul li:last-child a {
     border-right: 0;
   }
