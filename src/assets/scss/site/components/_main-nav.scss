@@ -49,10 +49,8 @@
         z-index:1;
         li {
             float:left;
-            height:rem-calc(72);
-            line-height: rem-calc(72);
             a {
-                border-color: rgba($main-nav-anchor-border-color, 0.2);
+                border-color: rgba(#000, 0.15);
                 border-style: solid;
                 border-width: 0 0 1px 0;
                 padding:0 rem-calc(8);
@@ -73,7 +71,7 @@
             }
             &:last-child {
                 a {
-                    border-width: 0 1px 1px 0;
+                    border-right-width: 1px;
                 }
             }
             &.active {
@@ -86,13 +84,19 @@
     }
 
     @include breakpoint(large down) {
-        border-bottom: 1px solid rgba(#000, 0.15);
         transition: transform 0.25s ease;
         &.scroll-down {
             transform: translate3d(-100%, 0, 0);
         }
         &.scroll-up {
             transform: translate3d(0, 0, 0);
+        }
+        .logo {
+            border-bottom: 1px solid rgba(#000, 0.15);
+        }
+        ul li a {
+            height:rem-calc(72.5);
+            line-height: rem-calc(72.5);
         }
     }
     @include breakpoint(small only) {
