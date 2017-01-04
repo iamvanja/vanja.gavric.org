@@ -38,7 +38,7 @@
         "iHaveExperienceWith": "I have experience with",
         "categories": {
             "html-css": "HTML / CSS",
-            "js": "Javascript (front-end, back-end, tooling)",
+            "js": "Javascript (front-end, tooling)",
             "back-end": "Back-end",
             "databases": "Databases",
             "api": "3rd-party APIs",
