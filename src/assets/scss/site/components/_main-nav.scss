@@ -28,6 +28,7 @@
             // border:1px solid transparent;
             border:1px solid $main-nav-logo-border-color;
             color: $main-nav-logo-color;
+            transition: all ease-in 0.2s;
         }
         .back {
             font-size: rem-calc(22);
@@ -59,6 +60,8 @@
                 background:rgba($main-nav-anchor-bg, 0.9);
                 color:darken($main-nav-color, 40%);
                 font-size:rem-calc(20);
+                transition: all ease-in 0.25s;
+                transition-property: background, color;
                 &:hover {
                     color:$main-nav-color;
                     background:$main-nav-anchor-bg-hover;

@@ -4110,18 +4110,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.438rem;
   border: 1px solid #0a463a;
   color: #0a463a;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
 }
-/* line 32, ../scss/site/components/_main-nav.scss */
+/* line 33, ../scss/site/components/_main-nav.scss */
 .main-nav .logo .back {
   font-size: 1.375rem;
   line-height: 3.125rem;
 }
-/* line 38, ../scss/site/components/_main-nav.scss */
+/* line 39, ../scss/site/components/_main-nav.scss */
 .main-nav:hover .wrap {
   background: #0a463a;
   color: #16a085;
 }
-/* line 43, ../scss/site/components/_main-nav.scss */
+/* line 44, ../scss/site/components/_main-nav.scss */
 .main-nav ul {
   list-style: none;
   margin: 0;
@@ -4130,11 +4132,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 1;
 }
-/* line 50, ../scss/site/components/_main-nav.scss */
+/* line 51, ../scss/site/components/_main-nav.scss */
 .main-nav ul li {
   float: left;
 }
-/* line 52, ../scss/site/components/_main-nav.scss */
+/* line 53, ../scss/site/components/_main-nav.scss */
 .main-nav ul li a {
   border-color: rgba(0, 0, 0, 0.15);
   border-style: solid;
@@ -4145,23 +4147,27 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(52, 73, 94, 0.9);
   color: #999999;
   font-size: 1.25rem;
+  -webkit-transition: all ease-in 0.25s;
+  transition: all ease-in 0.25s;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
 }
-/* line 62, ../scss/site/components/_main-nav.scss */
+/* line 65, ../scss/site/components/_main-nav.scss */
 .main-nav ul li a:hover {
   color: #fff;
   background: #2d3f51;
 }
-/* line 66, ../scss/site/components/_main-nav.scss */
+/* line 69, ../scss/site/components/_main-nav.scss */
 .main-nav ul li a .text {
   font-size: 0.875rem;
   padding-right: 0.5rem;
   padding-left: 0.25rem;
 }
-/* line 73, ../scss/site/components/_main-nav.scss */
+/* line 76, ../scss/site/components/_main-nav.scss */
 .main-nav ul li:last-child a {
   border-right-width: 1px;
 }
-/* line 78, ../scss/site/components/_main-nav.scss */
+/* line 81, ../scss/site/components/_main-nav.scss */
 .main-nav ul li.active a {
   background: #22303d;
   color: #fff;
@@ -4174,28 +4180,28 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.25s ease;
     transition: transform 0.25s ease, -webkit-transform 0.25s ease;
   }
-  /* line 88, ../scss/site/components/_main-nav.scss */
+  /* line 91, ../scss/site/components/_main-nav.scss */
   .main-nav.scroll-down {
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
   }
-  /* line 91, ../scss/site/components/_main-nav.scss */
+  /* line 94, ../scss/site/components/_main-nav.scss */
   .main-nav.scroll-up {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-  /* line 94, ../scss/site/components/_main-nav.scss */
+  /* line 97, ../scss/site/components/_main-nav.scss */
   .main-nav .logo {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   }
-  /* line 97, ../scss/site/components/_main-nav.scss */
+  /* line 100, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a {
     height: 4.531rem;
     line-height: 4.531rem;
   }
 }
 @media screen and (max-width: 39.938em) {
-  /* line 103, ../scss/site/components/_main-nav.scss */
+  /* line 106, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a .text {
     display: none;
   }
@@ -4209,7 +4215,7 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 1px solid rgba(16, 22, 28, 0.2);
     overflow-y: auto;
   }
-  /* line 115, ../scss/site/components/_main-nav.scss */
+  /* line 118, ../scss/site/components/_main-nav.scss */
   .main-nav .logo {
     font-size: 120%;
     float: none;
@@ -4218,7 +4224,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 8.75rem;
     position: relative;
   }
-  /* line 123, ../scss/site/components/_main-nav.scss */
+  /* line 126, ../scss/site/components/_main-nav.scss */
   .main-nav .logo .wrap {
     position: absolute;
     width: 5.075rem;
@@ -4229,11 +4235,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: -2.537rem;
     left: 50%;
   }
-  /* line 133, ../scss/site/components/_main-nav.scss */
+  /* line 136, ../scss/site/components/_main-nav.scss */
   .main-nav .logo .back {
     line-height: 4.568rem;
   }
-  /* line 138, ../scss/site/components/_main-nav.scss */
+  /* line 141, ../scss/site/components/_main-nav.scss */
   .main-nav ul {
     float: none;
     width: 100%;
@@ -4241,28 +4247,28 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 28.125rem;
     text-align: center;
   }
-  /* line 144, ../scss/site/components/_main-nav.scss */
+  /* line 147, ../scss/site/components/_main-nav.scss */
   .main-nav ul li {
     float: none;
     height: auto;
     line-height: 1.4;
   }
-  /* line 148, ../scss/site/components/_main-nav.scss */
+  /* line 151, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a {
     padding: 1.625rem 0.375rem;
     height: 100%;
     width: 100%;
   }
-  /* line 152, ../scss/site/components/_main-nav.scss */
+  /* line 155, ../scss/site/components/_main-nav.scss */
   .main-nav ul li a span.text {
     display: block;
     font-size: 1.125rem;
   }
-  /* line 158, ../scss/site/components/_main-nav.scss */
+  /* line 161, ../scss/site/components/_main-nav.scss */
   .main-nav ul li:first-child a {
     border-top-width: 1px;
   }
-  /* line 163, ../scss/site/components/_main-nav.scss */
+  /* line 166, ../scss/site/components/_main-nav.scss */
   .main-nav ul li:last-child a {
     border-right: 0;
   }
