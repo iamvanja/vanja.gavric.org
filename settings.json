@@ -111,5 +111,6 @@
     "email": {
         "username": "vanja",
         "domain": "gavric.org"
-    }
+    },
+    "testBaseUrl": "http://local.vanja.gavric.org/src"
 }

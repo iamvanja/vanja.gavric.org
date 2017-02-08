@@ -44,5 +44,9 @@ module.exports = {
             // Start a live reload server on the default port 35729
             livereload: true
         }
+    },
+    test: {
+        files: "test/specs/**/*.js",
+        tasks: ["eslint", "webdriver:test"]
     }
 };

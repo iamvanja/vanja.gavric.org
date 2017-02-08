@@ -35,8 +35,8 @@ module.exports = function(grunt) {
                 removelogging: "grunt-remove-logging",
                 jquery: "grunt-jquery-builder",
                 lodash: "grunt-lodash",
-            },
-            customTasksDir: "grunt/tasks"
+            }
         },
     });
+    grunt.task.loadTasks("./grunt/tasks");
 };
