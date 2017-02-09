@@ -94,11 +94,16 @@
             "Agile",
             "Trello"
         ],
+        "test": [
+            "Jasmine",
+            "Mocha",
+            "Chai",
+            "Selenium / WebDriver",
+            "A/B (VWO)"
+        ],
         "various": [
             "Command line",
-            "Amazon Web Services",
-            "A/B testing (VWO)",
-            "Jasmine (test)"
+            "Amazon Web Services"
         ]
     },
     "deploy": {

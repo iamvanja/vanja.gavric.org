@@ -53,17 +53,17 @@ $technology-label-map: (
         background-color: darken($my-gray, 5%),
         border-color: darken($my-gray, 8%)
     ),
-    // test: (
-    // background-color:darken($green-sea, 16%),
-    // border-color:darken($green-sea, 21%)
-    // ),
-    version-control: (
-        background-color: $skin,
-        border-color: darken($skin, 10%)
-    ),
-    various: (
+    test: (
         background-color:$purple,
         border-color:darken($purple, 3%)
+    ),
+    version-control: (
+        background-color:darken($light-purple, 16%),
+        border-color:darken($light-purple, 21%)
+    ),
+    various: (
+        background-color: $skin,
+        border-color: darken($skin, 10%)
     ),
     project-management: (
         background-color:$yellow,
