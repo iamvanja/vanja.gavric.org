@@ -3,6 +3,8 @@
 describe("main-nav", function() {
     "use strict";
 
+    // todo: clean up by creating page object pattern
+
     beforeEach(function() {
         browser.windowHandleSize({width: 800, height: 600});
     });
@@ -64,4 +66,11 @@ describe("main-nav", function() {
         browser.getCssProperty("#main-nav", "background-color").parsed.hex.should.equal("#34495e");
     });
 
+    it("should update active class for sections", function(){
+        browser.windowHandleSize({width: 1200, height: 600});
+        browser.url("/?loader=false");
+        browser.click("#intro .scroll-down a");
+
+        browser.waitForVisible("#main-nav li.developer.active", 2000);
+    });
 });
