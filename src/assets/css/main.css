@@ -4698,16 +4698,22 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #5f768c;
 }
 /* line 88, ../scss/site/components/_index.developer.scss */
+.main-article.developer .technologies-wrap .legend span.test:before,
+.main-article.developer .technologies-wrap .label.test {
+  background-color: #725eed;
+  border-color: #6650eb;
+}
+/* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.version-control:before,
 .main-article.developer .technologies-wrap .label.version-control {
-  background-color: #dd514c;
-  border-color: #cf2d27;
+  background-color: #7373b9;
+  border-color: #6262b0;
 }
 /* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.various:before,
 .main-article.developer .technologies-wrap .label.various {
-  background-color: #725eed;
-  border-color: #6650eb;
+  background-color: #dd514c;
+  border-color: #cf2d27;
 }
 /* line 88, ../scss/site/components/_index.developer.scss */
 .main-article.developer .technologies-wrap .legend span.project-management:before,

@@ -44,6 +44,7 @@
             "api": "3rd-party APIs",
             "version-control": "Version control",
             "project-management": "Project management",
+            "test": "Testing",
             "various": "Various"
         },
         "commandLine": "Command line",
