@@ -160,6 +160,17 @@ exports.config = {
         var chai = require('chai');
         global.expect = chai.expect;
         chai.Should();
+
+        browser.addCommand("getScrollPosition", function async() {
+            var scrollPosition = this.execute(function() {
+                return {
+                    top: window.pageYOffset || document.documentElement.scrollTop,
+                    left: window.pageXOffset || document.documentElement.scrollLeft
+                }
+            });
+
+            return scrollPosition;
+        });
     },
     //
     // Hook that gets executed before the suite starts
