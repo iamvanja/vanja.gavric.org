@@ -12694,19 +12694,29 @@ return jQuery;
         },
         hideLoader = function(){
             var timer = $.Deferred();
-            // show timer for at least 3.4s seconds
+            var initiatePostLoader = function() {
+                $("body").addClass("animate-on-load");
+                triggerHash();
+            };
+            // show timer for at least 500ms seconds
             window.setTimeout(function(){
                 timer.resolve();
             }, 500);
 
-            // when timer is finished and the page is loaded, remove loader
-            $.when(timer, isLoaded).done(function(){
-                $(window).on("view.common.showLoading.removed", function(){
-                    $("body").addClass("animate-on-load");
-                    triggerHash();
+            // if loader is not shown
+            if (!$("#loader").length) {
+                initiatePostLoader();
+            }
+            else {
+                // when timer is finished and the page is loaded, remove loader
+                $.when(timer, isLoaded).done(function(){
+                    $(window).on("view.common.showLoading.removed", function(){
+                        initiatePostLoader();
+                    });
+                    site.views.run("common", "showLoading", {toShow: false});
                 });
-                site.views.run("common", "showLoading", {toShow: false});
-            });
+            }
+
         },
         exports = {
             init: function(){

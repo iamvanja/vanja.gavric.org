@@ -231,13 +231,22 @@
             <h1 class="alternative">Almost there...</h1>
         </div>
         <script>
-            // show loader for users with js enabled
-            var loaderEl = document.getElementById("loader");
-            loaderEl.classList.remove("hide");
-            // trigger layout
-            loaderEl.offsetLeft;
-            // animate header (Almost there)
-            loaderEl.classList.add("animate-headers");
+            (function() {
+                // show loader for users with js enabled unless specifically requested otherwise
+                var isLoaderNeeded = /loader=([^&]+)/.exec(document.location.href.replace(/#.*$/,""));
+                isLoaderNeeded = isLoaderNeeded ? isLoaderNeeded[1] : null;
+                var loaderEl = document.getElementById("loader");
+                if (isLoaderNeeded !== "false") {
+                    loaderEl.classList.remove("hide");
+                    // trigger layout
+                    loaderEl.offsetLeft;
+                    // animate header (Almost there)
+                    loaderEl.classList.add("animate-headers");
+                }
+                else {
+                    loaderEl.parentNode.removeChild(loaderEl);
+                }
+            })();
         </script>
         <script src="assets/js/all.js"></script>
         <script>
