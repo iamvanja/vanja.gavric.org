@@ -10,6 +10,7 @@ module.exports = {
                     "**",
                     ".htaccess",
                     "!old/**",
+                    "!v1/**",
                     "!assets/js/foundation/**",
                     "!**/*.psd",
                     "!assets/css/**",

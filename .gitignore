@@ -19,3 +19,4 @@ node_modules
 build
 .credentials.json
 *.psd
+v1
