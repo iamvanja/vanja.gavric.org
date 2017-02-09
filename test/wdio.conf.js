@@ -47,11 +47,20 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'chrome'
+        browserName: 'chrome',
+        specs: [
+            './test/chrome-only/**/*.js'
+        ]
     }, {
-        browserName: 'firefox'
+        browserName: 'firefox',
+        specs: [
+            './test/non-chrome/**/*.js'
+        ]
     }, {
-        browserName: 'phantomjs'
+        browserName: 'phantomjs',
+        specs: [
+            './test/non-chrome/**/*.js'
+        ]
     }],
     //
     // ===================
