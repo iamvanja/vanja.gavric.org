@@ -25,14 +25,7 @@ module.exports = function(grunt) {
                     "--log-file=<%=logFile%>",
                     // "--dry-run"
                 ],
-                exclude: [
-                    "*.map",
-                    "Thumbs.db",
-                    ".DS_Store",
-                    "old/",
-                    "various/",
-                    "dropbox/",
-                ]
+                exclude: settings.deploy.exclude
             },
             exec;
 
