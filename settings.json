@@ -111,7 +111,16 @@
         "serverDestination": "~/public_html/vanja.gavric.org/",
         "logFilePath": ".grunt/rsync/",
         "host": "gavric.org",
-        "domainName": "vanja.gavric.org"
+        "domainName": "vanja.gavric.org",
+        "exclude": [
+            "*.map",
+            "Thumbs.db",
+            ".DS_Store",
+            "old/",
+            "various/",
+            "dropbox/",
+            "v1/"
+        ]
     },
     "email": {
         "username": "vanja",

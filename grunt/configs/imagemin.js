@@ -30,14 +30,6 @@ module.exports = function(grunt, data) {
                     ],
                     dest: "build/assets/images/"
                 },
-                {
-                    expand: true,
-                    cwd: "src/v1/images/",
-                    src: [
-                        "**/*.{png,jpg,gif}"
-                    ],
-                    dest: "build/v1/images/"
-                },
             ]
         },
         productionWebp: {
@@ -51,9 +43,6 @@ module.exports = function(grunt, data) {
 
     // use webp for webp images
     extend(config.productionWebp.options, options, {use: useWebp});
-
-    // exclude v1 images from webp build
-    config.productionWebp.files.push(config.productionJpg.files[0]);
 
     return config;
 };
