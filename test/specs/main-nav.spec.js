@@ -47,6 +47,7 @@ describe("main-nav", function() {
     });
 
     it("should be responsive", function() {
+        this.retries(4);
         var height = 500;
         browser.url("/?loader=false");
         // small
@@ -67,6 +68,7 @@ describe("main-nav", function() {
     });
 
     it("should update active class for sections", function(){
+        this.retries(4);
         browser.windowHandleSize({width: 1200, height: 600});
         browser.url("/?loader=false");
         browser.click("#intro .scroll-down a");
