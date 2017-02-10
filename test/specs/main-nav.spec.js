@@ -23,14 +23,13 @@ describe("main-nav", function() {
     });
 
     it("should hide main-nav when scrolling down", function() {
-        browser.windowHandleSize({width: 800, height: 600});
         browser.url("/?loader=false#writing");
         browser.isVisible("#main-nav.scroll-down").should.be.true;
         browser.isVisible("#main-nav.scroll-up").should.be.false;
     });
 
     it("should show main-nav when scrolling up", function() {
-        browser.windowHandleSize({width: 800, height: 600});
+        this.retries(4);
 
         // scroll down
         browser.url("/?loader=false#writing");
@@ -39,9 +38,8 @@ describe("main-nav", function() {
         browser.isVisible("#main-nav.scroll-up").should.be.false;
 
         // scroll up
-        browser
-            .scroll(0, 500)
-            .pause(800);
+        browser.scroll(0, 500)
+        browser.pause(1200);
         browser.isVisible("#main-nav.scroll-down").should.be.false;
         browser.isVisible("#main-nav.scroll-up").should.be.true;
     });

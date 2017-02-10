@@ -12,7 +12,7 @@ describe("general", function() {
     it("checks if the site is initialized properly", function() {
         browser
             .url("/")
-            .pause(2000);
+            .pause(4000);
 
         browser.isVisible("#loader").should.be.false;
         browser.isVisible("#intro").should.be.true;
