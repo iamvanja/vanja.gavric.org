@@ -43,7 +43,7 @@
     "webdriverio": "^4.6.2"
   },
   "scripts": {
-    "test": "grunt webdriver"
+    "test": "grunt webdriver:dev"
   },
   "repository": {
     "type": "git",

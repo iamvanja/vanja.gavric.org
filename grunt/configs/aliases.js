@@ -34,6 +34,7 @@ module.exports = {
         "setEnvironmentVars",
         "gitIsDirty",
         "production",
+        "webdriver:production",
         "choose"
     ]
 };
