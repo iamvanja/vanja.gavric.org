@@ -38,7 +38,7 @@ describe("main-nav", function() {
         browser.isVisible("#main-nav.scroll-up").should.be.false;
 
         // scroll up
-        browser.scroll(0, 500)
+        browser.scroll(0, 500);
         browser.pause(1200);
         browser.isVisible("#main-nav.scroll-down").should.be.false;
         browser.isVisible("#main-nav.scroll-up").should.be.true;
