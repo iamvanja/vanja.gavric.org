@@ -35,6 +35,15 @@ module.exports = function(grunt, data) {
         productionWebp: {
             options: {},
             files: [],
+        },
+        mainBg: {
+            options: {},
+            expand: true,
+            cwd: "src/assets/images/",
+            src: [
+                "bg.jpg"
+            ],
+            dest: "build/assets/images/"
         }
     };
 
@@ -43,6 +52,10 @@ module.exports = function(grunt, data) {
 
     // use webp for webp images
     extend(config.productionWebp.options, options, {use: useWebp});
+
+    config.productionWebp.files.push(config.productionJpg.files[0]);
+
+    extend(config.mainBg.options, options, { use: [mozjpeg({quality: 85})] });
 
     return config;
 };
