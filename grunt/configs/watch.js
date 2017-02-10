@@ -47,6 +47,6 @@ module.exports = {
     },
     test: {
         files: "test/specs/**/*.js",
-        tasks: ["eslint", "webdriver:test"]
+        tasks: ["eslint", "webdriver:dev"]
     }
 };
