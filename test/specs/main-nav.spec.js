@@ -23,7 +23,9 @@ describe("main-nav", function() {
     });
 
     it("should hide main-nav when scrolling down", function() {
+        this.retries(4);
         browser.url("/?loader=false#writing");
+        browser.pause(800);
         browser.isVisible("#main-nav.scroll-down").should.be.true;
         browser.isVisible("#main-nav.scroll-up").should.be.false;
     });
