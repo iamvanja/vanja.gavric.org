@@ -20,3 +20,4 @@ build
 .credentials.json
 *.psd
 v1
+.htpasswd
