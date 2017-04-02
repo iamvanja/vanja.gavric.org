@@ -1,6 +1,6 @@
 mixin playground-item(id, href, title, description)
     article(id!=id, class="playground-item " + id, role="article")
-        a.item-link(href!="/playground/" + href)
+        a.item-link(href!= (href.slice(0,4) === "http") ? href : "/playground/" + href)
         .title.inner
             h2= title
         .description.inner
