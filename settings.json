@@ -119,7 +119,8 @@
             "old/",
             "various/",
             "dropbox/",
-            "v1/"
+            "v1/",
+            "playground/blackjack/"
         ]
     },
     "email": {
