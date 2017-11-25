@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     grunt.task.registerTask("deploy", "Deploys using rsync", function(target) {
         var getExec = helpers.getExec,
             branch = grunt.config.get("gitBranch"),
-            command = "mkdir -p <%=logFilePath%> && touch <%=logFile%> && rsync <%= src %> --rsync-path=\"mkdir -p <%= dest %> && rsync\" <%= user %>@<%= host %>:<%= dest %> --rsh 'ssh -p 2222' <%= args %> <%= exclude %>",
+            command = "mkdir -p <%=logFilePath%> && touch <%=logFile%> && rsync <%= src %> --rsync-path=\"mkdir -p <%= dest %> && rsync\" <%= user %>@<%= host %>:<%= dest %> --rsh 'ssh -p 22' <%= args %> <%= exclude %>",
             options = {
                 user: grunt.config.get("credentials").username,
                 src: "build/",
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                     "--log-file=<%=logFile%>",
                     // "--dry-run"
                 ],
-                exclude: settings.deploy.exclude
+                exclude: settings.deploy.exclude,
             },
             exec;
 
@@ -52,8 +52,8 @@ module.exports = function(grunt) {
         options.exclude.forEach(function(element, i, collection) {
             options.exclude[i] = "--exclude="+element;
         });
-        options.args = options.args.join(' ');
-        options.exclude = options.exclude.join(' ');
+        options.args = options.args.join(" ");
+        options.exclude = options.exclude.join(" ");
         options.dest = settings.deploy.serverDestination + options.remoteAssetLocation;
 
         command = grunt.template.process(command, {data: options});

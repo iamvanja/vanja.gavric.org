@@ -108,9 +108,9 @@
     },
     "deploy": {
         "productionPath": "",
-        "serverDestination": "~/public_html/vanja.gavric.org/",
+        "serverDestination": "/var/www/vanja.gavric.org/",
         "logFilePath": ".grunt/rsync/",
-        "host": "gavric.org",
+        "host": "165.227.191.156",
         "domainName": "vanja.gavric.org",
         "exclude": [
             "*.map",
