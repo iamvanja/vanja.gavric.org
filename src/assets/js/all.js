@@ -13974,6 +13974,7 @@ return jQuery;
         viewName = "index.intro",
         ui = {
             el: "#intro",
+            blogContainer: ".latest-blog-post",
             title: ".blog-post-title",
             link: ".blog-post-link",
         },
@@ -13990,12 +13991,20 @@ return jQuery;
 
         },
         setLatestBlogPost = function() {
-            var apiUrl = "//vanja.gavric.org/blog/ghost/api/v0.1/posts/?limit=1&client_id=ghost-frontend&client_secret=9fe91d92f39c";
+            var apiUrl = "//vanja.gavric.org/blog/ghost/api/v0.1/posts/";
 
-            var request = $.ajax({ url: apiUrl });
+            var request = $.ajax({
+                url: apiUrl,
+                data: {
+                    limit: 1,
+                    fields: "title,slug",
+                    "client_id": "ghost-frontend",
+                    "client_secret": "9fe91d92f39c",
+                },
+            });
 
             request.fail(function(jqXHR, textStatus) {
-              $(ui.el).hide();
+              $(ui.el).find(ui.blogContainer).hide();
             });
 
             request.done(function(data) {

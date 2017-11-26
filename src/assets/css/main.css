@@ -4010,7 +4010,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro .bottom-content .latest-blog-post {
   background-color: rgba(255, 255, 255, 0.1);
   position: relative;
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 1rem;
 }
 /* line 54, ../scss/site/components/_intro.scss */
 .intro .bottom-content .latest-blog-post .label {
@@ -4049,39 +4049,43 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     min-height: 100%;
   }
+  /* line 94, ../scss/site/components/_intro.scss */
+  .intro .latest-blog-post .label {
+    display: none;
+  }
 }
 
-/* line 98, ../scss/site/components/_intro.scss */
+/* line 102, ../scss/site/components/_intro.scss */
 .cssanimations .intro .hi,
 .cssanimations .intro .i-am,
 .cssanimations .intro .bottom-content {
   opacity: 0;
 }
-/* line 104, ../scss/site/components/_intro.scss */
+/* line 108, ../scss/site/components/_intro.scss */
 .cssanimations .intro .profile-pic {
   opacity: 0;
   -webkit-transform: scale3d(0, 0, 0);
           transform: scale3d(0, 0, 0);
 }
 
-/* line 113, ../scss/site/components/_intro.scss */
+/* line 117, ../scss/site/components/_intro.scss */
 .animate-on-load .intro .hi,
 .animate-on-load .intro .i-am,
 .animate-on-load .intro .bottom-content {
   -webkit-animation: fadeIn 400ms 400ms ease-in forwards;
           animation: fadeIn 400ms 400ms ease-in forwards;
 }
-/* line 119, ../scss/site/components/_intro.scss */
+/* line 123, ../scss/site/components/_intro.scss */
 .animate-on-load .intro .i-am {
   -webkit-animation-delay: 1400ms;
           animation-delay: 1400ms;
 }
-/* line 123, ../scss/site/components/_intro.scss */
+/* line 127, ../scss/site/components/_intro.scss */
 .animate-on-load .intro .profile-pic {
   -webkit-animation: popupOut 300ms 2400ms linear forwards;
           animation: popupOut 300ms 2400ms linear forwards;
 }
-/* line 127, ../scss/site/components/_intro.scss */
+/* line 131, ../scss/site/components/_intro.scss */
 .animate-on-load .intro .bottom-content {
   -webkit-animation-duration: 400ms;
           animation-duration: 400ms;
@@ -4885,29 +4889,30 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
 }
-/* line 7, ../scss/site/components/_index.writing.scss */
+/* line 8, ../scss/site/components/_index.writing.scss */
 .main-article.writing .article-icon {
   color: #0b649d;
 }
-/* line 10, ../scss/site/components/_index.writing.scss */
+/* line 12, ../scss/site/components/_index.writing.scss */
 .main-article.writing h2 {
   position: relative;
 }
-/* line 12, ../scss/site/components/_index.writing.scss */
+/* line 15, ../scss/site/components/_index.writing.scss */
 .main-article.writing h2.subheader {
   color: #0b649d;
   font-size: 1.75rem;
 }
-/* line 17, ../scss/site/components/_index.writing.scss */
+/* line 21, ../scss/site/components/_index.writing.scss */
 .main-article.writing .articles {
   margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
 }
-/* line 20, ../scss/site/components/_index.writing.scss */
+/* line 26, ../scss/site/components/_index.writing.scss */
 .main-article.writing .articles .article-items div {
   text-align: center;
   margin-bottom: 0.875rem;
 }
-/* line 24, ../scss/site/components/_index.writing.scss */
+/* line 31, ../scss/site/components/_index.writing.scss */
 .main-article.writing .articles .article-items div a {
   display: inline-block;
   transition: -webkit-transform 0.1s ease-in;
@@ -4917,32 +4922,32 @@ h1, h2, h3, h4, h5, h6 {
           backface-visibility: hidden;
   background: #0b649d;
 }
-/* line 29, ../scss/site/components/_index.writing.scss */
+/* line 37, ../scss/site/components/_index.writing.scss */
 .main-article.writing .articles .article-items div a:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
-/* line 32, ../scss/site/components/_index.writing.scss */
+/* line 41, ../scss/site/components/_index.writing.scss */
 .main-article.writing .articles .article-items div a img.loaded {
   width: 100%;
   max-width: 7.25rem;
 }
 @media only screen and (max-width: 480px) {
-  /* line 42, ../scss/site/components/_index.writing.scss */
+  /* line 51, ../scss/site/components/_index.writing.scss */
   .main-article.writing h2.subheader {
     font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 63.938em) {
-  /* line 47, ../scss/site/components/_index.writing.scss */
+  /* line 56, ../scss/site/components/_index.writing.scss */
   .main-article.writing .article-items {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 }
 
-/* line 57, ../scss/site/components/_index.writing.scss */
+/* line 66, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items .column, .js .writing .article-items .columns {
   -webkit-transform: translate3d(0, 300%, 0);
           transform: translate3d(0, 300%, 0);
@@ -4951,55 +4956,55 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 400ms, -webkit-transform 400ms;
   transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
-/* line 63, ../scss/site/components/_index.writing.scss */
+/* line 73, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column, .js .writing .article-items.fade-in-bottom .columns {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-/* line 67, ../scss/site/components/_index.writing.scss */
+/* line 78, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(1), .js .writing .article-items.fade-in-bottom .columns:nth-child(1), .js .writing .article-items.fade-in-bottom .column:nth-child(8), .js .writing .article-items.fade-in-bottom .columns:nth-child(8) {
   -webkit-transform: translate3d(0, -10px, 0);
           transform: translate3d(0, -10px, 0);
 }
-/* line 70, ../scss/site/components/_index.writing.scss */
+/* line 82, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(3), .js .writing .article-items.fade-in-bottom .columns:nth-child(3), .js .writing .article-items.fade-in-bottom .column:nth-child(7), .js .writing .article-items.fade-in-bottom .columns:nth-child(7) {
   -webkit-transform: translate3d(0, 14px, 0);
           transform: translate3d(0, 14px, 0);
 }
-/* line 73, ../scss/site/components/_index.writing.scss */
+/* line 86, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(1), .js .writing .article-items.fade-in-bottom .columns:nth-child(1) {
   transition-delay: 50ms;
 }
-/* line 77, ../scss/site/components/_index.writing.scss */
+/* line 91, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(2), .js .writing .article-items.fade-in-bottom .columns:nth-child(2) {
   -webkit-transform: translate3d(0, -4px, 0);
           transform: translate3d(0, -4px, 0);
   transition-delay: 100ms;
 }
-/* line 84, ../scss/site/components/_index.writing.scss */
+/* line 100, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(4), .js .writing .article-items.fade-in-bottom .columns:nth-child(4) {
   -webkit-transform: translate3d(0, -12px, 0);
           transform: translate3d(0, -12px, 0);
   transition-delay: 200ms;
 }
-/* line 88, ../scss/site/components/_index.writing.scss */
+/* line 105, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(5), .js .writing .article-items.fade-in-bottom .columns:nth-child(5) {
   transition-delay: 250ms;
 }
-/* line 91, ../scss/site/components/_index.writing.scss */
+/* line 109, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(6), .js .writing .article-items.fade-in-bottom .columns:nth-child(6) {
   transition-delay: 400ms;
 }
-/* line 94, ../scss/site/components/_index.writing.scss */
+/* line 113, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(7), .js .writing .article-items.fade-in-bottom .columns:nth-child(7) {
   transition-delay: 300ms;
 }
-/* line 98, ../scss/site/components/_index.writing.scss */
+/* line 118, ../scss/site/components/_index.writing.scss */
 .js .writing .article-items.fade-in-bottom .column:nth-child(8), .js .writing .article-items.fade-in-bottom .columns:nth-child(8) {
   transition-delay: 350ms;
 }
 
-/* line 107, ../scss/site/components/_index.writing.scss */
+/* line 127, ../scss/site/components/_index.writing.scss */
 .no-js .writing .lazy {
   display: none;
 }
