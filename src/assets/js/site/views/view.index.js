@@ -84,6 +84,7 @@
                 onHashChange();
                 initHashClick();
 
+                site.views.run("index.intro", "init");
                 site.views.run("index.scrollspy", "init");
                 site.views.run("index.developer", "init");
                 site.views.run("index.photography", "init");

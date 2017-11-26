@@ -9,8 +9,8 @@ module.exports = function(grunt, data) {
             output: "/assets/js/vendor",
             versions: {
                 // Remove everything we don't need from 2.x versions
-                "2.1.1": [ "ajax", "deprecated", "wrap", ],
-            }
+                "2.1.1": ["deprecated", "wrap" ],
+            },
         },
         config = {
             dev: {

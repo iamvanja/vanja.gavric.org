@@ -27,6 +27,7 @@
         "src/assets/js/site/views.js",
         "src/assets/js/site/views/view.common.js",
         "src/assets/js/site/views/view.index.js",
+        "src/assets/js/site/views/view.index.intro.js",
         "src/assets/js/site/views/view.index.scrollspy.js",
         "src/assets/js/site/views/view.index.developer.js",
         "src/assets/js/site/views/view.index.photography.js",

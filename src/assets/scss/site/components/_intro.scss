@@ -1,9 +1,12 @@
 .intro {
-    width:100%;
-    height:100%;
-    z-index:1;
-    position:fixed;
-    top:0;right:0;bottom:0;left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: image-url("bg.jpg") no-repeat center center;
     // radial-gradient(ellipse farthest-side at -10% 90%, rgba($green, 0.9) 20%, rgba($green,0.1)),
     //                 radial-gradient(ellipse farthest-side at 100% 75%, $purple, rgba($purple,0) 80%),
@@ -16,61 +19,91 @@
     // hana + hard-light
     // autumn-in-zrinjevac + hard-light
 
-    min-height:100vh;
+    min-height: 100vh;
+
     h1 {
         color: #fff;
         text-align: center;
         font-family: 'open_sansregular';
-
     }
+
     .main-intro-content {
         top: 45%;
         transform: translateY(-45%);
-        position:absolute;
-        width:100%;
+        position: absolute;
+        width: 100%;
+
         .profile-pic {
-            width:rem-calc(110);
-            height:auto;
+            width: rem-calc(110);
+            height: auto;
             border-radius: $global-rounded;
-            margin-top:rem-calc(6);
+            margin-top: rem-calc(6);
         }
     }
+
+    .bottom-content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .latest-blog-post {
+            background-color: rgba(#fff, 0.1);
+            position: relative;
+            padding: rem-calc(8px 12px);
+
+            .label {
+                position: absolute;
+                top: rem-calc(-30px);
+                right: 0;
+                border-radius: 0;
+                background-color: rgba(#fff, 0.1);
+            }
+
+            .blog-post-title {
+                text-align: left;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
     .scroll-down {
-        position:absolute;
-        bottom:0;
-        left:50%;
-        width:rem-calc(280);
+        // left: 50%;
+        // width: rem-calc(280);
         height: rem-calc(50px);
-        margin-left:rem-calc(-140);
-        text-align:center;
+        // margin-left: rem-calc(-140);
+        text-align: center;
+
         span {
             display: inline-block;
         }
+
         i {
-            top:rem-calc(4);
-            position:relative;
-            font-size:rem-calc(18);
-            display:block;
+            top: rem-calc(4);
+            position: relative;
+            font-size: rem-calc(18);
+            display: block;
         }
     }
 
     @include breakpoint(small down) {
-        position:relative;
-        min-height:100%;
+        position: relative;
+        min-height: 100%;
     }
 }
-
 
 .cssanimations {
     .intro {
         .hi,
         .i-am,
-        .scroll-down {
-            opacity:0;
+        .bottom-content {
+            opacity: 0;
         }
+
         .profile-pic {
-            opacity:0;
-            transform: scale3d(0,0,0);
+            opacity: 0;
+            transform: scale3d(0, 0, 0);
         }
     }
 }
@@ -79,16 +112,19 @@
     .intro {
         .hi,
         .i-am,
-        .scroll-down {
+        .bottom-content {
             animation: fadeIn 400ms 400ms ease-in forwards;
         }
+
         .i-am {
             animation-delay: 1400ms;
         }
+
         .profile-pic {
             animation: popupOut 300ms 2400ms linear forwards;
         }
-        .scroll-down {
+
+        .bottom-content {
             animation-duration: 400ms;
             animation-delay: 2800ms;
         }
