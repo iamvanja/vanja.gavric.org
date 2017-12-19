@@ -64,6 +64,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                font-size: rem-calc(24px);
             }
         }
     }
@@ -91,8 +92,19 @@
         position: relative;
         min-height: 100%;
 
-        .latest-blog-post .label {
-            display: none;
+        .bottom-content {
+            .latest-blog-post {
+                .label {
+                    font-size: rem-calc(10px);
+                    position: static;
+                    background: none;
+                    padding-left: 0;
+                }
+
+                .blog-post-title {
+                    font-size: rem-calc(18px);
+                }
+            }
         }
     }
 }
