@@ -9,6 +9,9 @@
                 mainNav: {
                     selector: "#main-nav",
                 },
+                homeSubNav: {
+                    selector: "#main-nav .home",
+                },
                 backToTop: {
                     selector: "#back-to-top",
                 },
@@ -53,7 +56,7 @@
             }
 
             site.views.run("index", "setMainNavCategoryActive", {
-                $el: cachedUi.mainNav.$el,
+                $el: cachedUi.homeSubNav.$el,
                 categoryName: activeArticleClass,
             });
         },

@@ -125,6 +125,24 @@
       "css": "next-circled",
       "code": 59400,
       "src": "elusive"
+    },
+    {
+      "uid": "513ac180ff85bd275f2b736720cbbf5e",
+      "css": "home",
+      "code": 59409,
+      "src": "entypo"
+    },
+    {
+      "uid": "af95ef0ddda80a78828c62d386506433",
+      "css": "cubes",
+      "code": 61875,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "dplw5xo88mzzr7b45nvjcamyyhni6drs",
+      "css": "book",
+      "code": 59410,
+      "src": "modernpics"
     }
   ]
 }
