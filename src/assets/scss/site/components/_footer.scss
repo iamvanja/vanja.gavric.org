@@ -1,82 +1,54 @@
 .footer {
-    background:$footer-bg;
-    padding:rem-calc(18) 0;
-    z-index:11;
+    background: $footer-bg;
+    padding: rem-calc(18) 0;
+    z-index: 11;
     position: relative;
+
     p {
-        margin:0;
+        margin: 0;
         color: $footer-text-color;
     }
-    .wrapper {
-        display:flex;
-        flex-direction: row; // explicit for IE
-        flex: 0 1 auto; // explicit for IE
-        align-items: center;
-        text-align: center;
-        justify-content: space-between;
-    }
+
     .container {
+        text-align: center;
+
         &.info {
             font-size: rem-calc(12);
         }
+
         &.links {
-            display:flex;
-            flex-direction: row; // explicit for IE
-            flex: 0 1 auto; // explicit for IE
-            align-items: center;
-            justify-content: space-between;
             .link-container {
-                padding: 0 rem-calc(15);
-                margin: rem-calc(5) 0;
                 a {
-                    color:#fff;
+                    color: #fff;
+
                     &:hover {
-                        color:lighten($green, 10%);
+                        color: lighten($green, 10%);
+
                         span {
-                            color:#fff;
+                            color: #fff;
                         }
                     }
+
                     span {
-                        color:lighten($green, 10%);
+                        color: lighten($green, 10%);
                     }
                 }
-                &.site-link {
-                    border: 1px solid $footer-text-color;
-                    border-width: 0 1px;
-                }
             }
         }
     }
 
-    @include breakpoint (medium down) {
-        .wrapper {
-            flex-direction: column-reverse;
+    @include breakpoint(large up) {
+        .info {
+            text-align: left;
         }
-        .container {
-            &.info {
-                padding: rem-calc(15) rem-calc(30);
-                padding-bottom: rem-calc(9);
-                width:100%;
-            }
-            &.links {
-                font-size: rem-calc(14);
-                width:100%;
-                .link-container {
-                    width:33.33%;
-                }
 
-            }
+        .links {
+            text-align: right;
         }
     }
-
-    @include breakpoint (large up) {
-        .container {
-            &.info {
-                text-align: left;
-            }
-            &.links {
-                flex-flow: row wrap;
-            }
+    @include breakpoint(medium down) {
+        .info {
+            margin-bottom: rem-calc(10);
         }
     }
 }
