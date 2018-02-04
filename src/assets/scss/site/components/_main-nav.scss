@@ -75,9 +75,9 @@
             }
 
             &.active {
-                a {
+                > a {
                     background: $main-nav-anchor-bg-active;
-                    color: $main-nav-color;
+                    color: darken($main-nav-color, 15%);
                 }
             }
         }

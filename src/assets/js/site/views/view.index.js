@@ -4,7 +4,7 @@
         viewName = "index",
         ui = {
             el: ".index",
-            mainNav: "#main-nav",
+            mainNav: "#main-nav .home",
         },
         isLoaded = $.Deferred(),
         onLoad = function(){

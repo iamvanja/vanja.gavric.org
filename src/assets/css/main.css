@@ -4208,9 +4208,9 @@ body {
   background: #2d3f51;
 }
 /* line 78, ../scss/site/components/_main-nav.scss */
-.main-nav ul li.active a {
-  background: #22303d;
-  color: #fff;
+.main-nav ul li.active > a {
+  background: #2d3f51;
+  color: #d9d9d9;
 }
 /* line 88, ../scss/site/components/_main-nav.scss */
 .main-nav > ul > li > a {

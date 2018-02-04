@@ -1,21 +1,20 @@
 
-$skin:#dd514c;
-$purple:#725eed;
-$blue:#0e90d2;
-$pumpkin:#d35400;
+$skin: #dd514c;
+$purple: #725eed;
+$blue: #0e90d2;
+$pumpkin: #d35400;
 // $green:#3eb941;
-$green:#02b875;
-$yellow:darken(#fcad26, 5%);
-$asphalt:#34495e;
-$green-sea:#16a085;
-$brown:#3a3a3a;
-$asbestos:#7f8c8d;
+$green: #02b875;
+$yellow: darken(#fcad26, 5%);
+$asphalt: #34495e;
+$green-sea: #16a085;
+$brown: #3a3a3a;
+$asbestos: #7f8c8d;
 $my-gray: #738aa0;
 $light-purple: #a9a9d4;
-
 $media-phone: "only screen and (max-width : 480px)";
 $footer-height: 86px;
-$green:$green-sea;
+$green: $green-sea;
 $global-rounded: 1000px;
 
 // main-nav
@@ -27,49 +26,31 @@ $main-nav-logo-wrap-size: 58;
 $main-nav-anchor-bg: $asphalt;
 $main-nav-anchor-border-color: darken($main-nav-anchor-bg, 20%);
 $main-nav-anchor-bg-hover: darken($main-nav-anchor-bg, 4%);
-$main-nav-anchor-bg-active: darken($main-nav-anchor-bg, 10%);
+$main-nav-anchor-bg-active: darken($main-nav-anchor-bg, 4%);
 
 // developer
 $developer-bg: darken($asphalt, 5%);
 $developer-text-accent: darken(#fff, 40%);
 $technology-label-map: (
     html-css: (
-        background-color:$blue,
-        border-color:darken($blue, 10%)
-    ),
-    js: (
-        background-color:$pumpkin,
-        border-color:darken($pumpkin, 10%)
-    ),
-    back-end: (
-        background-color:$green,
-        border-color:darken($green, 10%)
-    ),
-    databases: (
-        background-color:darken($brown, 10%),
-        border-color:darken($brown, 25%)
-    ),
-    api: (
-        background-color: darken($my-gray, 5%),
-        border-color: darken($my-gray, 8%)
-    ),
-    test: (
-        background-color:$purple,
-        border-color:darken($purple, 3%)
-    ),
-    version-control: (
-        background-color:darken($light-purple, 16%),
-        border-color:darken($light-purple, 21%)
-    ),
-    various: (
-        background-color: $skin,
-        border-color: darken($skin, 10%)
-    ),
-    project-management: (
-        background-color:$yellow,
-        border-color:darken($yellow, 10%)
-    ),
-);
+        background-color:$blue, border-color:darken($blue, 10%)
+    ), js: (
+        background-color:$pumpkin, border-color:darken($pumpkin, 10%)
+    ), back-end: (
+        background-color:$green, border-color:darken($green, 10%)
+    ), databases: (
+        background-color:darken($brown, 10%), border-color:darken($brown, 25%)
+    ), api: (
+        background-color: darken($my-gray, 5%), border-color: darken($my-gray, 8%)
+    ), test: (
+        background-color:$purple, border-color:darken($purple, 3%)
+    ), version-control: (
+        background-color:darken($light-purple, 16%), border-color:darken($light-purple, 21%)
+    ), various: (
+        background-color: $skin, border-color: darken($skin, 10%)
+    ), project-management: (
+        background-color:$yellow, border-color:darken($yellow, 10%)
+    ), );
 
 // footer
 $footer-bg: $asphalt;

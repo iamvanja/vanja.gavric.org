@@ -13867,7 +13867,7 @@ return jQuery;
         viewName = "index",
         ui = {
             el: ".index",
-            mainNav: "#main-nav",
+            mainNav: "#main-nav .home",
         },
         isLoaded = $.Deferred(),
         onLoad = function(){
@@ -14034,6 +14034,9 @@ return jQuery;
                 mainNav: {
                     selector: "#main-nav",
                 },
+                homeSubNav: {
+                    selector: "#main-nav .home",
+                },
                 backToTop: {
                     selector: "#back-to-top",
                 },
@@ -14078,7 +14081,7 @@ return jQuery;
             }
 
             site.views.run("index", "setMainNavCategoryActive", {
-                $el: cachedUi.mainNav.$el,
+                $el: cachedUi.homeSubNav.$el,
                 categoryName: activeArticleClass,
             });
         },

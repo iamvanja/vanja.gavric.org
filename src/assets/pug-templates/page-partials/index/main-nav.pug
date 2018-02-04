@@ -1,6 +1,8 @@
+- var isHome = currentPage.name === "index"
 //- slash needed because of 404 page that may not be located in the same level
-- var navBase = currentPage.name === "index" ? "" : "/index.html"
+- var navBase = isHome ? "" : "/index.html"
 - var logoTitle = $i18n.mainNav[ currentPage.name === "index" ? "logoTitle" : "logoTitleNonIndex" ]
+
 nav#main-nav.main-nav
     a#logo.logo(href="/index.html", title="Vanja Gavrić logo. " + logoTitle)
         span.wrap
@@ -10,32 +12,36 @@ nav#main-nav.main-nav
                 | &larr;
 
     ul
-        li.home
+        li(class=`home ${isHome ? 'active' : ''}`)
             a(href=navBase, title="Home.")
                 i.icon-home
                 span.text Home
-            ul
-                li.developer
-                    a(href=navBase + "#developer", title="Developer.")
-                        i.icon-code
-                        span.text Developer
-                li.photography
-                    a(href=navBase + "#photography", title= $i18n.general.photography + ".")
-                        i.icon-camera
-                        span.text= $i18n.general.photography
-                li.writing
-                    a(href=navBase + "#writing", title= $i18n.general.writing + ".")
-                        i.icon-feather
-                        span.text= $i18n.general.writing
-                li.contact
-                    a(href=navBase + "#contact", title= $i18n.general.contact + ".")
-                        i.icon-paper-plane
-                        span.text= $i18n.general.contact
-        li.playground
+
+            if (isHome)
+                ul
+                    li.developer
+                        a(href=navBase + "#developer", title="Developer.")
+                            i.icon-code
+                            span.text Developer
+                    li.photography
+                        a(href=navBase + "#photography", title= $i18n.general.photography + ".")
+                            i.icon-camera
+                            span.text= $i18n.general.photography
+                    li.writing
+                        a(href=navBase + "#writing", title= $i18n.general.writing + ".")
+                            i.icon-feather
+                            span.text= $i18n.general.writing
+                    li.contact
+                        a(href=navBase + "#contact", title= $i18n.general.contact + ".")
+                            i.icon-paper-plane
+                            span.text= $i18n.general.contact
+
+        li.blog
             a(href=navBase + "blog", title="Blog.")
                 i.icon-book
                 span.text Blog
-        li.playground
+        
+        li(class=`playground ${currentPage.name === "playground" ? 'active' : ''}`)
             a(href=navBase + "playground", title="Playground.")
                 i.icon-cubes
                 span.text Playground
