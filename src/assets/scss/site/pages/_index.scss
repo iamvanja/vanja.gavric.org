@@ -1,4 +1,10 @@
 .index {
+    .main-nav,
+    .main-nav ul,
+    .main-nav li {
+        overflow: visible;
+    }
+
     .top-anchor {
         position: absolute;
         top: 0;
