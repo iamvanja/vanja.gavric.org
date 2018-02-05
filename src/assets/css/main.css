@@ -4363,7 +4363,7 @@ body {
   }
   /* line 244, ../scss/site/components/_main-nav.scss */
   .main-nav > ul > li > ul > li > a {
-    padding: 0.25rem 0.625rem;
+    padding: 0.5rem 0.625rem;
     clear: both;
     overflow: hidden;
   }
