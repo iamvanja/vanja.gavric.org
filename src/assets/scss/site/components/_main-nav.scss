@@ -28,7 +28,6 @@
             display: block;
             margin: 0 auto;
             margin-top: rem-calc(7);
-            // border:1px solid transparent;
             border: 1px solid $main-nav-logo-border-color;
             color: $main-nav-logo-color;
             transition: all ease-in 0.2s;
@@ -118,11 +117,8 @@
         .logo {
             border-bottom: 1px solid rgba(#000, 0.15);
         }
-        overflow: visible;
 
         > ul {
-            overflow: visible;
-
             > li {
                 > a {
                     height: rem-calc(72.5);
@@ -160,23 +156,9 @@
         }
     }
     @include breakpoint(small only) {
-        width: 100%;
-
-        ul {
-            position: static;
-
-            li a .text {
-                display: none;
-            }
-        }
-
-        > ul > li > ul {
-            visibility: visible;
-            opacity: 1;
-
-            > li {
-                float: left;
-            }
+        ul li a .text,
+        ul > li > ul {
+            display: none;
         }
     }
 
