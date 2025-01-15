@@ -49,30 +49,34 @@
             "Handlebars"
         ],
         "js": [
-            "BackboneJS",
-            "AngularJS",
-            "ReactJS",
+            "Backbone.js",
+            "Angular.js",
+            "React.js",
+            "Redux",
             "jQuery / Zepto",
-            "Underscore/Lo-Dash",
-            "RequireJS",
-            "Grunt",
             "ES2015",
-            "Webpack"
+            "Webpack",
+            "Next.js",
+            "Material UI",
+            "Vue.js",
+            "Nuxt.js"
         ],
         "back-end": [
             "Apache",
             "PHP",
-            "NodeJS",
+            "Node.js",
             "Slim (PHP)",
             "CodeIgniter (PHP)",
             "Express (Node)",
             "Sails (Node)",
-            "Sphinx"
+            "nginx"
         ],
         "databases": [
             "MySQL",
             "MS SQL",
-            "MongoDB"
+            "MongoDB",
+            "Redis",
+            "PostgreSQL"
         ],
         "api": [
             "Facebook API",
@@ -85,10 +89,6 @@
             "Cake API",
             "SalesForce"
         ],
-        "version-control": [
-            "SVN",
-            "Git"
-        ],
         "project-management": [
             "Redmine",
             "Jira",
@@ -100,11 +100,15 @@
             "Mocha",
             "Chai",
             "Selenium / WebDriver",
-            "A/B (VWO)"
+            "Jest",
+            "TestCafe",
+            "Playwright",
+            "Puppeteer"
         ],
         "various": [
             "Command line",
-            "Amazon Web Services"
+            "Amazon Web Services",
+            "Google Cloud Platform"
         ]
     },
     "deploy": {
