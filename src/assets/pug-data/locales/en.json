@@ -42,14 +42,13 @@
             "back-end": "Back-end",
             "databases": "Databases",
             "api": "3rd-party APIs",
-            "version-control": "Version control",
             "project-management": "Project management",
             "test": "Testing",
             "various": "Various"
         },
         "commandLine": "Command line",
-        "skillsExplanation": "Language / framework / tool agnostic. Choice of tools depends on the given job.",
-        "developerText": "Web development is my passion. I enjoy translating user-centric design into web applications that users love while developing, testing and deploying production-quality code."
+        "skillsExplanation": "I am technology-agnostic, selecting the most suitable languages, frameworks, and tools based on the specific needs of each project.",
+        "developerText": "I am deeply passionate about web development, with a strong focus on translating user-centric designs into high-performance, scalable web applications that provide exceptional user experiences. My expertise lies in developing, testing, and deploying production-ready solutions, ensuring both technical excellence and business impact."
     },
     "articlePhotography": {
         "title": "I like to shoot photos",
